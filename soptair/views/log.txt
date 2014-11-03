@@ -1,0 +1,34 @@
+FYP LOG
+
+1- Change SVG icon colors
+
+Useful Links:
+Technology Feeds Idea:
+	http://thenextweb.com/offers/2014/08/29/learn-code-ios-8-apps-comprehensive-course-79-92/
+Drop Down List:
+	http://tympanus.net/codrops/2012/11/29/simple-effects-for-drop-down-lists/
+Custom Fonts:
+	glyphter.com
+Sidebar Menu:
+	http://tympanus.net/codrops/2013/04/25/simple-youtube-menu-effect/
+	http://tympanus.net/codrops/2013/09/30/animated-border-menus/
+Custom Select Elements (Form):
+	http://tympanus.net/codrops/2014/07/10/inspiration-for-custom-select-elements/
+Progress Button Styles:
+	http://tympanus.net/codrops/2013/12/12/progress-button-styles/
+Creative Link Effects:
+	http://tympanus.net/codrops/2013/08/06/creative-link-effects/
+
+Color Codes:
+HTML		#E87E04
+CSS		#3498DB
+C++		#67809F
+PHP		#3A539B
+JavaScript		#F9BF3B
+jQuery		#22313F
+ASP.Net		#C0392B
+Android		#2ECC71
+Java		#F22613
+WordPress		#6C7A89
+Development Tools	#913D88
+Business		#BE90D4
