@@ -1,30 +1,28 @@
-<section class="container">
-	
-	<section class="content-md">
+<section class="content-md">
 		<form action="">
 			<table class="editform">
 				<tr>
-					<th><label>Your Photo</label></th>
+					<td><label>Your Photo</label></td>
 					<td><input type="file" multiple=""/></td>
 				</tr>
 				<tr>
-					<th><label>First Name</label></th>
+					<td><label>First Name</label></td>
 					<td><input type="text" name="" /></td>
 				</tr>
 				<tr>
-					<th><label>Last Name</label></th>
+					<td><label>Last Name</label></td>
 					<td><input type="text" name="" /></td>
 				</tr>
 				<tr>
-					<th><label>Vitorials Profile URL</label></th>
+					<td><label>Vitorials Profile URL</label></td>
 					<td><input type="text" name="" /></td>
 				</tr>
 				<tr>
-					<th><label>About You</label></th>
+					<td><label>About You</label></td>
 					<td><textarea rows="4" cols="50" name=""></textarea></td>
 				</tr>
 				<tr>
-					<th><label>Country</label></th>
+					<td><label>Country</label></td>
 					<td>
 						<select id="category" name="">
 							<option select="selected">Choose Country</option>
@@ -36,11 +34,11 @@
 					</td>
 				</tr>
 				<tr>
-					<th><label>Email Address</label></th>
+					<td><label>Email Address</label></td>
 					<td><input type="text" name="" /></td>
 				</tr>
 				<tr>
-					<th><label>Highest Level of Education</label></th>
+					<td><label>Highest Level of Education</label></td>
 					<td>
 						<select id="category" name="">
 							<option select="selected">Choose One</option>
@@ -52,7 +50,7 @@
 					</td>
 				</tr>
 				<tr>
-					<th><label>I am looking for work</label></th>
+					<td><label>I am looking for work</label></td>
 					<td>
 						<select id="category" name="">
 							<option select="selected">Choose One</option>
@@ -62,36 +60,42 @@
 					</td>
 				</tr>
 				<tr>
-					<th><label>Company Name</label></th>
+					<td><label>Company Name</label></td>
 					<td><input type="text" name="" /></td>
 				</tr>
 				<tr>
-					<th><label>Job Title</label></th>
+					<td><label>Job Title</label></td>
 					<td><input type="text" name="" /></td>
 				</tr>
 				<tr>
-					<th><label>Spoken Languages</label></th>
+					<td><label>Spoken Languages</label></td>
 					<td><input type="text" name="" /></td>
 				</tr>
 				<tr>
-					<th><label>Awards</label></th>
+					<td><label>Awards</label></td>
 					<td><input type="text" name="" /></td>
 				</tr>
 				<tr>
-					<th><label>Publications</label></th>
+					<td><label>Publications</label></td>
 					<td><input type="text" name="" /></td>
 				</tr>
 				<tr>
-					<th><label>Social Profile</label></th>
+					<td><label>Social Profile</label></td>
 					<td><input type="text" name="" /></td>
 				</tr>
 				<tr>
-					<th><label>Website URL</label></th>
+					<td><label>Website URL</label></td>
 					<td><input type="text" name="" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="submit" name="submit" value="Save" />
+						<input type="reset" name="reset" value="Reset" />
+					</td>
 				</tr>
 			</table>
 		</form>
-		<a class="form-action" href="">Save Changes</a>
 	</section>
 	
 	<section class="clear"></section>

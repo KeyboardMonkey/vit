@@ -128,7 +128,7 @@ class Register extends CI_Controller
 
                 }
                 else{
-                	$message="Form Not Submitted!";
+                	// $message="Form Not Submitted!";
                 }
 		$this->load->view('templates/header-login');
 		$this->load->view('pages/register', array('message' => $message));

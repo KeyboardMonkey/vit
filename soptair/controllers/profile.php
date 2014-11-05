@@ -18,7 +18,7 @@ class Profile extends CI_Controller
 		$this->load->view('templates/header');
 		$this->load->view('templates/breadcrumbs');
 	 	$this->load->view('templates/side-navs');
-		$this->load->view('pages/edit-account');
+		$this->load->view('pages/edit-profile');
 		$this->load->view('templates/footer');
 
 	

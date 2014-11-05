@@ -6,9 +6,26 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>Vitorials</title>
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/styles/main.css" />
 
-        <script src="<?=base_url();?>assets/js/jquery-1.4.1.min.js"></script>
+        <meta name="author" content="Team Vitorials" />
+        <meta name="description" content="Vitorials - A better way to learn technology" />
+        <meta name="keywords" content="programming tutorials, vitorial, learn php css html javascript, free tutorials, free programming video courses" />
+        
+        <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/graphics/favicon_vitorials.ico">
+        <!-- COMMON STYLE SHEETS FROM THE HEADER -->
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/styles/main.css" />
+       
+        <!-- COMMON SCRIPTS FROM THE HEADER -->
+        <script src="<?= base_url();?>assets/js/jquery-1.4.1.min.js"></script>
+
+
+       <!--          
+       <script src="<?= base_url();?>assets/js/modernizr.custom.63321.js"></script>
+       <script src="<?= base_url();?>assets/js/try.js"></script>
+       <script src="<?= base_url();?>assets/js/classie.js"></script>
+       <script src="<?= base_url();?>assets/js/borderMenu.js"></script> -->
+
+
 	</head>
 <body>
 
@@ -22,8 +39,8 @@
     </nav>
     <section id="user-settings-list" style="display:none;">
         <ul>
-            <li><a href="<?php echo base_url(); ?>index.php/account">Account Settings</a></li>
-            <li><a href="<?php echo base_url(); ?>home">Logout</a></li>
+            <li><a href="<?php echo base_url(); ?>index.php/profile">Account Settings</a></li>
+            <li><a href="<?php echo base_url(); ?>">Logout</a></li>
         </ul>
     </section>
     <section id="notifications-list" style="display: none;">
@@ -42,3 +59,16 @@
 </header>
 
 <!-- END OF HEADER -->
+
+    <!--     <nav id="bt-menu" class="bt-menu">
+            <a href="#" class="bt-menu-trigger">Menu</a>
+            <ul>
+                <li><a href="home"><img src="<?=base_url(); ?>assets/graphics/home.svg" width="50px" height="50px" /></a></li>
+                <li><a href="library"><img src="<?=base_url(); ?>assets/graphics/library.svg" width="50px" height="50px" /></a></li>
+                <li><a href="tracks"><img src="<?=base_url(); ?>assets/graphics/paths.svg" width="50px" height="50px" /></a></li>
+                <li><a href="tech_feeds"><img src="<?=base_url(); ?>assets/graphics/tech-feeds.svg" width="50px" height="50px" /></a></li>
+            </ul>
+        </nav> --> 
+<!-- 
+    <script src="<?=base_url(); ?>assets/js/classie.js"></script>
+    <script src="<?=base_url(); ?>assets/js/borderMenu.js"></script> -->
