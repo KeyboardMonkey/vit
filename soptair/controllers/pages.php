@@ -19,7 +19,7 @@ class Pages extends CI_Controller
 
 	$this->load->view('templates/header', $data);
 	$this->load->view('templates/breadcrumbs', $data);
- 	$this->load->view('templates/side-navs', $data);
+ 	// $this->load->view('templates/side-navs', $data);
 	$this->load->view('pages/'.$page, $data);
 	$this->load->view('templates/footer', $data);
 	}

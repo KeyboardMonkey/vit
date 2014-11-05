@@ -4,7 +4,7 @@ class Register extends CI_Controller
 {
 		public function view()
 	{
-		$message = "";
+		$message = "fdssdafasdfa";
 
 		$this->load->view('templates/header-login');
 		$this->load->view('pages/register', array('message' => $message));
@@ -107,12 +107,12 @@ class Register extends CI_Controller
 				array(
 						'field' => 'first_name',
 						'label' => 'First Name',
-						'rules' => 'required|xss_clean',
+						'rules' => 'required|xss_clean|alpha',
 					),
                                 array(
 						'field' => 'last_name',
 						'label' => 'last Name',
-						'rules' => 'required|xss_clean',
+						'rules' => 'required|xss_clean|alpha',
 					),
 			));
                 if($this->form_validation->run())
@@ -124,11 +124,18 @@ class Register extends CI_Controller
                     $user -> type = "User";
                     $user -> save();
                     $message = "<h4>Kindly check email({$user -> email}) for further verification</h4>";
+                    redirect('preference/index');
+
+                }
+                else{
+                	$message="Form Not Submitted!";
                 }
 		$this->load->view('templates/header-login');
 		$this->load->view('pages/register', array('message' => $message));
 		$this->load->view('widgets/signup-form', array('message' => $message));
 		$this->load->view('templates/footer');
+
+
 
 	}
 

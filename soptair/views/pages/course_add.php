@@ -1,7 +1,5 @@
-
 <section class="container">
-	
-	<section class="content-lg">
+		<section class="content-lg">
         <?=$message;?>
         <?=validation_errors();?>
         <form class="dashboard" method="post">

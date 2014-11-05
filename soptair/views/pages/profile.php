@@ -4,7 +4,7 @@
 
 		<section class="content-md">
 			<section class="profile-pic">
-				<img src="<?=base_url();?>graphics/profile-pic.jpg" width="120px" height="120px" />
+				<img src="<?=base_url();?>assets/graphics/profile-pic.jpg" width="120px" height="120px" />
 			</section>
 			<section class="user-info">
 				<h1>Abdul Rehman</h1>

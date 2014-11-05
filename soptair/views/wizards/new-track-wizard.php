@@ -58,6 +58,6 @@
 		</section>
 	</section>
 	</section>
-	<script src="<?=base_url();?>styles/js/svgcheckbx.js"></script> <!-- circling script -->
+	<script src="<?=base_url();?>assets/js/svgcheckbx.js"></script> <!-- codedrop fancy selection script -->
 </body>
 </html>

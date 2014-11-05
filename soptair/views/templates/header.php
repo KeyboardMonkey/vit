@@ -6,18 +6,19 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>Vitorials</title>
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>styles/main.css" />
-        <script src="<?=base_url();?>/assets/js/jquery-1.4.1.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/styles/main.css" />
+
+        <script src="<?=base_url();?>assets/js/jquery-1.4.1.min.js"></script>
 	</head>
 <body>
 
 <header>
     <section class="logo">
-            <a href="<?=base_url();?>"><img src="<?=base_url();?>graphics/logo.png" width="200px" height="39px" /></a>
+            <a href="<?=base_url();?>"><img src="<?=base_url();?>assets/graphics/logo.png" width="200px" height="39px" /></a>
     </section>
     <nav id="header">
-        <a onclick="javascript:$('#notifications-list').hide();$('#user-settings-list').toggle();"><img src="<?php echo base_url(); ?>graphics/user.svg" width="33px" height="25px" /></a>
-        <a onclick="javascript:$('#user-settings-list').hide();$('#notifications-list').toggle();" class="no-border"><img src="<?php echo base_url(); ?>graphics/notification.svg" width="25px" height="25px" /><span class="notification-badge">3</span></a>
+        <a onclick="javascript:$('#notifications-list').hide();$('#user-settings-list').toggle();"><img src="<?php echo base_url(); ?>assets/graphics/user.svg" width="33px" height="25px" /></a>
+        <a onclick="javascript:$('#user-settings-list').hide();$('#notifications-list').toggle();" class="no-border"><img src="<?php echo base_url(); ?>assets/graphics/notification.svg" width="25px" height="25px" /><span class="notification-badge">3</span></a>
     </nav>
     <section id="user-settings-list" style="display:none;">
         <ul>

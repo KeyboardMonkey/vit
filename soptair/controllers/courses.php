@@ -11,7 +11,9 @@ class Courses extends CI_Controller
         {
            redirect('library');
         }
-        $this -> load -> view('pages/viewcourse', array('course' => $course));
+        
+        
+        $this -> load -> view('pages/course-intro', array('course' => $course));
     }
 
    public function enrollme($course_id)
@@ -91,7 +93,8 @@ class Courses extends CI_Controller
 
         $this->load->view('templates/header');
         $this->load->view('templates/breadcrumbs');
-        $this->load->view('pages/course_add', array('message' => $message));
+        // $this->load->view('pages/course_add', array('message' => $message));
+        $this->load->view('pages/course-add', array('message' => $message));
         $this->load->view('templates/footer');
     }
 
@@ -128,5 +131,5 @@ class Courses extends CI_Controller
     }
 
 
-} /*class courses extends CI_Controller */
+} /*class Courses extends CI_Controller */
 /*end of file: courses.php*/

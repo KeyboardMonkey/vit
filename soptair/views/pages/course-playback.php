@@ -21,7 +21,7 @@
 		
 		<section class="widget-project-files">
 			<h4>Download</h4>
-			<a href=""><span><img src="graphics/downloads.svg" width="25px" height="22px" alt="download" /><span>Download Course Files</a>
+			<a href=""><span><img src="<?=base_url();?>assets/graphics/downloads.svg" width="25px" height="22px" alt="download" /><span>Download Course Files</a>
 		</section>
 		
 		<section class="clear"></section>
@@ -39,17 +39,17 @@
         <section style="display:none;margin: 0 auto;" class="html5gallery" data-skin="vertical" data-width="720" data-height="480">
 
             <!-- Add Videos to Gallery -->
-            <a href="http://localhost/-others/vitorials/assets/imgs/gallery/2020 Technology.mp4">
-                <img src="http://localhost/-others/vitorials/assets/imgs/gallery/video1.jpg" alt="2020 Technology" />
+            <a href="<?=base_url();?>assets/graphics/gallery/2020-Technology.mp4">
+                <img src="<?=base_url();?>assets/graphics/gallery/video1.jpg" alt="2020 Technology" />
             </a>
-            <a href="http://localhost/-others/vitorials/assets/imgs/gallery/Amazing Screen.mp4">
-                <img src="http://localhost/-others/vitorials/assets/imgs/gallery/video2.jpg" alt="Amazing Screen" />
+            <a href="<?=base_url();?>assets/graphics/gallery/Amazing-Screen.mp4">
+                <img src="<?=base_url();?>assets/graphics/gallery/video2.jpg" alt="Amazing Screen" />
             </a>
-            <a href="http://localhost/-others/vitorials/assets/imgs/gallery/Coke and Milk.mp4">
-                <img src="http://localhost/-others/vitorials/assets/imgs/gallery/video3.jpg" alt="Coke and Milk" />
+            <a href="<?=base_url();?>assets/graphics/gallery/Coke-and-Milk.mp4">
+                <img src="<?=base_url();?>assets/graphics/gallery/video3.jpg" alt="Coke and Milk" />
             </a>
-            <a href="http://localhost/-others/vitorials/assets/imgs/gallery/Future Technology 2019.mp4">
-                <img src="http://localhost/-others/vitorials/assets/imgs/gallery/video4.jpg" alt="Future Technology 2019" />
+            <a href="<?=base_url();?>assets/graphics/gallery/Future-Technology-2019.mp4">
+                <img src="<?=base_url();?>assets/graphics/gallery/video4.jpg" alt="Future Technology 2019" />
             </a>
 
         </section>

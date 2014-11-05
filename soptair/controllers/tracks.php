@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Paths extends CI_Controller 
+class Tracks extends CI_Controller 
 {
 		public function view()
 	{
@@ -43,5 +43,5 @@ class Paths extends CI_Controller
 
 
 
-}/*class Paths extends CI_Controller */
-/*end of file: pathss.php*/
+}/*class Tracks extends CI_Controller */
+/*end of file: tracks.php*/
