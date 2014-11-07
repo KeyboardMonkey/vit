@@ -1,6 +1,6 @@
 /*  -- THEME COLORS
 
-->COLOR TAGSF
+->COLOR TAGS
 html        blue:           #19B5FE
 css         voilet:         #34495e
 cpp         darkgrey:       #2c3e50
@@ -468,6 +468,42 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 .course-info ul li { padding:5px 0; }
 .inline-buttons { padding:0 20px 20px; float:right; }
 /*-----------------------------------------------------------End Learning Paths-----------------------------------------------------------*/
+/*-----------------------------------------------------------Course Playback-----------------------------------------------------------*/
+.widgets { float:right; margin-right:5%; }
+.widgets .widget-video-transition { margin-top:18px; padding:10px 0; width:240px; background:#ffffff; }
+.widgets .widget-video-transition h6 { padding:10px 10px 0; }
+.widgets .widget-video-transition h4 { padding:5px 10px 0; }
+.widgets .widget-video-transition ul { padding:10px 0 40px 0; list-style:none; }
+.widgets .widget-video-transition ul li { padding:5px 0; display:inline-block; border-bottom:1px solid #ECF0F1; text-align:center; cursor:pointer; font-size:14px; background:#2ABB9B; transition:all 0.5s ease-out; opacity:0.6; }
+	.widgets .widget-video-transition ul li:hover { opacity:1; }
+.widgets .widget-video-transition ul li  a { color:#FFFFFF; transition:all 0.5s ease-out; }
+.widgets .widget-video-transition ul li.previous { width:35%; float:left; margin-left:14%; }
+.widgets .widget-video-transition ul li.next { width:35%; float:right; margin-right:14%; }
+
+.widgets .widget-course-progress { margin-top:18px; padding:10px 0 20px; width:240px; background:#ffffff; }
+.widgets .widget-course-progress h4 { padding:10px 10px 0; }
+.widgets .widget-course-progress .progress-bar { margin:0 auto; padding:5px 15px; width:80%; border-bottom:10px solid #58585a; }
+
+.widgets .widget-project-files { margin-top:18px; padding:10px 0 20px; width:240px; background:#ffffff; }
+.widgets .widget-project-files h4 { padding:10px; }
+.widgets .widget-project-files a { padding:5px 10px; margin-bottom:10px; transition:all 0.5s ease-out; }
+	.widgets .widget-project-files a:hover { color:#2ABB9B; }
+	.widgets .widget-project-files a span img { padding-right:10px; }
+
+.widgets .widget-facebook-recommendations { margin-top:18px; padding:10px 0 20px; width:240px; background:#ffffff; }
+.widgets .widget-facebook-recommendations h4, p.fb-feeds { padding:5px 10px; border-bottom:1px solid #ECF0F1; }
+	.widgets .widget-facebook-recommendations p.fb-feeds { opacity:0.8; }
+
+.widget-video-player { margin:10px auto; width:95%; height:420px; background:#ECF0F1; }
+.content-md h3.course-title { margin:0 2.5%; padding:5px 0 10px; border-bottom:1px solid #ECF0F1; }
+.content-md .teacher-notes { margin:20px 2.5%; }
+.content-md .teacher-notes ol { padding:5px 20px; color:#2ABB9B; }
+.content-md .teacher-notes ol li { padding:3px 0 }
+.content-md .teacher-notes ol li a { color:#2ABB9B; transition:all 0.5s ease-out; }
+.content-md .teacher-notes ol li a:hover { text-decoration:underline; }
+
+.content-md .widget-facebook-commenter { margin:0 2.5%; }
+/*-----------------------------------------------------------End Course Playback-----------------------------------------------------------*/
 /*-----------------------------------------------------------Course Introduction-----------------------------------------------------------*/
 .content-lg h2.course-heading { padding:10px 20px;}
 .content-lg ul.course-desc { float:left;padding:5px 20px; list-style:none; }
@@ -515,59 +551,6 @@ h3.widget-similar-courses { margin:20px 0; padding:0 0 10px 60px; width:100%; bo
 	.widget-similar-courses ul.course-desc li { display:inline; }
 	.widget-similar-courses ul.course-desc li span { vertical-align:middle; padding:0 2px; }
 /*-----------------------------------------------------------End Course Introduction-----------------------------------------------------------*/
-/*-----------------------------------------------------------Course Playback-----------------------------------------------------------*/
-.widgets { float:right; margin-right:5%; }
-.widgets .widget-video-transition { margin-top:18px; padding:10px 0; width:240px; background:#ffffff; }
-.widgets .widget-video-transition h6 { padding:10px 10px 0; }
-.widgets .widget-video-transition h4 { padding:5px 10px 0; }
-.widgets .widget-video-transition ul { padding:10px 0 40px 0; list-style:none; }
-.widgets .widget-video-transition ul li { padding:5px 0; display:inline-block; border-bottom:1px solid #ECF0F1; text-align:center; cursor:pointer; font-size:14px; background:#2ABB9B; transition:all 0.5s ease-out; opacity:0.6; }
-	.widgets .widget-video-transition ul li:hover { opacity:1; }
-.widgets .widget-video-transition ul li  a { color:#FFFFFF; transition:all 0.5s ease-out; }
-.widgets .widget-video-transition ul li.previous { width:35%; float:left; margin-left:14%; }
-.widgets .widget-video-transition ul li.next { width:35%; float:right; margin-right:14%; }
-
-.widgets .widget-course-progress { margin-top:18px; padding:10px 0 20px; width:240px; background:#ffffff; }
-.widgets .widget-course-progress h4 { padding:10px 10px 0; }
-.widgets .widget-course-progress .progress-bar { margin:0 auto; padding:5px 15px; width:80%; border-bottom:10px solid #58585a; }
-
-.widgets .widget-project-files { margin-top:18px; padding:10px 0 20px; width:240px; background:#ffffff; }
-.widgets .widget-project-files h4 { padding:10px; }
-.widgets .widget-project-files a { padding:5px 10px; margin-bottom:10px; transition:all 0.5s ease-out; }
-	.widgets .widget-project-files a:hover { color:#2ABB9B; }
-	.widgets .widget-project-files a span img { padding-right:10px; }
-
-.widgets .widget-facebook-recommendations { margin-top:18px; padding:10px 0 20px; width:240px; background:#ffffff; }
-.widgets .widget-facebook-recommendations h4, p.fb-feeds { padding:5px 10px; border-bottom:1px solid #ECF0F1; }
-	.widgets .widget-facebook-recommendations p.fb-feeds { opacity:0.8; }
-
-.widget-video-player { margin:10px auto; width:95%; height:420px; background:#ECF0F1; }
-.content-md h3.course-title { margin:0 2.5%; padding:5px 0 10px; border-bottom:1px solid #ECF0F1; }
-.content-md .teacher-notes { margin:20px 2.5%; }
-.content-md .teacher-notes ol { padding:5px 20px; color:#2ABB9B; }
-.content-md .teacher-notes ol li { padding:3px 0 }
-.content-md .teacher-notes ol li a { color:#2ABB9B; transition:all 0.5s ease-out; }
-.content-md .teacher-notes ol li a:hover { text-decoration:underline; }
-
-.content-md .widget-facebook-commenter { margin:0 2.5%; }
-/*-----------------------------------------------------------End Course Playback-----------------------------------------------------------*/
-/*-----------------------------------------------------------Quiz-----------------------------------------------------------*/
-.content-md h5.quiz { margin:0 2.5%; padding:5px 0 10px; }
-.content-md h3.quiz-question { margin:0 2.5%; padding:5px 0 10px; border-bottom:1px solid #ECF0F1; }
-.widgets .widget-quiz-remarks { margin-top:18px; padding:10px 0; width:240px; background:#ffffff; }
-.widgets .widget-quiz-remarks ul { padding:20px 0 95px 0; list-style:none; }
-.widgets .widget-quiz-remarks ul li { padding:20px 0; display:inline-block; border-bottom:1px solid #ECF0F1; text-align:center; cursor:pointer; font-size:14px; background:#2ABB9B; transition:all 0.5s ease-out; }
-	.widgets .widget-quiz-remarks ul li  a { color:#FFFFFF; font-size:16px; transition:all 0.5s ease-out; }
-	.widgets .widget-quiz-remarks ul li:first-child { width:35%; font-weight:bold; float:left; margin-left:14%; }
-	.widgets .widget-quiz-remarks ul li:last-child { width:35%; float:right; margin-right:14%; }
-.widgets .widget-quiz-remarks p.info { margin:0 auto; padding:0; width:80%; text-align:justify; }
-ul.quiz-options { margin:0; padding:20px 40px;}
-	ul.quiz-options li { padding:25px 0; list-style:none; }
-	ul.quiz-options input { margin-right:10px; }
-form.quiz-answer { padding:0 20px 10px; float:right; position:relative; text-align:center; }
-form.quiz-answer input[type=submit] { padding:5px 50px; font-size:16px; background:#2ABB9B; border:1px solid #2ABB9B; color:#FFFFFF; transition:all 0.5s ease-out; position:relative; cursor:pointer; }
-form.quiz-answer input[type=submit]:hover { background:#ECF0F1; border:1px solid #2ABB9B; color:#2ABB9B; }
-/*-----------------------------------------------------------End Quiz-----------------------------------------------------------*/
 /*-----------------------------------------------------------Technology Feeds-----------------------------------------------------------*/
 .feeds-col1 { margin:10px 0 10px 2.2%; float:left; width:22%; border:1px solid #ECF0F1; }
 .feeds-col2 { margin:10px 0 10px 2.2%; float:left; width:22%; border:1px solid #ECF0F1; }

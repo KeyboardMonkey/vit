@@ -52,7 +52,7 @@
                 <section class="<?=$class?>">
 			<section class="course-info">
 				<section class="color-tag">
-					<a href="<?=base_url();?>index.php/pages/view/course-intro" class="<?=$course->getCategory()->color_tag;?>"><?=$course->getCategoryTitle();?></a>
+					<a href="<?=base_url();?>index.php/courses/temp" class="<?=$course->getCategory()->color_tag;?>"><?=$course->getCategoryTitle();?></a>
 				</section>
 				<h4 class="course-name"><?=$course->full_name;?></h4>
 				<p class="points"><?=$course->points;?> Points</p>

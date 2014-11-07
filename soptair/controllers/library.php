@@ -21,37 +21,18 @@ class Library extends MY_Controller
                 
 		$this->load->view('templates/header');
 		$this->load->view('templates/breadcrumbs');
-	 
-		$this->load->view('pages/library');
+	 	$this->load->view('pages/library');
 		$this->load->view('templates/footer');
 		
 
 	}
 
 
-
-		public function edit()
-	{
-
-	
-
-	}
-
-		public function delete()
-	{
-
-	
-
-	}
-
-
-
 	public function index($type = NULL, $value = NULL)
 	{
-                if($type != 'category') $type = NULL;
+        if($type != 'category') $type = NULL;
 		$this->load->view('templates/header');
 		$this->load->view('templates/breadcrumbs');
-
 		$this->load->view('pages/library', array('filter_type' => $type, 'filter_value' => $value ));
 		$this->load->view('templates/footer');
 
@@ -59,5 +40,5 @@ class Library extends MY_Controller
 
 
 
-}/*class Library extends CI_Controller */
+}/*class Library extends MY_Controller  */
 /*end of file: library.php*/

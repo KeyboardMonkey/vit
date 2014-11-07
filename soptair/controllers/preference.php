@@ -12,13 +12,17 @@ class Preference extends MY_Controller
 
 	}
 
+	public function set_preference()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('wizards/pref-set');
+		$this->load->view('templates/footer');
+	}
 
 	public function index()
 	{
 
-		$this->load->view('templates/header');
-		$this->load->view('wizards/pref-set');
-		$this->load->view('templates/footer');
+		redirect('preference/set_preference');
 
 	}
 

@@ -13,7 +13,10 @@ class Courses extends CI_Controller
         }
         
         
+        $this -> load -> view('templates/header');
+        $this -> load -> view('templates/breadcrumbs'); 
         $this -> load -> view('pages/course-intro', array('course' => $course));
+        $this -> load -> view('templates/footer');
     }
 
    public function enrollme($course_id)
@@ -99,18 +102,20 @@ class Courses extends CI_Controller
     }
 
 
-
-    public function edit()
+    public function temp()
     {
 
-    	
-
-    }
-
-    public function delete()
-    {
-
-    	
+        $course = new course();
+        $course -> load($id);
+        if(!isset($course->course_id))
+        {
+           redirect('library');
+        }
+        
+    	$this->load->view('templates/header');
+        $this->load->view('templates/breadcrumbs');
+        $this->load->view('pages/viewcourse', array('course' => $course) );
+        $this->load->view('templates/footer');
 
     }
 
