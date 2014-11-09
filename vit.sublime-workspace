@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"passwor",
+				"password_conf"
+			],
+			[
+				"ac",
+				"action	Attr"
+			],
+			[
+				"pri",
+				"print_r"
+			],
+			[
+				"c",
+				"class	Attr"
+			],
+			[
+				"view",
+				"viewcourse"
+			],
+			[
 				"f",
 				"fun	function …"
 			],
@@ -32,10 +52,6 @@
 				"href	Attr"
 			],
 			[
-				"c",
-				"css"
-			],
-			[
 				"block",
 				"block1"
 			]
@@ -44,42 +60,10 @@
 	"buffers":
 	[
 		{
-			"file": "soptair/views/pages/library.php",
+			"file": "/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/course playback screen/course-playback.html",
 			"settings":
 			{
-				"buffer_size": 2691,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "soptair/models/course.php",
-			"settings":
-			{
-				"buffer_size": 2586,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "soptair/views/templates/header.php",
-			"settings":
-			{
-				"buffer_size": 2070,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "soptair/controllers/courses.php",
-			"settings":
-			{
-				"buffer_size": 3723,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "soptair/views/pages/recommendations.php",
-			"settings":
-			{
-				"buffer_size": 5585,
+				"buffer_size": 1990,
 				"line_ending": "Windows"
 			}
 		},
@@ -87,31 +71,15 @@
 			"file": "soptair/views/pages/course-playback.php",
 			"settings":
 			{
-				"buffer_size": 4546,
+				"buffer_size": 4613,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "soptair/core/my_model.php",
+			"file": "soptair/views/pages/course-playback-old.php",
 			"settings":
 			{
-				"buffer_size": 2907,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "soptair/controllers/recommendations.php",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "soptair/core/MY_Controller.php",
-			"settings":
-			{
-				"buffer_size": 295,
+				"buffer_size": 4449,
 				"line_ending": "Windows"
 			}
 		}
@@ -143,45 +111,74 @@
 	},
 	"file_history":
 	[
+		"/A/xampp/htdocs/vit/soptair/controllers/tracks.php",
+		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/course playback screen/add-track.html",
+		"/A/xampp/htdocs/vit/soptair/views/pages/track-add.php",
+		"/A/xampp/htdocs/vit/assets/styles/main.css",
+		"/A/xampp/htdocs/vit/soptair/controllers/courses.php",
+		"/A/xampp/htdocs/vit/soptair/controllers/register.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/edit-profile.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/course_add.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/course-intro.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/course-add.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/course-playback-old2.php",
+		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/course playback screen/course-playback.html",
+		"/A/xampp/htdocs/vit/soptair/controllers/notifications.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/quiz.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/tracks.php",
+		"/A/xampp/htdocs/ssss/dynamic.php",
+		"/A/xampp/htdocs/vit/Vitorials.phpproj",
+		"/A/xampp/htdocs/vit/soptair/views/templates/side-navs.php",
+		"/A/xampp/htdocs/vit/soptair/views/templates/header.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/library.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/paths.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/register.php",
+		"/A/xampp/htdocs/vit/soptair/controllers/preference.php",
+		"/A/xampp/htdocs/index.php",
+		"/A/xampp/htdocs/vit/soptair/controllers/profile.php",
+		"/A/xampp/htdocs/vit/soptair/views/widgets/signup-form.php",
+		"/A/xampp/htdocs/vit/soptair/controllers/library.php",
+		"/A/xampp/htdocs/vit/soptair/core/MY_Controller.php",
+		"/A/xampp/htdocs/vit/soptair/controllers/quiz.php",
+		"/A/xampp/htdocs/vit/soptair/views/templates/header-login.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/viewcourse.php",
+		"/A/xampp/htdocs/vit/assets/js/borderMenu.js",
+		"/A/xampp/htdocs/vit/assets/js/classie.js",
+		"/A/xampp/htdocs/vit/assets/js/new.js",
+		"/A/xampp/htdocs/vit/assets/js/try.js",
+		"/A/xampp/htdocs/vit/assets/js/New folder/jquery.dropdown.js",
+		"/A/xampp/htdocs/vit/assets/js/New folder/modernizr.custom.63321.js",
+		"/A/xampp/htdocs/vit/soptair/views/pages/profile.php",
+		"/A/xampp/htdocs/vit/soptair/views/wizards/pref-set.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/recommendations.php",
+		"/A/xampp/htdocs/vit/soptair/views/wizards/pref-rank.php",
+		"/A/xampp/htdocs/vit/soptair/controllers/recommendations.php",
+		"/A/xampp/htdocs/vit/soptair/controllers/pages.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/course-playback.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/new-track-wizard.php",
+		"/A/xampp/htdocs/vit/soptair/views/templates/header-clean.php",
+		"/A/xampp/htdocs/vit/soptair/views/pages/home.php",
+		"/A/xampp/htdocs/vit/soptair/models/course.php",
+		"/A/xampp/htdocs/vit/soptair/core/my_model.php",
 		"/A/xampp/htdocs/htmls/dd/recommendations.html",
 		"/A/xampp/htdocs/htmls/dd/pref-rank.html",
 		"/A/xampp/htdocs/htmls/dd/pref-set.html",
-		"/A/xampp/htdocs/vit/soptair/controllers/recommendations.php",
-		"/A/xampp/htdocs/vit/soptair/views/pages/course-playback.php",
 		"/A/xampp/htdocs/vit/soptair/controllers/leaderboard.php",
 		"/A/xampp/htdocs/dashboard/assets/css/main.css",
 		"/A/xampp/htdocs/htmls/course-playback.html",
-		"/A/xampp/htdocs/vit/soptair/views/pages/home.php",
 		"/A/xampp/htdocs/vit/soptair/views/pages/leaderboard.php",
 		"/A/xampp/htdocs/vit/soptair/views/pages/course.php",
 		"/A/xampp/htdocs/vit/soptair/views/pages/tech-feeds.php",
-		"/A/xampp/htdocs/vit/soptair/views/templates/header.php",
 		"/A/xampp/htdocs/vit/styles/main.css",
-		"/A/xampp/htdocs/vit/soptair/controllers/pages.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/register.php",
 		"/A/xampp/htdocs/vit/soptair/controllers/tech_feeds.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/profile.php",
 		"/A/xampp/htdocs/vit/soptair/controllers/paths.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/library.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/notifications.php",
 		"/A/xampp/htdocs/vit/soptair/controllers/home.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/courses.php",
 		"/A/xampp/htdocs/vit/soptair/config/config.php",
 		"/F/xxxxxx/main.css",
-		"/A/xampp/htdocs/vit/soptair/views/templates/header-clean.php",
-		"/A/xampp/htdocs/vit/soptair/core/my_model.php",
-		"/A/xampp/htdocs/vit/soptair/views/templates/side-navs.php",
-		"/A/xampp/htdocs/vit/soptair/views/templates/header-login.php",
-		"/A/xampp/htdocs/vit/soptair/core/MY_Controller.php",
-		"/A/xampp/htdocs/vit/soptair/models/course.php",
-		"/A/xampp/htdocs/vit/soptair/views/pages/profile.php",
 		"/A/xampp/htdocs/vit/soptair/views/pages/post-reg.php",
 		"/A/xampp/htdocs/vit/soptair/views/pages/edit-account.php",
-		"/A/xampp/htdocs/vit/soptair/views/pages/course_add.php",
 		"/A/xampp/htdocs/vit/soptair/config/autoload.php",
 		"/A/xampp/htdocs/vit/soptair/controllers/add_course.php",
-		"/A/xampp/htdocs/vit/soptair/views/pages/register.php",
-		"/A/xampp/htdocs/vit/soptair/views/widgets/signup-form.php",
 		"/A/xampp/htdocs/vit/index.php",
 		"/A/xampp/vit-core/soptair/views/templates/footer.php",
 		"/A/xampp/vit-core/soptair/config/routes.php",
@@ -241,36 +238,7 @@
 		"/C/Winginx/home/localhost/public_html/code/application/controllers/tahir.php",
 		"/C/Winginx/home/localhost/public_html/code/application/config/routes.php",
 		"/C/Winginx/home/localhost/public_html/code/application/config/config.php",
-		"/C/Winginx/home/localhost/public_html/code/application/config/autoload.php",
-		"/C/Winginx/home/localhost/public_html/code/application/controllers/welcome.php",
-		"/C/Winginx/home/localhost/public_html/code/application/.htaccess",
-		"/C/Winginx/home/localhost/public_html/code/application/views/welcome_message.php",
-		"/C/Winginx/home/localhost/public_html/code/application/controllers/tahir",
-		"/C/Winginx/home/localhost/public_html/code/index.php",
-		"/B/-- FYP/2. Prototypes/Vitorials - Web Template/styles/bootstrap/css/bootstrap.min.css",
-		"/B/-- FYP/2. Prototypes/Vitorials - Web Template/styles/css/styles.css",
-		"/B/-- FYP/2. Prototypes/HTMLS/Vitorials/notifications.html",
-		"/B/-- FYP/2. Prototypes/HTMLS/Vitorials/index.html",
-		"/B/-- FYP/2. Prototypes/Vitorials - Web Template/path-selection.html",
-		"/B/-- FYP/2. Prototypes/Vitorials - Web Template/css/component.css",
-		"/B/-- FYP/2. Prototypes/Vitorials - Web Template/css/demo.css",
-		"/A/aaa/TEMP/5191.html",
-		"/A/aaa/TEMP/5195.html",
-		"/C/Users/The Unusual Suspect/Desktop/projectChitral/HQ/100_7105.JPG",
-		"/C/Users/The Unusual Suspect/AppData/Local/Temp/fz3temp-1/custom.css",
-		"/C/Users/The Unusual Suspect/AppData/Local/Temp/fz3temp-1/environmental-site-assessment.html",
-		"/C/Users/The Unusual Suspect/AppData/Local/Temp/fz3temp-1/riparan-areas-regulation.html",
-		"/C/Users/The Unusual Suspect/AppData/Local/Temp/fz3temp-1/index.html",
-		"/C/Users/The Unusual Suspect/AppData/Local/Temp/fz3temp-1/hazardous-material-risk.html",
-		"/A/ABC/report-May20.html",
-		"/B/-- FYP/2. Prototypes/Vitorials - Web Template/index.html",
-		"/C/Users/The Unusual Suspect/Desktop/AnimatedCheckboxes/css/component.css",
-		"/C/Users/The Unusual Suspect/Desktop/AnimatedCheckboxes/index.html",
-		"/C/Users/The Unusual Suspect/Desktop/AnimatedCheckboxes/css/demo.css",
-		"/C/Users/The Unusual Suspect/Desktop/getCoin login/Signin.htm",
-		"/C/Winginx/home/localhost/public_html/testdrive/protected/views/layouts/main.php",
-		"/C/Winginx/var/mysqladmin/setup/config.php",
-		"/C/Winginx/var/mysqladmin/setup/index.php"
+		"/C/Winginx/home/localhost/public_html/code/application/config/autoload.php"
 	],
 	"find":
 	{
@@ -278,9 +246,14 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
+			"A:\\xampp\\htdocs\\vit",
+			"A:\\xampp\\htdocs\\vit\\soptair\\models",
+			"A:\\xampp\\htdocs\\vit\\soptair\\controllers",
+			"A:\\xampp\\htdocs\\vit\\soptair\\views",
+			"A:\\xampp\\htdocs\\vit\\soptair\\controllers"
 		]
 	},
 	"find_state":
@@ -288,6 +261,30 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"section",
+			"graphics",
+			"enroll-me",
+			"paths",
+			"tracks",
+			"course-playback",
+			"section",
+			"edit-account",
+			"})();\n",
+			"?>",
+			"echo",
+			"base",
+			"redirect",
+			"graphics/",
+			"\"\"",
+			"#",
+			"course_add",
+			"submit_form",
+			"dashboard",
+			"submit_form",
+			"course-desc\">",
+			"font",
+			"viewcourse",
+			"<script ",
 			"<img src=\"graphics/course-thumbnail.png",
 			"<a href=\"\"><img src=\"",
 			"href",
@@ -350,6 +347,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"section",
+			"assets/graphics/",
 			"<img src=\"course-thumbnail.png",
 			"<a href=\"play_btn_36px.png\"><img src=\"",
 			"<?=base_url();?>graphics"
@@ -363,220 +362,16 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "soptair/views/pages/library.php",
+					"file": "/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/course playback screen/course-playback.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2691,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								63,
-								63
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "soptair/models/course.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2586,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								170,
-								170
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "soptair/views/templates/header.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2070,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								328,
-								344
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "soptair/controllers/courses.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3723,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1603,
-								1603
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 333.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "soptair/views/pages/recommendations.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5585,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								495,
-								495
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "soptair/views/pages/course-playback.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4546,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3705,
-								3705
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 763.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "soptair/core/my_model.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2907,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1769,
-								1769
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 982.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "soptair/controllers/recommendations.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 0,
+						"buffer_size": 1990,
 						"regions":
 						{
 						},
@@ -584,41 +379,13 @@
 						[
 							[
 								0,
-								0
+								1990
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"syntax": "Packages/HTML/HTML.tmLanguage",
 							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "soptair/core/MY_Controller.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 295,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -626,13 +393,76 @@
 					},
 					"stack_index": 1,
 					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "soptair/views/pages/course-playback.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4613,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1567,
+								1567
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 312.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "soptair/views/pages/course-playback-old.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								4449
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 234.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
 				}
 			]
 		}
 	],
 	"incremental_find":
 	{
-		"height": 27.0
+		"height": 34.0
 	},
 	"input":
 	{
@@ -647,11 +477,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.540273556231,
 			1.0
 		],
 		"rows":
@@ -706,7 +543,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 187.0,
+	"side_bar_width": 181.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

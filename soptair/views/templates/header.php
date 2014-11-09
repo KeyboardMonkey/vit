@@ -19,12 +19,6 @@
         <script src="<?= base_url();?>assets/js/jquery-1.4.1.min.js"></script>
 
 
-       <!--          
-       <script src="<?= base_url();?>assets/js/modernizr.custom.63321.js"></script>
-       <script src="<?= base_url();?>assets/js/try.js"></script>
-       <script src="<?= base_url();?>assets/js/classie.js"></script>
-       <script src="<?= base_url();?>assets/js/borderMenu.js"></script> -->
-
 
 	</head>
 <body>
@@ -57,18 +51,3 @@
         </section>
     </section>
 </header>
-
-<!-- END OF HEADER -->
-
-    <!--     <nav id="bt-menu" class="bt-menu">
-            <a href="#" class="bt-menu-trigger">Menu</a>
-            <ul>
-                <li><a href="home"><img src="<?=base_url(); ?>assets/graphics/home.svg" width="50px" height="50px" /></a></li>
-                <li><a href="library"><img src="<?=base_url(); ?>assets/graphics/library.svg" width="50px" height="50px" /></a></li>
-                <li><a href="tracks"><img src="<?=base_url(); ?>assets/graphics/paths.svg" width="50px" height="50px" /></a></li>
-                <li><a href="tech_feeds"><img src="<?=base_url(); ?>assets/graphics/tech-feeds.svg" width="50px" height="50px" /></a></li>
-            </ul>
-        </nav> --> 
-<!-- 
-    <script src="<?=base_url(); ?>assets/js/classie.js"></script>
-    <script src="<?=base_url(); ?>assets/js/borderMenu.js"></script> -->

@@ -1,5 +1,5 @@
 
-	<section class="container">
+<section class="container">
 	<section id="welcome">
 		<section id="select-type">
 			<h5>Welcome to VITORIALS, John Doe!</h5>
@@ -7,7 +7,7 @@
 			<section class="choose-category">
 				<form class="ac-custom ac-radio ac-circle" autocomplete="off">
 					<ul>
-				
+						
 						<li><input id="r5" name="r2" type="radio"><label for="r5">I'd like to learn to build mobile app</label></li>
 						<li><input id="r6" name="r2" type="radio"><label for="r6">I'd like to learn to build websites</label></li>
 						<li><input id="r7" name="r2" type="radio"><label for="r7">I'd like to brush my code/design skills</label></li>
@@ -57,7 +57,7 @@
 			</section>
 		</section>
 	</section>
-	</section>
-	<script src="<?=base_url();?>assets/js/svgcheckbx.js"></script> <!-- codedrop fancy selection script -->
+</section>
+<script src="<?=base_url();?>assets/js/svgcheckbx.js"></script> <!-- codedrop fancy selection script -->
 </body>
 </html>

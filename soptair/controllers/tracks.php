@@ -7,7 +7,8 @@ class Tracks extends CI_Controller
 
 		$this->load->view('templates/header');
 		$this->load->view('templates/breadcrumbs');
-		$this->load->view('pages/paths');
+
+		$this->load->view('pages/tracks');
 		$this->load->view('templates/footer');
 		
 
@@ -15,8 +16,13 @@ class Tracks extends CI_Controller
 
 
 
-		public function edit()
+		public function add()
 	{
+		$this->load->view('templates/header');
+		$this->load->view('templates/breadcrumbs');
+		$this->load->view('templates/side-navs');
+		$this->load->view('pages/track-add');
+		$this->load->view('templates/footer');
 
 	
 
@@ -36,7 +42,7 @@ class Tracks extends CI_Controller
 
 		$this->load->view('templates/header');
 		$this->load->view('templates/breadcrumbs');
-		$this->load->view('pages/paths');
+		$this->load->view('pages/tracks');
 		$this->load->view('templates/footer');
 
 	}

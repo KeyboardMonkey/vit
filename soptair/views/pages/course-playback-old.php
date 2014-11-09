@@ -1,4 +1,4 @@
-	<section class="container">
+	
 	<section class="widgets">
 		<section class="widget-video-transition">
 			<h6>Video 1/8</h6>
@@ -10,7 +10,6 @@
 		</section>
 		
 		<section class="clear"></section>
-
 		
 		<section class="widget-course-progress">
 			<h4>Course Progress</h4>
@@ -18,13 +17,11 @@
 			</section>
 		</section>
 		
-		<section class="clear"></section>  
+		<section class="clear"></section>
 		
 		<section class="widget-project-files">
 			<h4>Download</h4>
-			<ul>
-				<li><span class="download"><img src="<?=base_url();?>assets/graphics/downloads.png" width="20px" height="18px" alt="download" /></span><a href="">Download Course Files</a></li>
-			</ul>
+			<a href=""><span><img src="<?=base_url();?>assets/graphics/downloads.svg" width="25px" height="22px" alt="download" /><span>Download Course Files</a>
 		</section>
 		
 		<section class="clear"></section>
@@ -38,9 +35,8 @@
 	</section>
 	
 	<section class="content-md">
-		<section class="widget-video-player">
-		<h3 class="course-title">jQuery Basics Overview</h3>
-		 <section style="display:none;margin: 0 auto;" class="html5gallery" data-skin="vertical" data-width="720" data-height="480">
+
+        <section style="display:none;margin: 0 auto;" class="html5gallery" data-skin="vertical" data-width="720" data-height="480">
 
             <!-- Add Videos to Gallery -->
             <a href="<?=base_url();?>assets/graphics/gallery/2020-Technology.mp4">
@@ -55,13 +51,17 @@
             <a href="<?=base_url();?>assets/graphics/gallery/Future-Technology-2019.mp4">
                 <img src="<?=base_url();?>assets/graphics/gallery/video4.jpg" alt="Future Technology 2019" />
             </a>
-		</section>
+
+        </section>
+    <!-- </section> -->
+
+		<h3 class="course-title">jQuery Basics Overview</h3>
 		<section class="teacher-notes">
 			<h4>Teacher's Notes</h4>
-			<ul>
-				<li><span class="notes"><img src="<?=base_url();?>assets/graphics/teacher-notes.png" width="20px" height="20px" /></span><a href="">Introduction to Programming</a></li>
-				<li><span class="notes"><img src="<?=base_url();?>assets/graphics/teacher-notes.png" width="20px" height="20px" /></span><a href="">JavaScript Foundations</a></li>
-			</ul>
+			<ol>
+				<li><a href="">Introduction to Programming</a></li>
+				<li><a href="">JavaScript Foundations</a></li>
+			</ol>
 		</section>
 	</section>
 	
@@ -81,15 +81,16 @@
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the discussions.</noscript>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     
 		</section>
 	</section>
 	
 	</section>
+	<a href="<?=base_url();?>index.php/courses/course_playback#disqus_thread">Link</a>
 	<section class="clear"></section>
 
-	<script type="text/javascript">
+	    <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
     var disqus_shortname = 'vitorials'; // required: replace example with your forum shortname
 
@@ -101,4 +102,8 @@
         (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
     }());
     </script>
-    <script src="<?=base_url();?>assets/js/html5gallery/html5gallery.js"></script>
+    
+
+<script src="<?=base_url();?>assets/js/classie.js"></script>
+<script src="<?=base_url();?>assets/js/borderMenu.js"></script>
+<script src="<?=base_url();?>assets/js/html5gallery/html5gallery.js"></script>

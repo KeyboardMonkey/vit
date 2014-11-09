@@ -3,6 +3,12 @@
 class Quiz extends CI_Controller 
 {
 
+	public function add()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('pages/quiz-add');
+		$this->load->view('templates/footer');
+	}
 	public function index()
 	{
 

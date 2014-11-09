@@ -15,8 +15,16 @@ class course extends MY_Model{
     public $status;
     public $description;
     public $points = 100;
+    public $developed_by;
+    public $learning_outcome;
+    public $target_audience;
+    public $is_new;
     public $created_date;
     public $updated_date;
+
+
+
+
     public function getCategoryTitle(){
         $_category = new course_cat();
         $_category->load($this->category);

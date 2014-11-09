@@ -269,7 +269,7 @@
     <Compile Include="soptair\controllers\library.php" />
     <Compile Include="soptair\controllers\notifications.php" />
     <Compile Include="soptair\controllers\pages.php" />
-    <Compile Include="soptair\controllers\paths.php" />
+    <Compile Include="soptair\controllers\tracks.php" />
     <Compile Include="soptair\controllers\profile.php" />
     <Compile Include="soptair\controllers\register.php" />
     <Compile Include="soptair\controllers\tech_feeds.php" />
@@ -302,7 +302,7 @@
     <Compile Include="soptair\views\pages\leaderboard.php" />
     <Compile Include="soptair\views\pages\library.php" />
     <Compile Include="soptair\views\pages\notifications.php" />
-    <Compile Include="soptair\views\pages\paths.php" />
+    <Compile Include="soptair\views\pages\tracks.php" />
     <Compile Include="soptair\views\pages\post-reg.php" />
     <Compile Include="soptair\views\pages\profile.php" />
     <Compile Include="soptair\views\pages\register.php" />

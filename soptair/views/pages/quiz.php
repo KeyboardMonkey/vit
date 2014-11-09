@@ -1,12 +1,12 @@
 <section class="widgets">
-		<section class="widget-video-transition">
+		<!-- <section class="widget-video-transition">
 			<h6>Stage 1</h6>
 			<h4>Website Basics</h4>
 			<ul>
 				<li class="previous"><a href="">Previous</a></li>
 				<li class="next"><a href="">Next</a></li>
 			</ul>
-		</section>
+		</section> -->
 		
 		<section class="clear"></section>
 		

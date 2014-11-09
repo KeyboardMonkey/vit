@@ -102,22 +102,6 @@ class Courses extends CI_Controller
     }
 
 
-    public function temp()
-    {
-
-        $course = new course();
-        $course -> load($id);
-        if(!isset($course->course_id))
-        {
-           redirect('library');
-        }
-        
-    	$this->load->view('templates/header');
-        $this->load->view('templates/breadcrumbs');
-        $this->load->view('pages/viewcourse', array('course' => $course) );
-        $this->load->view('templates/footer');
-
-    }
 
     public function course_playback()
     {
