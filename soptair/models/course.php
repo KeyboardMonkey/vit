@@ -170,9 +170,9 @@ class course extends MY_Model{
         foreach($course_points as $key => $arrays)
         {
             //$arrays = $this -> _sort_array($arrays);
-            echo "<br />";
-            print_r($arrays);
-            echo "<br />";
+            //echo "<br />";
+            //print_r($arrays);
+           // echo "<br />";
             $course_points[$key] = $arrays;
         }
          foreach($categories as $singleCat)
@@ -182,29 +182,58 @@ class course extends MY_Model{
              $courses = $this -> course -> getWithCondition(array('category' => $singleCat -> id));
                foreach($courses as $singleCourse)
                {
-                   $index = 0;
-                  for($i = 0; $i < count($recommendations[$singleCat -> id]); $i++)
-                  {
-                      if($recommendations[$singleCat -> id][$i]['points'] < $course_points[$singleCat -> id][$singleCourse -> course_id])
-                      {
-                          $index = $i;
-                          print_r($recommendations);
-                          echo "Cat : {$singleCat -> id} Count:"  .count($recommendations[$singleCat -> id]);
-                          for($j = $i; $j < count($recommendations[$singleCat -> id]); $j++)
-                          {
-                              echo "J: {$j}";
-                              $recommendations[$singleCat -> id][$j++] = $recommendations[$singleCat -> id][$j];
-                          }
-                      }
-                      
-                  }
-                  $recommendations[$singleCat -> id][$index] = array();
-                  $recommendations[$singleCat -> id][$index]['points'] = $course_points[$singleCat -> id][$singleCourse -> course_id];
-                  $recommendations[$singleCat -> id][$index]['course_id'] = $singleCourse -> course_id;
+                   
+                  //$recommendations[$singleCat -> id][$index] = array();
+                  array_push($recommendations[$singleCat->id], array('points' => $course_points[$singleCat -> id][$singleCourse -> course_id], 'course_id' => $singleCourse -> course_id) );
+                  //$recommendations[$singleCat -> id][$index]['points'] = $course_points[$singleCat -> id][$singleCourse -> course_id];
+                  //$recommendations[$singleCat -> id][$index]['course_id'] = $singleCourse -> course_id;
                }
          }
+         foreach ($recommendations as $key => $catRecom)
+         {
+            // echo "<br/>processing:";
+          //  / print_r($catRecom);
+            // echo "<br/>";
+             if(count($catRecom) == 0) 
+             {
+                 unset($recommendations[$key]);
+               // echo "removed:{$key}";
+               // continue;
+             }
+             else
+             {
+                // echo ">".count($catRecom);
+                for($i = 0; $i < count($catRecom); $i++)
+                {
+                    for($j = $i + 1; $j < count($catRecom); $j++)
+                    {
+                        if($catRecom[$j]['points'] > $catRecom[$j-1]['points'] )
+                        {
+                            $temp = $catRecom[$j];
+                            $catRecom[$j] = $catRecom[$j -1];
+                            $catRecom[$j - 1] = $temp;
+                        }
+                    }
+
+                }
+                for($i = 0; $i < count($catRecom); $i++)
+                {
+                    if($catRecom[$i]['points'] == 0) {
+                        //echo "removing:" . $catRecom[$i]['points'] . "<br/>";
+                        unset($catRecom[$i]);
+
+                    }
+                }
+               // echo "<br />";
+               // print_r($catRecom);
+               // echo "<br />";
+                $catRecom = array_slice($catRecom, 0, 5);
+                $recommendations[$key] = $catRecom;
+             } 
+         }
          
-       print_r($recommendations);
+    //   print_r($recommendations);
+         return $recommendations;
     }
     public function _sort_array($array)
     {
