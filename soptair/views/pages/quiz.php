@@ -1,13 +1,8 @@
-<section class="widgets">
-		<!-- <section class="widget-video-transition">
-			<h6>Stage 1</h6>
-			<h4>Website Basics</h4>
-			<ul>
-				<li class="previous"><a href="">Previous</a></li>
-				<li class="next"><a href="">Next</a></li>
-			</ul>
-		</section> -->
-		
+<script src="<?=base_url();?>assets/js/svgcheckbx.js"></script>
+
+	<section class="container">
+
+	<section class="widgets">		
 		<section class="clear"></section>
 		
 		<section class="widget-quiz-remarks">
@@ -22,12 +17,14 @@
 	<section class="content-md">
 		<h5 class="quiz">Quiz: Question 1/5</h5>
 		<h3 class="quiz-question">Which two languages form the foundation of structure and presentation on the web?</h3>
-		<ul class="quiz-options">
-			<li><input type="radio" name="a" value="one" />Content and Structure</li>
-			<li><input type="radio" name="a" value="two" />HTML and CSS</li>
-			<li><input type="radio" name="a" value="three" />Hypertext and CSS</li>
-			<li><input type="radio" name="a" value="four" />Semantics and HTML</li>
-		</ul>
+		<form class="ac-custom ac-radio ac-circle" autocomplete="off">
+			<ul>
+				<li><input id="r5" name="r2" type="radio"><label for="r5">Content and Structure</label></li>
+				<li><input id="r6" name="r2" type="radio"><label for="r6">HTML and CSS</label></li>
+				<li><input id="r7" name="r2" type="radio"><label for="r7">Hypertext and CSS</label></li>
+				<li><input id="r8" name="r2" type="radio"><label for="r8">Semantics and HTML</label></li>
+			</ul>
+		</form>
 		<form class="quiz-answer" action="">
 			<input type="submit" name="submit" value="Next Question" />
 		</form>

@@ -14,7 +14,7 @@
 				</tr>
 				<tr>
 					<td><label>Description:</label></td>
-					<td><textarea rows="4" cols="50" placeholder="Write Course Summary Here"></textarea></td>
+					<td><textarea rows="4" cols="50" placeholder="Write Course Summary Here" name="description"></textarea></td>
 				</tr>
 				<tr>
 					<td><label>Category:</label></td>
@@ -49,46 +49,11 @@
 					<td><label>Difficulty Level</label></td>
 					<td><input type="radio" name="level" value="beginner" /> Beginner <input type="radio" name="level" value="beginner" /> Intermediate <input type="radio" name="level" value="beginner" /> Advanced</td>
 				</tr>
+				
+
 				<tr>
-					<td><label>Points</label></td>
-					<td>
-						<select id="category" name="">
-							<option value="1" selected="selected">100</option>
-							<option value="2">200</option>
-							<option value="3">300</option>
-							<option value="4">400</option>
-							<option value="5">500</option>
-							<option value="6">600</option>
-							<option value="7">700</option>
-							<option value="8">800</option>
-							<option value="9">900</option>
-							<option value="10">1000</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td><label>Developed By</label></td>
-					<td>
-						<select id="category" name="">
-							<option select="selected"></option>
-							<option value="1">Udemy</option>
-							<option value="2">Khan Academy</option>
-							<option value="3">Lynda</option>
-							<option value="4">Team Tree House</option>
-						</select>
-					</td>
-				</tr>
-				<tr>
-					<td><label>Learning Outcomes:</label></td>
-					<td><textarea rows="4" cols="50" placeholder="Write about what students will learn"></textarea></td>
-				</tr>
-				<tr>
-					<td><label>Target Audience:</label></td>
-					<td><textarea rows="4" cols="50" placeholder="Write about who should take this course"></textarea></td>
-				</tr>
-				<tr>	
 					<td><label>Section 1</label></td>
-					<td><input class="name" type="text" name="coursetitle" placeholder="Section Name Here" /></td>
+					<td><input class="name" type="text" name="sectiontitle" placeholder="" /></td>
 				</tr>
 				<tr>
 					<td><label>Video 1</label></td>
@@ -96,24 +61,27 @@
 				</tr>
 				<tr>
 					<td></td>
-					<td>Video:1 &nbsp;&nbsp;&nbsp;<input type="file" multiple=""/></td>
+					<td>Video:1 &nbsp;&nbsp;&nbsp;<input type="file" name="videofile" multiple=""/></td>
 				</tr>
 				<tr>
 					<td><label>Add SRT*</label></td>
-					<td><input type="file" multiple=""/></td>
+					<td><input type="file" multiple="" name="srt" /></td>
 				</tr>
 				<tr>
 					<td><label>Course Content</label></td>
 					<td>
-						Course Files (ZIP) &nbsp;&nbsp;<input type="file" multiple=""/><br />
+						Course Files (ZIP) &nbsp;&nbsp;<input type="file" name="fullcoursefileszip" multiple=""/><br />
 
 					</tr>
-					<tr>
-						<td><label>Teacher's Notes</label></td>
-						<td>
-							Additional  Files  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="file" multiple=""/><br />
-							External Reading &nbsp;&nbsp;&nbsp;<input type="file" multiple=""/>
-						</tr>
+					
+				<tr>
+					<td><label>Addt. File Title</label></td>
+					<td><input class="name" type="text" name="additionalfiletitle" placeholder="Video Title Here" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>Addition File &nbsp;&nbsp;&nbsp;<input type="file" name="additionalfile" multiple=""/></td>
+				</tr>
 						<tr>
 							<td></td>
 							<td>
@@ -124,7 +92,14 @@
 							</td>
 						</tr>
 					</table>
+
+					
+
+					<input type='hidden' value='0' name='total_videos' id='total_values'>
+            
+            
 				</form>
+				<button id="add_video">&nbsp;+&nbsp;</button>
 			</section>
 
 			<section class="clear"></section>
@@ -137,4 +112,21 @@
 						$('form .add-course.dashboard').submit();
 					});
 				});
+			</script>
+
+
+			<script type="text/javascript">
+				$('#add_video').click(function(
+				{
+				console.log('button clicked');
+                $('#video_div').append(
+                    
+                    '
+                        <input type='text' name='videotitle' + $('#total_videos').val();
+                        <input type='file' name='videofile' + $('#total_videos').val();
+                    '
+                    $('#total_videos').val($('#total_videos').val() + 1);
+                    
+                );
+            }));
 			</script>

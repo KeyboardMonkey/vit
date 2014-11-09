@@ -56,26 +56,47 @@ class Courses extends CI_Controller
          $this -> form_validation -> set_rules ( array(
 
             array(
-              'field' => 'full_name',
-              'label' => 'Course Full Name',
+              'field' => 'coursefullname',
+              'label' => 'Course Name',
               'rules' => 'required|xss_clean',
               ),
             array(
-              'field' => 'short_name',
-              'label' => 'Course Short Name',
+              'field' => 'courseshortname',
+              'label' => 'One Line Intro',
               'rules' => 'required|xss_clean',
               ),
 
             array(
                 'field' => 'category',
-                'label' => 'Course Category',
+                'label' => 'Category',
                 'rules' => 'required|number|in[course_category.id]'
                 ),
 
             array(
                 'field' => 'description',
-                'label' => 'Course Description',
+                'label' => 'Description',
                 'rules' => 'required|xss_clean|min_length[10]'
+                ),
+
+            array(
+                'field' => 'level',
+                'label' => 'Difficulty Level',
+                'rules' => 'required|xss_clean|min_length[10]'
+                ),
+            array(
+                'field' => 'sectiontitle',
+                'label' => 'Section Name',
+                'rules' => 'xss_clean|min_length[10]'
+                ),
+            array(
+                'field' => 'videotitle',
+                'label' => 'Video Title',
+                'rules' => 'xss_clean|min_length[10]'
+                ),
+            array(
+                'field' => 'additionalfiletitle',
+                'label' => 'Addt. File Title',
+                'rules' => 'xss_clean|min_length[10]'
                 )
 
 
@@ -84,13 +105,23 @@ class Courses extends CI_Controller
          if($this->form_validation->run())
          {
                 $newCourse = new course();
-                $newCourse ->full_name  = $this -> input -> post('full_name');
-                $newCourse ->short_name  = $this -> input -> post('short_name');
+                $newCourse ->full_name  = $this -> input -> post('coursefullname');
+                $newCourse ->tiny_intro  = $this -> input -> post('courseshortname');
                 $newCourse ->description  = $this -> input -> post('description');
+                $newCourse ->difficulty_level  = $this -> input -> post('level');
+
+                $newCourse ->section_title  = $this -> input -> post('sectiontitle');
+                $newCourse ->video_title  = $this -> input -> post('videotitle');
+                $newCourse ->video_file  = $this -> input -> post('videofile');
+                $newCourse ->srt  = $this -> input -> post('srt');
+                $newCourse ->full_course_files_zip  = $this -> input -> post('fullcoursefileszip');
+                $newCourse ->additional_file_title  = $this -> input -> post('additionalfiletitle');
+                $newCourse ->additional_file  = $this -> input -> post('additionalfile');
+
                 $newCourse ->category  = $this -> input -> post('category');
                 $newCourse ->status  = ($this -> input -> post('status') == 'on' ) ? 'yes' : 'no';
                 $newCourse -> save();
-                $message = "<h5>Course {$newCourse->short_name} registered successfully!";
+                $message = "<h5>Course {$newCourse->full_name} registered successfully!";
          }
 
 

@@ -10,6 +10,7 @@ class course extends MY_Model{
     public $course_id;
     public $full_name;
     public $tiny_intro;
+    public $course_thumbnail;
     public $category;
     public $difficulty_level;
     public $status;
@@ -18,11 +19,16 @@ class course extends MY_Model{
     public $developed_by;
     public $learning_outcome;
     public $target_audience;
+    public $section_title;
+    public $video_title;
+    public $video_file;
+    public $srt;
+    public $full_course_files_zip;
+    public $additional_file_title;
+    public $additional_file;
     public $is_new;
     public $created_date;
     public $updated_date;
-
-
 
 
     public function getCategoryTitle(){
