@@ -86,7 +86,26 @@ public function getWithCondition($condition){
 	}
 	return $rel_val;
 
+}
+public function getWithConditionLimit1($condition){
+	//print_r($condition);
+	$query = $this -> db -> get_where($this::DB_TABLE, $condition);
+	$rel_val = array();
+	$class = get_class($this);
+	foreach($query -> result() as $row){
+		$model = new $class;
+		$model -> populate($row);
+                return $model;
+		$rel_val[$row -> {$this :: DB_TABLE_PK}] = $model;
+	}
+        if(count($rel_val)> 0)
+        {
+            
+            return $rel_val[0];
         }
+        else return new $class();
+
+}
         public function getWithConditionAndOrder($condition, $orderby){
 			$this -> db ->order_by($orderby[0], $orderby[1]);
 			$query = $this -> db -> get_where($this::DB_TABLE, $condition);

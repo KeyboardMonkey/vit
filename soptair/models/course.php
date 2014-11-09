@@ -77,4 +77,139 @@ class course extends MY_Model{
         else return FALSE;
         
     }
+    public function getRecommendations()
+    {
+        /*
+             USER INTEREST
+                        -> 0 = NO INTEREST
+                        -> 1 = NO OPINION
+                        -> 2 = INTERESTED
+            course points system
+                a - Number of Registered, Users = 0.1 point per user. MULTIPLIED BY USER INTEREST
+                b - User Rating:
+                        i-      If User Has less than 50% completed then 0.3 points per user MULTIPLIED BY USER INTEREST
+                        ii-     If User has less than 75% competed then 0.4 points per User MULTIPLIED BY USER INTEREST
+                        iii -   If User has more than 90% completed then 0.5 points per user MULTIPLIED BY USER INTEREST
+            User Ratings:
+                         i-      If User Has less than 50% completed then 0.3 points per star MULTIPLIED BY USER INTEREST
+                        ii-     If User has less than 75% competed then 0.4 points per star MULTIPLIED BY USER INTEREST
+                        iii -   If User has more than 90% completed then 0.5 points per star MULTIPLIED BY USER INTEREST
+         
+        */
+        $recommendations = array();
+        $categories = $this -> course_cat -> get();
+        $course_points = array();
+        foreach($categories as $singleCat)
+        {
+            
+            $categoryCourses = array();
+            $course_points[$singleCat -> id] = array();
+            $courses = $this -> course -> getWithCondition(array('category' => $singleCat -> id));
+            //echo "A: ";
+            
+            $userInterestInCourse = $this -> user_interest_categories -> getWithConditionLimit1(array('user_id' => $this -> session -> userdata('user_id'), 'cat_id' => $singleCat -> id));
+          
+            if(!isset($userInterestInCourse->id)) continue;
+            $interestValue = $userInterestInCourse -> interest_level;
+            
+            foreach($courses as $singleCourse)
+            {
+               // echo "B: ";
+               // print_r($singleCourse);
+                $course_points[$singleCat -> id][$singleCourse -> course_id] = 0;
+              
+                $enrollmentsInThisCategory = 0;
+              //  echo "C:";
+               // foreach($courses as $course)
+                {
+                    $enrollmentsInCourse = $this -> course_enrollment -> getWithCondition(array('course_id' => $singleCourse -> course_id));
+                    $enrollmentsInThisCategory += count($enrollmentsInCourse);
+                    $course_points[$singleCat -> id][$singleCourse -> course_id] += $enrollmentsInThisCategory * 0.1 * $interestValue;
+                    foreach ($enrollmentsInCourse as $singleEnrollment)
+                    {
+                        $course_rating = new course_rating();
+                        $course_rating ->getWithConditionLimit1(array('user_id' => $this -> session -> userdata('user_id'), 'course_id' => $singleEnrollment -> course_id));
+                       // echo "1: ";
+                        if($singleEnrollment -> progress < 50)
+                        {
+                             $course_points[$singleCat -> id][$singleCourse -> course_id] += count($enrollmentsInCourse) * 0.3 * $interestValue;
+                           //  echo "1: ";
+                             if(isset($course_rating -> id))
+                             {
+                                  $course_points[$singleCat -> id][$singleCourse -> course_id] += $course_rating -> rating * 0.3 * $interestValue;
+                            
+                             }
+                        }
+                        else if($singleEnrollment -> progress < 90)
+                        {
+                             $course_points[$singleCat -> id][$singleCourse -> course_id] += count($enrollmentsInCourse) * 0.4 * $interestValue;
+                            // echo "2: ";
+                             if(isset($course_rating -> id))
+                             {
+                                 $course_points[$singleCat -> id][$singleCourse -> course_id] += $course_rating -> rating * 0.4 * $interestValue;
+                            
+                             }
+                        }
+                        else 
+                        {
+                             $course_points[$singleCat -> id][$singleCourse -> course_id] += count($enrollmentsInCourse) * 0.5 * $interestValue;
+                            //echo "3: ";
+                             if(isset($course_rating -> id))
+                             {
+                                 $course_points[$singleCat -> id][$singleCourse -> course_id] += $course_rating -> rating * 0.4 * $interestValue;
+                            
+                             }
+                        }
+                    }
+                }
+                 
+            }
+
+        }
+        
+        foreach($course_points as $key => $arrays)
+        {
+            //$arrays = $this -> _sort_array($arrays);
+            echo "<br />";
+            print_r($arrays);
+            echo "<br />";
+            $course_points[$key] = $arrays;
+        }
+         foreach($categories as $singleCat)
+        {
+             $recommendations[$singleCat -> id] = array();
+             $i = 0;
+             $courses = $this -> course -> getWithCondition(array('category' => $singleCat -> id));
+               foreach($courses as $singleCourse)
+               {
+                   $index = 0;
+                  for($i = 0; $i < count($recommendations[$singleCat -> id]); $i++)
+                  {
+                      if($recommendations[$singleCat -> id][$i]['points'] < $course_points[$singleCat -> id][$singleCourse -> course_id])
+                      {
+                          $index = $i;
+                          print_r($recommendations);
+                          echo "Cat : {$singleCat -> id} Count:"  .count($recommendations[$singleCat -> id]);
+                          for($j = $i; $j < count($recommendations[$singleCat -> id]); $j++)
+                          {
+                              echo "J: {$j}";
+                              $recommendations[$singleCat -> id][$j++] = $recommendations[$singleCat -> id][$j];
+                          }
+                      }
+                      
+                  }
+                  $recommendations[$singleCat -> id][$index] = array();
+                  $recommendations[$singleCat -> id][$index]['points'] = $course_points[$singleCat -> id][$singleCourse -> course_id];
+                  $recommendations[$singleCat -> id][$index]['course_id'] = $singleCourse -> course_id;
+               }
+         }
+         
+       print_r($recommendations);
+    }
+    public function _sort_array($array)
+    {
+        $keys = array();
+     
+        
+    }
 }
