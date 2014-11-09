@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 09, 2014 at 04:31 PM
--- Server version: 5.6.11
--- PHP Version: 5.5.3
+-- Generation Time: Nov 09, 2014 at 09:03 PM
+-- Server version: 5.6.12-log
+-- PHP Version: 5.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -234,6 +234,40 @@ INSERT INTO `users` (`user_id`, `email`, `password`, `type`, `active`, `last_log
 (61, 'mir.shakil@geo.tv', 'mir.shakil@geo.tv', 'User', 'No', NULL, '', '2014-11-07 14:45:40', 'Mir Shakil', 0),
 (62, 'abdul@yahoo.com', 'abdul@sdfj', 'User', 'No', NULL, '', '2014-11-08 10:44:46', 'abdul qadir', 0),
 (63, 'abdul.qadir@yahoo.com', 'abdul@sdfj', 'User', 'No', NULL, '', '2014-11-08 10:44:58', 'abdul qadir', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_interest_categories`
+--
+
+CREATE TABLE IF NOT EXISTS `user_interest_categories` (
+  `id` int(19) NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) NOT NULL,
+  `cat_id` int(10) NOT NULL,
+  `interest_level` int(2) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=94 ;
+
+--
+-- Dumping data for table `user_interest_categories`
+--
+
+INSERT INTO `user_interest_categories` (`id`, `user_id`, `cat_id`, `interest_level`) VALUES
+(80, 1, 1, 2),
+(81, 1, 2, 0),
+(82, 1, 3, 2),
+(83, 1, 4, 2),
+(84, 1, 5, 2),
+(85, 1, 6, 2),
+(86, 1, 7, 2),
+(87, 1, 8, 2),
+(88, 1, 9, 2),
+(89, 1, 10, 2),
+(90, 1, 11, 2),
+(91, 1, 12, 2),
+(92, 1, 13, 2),
+(93, 1, 14, 2);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
