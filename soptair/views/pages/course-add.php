@@ -67,7 +67,6 @@
 					<td><label>Add SRT*</label></td>
 					<td><input type="file" multiple="" name="srt" /></td>
 				</tr>
-				<div id="video_div"> </div>
 				<tr>
 					<td><label>Course Content</label></td>
 					<td>
@@ -96,7 +95,7 @@
 
 					
 
-					<input type='number' value='0' name='total_videos' id='total_videos'>
+					<input type='hidden' value='0' name='total_videos' id='total_values'>
             
             
 				</form>
@@ -117,17 +116,17 @@
 
 
 			<script type="text/javascript">
-				$('#add_video').click(function(){
+				$('#add_video').click(function(
+				{
 				console.log('button clicked');
-				console.log($('#video_div').html());
                 $('#video_div').append(
                     
-                    '<input type="text" name="videotitle_' + $('#total_videos').val()+ '"/>' + 
-                    '<input type="file" name="videofile_' + $('#total_videos').val() + '"/>'   
+                    '
+                        <input type='text' name='videotitle' + $('#total_videos').val();
+                        <input type='file' name='videofile' + $('#total_videos').val();
+                    '
+                    $('#total_videos').val($('#total_videos').val() + 1);
+                    
                 );
-                console.log($('#total_videos'));
-                console.log($('#total_videos').val());
-                
-                $('#total_videos').val(parseInt($('#total_videos').val() )+ 1);
-            });
+            }));
 			</script>
