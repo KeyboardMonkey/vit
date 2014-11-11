@@ -45,7 +45,5 @@ class Profile extends CI_Controller
 
 	}
 
-
-
 }/*class Profile extends CI_Controller */
 /*end of file: profile.php*/

@@ -1,9 +1,9 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 10, 2014 at 09:26 AM
+-- Generation Time: Nov 11, 2014 at 09:09 PM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.3
 
@@ -30,29 +30,29 @@ USE `vitdb`;
 
 CREATE TABLE IF NOT EXISTS `courses` (
   `course_id` int(11) NOT NULL AUTO_INCREMENT,
-  `full_name` varchar(40) NOT NULL,
-  `tiny_intro` varchar(50) NOT NULL,
-  `course_thumbnail` varchar(30) DEFAULT NULL,
-  `category` varchar(20) NOT NULL,
+  `full_name` varchar(255) NOT NULL,
+  `tiny_intro` varchar(255) NOT NULL,
+  `course_thumbnail` varchar(255) DEFAULT NULL,
+  `category` varchar(255) NOT NULL,
   `difficulty_level` enum('beginner','intermediate','advanced') NOT NULL,
   `status` enum('yes','no') NOT NULL,
   `description` text NOT NULL,
-  `points` int(10) NOT NULL DEFAULT '0',
-  `developed_by` varchar(20) DEFAULT NULL,
+  `points` int(20) NOT NULL DEFAULT '0',
+  `developed_by` varchar(255) DEFAULT NULL,
   `learning_outcome` text,
   `target_audience` text,
-  `section_title` varchar(30) DEFAULT NULL,
-  `video_title` varchar(30) DEFAULT NULL,
-  `video_file` varchar(70) DEFAULT NULL,
-  `srt` varchar(70) DEFAULT NULL,
-  `full_course_files_zip` varchar(70) DEFAULT NULL,
-  `additional_file_title` varchar(30) DEFAULT NULL,
-  `additional_file` varchar(70) DEFAULT NULL,
+  `section_title` varchar(255) DEFAULT NULL,
+  `video_title` varchar(255) DEFAULT NULL,
+  `video_file` varchar(255) DEFAULT NULL,
+  `srt` varchar(255) DEFAULT NULL,
+  `full_course_files_zip` varchar(255) DEFAULT NULL,
+  `additional_file_title` varchar(255) DEFAULT NULL,
+  `additional_file` varchar(255) DEFAULT NULL,
   `is_new` enum('yes','no') DEFAULT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`course_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=18 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
 
 --
 -- Dumping data for table `courses`
@@ -75,7 +75,9 @@ INSERT INTO `courses` (`course_id`, `full_name`, `tiny_intro`, `course_thumbnail
 (14, 'Course XYZ', 'XYZ', NULL, '7', 'beginner', 'no', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 100, 'TTH', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-28 10:11:40', '2014-10-28 10:11:40'),
 (15, 'asfsadfasdfasdf', 'asdfasdfdsafsadf', NULL, '1', '', 'yes', 'afsadfsdafasdfsd', 100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2014-11-09 16:36:11', '2014-11-09 16:36:11'),
 (16, 'asfsadfasdfasdf', 'asdfasdfdsafsadf', NULL, '1', '', 'yes', 'afsadfsdafasdfsd', 100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2014-11-09 16:39:00', '2014-11-09 16:39:00'),
-(17, 'asfsadfasdfasdf', 'asdfasdfdsafsadf', NULL, '1', '', 'yes', 'afsadfsdafasdfsd', 100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2014-11-09 16:39:20', '2014-11-09 16:39:20');
+(17, 'asfsadfasdfasdf', 'asdfasdfdsafsadf', NULL, '1', '', 'yes', 'afsadfsdafasdfsd', 100, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2014-11-09 16:39:20', '2014-11-09 16:39:20'),
+(18, 'Hola', 'hello hello hello hello', NULL, '3', 'advanced', 'yes', 'madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka madafaka ', 100, NULL, NULL, NULL, '', '', '0', '0', '0', '', '0', NULL, '2014-11-11 13:53:56', '2014-11-11 13:53:56'),
+(19, 'Booo', 'asfsd', NULL, '5', 'advanced', 'yes', 'asdfsdafsadfasd', 100, NULL, NULL, NULL, 'asdfasdf', 'asdfasdfsadfas', '0', '0', '0', 'asdfasdf', '0', NULL, '2014-11-11 19:17:03', '2014-11-11 19:17:03');
 
 -- --------------------------------------------------------
 
@@ -85,8 +87,8 @@ INSERT INTO `courses` (`course_id`, `full_name`, `tiny_intro`, `course_thumbnail
 
 CREATE TABLE IF NOT EXISTS `course_category` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `category` varchar(100) NOT NULL,
-  `color_tag` varchar(20) DEFAULT NULL,
+  `category` varchar(255) NOT NULL,
+  `color_tag` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
@@ -125,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `course_enrollment` (
   `progress` int(11) NOT NULL,
   PRIMARY KEY (`enrol_id`),
   KEY `enrol_time` (`enrol_time`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=22 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
 
 --
 -- Dumping data for table `course_enrollment`
@@ -149,7 +151,10 @@ INSERT INTO `course_enrollment` (`enrol_id`, `course_id`, `user_id`, `enrol_time
 (18, 1, 6, '2014-11-08 17:50:18', 'in-progress', 0),
 (19, 13, 6, '2014-11-09 09:16:15', 'in-progress', 0),
 (20, 13, 6, '2014-11-09 09:16:17', 'in-progress', 0),
-(21, 1, 6, '2014-11-09 10:12:54', 'in-progress', 0);
+(21, 1, 6, '2014-11-09 10:12:54', 'in-progress', 0),
+(22, 1, 6, '2014-11-11 13:39:13', 'in-progress', 0),
+(23, 12, 6, '2014-11-11 13:43:26', 'in-progress', 0),
+(24, 12, 6, '2014-11-11 13:44:16', 'in-progress', 0);
 
 -- --------------------------------------------------------
 
@@ -180,22 +185,164 @@ INSERT INTO `course_rating` (`rating_id`, `course_id`, `user_id`, `rating`) VALU
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `files`
+--
+
+CREATE TABLE IF NOT EXISTS `files` (
+  `file_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `file_name` varchar(255) COLLATE latin1_general_ci NOT NULL,
+  `file_orig_name` varchar(255) COLLATE latin1_general_ci NOT NULL,
+  `file_path` varchar(255) COLLATE latin1_general_ci NOT NULL,
+  `upload_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`file_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci AUTO_INCREMENT=14 ;
+
+--
+-- Dumping data for table `files`
+--
+
+INSERT INTO `files` (`file_id`, `file_name`, `file_orig_name`, `file_path`, `upload_date`) VALUES
+(1, '5390f1f322157e16396a02c1bbe56b11.txt', 'workingCards.txt', 'A:/xampp/htdocs/vit/upload/5390f1f322157e16396a02c1bbe56b11.txt', '2014-11-11 14:54:35'),
+(2, '07858fa826b077f59c0640d7108645e5.jpg', '10636117_10152660457339648_530200368499918084_n.jpg', 'A:/xampp/htdocs/vit/upload/07858fa826b077f59c0640d7108645e5.jpg', '2014-11-11 14:54:44'),
+(3, 'f92b14694c4ecbd0a0a82bc6c624a022.exe', 'DivXWebPlayerInstaller.exe', 'A:/xampp/htdocs/vit/upload/f92b14694c4ecbd0a0a82bc6c624a022.exe', '2014-11-11 14:56:02'),
+(4, '9e592f548e42bd99ce860ad18f24e117.srt', 'jQuery_Basics_Overview.srt', 'A:/xampp/htdocs/vit/upload/9e592f548e42bd99ce860ad18f24e117.srt', '2014-11-11 15:05:48'),
+(5, '771ffc870e5d80a90ac22f8f0bca0921.mp4', 'jQuery_Documentation_-_What_does_it_mean-.mp4', 'A:/xampp/htdocs/vit/upload/771ffc870e5d80a90ac22f8f0bca0921.mp4', '2014-11-11 15:05:48'),
+(6, '7a01485a5fa1126e35febcb49aff14a7.srt', 'jQuery_Documentation_-_What_does_it_mean-.srt', 'A:/xampp/htdocs/vit/upload/7a01485a5fa1126e35febcb49aff14a7.srt', '2014-11-11 15:05:48'),
+(7, '36ac1400183eeeaac9bb88d1e634676b.mp4', 'TH-jQuery-Basics-S1-V1-720.mp4', 'A:/xampp/htdocs/vit/upload/36ac1400183eeeaac9bb88d1e634676b.mp4', '2014-11-11 15:05:48'),
+(8, '89b66f4a6f3aa8086c240f0a8fbcc34b.mp4', 'Ways_to_Include_jQuery_in_a_Project.mp4', 'A:/xampp/htdocs/vit/upload/89b66f4a6f3aa8086c240f0a8fbcc34b.mp4', '2014-11-11 15:05:48'),
+(9, 'db1351196f6bc92c8e9454ef03289708.mp4', 'What_is_jQuery-.mp4', 'A:/xampp/htdocs/vit/upload/db1351196f6bc92c8e9454ef03289708.mp4', '2014-11-11 15:05:48'),
+(10, '7a17ebeb1fa6f5e3341965232beeeb75.mp4', 'What_is_the_DOM-.mp4', 'A:/xampp/htdocs/vit/upload/7a17ebeb1fa6f5e3341965232beeeb75.mp4', '2014-11-11 15:05:48'),
+(11, 'e7ee378194f133530c5fdfdd91466a1f.srt', 'jQuery_Basics_Overview.srt', 'A:/xampp/htdocs/vit/upload/e7ee378194f133530c5fdfdd91466a1f.srt', '2014-11-11 15:06:44'),
+(12, '36d7ac6e49f8e6b60e6afead71b87ee2.mp4', 'jQuery_Documentation_-_What_does_it_mean-.mp4', 'A:/xampp/htdocs/vit/upload/36d7ac6e49f8e6b60e6afead71b87ee2.mp4', '2014-11-11 15:06:44'),
+(13, '32343f6dc780aed24bece469f31a5cfd.mp4', 'What_is_jQuery-.mp4', 'A:/xampp/htdocs/vit/upload/32343f6dc780aed24bece469f31a5cfd.mp4', '2014-11-11 15:06:44');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `lectures`
+--
+
+CREATE TABLE IF NOT EXISTS `lectures` (
+  `lect_id` int(11) NOT NULL AUTO_INCREMENT,
+  `vid_title` varchar(255) NOT NULL,
+  `vid_path` varchar(255) NOT NULL,
+  `srt_path` varchar(255) NOT NULL,
+  `progress` int(20) NOT NULL,
+  `lect_progress_points` int(20) NOT NULL,
+  `additional_file_title` varchar(255) NOT NULL,
+  `additional_file_path` varchar(255) NOT NULL,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `is_completed` enum('yes','no') NOT NULL,
+  PRIMARY KEY (`lect_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quiz`
+--
+
+CREATE TABLE IF NOT EXISTS `quiz` (
+  `quiz_id` int(11) NOT NULL AUTO_INCREMENT,
+  `course_id` int(11) NOT NULL,
+  `quiz_title` varchar(255) NOT NULL,
+  `quiz_progress_points` int(20) DEFAULT NULL,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`quiz_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
+
+--
+-- Dumping data for table `quiz`
+--
+
+INSERT INTO `quiz` (`quiz_id`, `course_id`, `quiz_title`, `quiz_progress_points`, `created_date`, `updated_date`) VALUES
+(1, 0, 'hgjhghjhj', NULL, '2014-11-11 15:54:50', '2014-11-11 15:54:50'),
+(2, 0, 'bcvxbxcvb', NULL, '2014-11-11 15:56:54', '2014-11-11 15:56:54'),
+(3, 0, 'Common Sense API', 20, '2014-11-11 17:00:58', '2014-11-11 17:00:58'),
+(4, 0, '&lt;?php echo Common Sense API; ?&gt;', 20, '2014-11-11 17:02:03', '2014-11-11 17:02:03'),
+(5, 0, 'Special Sense API', 20, '2014-11-11 17:08:14', '2014-11-11 17:08:14'),
+(6, 0, 'Special Sense API', 20, '2014-11-11 17:09:15', '2014-11-11 17:09:15'),
+(7, 0, 'xvxcxvvvvvxvx', 20, '2014-11-11 17:22:34', '2014-11-11 17:22:34'),
+(8, 0, '8', 20, '2014-11-11 17:25:29', '2014-11-11 17:25:29'),
+(9, 0, '9', 20, '2014-11-11 17:29:03', '2014-11-11 17:29:03'),
+(10, 0, 'Consipiracy Quiz', 20, '2014-11-11 17:33:09', '2014-11-11 17:33:09'),
+(11, 0, 'Pakistan Quiz', 20, '2014-11-11 17:43:43', '2014-11-11 17:43:43'),
+(12, 0, 'Pakistan Quiz', 20, '2014-11-11 17:47:17', '2014-11-11 17:47:17'),
+(13, 0, 'LOL Quiz', 20, '2014-11-11 17:48:03', '2014-11-11 17:48:03'),
+(14, 0, 'LOL Quiz', 20, '2014-11-11 17:50:02', '2014-11-11 17:50:02'),
+(15, 0, 'Fake Quiz', 20, '2014-11-11 17:51:35', '2014-11-11 17:51:35');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `quiz_questions`
+--
+
+CREATE TABLE IF NOT EXISTS `quiz_questions` (
+  `question_id` int(11) NOT NULL AUTO_INCREMENT,
+  `quiz_id` int(11) NOT NULL,
+  `question_text` varchar(255) NOT NULL,
+  `option_1` varchar(255) NOT NULL,
+  `option_2` varchar(255) NOT NULL,
+  `option_3` varchar(255) NOT NULL,
+  `option_4` varchar(255) NOT NULL,
+  `correct_answer` varchar(255) NOT NULL,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `updated_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`question_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
+
+--
+-- Dumping data for table `quiz_questions`
+--
+
+INSERT INTO `quiz_questions` (`question_id`, `quiz_id`, `question_text`, `option_1`, `option_2`, `option_3`, `option_4`, `correct_answer`, `created_date`, `updated_date`) VALUES
+(1, 0, 'The Question field is required.', '0', '0', '0', '0', '0', '2014-11-11 15:40:37', '2014-11-11 15:40:37'),
+(2, 0, 'asdfasdf', '0', '0', '0', '0', '0', '2014-11-11 15:43:01', '2014-11-11 15:43:01'),
+(3, 0, 'jfgjfghj', '0', '0', '0', '0', '0', '2014-11-11 15:54:50', '2014-11-11 15:54:50'),
+(4, 0, 'xbvbxvcb', 'xcvbxvc', 'bxcvbxcvb', 'xvcbxc', 'bxvcbxcvb', '0', '2014-11-11 15:56:54', '2014-11-11 15:56:54'),
+(5, 0, 'What comes after zero?', 'one', 'two ', 'three', 'four', 'option1', '2014-11-11 17:00:59', '2014-11-11 17:00:59'),
+(6, 0, 'What comes after Earth?', 'venus', 'earth', 'mars', 'jupiter', 'option3', '2014-11-11 17:02:03', '2014-11-11 17:02:03'),
+(7, 0, 'What came first?', 'Egg', 'Chicken', 'Kukkar', 'Aanda', 'option2', '2014-11-11 17:08:14', '2014-11-11 17:08:14'),
+(8, 0, 'What are you?', 'A dog', 'A man', 'A crow', 'A cat', 'option4', '2014-11-11 17:09:15', '2014-11-11 17:09:15'),
+(9, 0, 'dfdgfdgfgdf', 'gdfgdf', 'gdfgdfg', 'dfgfdgfd', 'gff', 'option2', '2014-11-11 17:22:34', '2014-11-11 17:22:34'),
+(10, 0, 'fadsasdfsdaf', 'asdfasdfasdfa', 'fgsdfasdf', 'asdfasdfasd', 'fasdfdsaf', 'option2', '2014-11-11 17:25:29', '2014-11-11 17:25:29'),
+(11, 0, 'asdfasdfa', 'sdfasdf', 'asdfasdfasd', 'asdfasdfasdf', 'asdfsdaf', 'option2', '2014-11-11 17:25:48', '2014-11-11 17:25:48'),
+(12, 0, 'HTML stands for?', 'Hathi', 'Hyper text terminal protocol', 'Hoohaaa', 'Hola', 'option2', '2014-11-11 17:29:04', '2014-11-11 17:29:04'),
+(13, 0, 'Who made the HTML?', 'Steve Jobs', 'Tim B. Lee', 'Bill Gates', 'You', 'option2', '2014-11-11 17:29:41', '2014-11-11 17:29:41'),
+(14, 0, 'Is Osama real?', 'yes', 'no', 'pata nahi', 'no comments', 'option1', '2014-11-11 17:33:09', '2014-11-11 17:33:09'),
+(15, 0, 'Where is George W Bush?', 'At home', 'Library', 'Underground Bunker', 'Afghanistan', 'option3', '2014-11-11 17:33:54', '2014-11-11 17:33:54'),
+(16, 0, 'Who is Zaid Hamid?', 'ISI Agent', 'Douchbag', 'RAW Agent', 'Musad Agent', 'option2', '2014-11-11 17:35:00', '2014-11-11 17:35:00'),
+(17, 0, 'Who killed BB?', 'Me', 'You', 'Zardari', 'Mush', 'option3', '2014-11-11 17:36:29', '2014-11-11 17:36:29'),
+(18, 0, 'Is ISIS real?', 'LOL', 'CIA created em', 'Yes', 'No way', 'option2', '2014-11-11 17:38:59', '2014-11-11 17:38:59'),
+(19, 15, 'Is Batman real?', 'aho', 'nai pata', 'lol', 'haan na bhai', 'option4', '2014-11-11 17:51:35', '2014-11-11 17:51:35'),
+(20, 15, 'Does Altaf bhai loves peace?', 'sure', 'lol', 'why not', 'most', 'option2', '2014-11-11 17:52:15', '2014-11-11 17:52:15'),
+(21, 15, 'Is IK pagal?', 'yeah ', 'sure is ', 'no ', 'to or kya', 'option4', '2014-11-11 17:52:43', '2014-11-11 17:52:43'),
+(22, 15, 'Who made Apple?', 'newton', 'steve jobs', 'einstine', 'billy', 'option1', '2014-11-11 17:53:13', '2014-11-11 17:53:13');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tracks`
 --
 
 CREATE TABLE IF NOT EXISTS `tracks` (
-  `track_title` int(11) NOT NULL AUTO_INCREMENT,
-  `tiny_intro` varchar(40) NOT NULL,
+  `track_id` int(11) NOT NULL AUTO_INCREMENT,
+  `track_title` varchar(255) NOT NULL,
+  `tiny_intro` varchar(255) NOT NULL,
   `track_description` text NOT NULL,
   `status` enum('yes','no') NOT NULL,
   `track_points` int(10) NOT NULL,
+  `track_progress` int(20) NOT NULL,
   `difficulty_level` enum('beginner','intermediate','advanced') NOT NULL,
   `is_new` enum('yes','no') DEFAULT NULL,
-  `additional_file_title` varchar(30) DEFAULT NULL,
-  `additional_file` varchar(70) DEFAULT NULL,
+  `additional_file_title` varchar(255) DEFAULT NULL,
+  `additional_file` varchar(255) DEFAULT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`track_title`)
+  PRIMARY KEY (`track_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -230,7 +377,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(255) NOT NULL,
   `logged_in` int(1) NOT NULL DEFAULT '0' COMMENT '0 - No, 1 - Yes',
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=64 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=66 ;
 
 --
 -- Dumping data for table `users`
@@ -279,7 +426,10 @@ INSERT INTO `users` (`user_id`, `email`, `password`, `type`, `active`, `last_log
 (60, 'mush@army.com', '$this->load->view(''templa tes/header'');         $this->load->view(''wizards/pref-set'');         $this->load->view(''templates/footer'');', 'User', 'No', NULL, '', '2014-11-07 14:43:33', 'Gen Mushi', 0),
 (61, 'mir.shakil@geo.tv', 'mir.shakil@geo.tv', 'User', 'No', NULL, '', '2014-11-07 14:45:40', 'Mir Shakil', 0),
 (62, 'abdul@yahoo.com', 'abdul@sdfj', 'User', 'No', NULL, '', '2014-11-08 10:44:46', 'abdul qadir', 0),
-(63, 'abdul.qadir@yahoo.com', 'abdul@sdfj', 'User', 'No', NULL, '', '2014-11-08 10:44:58', 'abdul qadir', 0);
+(63, 'abdul.qadir@yahoo.com', 'abdul@sdfj', 'User', 'No', NULL, '', '2014-11-08 10:44:58', 'abdul qadir', 0),
+(64, 'afridi@sixer.com', 'afridi@sixer.com', 'User', 'No', NULL, '', '2014-11-10 09:14:26', 'Shahid Afridi', 0),
+(65, 'inzi@captain.com', 'inzi@captain.com', 'User', 'No', NULL, '', '2014-11-10 09:16:55', 'Inzi Bhai', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -292,7 +442,7 @@ CREATE TABLE IF NOT EXISTS `user_interest_categories` (
   `cat_id` int(10) NOT NULL,
   `interest_level` int(2) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=94 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=122 ;
 
 --
 -- Dumping data for table `user_interest_categories`
@@ -312,7 +462,35 @@ INSERT INTO `user_interest_categories` (`id`, `user_id`, `cat_id`, `interest_lev
 (90, 1, 11, 2),
 (91, 1, 12, 2),
 (92, 1, 13, 2),
-(93, 1, 14, 2);
+(93, 1, 14, 2),
+(94, 64, 1, 0),
+(95, 64, 2, 2),
+(96, 64, 3, 0),
+(97, 64, 4, 0),
+(98, 64, 5, 0),
+(99, 64, 6, 2),
+(100, 64, 7, 0),
+(101, 64, 8, 0),
+(102, 64, 9, 0),
+(103, 64, 10, 0),
+(104, 64, 11, 2),
+(105, 64, 12, 0),
+(106, 64, 13, 0),
+(107, 64, 14, 0),
+(108, 65, 1, 0),
+(109, 65, 2, 2),
+(110, 65, 3, 1),
+(111, 65, 4, 0),
+(112, 65, 5, 0),
+(113, 65, 6, 2),
+(114, 65, 7, 0),
+(115, 65, 8, 0),
+(116, 65, 9, 0),
+(117, 65, 10, 0),
+(118, 65, 11, 2),
+(119, 65, 12, 0),
+(120, 65, 13, 0),
+(121, 65, 14, 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

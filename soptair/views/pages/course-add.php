@@ -47,7 +47,7 @@
 				</tr>
 				<tr>
 					<td><label>Difficulty Level</label></td>
-					<td><input type="radio" name="level" value="beginner" /> Beginner <input type="radio" name="level" value="beginner" /> Intermediate <input type="radio" name="level" value="beginner" /> Advanced</td>
+					<td><input type="radio" name="level" value="beginner" /> Beginner <input type="radio" name="level" value="intermediate" /> Intermediate <input type="radio" name="level" value="advanced" /> Advanced</td>
 				</tr>
 				
 
@@ -96,6 +96,7 @@
 					
 
 					<input type='hidden' value='0' name='total_videos' id='total_values'>
+					
             
             
 				</form>

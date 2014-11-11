@@ -17,6 +17,7 @@ class Register extends CI_Controller
 
 
         public function login(){
+        	$success= NULL;
             $message = "";
                 $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
                 $this -> form_validation -> set_rules ( array(
@@ -59,13 +60,13 @@ class Register extends CI_Controller
                         }
                        
                     }else{
-                        $message = "<h4>No Such record found</h4>";
+                        $message = "<h4>No record found!</h4>";
                     }
                     
                     
                 }
 		$this->load->view('templates/header-login');
-		$this->load->view('pages/register', array('message' => $message));
+		$this->load->view('pages/register', array('message' => $message, 'success' => $success));
 		$this->load->view('templates/footer');
         }
 	public function index()

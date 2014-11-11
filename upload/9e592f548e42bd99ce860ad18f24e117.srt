@@ -1,0 +1,66 @@
+1
+00:00:00,000 --> 00:00:04,079
+[MUSIC]
+
+2
+00:00:04,079 --> 00:00:08,303
+Have you ever wondered how to add that
+additional functionality to the front
+
+3
+00:00:08,303 --> 00:00:12,155
+end of your website, that you just can't
+do with HTML or CSS alone?
+
+4
+00:00:12,155 --> 00:00:18,864
+Such as custom navigations, tool tops,
+form hints and animations based on events.
+
+5
+00:00:18,864 --> 00:00:22,058
+I'm Andrew, and welcome to jQuery basics.
+
+6
+00:00:22,058 --> 00:00:24,750
+Where I will show the basics of adding new
+
+7
+00:00:24,750 --> 00:00:28,460
+types of functionality to the front-end of
+a website.
+
+8
+00:00:28,460 --> 00:00:31,350
+>> Throughout this course, we'll work on
+several small projects to
+
+9
+00:00:31,350 --> 00:00:35,700
+bring up to speed on adding this behavior
+to your sites.
+
+10
+00:00:35,700 --> 00:00:40,080
+jQuery basics is for people with a basic
+grasp of java script.
+
+11
+00:00:40,080 --> 00:00:43,850
+Like creating variables, conditional
+statements and functions.
+
+12
+00:00:44,850 --> 00:00:48,980
+If haven't had any of experience like this
+already, you should probably check out one
+
+13
+00:00:48,980 --> 00:00:51,240
+of our other courses or projects that
+
+14
+00:00:51,240 --> 00:00:53,800
+covers the basics of java script and
+programming.
+

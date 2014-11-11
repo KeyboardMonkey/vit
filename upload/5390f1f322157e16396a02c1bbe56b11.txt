@@ -1,0 +1,35 @@
+﻿-------
+[Worked]
+Name: Ahmet Tas
+Card No: 4506344227769265
+S.K.T: 04 / 2017
+Cvv : 615
+-------
+anka Adi: Ziraat Bankasi
+Kart No: 4446760656722991
+S.K.T: 05 / 2018
+Cvv Kodu: 663
+Kart Sifresi: 1973
+-------
+TL Miktar: Standart 20,00 TL
+Banka Adi: Yabanci Banka Karti
+Ad Soyad: Rifat Sahin
+Kart No: 5131413955404658
+S.K.T: 09 / 2015
+Cvv Kodu: 225
+Kart Sifresi: 4658
+-------
+TL Miktar: Standart 20,00 TL
+Banka Adi: FinansBank
+Ad Soyad: Eyüp Karada?
+Kart No: 4022780196237583
+S.K.T: 05 / 2017
+Cvv Kodu: 664
+Kart Sifresi: 5192
+-------
+4415243603714509;02/17;456;
+-------
+Creditcard Number: 4117764001058562
+Exp Month : 05
+Exp Year : 2011
+Cvv : 522

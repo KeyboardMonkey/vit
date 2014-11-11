@@ -247,4 +247,9 @@ class course extends MY_Model{
      
         
     }
+    public function enrollmentCount(){
+        $enrollment = new course_enrollment();
+        $enrollments = $enrollment -> getWithCondition(array('course_id' => $this -> course_id));
+    return count($enrollments);
+        }
 }

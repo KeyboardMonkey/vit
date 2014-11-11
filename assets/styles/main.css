@@ -20,6 +20,7 @@ other       greyishblue     #aea8d3
 * { margin:0; padding:0; }
 body { margin:0 auto; padding:0; background:#ECF0F1; font-family:"Trebuchet MS", Helvetica, sans-serif; max-width:1366px; }
 input, select, option, textarea { font-family:"Trebuchet MS", Helvetica, sans-serif; }
+hr { opacity:0.1; }
 .clear { clear:both; }
 .line-border { border:1px solid #ECF0F1; }
 a { text-decoration:none; color:#58585a; }
@@ -166,6 +167,13 @@ input#login-checkbox { margin-left:5px; position:absolute; }
 #welcome .choose-category .ac-circle label::before { background-color:#FFFFFF; border:5px solid #58585a; }
 #welcome .choose-category .ac-circle svg { width:50px; height:50px; margin-top:-25px; left:20px; }
 #welcome .choose-category .ac-circle svg path { stroke-width:5px; }
+
+#welcome .welcome-video { margin:20px auto 0; width:50%; height:350px; background:#FFFFFF; }
+#welcome #get-started { margin:0 auto 20px; width:50%; height:100px; background:#FFFFFF; border-top:2px solid #ECF0F1; }
+#welcome #get-started h5 { padding:20px 0 0 20px; text-align:left; }
+#welcome #get-started h3 { padding:10px 0 0 20px; text-align:left; }
+#welcome #get-started button { margin:-27px 20px; padding:5px 40px; float:right; font-size:14px; background:#2ABB9B; color:#FFFFFF; border:1px solid #2ABB9B; cursor:pointer; transition:all 0.5s ease-out; opacity:0.8; }
+    #welcome #get-started button:hover { opacity:1; }
 /*-----------------------------------------------------------End Welcome-----------------------------------------------------------*/
 /*-----------------------------------------------------------Side Navigations-----------------------------------------------------------*/
 nav.side-navs {
@@ -413,11 +421,11 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 .half-two { border-top:2px solid #2ABB9B; width:450px; float:right; margin:20px 20px 0 0; background:#ECF0F1; }
 .course-info { padding:20px 0 20px 20px; }
 .course-info h4.course-name { padding:10px 0; color:#2ABB9B; }
-.course-info p.points { font-size:14px; background:#ffffff; display:inline-block; padding:1px 10px; }
+.course-info p.points { padding:1px 10px; font-size:14px; background:#ffffff; display:inline-block; }
 .rating { padding:20px 0 20px 20px; float:left; }
 .rating p { font-size:14px; }
 .learn-now { padding:10px 0; float:right; }
-.learn-now a.learn-now { display:inline-block; width:80px; text-align:center; padding:5px 15px; background:#2ABB9B; font-size:14px; color:#ffffff; }
+.learn-now a.learn-now { padding:5px 15px; display:inline-block; width:80px; text-align:center; background:#2ABB9B; font-size:14px; color:#FFFFFF; }
 .color-tag { padding:0; float:right; }
 
 
@@ -461,11 +469,11 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 
 /*-----------------------------------------------------------End Library-----------------------------------------------------------*/
 /*-----------------------------------------------------------Learning Paths-----------------------------------------------------------*/
-ul.suggest-me-track { margin:30px auto 0; padding:0; width:30%; }
-    ul.suggest-me-track li { margin:2px 0; padding:10px 0; list-style:none; background:#2ABB9B; opacity:0.8; }
+ul.suggest-me-track { margin:20px auto 0; padding:0; width:18%; }
+    ul.suggest-me-track li { margin:2px auto; padding:0; list-style:none; background:#2ABB9B; opacity:0.7; }
     ul.suggest-me-track li:hover { opacity:1; }
-    ul.suggest-me-track li a { padding:20px 55px; color:#FFFFFF; display:block; transition:all 0.5s ease-out; }
-        span.suggest-me-track { margin:-1px 25px; position:absolute; }
+    ul.suggest-me-track li a { padding:20px 0 20px 70px; color:#FFFFFF; display:block; transition:all 0.5s ease-out; }
+    span.suggest-me-track { margin:-10px 10px; position:absolute; }
 
 .half-one { border-top:2px solid #2ABB9B; width:47.5%; float:left; margin:20px 0 0 1.7%; background:#ECF0F1; }
 .half-two { border-top:2px solid #2ABB9B; width:47.5%; float:right; margin:20px 1.7% 0 0; background:#ECF0F1; }
@@ -474,6 +482,43 @@ ul.suggest-me-track { margin:30px auto 0; padding:0; width:30%; }
 .course-info ul { padding-left:15px; }
 .course-info ul li { padding:5px 0; }
 .inline-buttons { padding:0 20px 20px; float:right; }
+
+#course-progress-left { margin:20px; float:left; }
+#course-progress-right { margin:20px; float:right; }
+#track-description { margin:20px; }
+.progress-bar { margin:0 auto; padding:5px 15px; width:80%; border-bottom:10px solid #58585a; }
+.course-progress { margin:30px 20px 0; float:right; }
+.course-progress button { padding:3px 20px; font-size:14px; background:#2ABB9B; color:#FFFFFF; border:1px solid #2ABB9B; transition:all 0.2s ease-out; opacity:0.8; }
+    .course-progress button:hover { opacity:1; }
+.content-lg #course-col-track { margin:20px 20px; }
+.course-number-col { margin:85px 0 0 10px; float:left; background:#58585A; width:100px; height:100px; border-radius:50%; opacity:0.4; }
+.course-number-col-completed { margin:85px 0 0 10px; float:left; background:#2ABB9B; width:100px; height:100px; border-radius:50%; opacity:1; }
+    .course-number-col h2 { padding:25px 0; font-size:42px; text-align:center; color:#FFFFFF; }
+.course-track-border { margin:130px 0; float:left; width:700px; height:10px; background:#58585A; opacity:0.4; }
+.course-track-border-completed { margin:130px 0; float:left; width:700px; height:10px; background:#2ABB9B; opacity:1; }
+.course-col { margin:20px 0; padding:25px 0; float:left; border-top:2px solid #2ABB9B; width:350px; height:180px; background:#ECF0F1; opacity:0.4; }
+.course-col-completed { margin:20px 0; padding:25px 0; float:left; border-top:2px solid #2ABB9B; width:350px; height:180px; background:#ECF0F1; opacity:1; }
+    .course-col h4.level { margin:10px; padding:0; float:left; font-size:14px; }
+    .course-col h4.course-name { margin:10px; font-size:18px; float:left; color:#2ABB9B; }
+    .course-col p.points { margin:10px; padding:0 10px; font-size:14px; float:left; background:#ffffff; display:inline-block; }
+    .course-col h4.rating { margin:10px; padding:0; float:right; font-size:14px; }
+    .course-col img { margin:15px 125px 30px; }
+    .course-col h5 { margin:10px 0 0 0; padding:0 20px; color:#FFFFFF; float:right; }
+        .course-col h5.html { background:#19B5FE; }
+        .course-col h5.css { background:#34495E; }
+        .course-col h5.cpp { background:#2C3E50; }
+        .course-col h5.php { background:#3498DB; }
+        .course-col h5.javascript{ background:#D35400; }
+        .course-col h5.jquery { background:#03C9A9; }
+        .course-col h5.asp { background:#F5D76E; }
+        .course-col h5.android { background:#2ECC71; }
+        .course-col h5.java{ background:#C0392B; }
+        .course-col h5.wordpress { background:#95A5A6; }
+        .course-col h5.d-tools { background:#1ABC9C; }
+        .course-col h5.business { background:#26A65B; }
+        .course-col h5.design { background:#E67E22; }
+        .course-col h5.other { background:#AEA8D3; }
+    .progress-bar-mini { margin:30px auto 10px; width:80%; border:10px solid #58585a; }
 /*-----------------------------------------------------------End Learning Paths-----------------------------------------------------------*/
 /*-----------------------------------------------------------Course Introduction-----------------------------------------------------------*/
 .content-lg h2.course-heading { padding:10px 20px;}
@@ -538,13 +583,15 @@ h3.widget-similar-courses { margin:20px 0; padding:0 0 10px 60px; width:100%; bo
 .widgets .widget-course-progress h4 { padding:10px 10px 0; }
 .widgets .widget-course-progress .progress-bar { margin:0 auto; padding:5px 15px; width:80%; border-bottom:10px solid #58585a; }
 
-.widgets .widget-project-files { margin-top:18px; padding:10px 0 20px; width:240px; background:#ffffff; }
-.widgets .widget-project-files h4 { padding:10px; }
-.widgets .widget-project-files ul { margin:0 10px; padding:5px 0; }
-    .widgets .widget-project-files ul li { margin:2px 0; padding:10px 0; list-style:none; background:#2ABB9B; opacity:0.8; }
-    .widgets .widget-project-files ul li:hover { opacity:1; }
+.widgets .widget-project-files, .widgets .widget-take-quiz { margin-top:18px; padding:10px 0 20px; width:240px; background:#ffffff; }
+.widgets .widget-project-files h4, .widgets .widget-take-quiz h4 { padding:10px; }
+.widgets .widget-project-files ul, .widgets .widget-take-quiz ul { margin:0 10px; padding:5px 0; }
+    .widgets .widget-project-files ul li, .widgets .widget-take-quiz ul li { margin:2px 0; padding:10px 0; list-style:none; background:#2ABB9B; opacity:0.8; }
+    .widgets .widget-project-files ul li:hover, .widgets .widget-take-quiz ul li:hover { opacity:1; }
     .widgets .widget-project-files ul li a { padding-left:55px; color:#FFFFFF;  display:block; transition:all 0.5s ease-out; }
+    .widgets .widget-take-quiz ul li a { padding-left:90px; color:#FFFFFF;  display:block; transition:all 0.5s ease-out; }
         span.download { margin:-1px 25px; position:absolute; }
+        span.take-quiz { margin:-10px 50px; position:absolute; }
 
 .widgets .widget-facebook-recommendations { margin-top:18px; padding:10px 0 20px; width:240px; background:#ffffff; }
 .widgets .widget-facebook-recommendations h4, p.fb-feeds { padding:5px 10px; border-bottom:1px solid #ECF0F1; }
@@ -574,9 +621,41 @@ h3.widget-similar-courses { margin:20px 0; padding:0 0 10px 60px; width:100%; bo
 ul.quiz-options { margin:0; padding:20px 40px;}
     ul.quiz-options li { padding:25px 0; list-style:none; }
     ul.quiz-options input { margin-right:10px; }
+
+/*--------------Plugin------------------*/
+.ac-custom ul { list-style:none; padding:0; margin:30px 60px; }
+.ac-custom li { margin:0 auto; padding:25px 0; position:relative; }
+.ac-custom label { display:inline-block; position:relative; font-size:16px; padding:0 0 0 80px; vertical-align:top; color:#58585a; cursor:pointer; -webkit-transition:color 0.5s; transition:color 0.5s; }
+.ac-custom input[type="checkbox"], .ac-custom input[type="radio"], .ac-custom label::before { width:50px; height:50px; top:50%; left:0; margin-top:-25px; position:absolute; cursor:pointer; }
+.ac-custom input[type="checkbox"], .ac-custom input[type="radio"] { opacity:0; -webkit-appearance:none; display:inline-block; vertical-align:middle; z-index:100; }
+.ac-custom input[type="checkbox"], .ac-custom input[type="radio"] { opacity:0; -webkit-appearance:none; display:inline-block; vertical-align:middle; z-index:100; }
+.ac-custom label::before { content:''; border:4px solid #FFFFFF; -webkit-transition:opacity 0.5s; transition:opacity 0.5s; }
+.ac-radio label::before { border-radius:50%; }
+.ac-custom input[type="checkbox"]:checked + label, .ac-custom input[type="radio"]:checked + label { color:#2ABB9B; }
+.ac-custom input[type="checkbox"]:checked + label::before, .ac-custom input[type="radio"]:checked + label::before { opacity:0.8; }
+/* General SVG and path styles */
+.ac-custom svg { position:absolute; width:40px; height:40px; top:50%; margin-top:-20px; left:5px; pointer-events:none; }
+.ac-custom svg path { stroke:#2ABB9B; stroke-width:13px; stroke-linecap:round; stroke-linejoin:round; fill:none; }
+/* Specific input, SVG and path styles */
+/* Circle */
+.ac-circle input[type="checkbox"], .ac-circle input[type="radio"], .ac-circle label::before { width:30px; height:30px; margin-top:-15px; left:10px; position:absolute; }
+.ac-circle label::before { background-color:#2ABB9B; border:none; }
+.ac-circle svg { width:50px; height:50px; margin-top:-25px; left:0px; }
+.ac-circle svg path { stroke-width:5px; }
+
+/*--------------End Plugin------------------*/
+
 form.quiz-answer { padding:0 20px 10px; float:right; position:relative; text-align:center; }
 form.quiz-answer input[type=submit] { padding:5px 50px; font-size:16px; background:#2ABB9B; border:1px solid #2ABB9B; color:#FFFFFF; transition:all 0.5s ease-out; position:relative; cursor:pointer; }
 form.quiz-answer input[type=submit]:hover { background:#ECF0F1; border:1px solid #2ABB9B; color:#2ABB9B; }
+
+#quiz-result { margin:80px auto; padding:20px; width:500px; background:url(../graphics/quiz-result-bg.png); }
+#quiz-result h1 { margin:60px 200px; padding:50px 0; position:absolute; text-align:center; color:#F06060; font-size:36px; }
+#quiz-result #points { margin:10px auto; width:150px; height:150px; background:#FFFFFF; border:80px solid #F06060; border-radius:50%; }
+#quiz-result h3 { margin:20px 0 10px; text-align:center; }
+#quiz-result p { margin:0 auto; line-height:1.5; font-size:14px; text-align:center; width:70%; }
+#quiz-result button { margin:20px 0 0; padding:5px 40px; float:right; font-size:16px; background:#2ABB9B; color:#FFFFFF; border:1px solid #2ABB9B; cursor:pointer; transition:all 0.5s ease-out; opacity:0.8; }
+    #quiz-result button:hover { opacity:1; }
 /*-----------------------------------------------------------End Quiz-----------------------------------------------------------*/
 /*-----------------------------------------------------------Technology Feeds-----------------------------------------------------------*/
 .feeds-col1 { margin:10px 0 10px 2.2%; float:left; width:22%; border:1px solid #ECF0F1; }

@@ -15,19 +15,6 @@ class Library extends MY_Controller
             
         }
 
-        public function view()
-	{
-            
-                
-		$this->load->view('templates/header');
-		$this->load->view('templates/breadcrumbs');
-	 	$this->load->view('pages/library');
-		$this->load->view('templates/footer');
-		
-
-	}
-
-
 	public function index($type = NULL, $value = NULL)
 	{
         if($type != 'category') $type = NULL;

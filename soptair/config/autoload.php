@@ -64,7 +64,7 @@ $autoload['libraries'] = array('database','session','cart', 'form_validation', '
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'form', 'html');
+$autoload['helper'] = array('url', 'form', 'html', 'file',  'text');
 
 
 /*
@@ -109,7 +109,8 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('user', 'course', 'course_cat', 'course_rating', 'course_enrollment', 'user_interest_categories');
+$autoload['model'] = array('user', 'course', 'course_cat', 'course_rating', 'course_enrollment', 'user_interest_categories', 'file_model', 
+	'lecture', 'track', 'track_rating', 'quiz_model', 'quiz_question');
 
 
 /* End of file autoload.php */

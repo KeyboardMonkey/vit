@@ -2,13 +2,12 @@
 
 class Tracks extends CI_Controller 
 {
-		public function view()
+		public function explore()
 	{
 
 		$this->load->view('templates/header');
 		$this->load->view('templates/breadcrumbs');
-
-		$this->load->view('pages/tracks');
+		$this->load->view('pages/explore-track');
 		$this->load->view('templates/footer');
 		
 
@@ -24,14 +23,23 @@ class Tracks extends CI_Controller
 		$this->load->view('pages/track-add');
 		$this->load->view('templates/footer');
 
-	
-
 	}
 
-		public function delete()
+		public function resume_track()
 	{
 
-	
+		$this->load->view('templates/header');
+		$this->load->view('templates/breadcrumbs');
+		$this->load->view('pages/track-in-progress');
+		$this->load->view('templates/footer');
+
+	}
+		public function suggest_track()
+	{
+
+		$this->load->view('templates/header');
+		$this->load->view('wizards/new-track-wizard');
+		$this->load->view('templates/footer');
 
 	}
 

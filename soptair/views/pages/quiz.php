@@ -1,10 +1,8 @@
-<script src="<?=base_url();?>assets/js/svgcheckbx.js"></script>
-
-	<section class="container">
+<section class="container">
 
 	<section class="widgets">		
 		<section class="clear"></section>
-		
+
 		<section class="widget-quiz-remarks">
 			<ul class="quiz-remarks">
 				<li><a href="">1<br />Correct</a></li>
@@ -13,7 +11,7 @@
 			<p class="info">You need minimum 4 correct answers to pass the quiz.</p>
 		</section>
 	</section>
-	
+
 	<section class="content-md">
 		<h5 class="quiz">Quiz: Question 1/5</h5>
 		<h3 class="quiz-question">Which two languages form the foundation of structure and presentation on the web?</h3>
@@ -29,7 +27,8 @@
 			<input type="submit" name="submit" value="Next Question" />
 		</form>
 	</section>
-	
-	</section>
-	
-	<section class="clear"></section>
+
+</section>
+
+<section class="clear"></section>
+<script src="<?=base_url()?>assets/js/svgcheckbx.js"></script>

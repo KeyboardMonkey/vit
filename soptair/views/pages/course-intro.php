@@ -3,10 +3,11 @@
 	<section class="content-lg">
 		<h2 class="course-heading"><?=$course->full_name;?></h2>
 		<ul class="course-desc">
-			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Category: <?=$course->category;?></li>
+		
+			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Category: <?=$course->getCategoryTitle();?></li>
 			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Level: <?=$course->difficulty_level;?></li>
 			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Points: <?=$course->points;?></li>
-			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Enrol Count: 755</li>
+			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Enrol Count: <?=$course->enrollmentCount();?></li>
 		</ul>
 
 		<?php

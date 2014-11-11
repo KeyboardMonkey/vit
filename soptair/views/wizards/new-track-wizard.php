@@ -1,4 +1,3 @@
-
 <section class="container">
 	<section id="welcome">
 		<section id="select-type">
@@ -7,7 +6,7 @@
 			<section class="choose-category">
 				<form class="ac-custom ac-radio ac-circle" autocomplete="off">
 					<ul>
-						
+
 						<li><input id="r5" name="r2" type="radio"><label for="r5">I'd like to learn to build mobile app</label></li>
 						<li><input id="r6" name="r2" type="radio"><label for="r6">I'd like to learn to build websites</label></li>
 						<li><input id="r7" name="r2" type="radio"><label for="r7">I'd like to brush my code/design skills</label></li>
@@ -56,8 +55,17 @@
 				</form>
 			</section>
 		</section>
+		<section id="4">
+			<h3>We recommend the PHP Development Track.</h3>
+			<h5>You'll learn how to build dynamic websites with PHP, HTML, CSS and databases.</h5>
+			<section class="welcome-video">
+			</section>
+			<section id="get-started">
+				<h5>Suggested Track</h5>
+				<h3>PHP Development</h3>
+				<button type="button">Get Started</button>
+			</section>
+		</section>
 	</section>
 </section>
 <script src="<?=base_url();?>assets/js/svgcheckbx.js"></script> <!-- codedrop fancy selection script -->
-</body>
-</html>
