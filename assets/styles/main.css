@@ -11,10 +11,10 @@ asp         lightred        #F5D76E
 android     green           #2ECC71
 java        red             #c0392b
 wordpress   silver          #95a5a6
-d-tools     green           #1abc9c
-business    win8green       #26A65B
+d-tools     green           #913D88 
+business    win8green       #BE90D4 
 design      darkoragne      #e67e22
-other       greyishblue     #aea8d3
+other       greyishblue     #915E25
 */
 
 * { margin:0; padding:0; }
@@ -193,6 +193,18 @@ nav.side-navs ul li {
     list-style:none;
     font-size:14px;
 }
+span.total-courses {
+    margin:7px 180px;
+    padding:5px;
+    position:absolute;
+    border-radius:5px;
+    background:#ECF0F1;
+}
+span.total-courses:hover {
+    transition:all 0.5s ease-out;
+    color:#FFFFFF;
+    background:#2ABB9B;
+}
 nav.side-navs ul li.courses {
     padding:12px 15px;
     font-weight:bold;
@@ -314,6 +326,22 @@ nav.side-navs ul li a.business:hover {
     border-right:15px #BE90D4 solid;
     border-left:none;
     color:#BE90D4;
+}nav.side-navs ul li a.design {
+    border-right:5px #e67e22 solid;
+    transition:all 0.5s ease-out;
+}
+nav.side-navs ul li a.design:hover {
+    border-right:15px #e67e22 solid;
+    border-left:none;
+    color:#e67e22;
+}nav.side-navs ul li a.other {
+    border-right:5px #915E25 solid;
+    transition:all 0.5s ease-out;
+}
+nav.side-navs ul li a.other:hover {
+    border-right:15px #915E25 solid;
+    border-left:none;
+    color:#915E25;
 }
 nav.side-navs ul li a:hover {
     color:#2ABB9B;
@@ -448,7 +476,7 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
     display:inline-block; 
     width:80px; 
     padding:3px 15px; 
-    font-size:10px; 
+    font-size:12px; 
     color:#ffffff; 
 }
 
@@ -462,8 +490,8 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 .color-tag a.android { background:#2ECC71; } 
 .color-tag a.java { background:#c0392b; } 
 .color-tag a.wordpress { background:#95a5a6; } 
-.color-tag a.d-tools { background:#1abc9c; } 
-.color-tag a.business { background:#26A65B; }
+.color-tag a.d-tools { background:#913D88; } 
+.color-tag a.business { background:#BE90D4; }
 .color-tag a.design { background:#e67e22; }
 .color-tag a.other { background:#aea8d3; }
 
@@ -517,7 +545,7 @@ ul.suggest-me-track { margin:20px auto 0; padding:0; width:18%; }
         .course-col h5.d-tools { background:#1ABC9C; }
         .course-col h5.business { background:#26A65B; }
         .course-col h5.design { background:#E67E22; }
-        .course-col h5.other { background:#AEA8D3; }
+        .course-col h5.other { background:#915E25; }
     .progress-bar-mini { margin:30px auto 10px; width:80%; border:10px solid #58585a; }
 /*-----------------------------------------------------------End Learning Paths-----------------------------------------------------------*/
 /*-----------------------------------------------------------Course Introduction-----------------------------------------------------------*/
@@ -536,7 +564,7 @@ form.enroll-me input[type=submit]:hover { background:#ECF0F1; border:1px solid #
 .tabs nav ul { position:relative; display:-ms-flexbox; display:-webkit-flex; display:-moz-flex; display:-ms-flex; display:flex; margin:0 auto; padding:0; list-style:none;
     -ms-box-orient:horizontal; -ms-box-pack:center; -webkit-flex-flow:row wrap; -moz-flex-flow:row wrap; -ms-flex-flow:row wrap; flex-flow:row wrap; -webkit-justify-content:center; -moz-justify-content:center; -ms-justify-content:center; justify-content:center; }
 .tabs nav ul li { position:relative; z-index:1; display:block; margin:0; text-align:center; -webkit-flex:1; -moz-flex:1; -ms-flex:1; flex:1; }
-.tabs nav a { position:relative; display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; line-height:2.5; color:#58585a; }
+.tabs nav a { position:relative; display:block; font-size:18px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; line-height:2.5; color:#58585a; }
 .tabs nav a span { vertical-align:middle; }
 .tabs nav li.tab-current a { color:#2ABB9B; background:#FFFFFF; }
 .tabs nav a:focus { outline:none; }
@@ -552,20 +580,26 @@ form.enroll-me input[type=submit]:hover { background:#ECF0F1; border:1px solid #
 .content-wrap #section-underline-1 img { margin:10px auto; padding:0; }
 .content-wrap #section-underline-1 p.video-desc { margin:10px 0; font-size:14px; text-align:justify; border:none }
 .content-wrap #section-underline-1 h4 { margin:10px 0; }
-.content-wrap #section-underline-1 ul, .content-wrap #section-underline-1 p { margin:10px 0; padding:0 0 10px 0; list-style:none; border-bottom:1px solid #ECF0F1; font-size:14px; }
+.content-wrap #section-underline-1 ul, .content-wrap #section-underline-1 p { margin:10px 0; padding:0 0 10px 0; line-height:1.5em; list-style:none; border-bottom:1px solid #ECF0F1; font-size:14px; }
 .content-wrap #section-underline-1 ul li { margin:10px 0; padding:5px 0; }
-.content-wrap #section-underline-2 h5 { margin:10px 0; padding:10px 0; list-style:none; font-size:14px; }
-.content-wrap #section-underline-2 p, .content-wrap #section-underline-3 p { font-size:14px; }
-.content-wrap #section-underline-3 ul.course-content { padding:10px 0; list-style:none; }
+.content-wrap #section-underline-2 h5 { margin:0px 0 0; padding:10px 0; list-style:none; font-size:14px; }
+.content-wrap #section-underline-2 p, .content-wrap #section-underline-3 p { line-height:1.5em; font-size:14px; }
+.content-wrap #section-underline-3 h3#course-content {padding: 10px 20px; display: inline; }
+.content-wrap #section-underline-3 a#course-content { margin:0; padding:10px 20px 6px; display:block; background:#2ABB9B; opacity:0.5; transition: all 0.5s ease-out; }
+.content-wrap #section-underline-3 a#course-content:hover { opacity:1; }
+.content-wrap #section-underline-3 ul.course-content { padding:10px 30px; list-style:none; }
     .content-wrap #section-underline-3 ul.course-content li { padding:10px 0; border-bottom:1px solid #ECF0F1; }
-    .content-wrap #section-underline-3 ul.course-content li span { vertical-align:middle; padding:25px 25px 0 10px; }
+    .content-wrap #section-underline-3 ul.course-content li span { margin:0 0 0 10px; position:absolute; opacity:0.5; cursor:pointer; transition: all 0.5s ease-out; }
+    .content-wrap #section-underline-3 ul.course-content li span:hover { opacity:0.8; }
+    .content-wrap #section-underline-3 ul.course-content li a { padding:0 50px; color:#58585A; transition: all 0.5s ease-out; }
+    .content-wrap #section-underline-3 ul.course-content li a:hover { color:#2ABB9B; }
 h3.widget-similar-courses { margin:20px 0; padding:0 0 10px 60px; width:100%; border-bottom:1px solid #ECF0F1; }
 .widget-similar-courses { margin:0 auto; padding:10px 0 20px 0; width:90%; border-bottom:1px solid #ECF0F1; }
 .widget-similar-courses img { float:left; padding-left:20px; }
 .widget-similar-courses h4, .widget-similar-courses p { padding-left:240px; }
 .widget-similar-courses ul.course-desc { padding-left:220px; padding:50px 0 0 20px; list-style:none; }
     .widget-similar-courses ul.course-desc li { display:inline; }
-    .widget-similar-courses ul.course-desc li span { vertical-align:middle; padding:0 2px; }
+    .widget-similar-courses ul.course-desc li span { margin:0; padding:0; position:relative; }
 /*-----------------------------------------------------------End Course Introduction-----------------------------------------------------------*/
 /*-----------------------------------------------------------Course Playback-----------------------------------------------------------*/
 .widgets { float:right; margin-right:5%; }

@@ -2,17 +2,18 @@
 	<section class="container">
 
 	<nav class="side-navs">
-
 		<ul>
-               <li class="courses"><a href="<?=base_url();?>index.php/library">All Courses</a></li>
-                <?php
+		<li class="courses"><a href="<?=base_url();?>index.php/library">All Courses</a></li>
+	
+	<?php
                     $cats = $this->course_cat->get();
                     foreach($cats as $cat){
                 ?>
-			<li><a href="<?=base_url();?>index.php/library/index/category/<?=$cat->id;?>" class="<?=$cat->color_tag;?>"> <?=$cat->category;?></a></li>
-
-                    <?php }?>
-                </ul>
+			
+	
+			<li><span class="total-courses">10</span><a href="<?=base_url();?>index.php/library/index/category/<?=$cat->id;?>" class="<?=$cat->color_tag;?>"><?=$cat->category;?></a></li>
+			<?php }?>
+		</ul>
 	</nav>
 	
 	<section class="content-md">
