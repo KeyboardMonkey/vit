@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Leaderboard extends CI_Controller 
+class Leaderboard extends MY_Controller 
 {
 	
 		public function view()
@@ -47,5 +47,5 @@ class Leaderboard extends CI_Controller
 
 
 
-}/*class Leaderboard extends CI_Controller */
+}/*class Leaderboard extends MY_Controller */
 /*end of file: leaderboard.php*/

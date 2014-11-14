@@ -46,7 +46,9 @@ validation_errors();?>
 		</form>
 		<section class="inline-buttons">
 			<a href="<?=base_url();?>index.php/home">Not Right Now</a>
+			<!-- <a href="<?=base_url();?>index.php/preference/rank_preference">Next Step</a> -->
 			<a id="submit_pref">Next Step</a>
+			<input type="button" value="Recommendations" onclick="newDoc()">
                         <script>
                             $(document).ready(function(){
                                $("#submit_pref").click(function(){
@@ -54,6 +56,45 @@ validation_errors();?>
                                });
                             });
                         </script>
+<script>
+function newDoc() {
+    window.location.assign("<?=base_url();?>index.php/recommendations");
+}
+</script>
+<!-- redirect script -->
+          <!--               <?php
+			//if()
+			{
+?>
+				<span class="countdown">
+				3
+				</span>
+
+			<script>
+						$(document).ready(function(){
+							//alert("readh");
+							var count = 3;
+							var fun = function()
+							{
+								count --;
+								$('.countdown').html(count);
+								if(count == 0){
+									var url = "<?= base_url() . "index.php/preference/rank_preference";?>";
+								//	alert("you are being teleported to: " + url);
+									window.location = url;
+								}
+								setTimeout(fun, 1000);
+							}
+							setTimeout(fun, 1000);
+
+						});
+
+			</script>
+<?php
+
+			}
+
+	?> -->
 		</section>
 	</section>
 	</section>

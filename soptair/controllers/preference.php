@@ -20,7 +20,7 @@ class Preference extends MY_Controller
                 $this->form_validation->set_rules( $cat->id, 'Category: ' . $cat -> category, 'required|is_number|greater_than[-1]|less_than[3]|exists[course_category.id]');
             }
             
-           // print_r($_POST);
+            print_r($_POST);
             if($this -> form_validation -> run())
             { 
                 foreach($cats as $cat){
@@ -38,7 +38,7 @@ class Preference extends MY_Controller
                 }
                
             }
-		$this->load->view('templates/header');
+        $this->load->view('templates/header');
 		$this->load->view('wizards/pref-set');
 		$this->load->view('templates/footer');
 	}
@@ -52,5 +52,5 @@ class Preference extends MY_Controller
 
 
 
-}/*class Preference extends CI_Controller */
+}/*class Preference extends MY_Controller */
 /*end of file: preference.php*/

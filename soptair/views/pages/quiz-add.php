@@ -54,7 +54,7 @@
 			<td>
 				<input type="reset" name="reset" value="Reset" />
 				<input class="submit_form" type="submit" name="submit" value="Next Question" />
-				<a href="<?=base_url();?>index.php">Finish</button>
+				<a href="<?=base_url();?>index.php">Finish</a>
 			</td>
 		</tr>
 	</table>

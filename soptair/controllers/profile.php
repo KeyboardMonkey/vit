@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Profile extends CI_Controller 
+class Profile extends MY_Controller 
 {
 		public function view()
 	{
@@ -25,12 +25,6 @@ class Profile extends CI_Controller
 
 	}
 
-		public function delete()
-	{
-
-	
-
-	}
 
 
 
@@ -45,5 +39,5 @@ class Profile extends CI_Controller
 
 	}
 
-}/*class Profile extends CI_Controller */
+}/*class Profile extends MY_Controller */
 /*end of file: profile.php*/

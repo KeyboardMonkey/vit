@@ -39,7 +39,7 @@
 */
 
 $route['default_controller'] = "home";
-$route['404_override'] = '';
+$route['404_override'] = 'PageDoesNotExist';
 
 // $route['default_controller'] = 'pages/view';
 // $route['(:any)'] = 'pages/view/$1';

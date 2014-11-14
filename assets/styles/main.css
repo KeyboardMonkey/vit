@@ -1,18 +1,23 @@
-/*  -- THEME COLORS
+/*  
 
-->COLOR TAGSF
+-> THEME COLORS
+Header      Neela wala      #00A8E7
+Buttons     Sabazzzz        #2ABB9B
+Background  Greyish         #ECF0F1
+
+-> COLOR TAGS
 html        blue:           #19B5FE
-css         voilet:         #34495e
-cpp         darkgrey:       #2c3e50
-php         lightblue:      #3498db
-javascript  orange:         #d35400
-jquery      pheekablue      #03C9A9
-asp         lightred        #F5D76E
-android     green           #2ECC71
-java        red             #c0392b
-wordpress   silver          #95a5a6
-d-tools     green           #913D88 
-business    win8green       #BE90D4 
+php         lightblue:      #3A539B
+asp         lightred        #C0392B 
+java        red             #F22613 
+android     green           #2ECC71 
+javascript  orange:         #DDA423 
+jquery      pheekablue      #2AE7C3 
+css         voilet:         #FCDC05 
+cpp         darkgrey:       #67809F 
+wordpress   silver          #6C7A89 
+d-tools     green           #913D88  
+business    win8green       #34495e  
 design      darkoragne      #e67e22
 other       greyishblue     #915E25
 */
@@ -229,13 +234,13 @@ nav.side-navs ul li a.html:hover {
     color:#19B5FE;
 }
 nav.side-navs ul li a.css {
-    border-right:5px #3498DB solid;
+    border-right:5px #FCDC05 solid;
     transition:all 0.5s ease-out;
 }
 nav.side-navs ul li a.css:hover {
-    border-right:15px #3498DB solid;
+    border-right:15px #FCDC05 solid;
     border-left:none;
-    color:#3498DB;
+    color:#FCDC05;
 }
 nav.side-navs ul li a.cpp {
     border-right:5px #67809F solid;
@@ -256,22 +261,22 @@ nav.side-navs ul li a.php:hover {
     color:#3A539B;
 }
 nav.side-navs ul li a.javascript {
-    border-right:5px #F9BF3B solid;
+    border-right:5px #DDA423 solid;
     transition:all 0.5s ease-out;
 }
 nav.side-navs ul li a.javascript:hover {
-    border-right:15px #F9BF3B solid;
+    border-right:15px #DDA423 solid;
     border-left:none;
-    color:#F9BF3B;
+    color:#DDA423;
 }
 nav.side-navs ul li a.jquery {
-    border-right:5px #22313F solid;
+    border-right:5px #2AE7C3 solid;
     transition:all 0.5s ease-out;
 }
 nav.side-navs ul li a.jquery:hover {
-    border-right:15px #22313F solid;
+    border-right:15px #2AE7C3 solid;
     border-left:none;
-    color:#22313F;
+    color:#2AE7C3;
 }
 nav.side-navs ul li a.asp {
     border-right:5px #C0392B solid;
@@ -319,13 +324,13 @@ nav.side-navs ul li a.d-tools:hover {
     color:#913D88;
 }
 nav.side-navs ul li a.business {
-    border-right:5px #BE90D4 solid;
+    border-right:5px #34495e solid;
     transition:all 0.5s ease-out;
 }
 nav.side-navs ul li a.business:hover {
-    border-right:15px #BE90D4 solid;
+    border-right:15px #34495e solid;
     border-left:none;
-    color:#BE90D4;
+    color:#34495e;
 }nav.side-navs ul li a.design {
     border-right:5px #e67e22 solid;
     transition:all 0.5s ease-out;
@@ -448,7 +453,7 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 .half-one { border-top:2px solid #2ABB9B; width:450px; float:left; margin:20px 20px 0; background:#ECF0F1; }
 .half-two { border-top:2px solid #2ABB9B; width:450px; float:right; margin:20px 20px 0 0; background:#ECF0F1; }
 .course-info { padding:20px 0 20px 20px; }
-.course-info h4.course-name { padding:10px 0; color:#2ABB9B; }
+.course-info h4.course-name { padding: 0px 0px 10px 0px; color: #2ABB9B; font-size: 17px; }
 .course-info p.points { padding:1px 10px; font-size:14px; background:#ffffff; display:inline-block; }
 .rating { padding:20px 0 20px 20px; float:left; }
 .rating p { font-size:14px; }
@@ -481,19 +486,19 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 }
 
 .color-tag a.html{ background:#19B5FE; }
-.color-tag a.css { background:#34495e; } 
-.color-tag a.cpp { background:#2c3e50; } 
-.color-tag a.php { background:#3498db; } 
-.color-tag a.javascript { background:#d35400; } 
-.color-tag a.jquery { background:#03C9A9; } 
-.color-tag a.asp { background:#F5D76E; } 
+.color-tag a.css { background:#FCDC05; } 
+.color-tag a.cpp { background:#67809F; } 
+.color-tag a.php { background:#3A539B; } 
+.color-tag a.javascript { background:#DDA423; } 
+.color-tag a.jquery { background:#2AE7C3; } 
+.color-tag a.asp { background:#C0392B; } 
 .color-tag a.android { background:#2ECC71; } 
-.color-tag a.java { background:#c0392b; } 
-.color-tag a.wordpress { background:#95a5a6; } 
+.color-tag a.java { background:#F22613; } 
+.color-tag a.wordpress { background:#6C7A89; } 
 .color-tag a.d-tools { background:#913D88; } 
-.color-tag a.business { background:#BE90D4; }
+.color-tag a.business { background:#34495e; }
 .color-tag a.design { background:#e67e22; }
-.color-tag a.other { background:#aea8d3; }
+.color-tag a.other { background:#915E25; }
 
 /*-----------------------------------------------------------End Library-----------------------------------------------------------*/
 /*-----------------------------------------------------------Learning Paths-----------------------------------------------------------*/
@@ -533,17 +538,17 @@ ul.suggest-me-track { margin:20px auto 0; padding:0; width:18%; }
     .course-col img { margin:15px 125px 30px; }
     .course-col h5 { margin:10px 0 0 0; padding:0 20px; color:#FFFFFF; float:right; }
         .course-col h5.html { background:#19B5FE; }
-        .course-col h5.css { background:#34495E; }
-        .course-col h5.cpp { background:#2C3E50; }
-        .course-col h5.php { background:#3498DB; }
-        .course-col h5.javascript{ background:#D35400; }
-        .course-col h5.jquery { background:#03C9A9; }
-        .course-col h5.asp { background:#F5D76E; }
+        .course-col h5.css { background:#FCDC05; }
+        .course-col h5.cpp { background:#67809F; }
+        .course-col h5.php { background:#3A539B; }
+        .course-col h5.javascript{ background:#DDA423; }
+        .course-col h5.jquery { background:#2AE7C3; }
+        .course-col h5.asp { background:#C0392B; }
         .course-col h5.android { background:#2ECC71; }
-        .course-col h5.java{ background:#C0392B; }
-        .course-col h5.wordpress { background:#95A5A6; }
-        .course-col h5.d-tools { background:#1ABC9C; }
-        .course-col h5.business { background:#26A65B; }
+        .course-col h5.java{ background:#F22613; }
+        .course-col h5.wordpress { background:#6C7A89; }
+        .course-col h5.d-tools { background:#913D88; }
+        .course-col h5.business { background:#34495e; }
         .course-col h5.design { background:#E67E22; }
         .course-col h5.other { background:#915E25; }
     .progress-bar-mini { margin:30px auto 10px; width:80%; border:10px solid #58585a; }
@@ -614,11 +619,11 @@ h3.widget-similar-courses { margin:20px 0; padding:0 0 10px 60px; width:100%; bo
 .widgets .widget-video-transition ul li.next { width:35%; float:right; margin-right:14%; }
 
 .widgets .widget-course-progress { margin-top:18px; padding:10px 0 20px; width:240px; background:#ffffff; }
-.widgets .widget-course-progress h4 { padding:10px 10px 0; }
+.widgets .widget-course-progress h4 { margin:1px 8px 11px;}
 .widgets .widget-course-progress .progress-bar { margin:0 auto; padding:5px 15px; width:80%; border-bottom:10px solid #58585a; }
 
 .widgets .widget-project-files, .widgets .widget-take-quiz { margin-top:18px; padding:10px 0 20px; width:240px; background:#ffffff; }
-.widgets .widget-project-files h4, .widgets .widget-take-quiz h4 { padding:10px; }
+.widgets .widget-project-files h4, .widgets .widget-take-quiz h4 { margin:1px 8px 3px; }
 .widgets .widget-project-files ul, .widgets .widget-take-quiz ul { margin:0 10px; padding:5px 0; }
     .widgets .widget-project-files ul li, .widgets .widget-take-quiz ul li { margin:2px 0; padding:10px 0; list-style:none; background:#2ABB9B; opacity:0.8; }
     .widgets .widget-project-files ul li:hover, .widgets .widget-take-quiz ul li:hover { opacity:1; }
@@ -766,3 +771,7 @@ footer {
 .copyrights { padding:1% 0; padding-left:5%; }
 .copyrights p { font-size:14px; color:#ffffff; }
 /*-----------------------------------------------------------End Footer-----------------------------------------------------------*/
+/*-----------------------------------------------------------404 Page-----------------------------------------------------------*/
+
+
+/*-----------------------------------------------------------END 404 Page-----------------------------------------------------------*/

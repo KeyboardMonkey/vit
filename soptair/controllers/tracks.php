@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Tracks extends CI_Controller 
+class Tracks extends MY_Controller 
 {
 		public function explore()
 	{
@@ -57,5 +57,5 @@ class Tracks extends CI_Controller
 
 
 
-}/*class Tracks extends CI_Controller */
+}/*class Tracks extends MY_Controller */
 /*end of file: tracks.php*/

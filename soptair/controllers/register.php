@@ -4,7 +4,7 @@ class Register extends CI_Controller
 {
 		public function view()
 	{
-		$message = "fdssdafasdfa";
+		$message = "";
 
 		$this->load->view('templates/header-login');
 		$this->load->view('pages/register', array('message' => $message));

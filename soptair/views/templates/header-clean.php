@@ -7,12 +7,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>Vitorials</title>
 		<link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/styles/main.css" />
+		   <!-- COMMON SCRIPTS FROM THE HEADER -->
+        <script src="<?= base_url();?>assets/js/jquery-1.4.1.min.js"></script>
 	</head>
 <body>
 
 	<header>
 		<section class="logo">
             <a href="<?=base_url();?>"><img src="<?=base_url();?>assets/graphics/logo.png" width="200px" height="39px" /></a>
+
 		</section>
 	
 	</header>

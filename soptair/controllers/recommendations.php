@@ -15,7 +15,7 @@ class Recommendations extends MY_Controller
 	{
 
 		$this->load->view('templates/header');
-		// $this->load->view('templates/side-navs');
+		$this->load->view('templates/side-navs');
 		$this->load->view('pages/recommendations');
 		$this->load->view('templates/footer');
 
@@ -23,5 +23,5 @@ class Recommendations extends MY_Controller
 
 
 
-}/*class Recommendations extends CI_Controller */
+}/*class Recommendations extends MY_Controller */
 /*end of file: recommendations.php*/

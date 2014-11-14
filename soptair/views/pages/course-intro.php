@@ -1,3 +1,13 @@
+<?php 
+			$enrollement = new course_enrollment();
+			$enrollement = $this -> course_enrollment -> getWithConditionLimit1(array('user_id' => $this -> session -> userdata('user_id'), 'course_id' => $course -> course_id));
+	        $enrol_date = $enrollement -> enrol_time;
+			$enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
+		
+
+			//print_r($enrollement);
+?>
+
 <style type="text/css">
 	.ratingButton{background: #ccc; margin-right: 20px; height: 23px; display: inline; float: right;}
 	.ratingButton a {text-decoration: underline;}
@@ -13,12 +23,21 @@
 			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Category: <?=$course->getCategoryTitle();?></li>
 			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Level: <?=$course->difficulty_level;?></li>
 			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Points: <?=$course->points;?></li>
-			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Enrol Count: <?=$course->enrollmentCount();?></li>
+			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Times Enrolled: <?=$course->enrollmentCount();?></li>
+		<?php
+			if($course -> isUserEnrolled($this -> session -> userdata('user_id')))
+			{
+				echo "<li><span><img src=\"".base_url()."assets/graphics/tech-feeds.svg\" width=\"15px\" height=\"15px\" /></span>Enrolled on: ".$enrol_date_formatted."</li>";
+			}
+		?>
 		</ul>
 
 		<?php
 		if($course -> isUserEnrolled($this -> session -> userdata('user_id')))
 		{
+	
+
+
 			if($course -> isRatedByUser())
 			{
 				echo '<div class="ratingButton">';

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Notifications extends CI_Controller 
+class Notifications extends MY_Controller 
 {
 		public function view()
 	{
@@ -42,5 +42,5 @@ class Notifications extends CI_Controller
 
 
 
-}/*class Notifications extends CI_Controller */
+}/*class Notifications extends MY_Controller */
 /*end of file: notifications.php*/

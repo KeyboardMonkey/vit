@@ -33,8 +33,8 @@
     </nav>
     <section id="user-settings-list" style="display:none;">
         <ul>
-            <li><a href="<?php echo base_url(); ?>index.php/profile">Account Settings</a></li>
-            <li><a href="<?php echo base_url(); ?>">Logout</a></li>
+            <li><a href="<?php echo base_url();?>index.php/profile">Account Settings</a></li>
+            <li><a href="<?php echo base_url();?>index.php/users/logout">Logout</a></li>
         </ul>
     </section>
     <section id="notifications-list" style="display: none;">
@@ -47,7 +47,7 @@
             <li>This is the oldest of notifications<br/><span class="notif-time">2 hr</span></li>
         </ul>
         <section id="see-all-notif">
-            <a href="notifications">See all notifications</a>
+            <a href="index.php/notifications">See all notifications</a>
         </section>
     </section>
 </header>

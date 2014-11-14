@@ -40,7 +40,26 @@ class course extends MY_Model{
         $_cat = new course_cat();
         $_cat -> load($this->category);
         return $_cat;
+    } 
+
+    public function getCategoryCourseCount($tempy)
+    {
+
+        $county=NULL;
+        $course_count = $this -> course -> get();
+        foreach($course_count as $count)
+        {
+        
+            if ($count -> category == $tempy) 
+            {
+
+                $county++;                                  
+            }                              
+        }
+        return $county;
+
     }
+
     public function courseRatedByMe(){
         
     }
@@ -67,17 +86,20 @@ class course extends MY_Model{
         $ratings  = $this -> course_rating -> getWithCondition(array('course_id' => $this -> course_id));
         return count($ratings);
     }
-    public function getOverAllRating(){
+    public function getOverAllRating()
+    {
         $ratings  = $this -> course_rating -> getWithCondition(array('course_id' => $this -> course_id));
         $score = 0;
-        foreach($ratings as $rating){
+        foreach($ratings as $rating)
+        {
             $score += $rating -> rating;
         }
         $count = (count($ratings));
         if($count == 0) $count = 1;
         return (int) ($score / $count);
     }
-    public function isUserEnrolled($user_id){
+    public function isUserEnrolled($user_id)
+    {
         $enrollment = $this -> course_enrollment -> getWithCondition(array('user_id' => $user_id, 'course_id' => $this -> course_id));
         if(count($enrollment) > 0 ) return TRUE;
         else return FALSE;
@@ -90,14 +112,24 @@ class course extends MY_Model{
                         -> 0 = NO INTEREST
                         -> 1 = NO OPINION
                         -> 2 = INTERESTED
-            course points system
+            
+            -> Course Recommendation Points System
                 a - Number of Registered, Users = 0.1 point per user. MULTIPLIED BY USER INTEREST
-                b - User Rating:
+                b - User Ratings (Per User):
                         i-      If User Has less than 50% completed then 0.3 points per user MULTIPLIED BY USER INTEREST
                         ii-     If User has less than 75% competed then 0.4 points per User MULTIPLIED BY USER INTEREST
                         iii -   If User has more than 90% completed then 0.5 points per user MULTIPLIED BY USER INTEREST
-            User Ratings:
+                c - User Ratings (Per Star):
                          i-      If User Has less than 50% completed then 0.3 points per star MULTIPLIED BY USER INTEREST
+                        ii-     If User has less than 75% competed then 0.4 points per star MULTIPLIED BY USER INTEREST
+                        iii -   If User has more than 90% completed then 0.5 points per star MULTIPLIED BY USER INTEREST
+
+                d - Courses Completed from the same category:
+                        i-      If User Has less than 50% completed then 0.3 points per course MULTIPLIED BY USER INTEREST
+                        ii-     If User has less than 75% competed then 0.4 points per course MULTIPLIED BY USER INTEREST
+                        iii -   If User has more than 90% completed then 0.5 points per course MULTIPLIED BY USER INTEREST
+                e - Courses Rated (By himself):
+                        i-      If User Has less than 50% completed then 0.3 points per star MULTIPLIED BY USER INTEREST
                         ii-     If User has less than 75% competed then 0.4 points per star MULTIPLIED BY USER INTEREST
                         iii -   If User has more than 90% completed then 0.5 points per star MULTIPLIED BY USER INTEREST
          
@@ -252,4 +284,48 @@ class course extends MY_Model{
         $enrollments = $enrollment -> getWithCondition(array('course_id' => $this -> course_id));
     return count($enrollments);
         }
+        public function getNextLecture()
+        {
+            $allLectures = $this -> lecture -> getWithCondition(array('course_id' => $this -> course_id));
+            $i = 0;
+            foreach ($allLectures as $key => $lecture) {
+                
+                $lecture_progress = $this -> user_lecture_progress -> getWithConditionLimit1(array('lecture_id' => $lecture -> lect_id));
+                if($lecture_progress -> progress < 100)
+                {
+                  return $i;
+                }
+                $i++;
+            }
+            return 0;
+        }
+        public function getLectures()
+    {
+      $lectures = $this -> lecture -> getWithCondition(array('course_id' => $this -> course_id));
+      return $lectures;
+    }
+    public function getFinishedLecture()
+    {
+        $lectures = $this -> getLectures();
+        $returnLectures = array();
+        foreach ($lectures as $key => $lecture) {
+          $user_lecture_progress = new user_lecture_progress();
+          $user_lecture_progress = $this -> user_lecture_progress -> 
+          getWithConditionLimit1(
+                                      array('user_id' => $this -> session -> userdata('user_id')
+                                              ,'lecture_id' => $lecture->lect_id
+                                      )
+                                    );
+          if($user_lecture_progress->progress == 100)
+            array_push($returnLectures, $lecture);
+        }
+        return $returnLectures;
+    }
+    public function getProgressPercent()
+    {
+        $finishedLectures = $this -> getFinishedLecture();
+        $totalLectures = $this -> getLectures();
+        return (count($finishedLectures) / count($totalLectures)) * 100;
+
+    }
 }

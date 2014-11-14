@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Pages extends CI_Controller 
+class Pages extends MY_Controller 
 {
 	public function view ($page = 'about')
 	{
@@ -40,5 +40,5 @@ class Pages extends CI_Controller
 	// 	//$this->load->view(BASEPATH.'views/pages/about.php');
 	// 	//echo APPPATH;
 	// }
-}/*class Pages extends CI_Controller */
+}/*class Pages extends MY_Controller */
 /*end of file: pages.php*/

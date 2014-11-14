@@ -2,12 +2,8 @@
  
 if (!defined('BASEPATH'))
     exit('No direct script access allowed');
- 
-/**
- *
- * @author http://www.webtuts.in
- */
-class UploadFiles extends CI_Controller {
+
+class UploadFiles extends MY_Controller {
  
     private $error;
     private $success;
@@ -90,5 +86,5 @@ class UploadFiles extends CI_Controller {
  
 }
  
-/* End of file uploadfiles.php */
+/* class Uploadfiles extends MY_Controller */
 /* Location: ./application/controllers/uploadfiles.php */

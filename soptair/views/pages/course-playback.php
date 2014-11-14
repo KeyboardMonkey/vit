@@ -1,24 +1,138 @@
+    <link href="<?=base_url();?>assets/styles/pro-bars.min.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <style>
+        .main-content {
+            width: 65%;
+            margin-right: 3%;
+            float: left;
+        }
+
+        .progress-bar-control-form {
+            width: 100%;
+            float: left;
+        }
+
+        .progress-bar-control-form table {
+            width: 50%;
+            float: left;
+        }
+
+        .right-sidebar {
+            width: 30%;
+            float: left;
+        }
+
+        .pro-bar {
+            text-align: center;
+        }
+        .pro-bar-percentage {
+            color: #FFFFFF;
+            line-height: 15px;
+            display: none;
+            cursor: default;
+        }
+        .pro-bar-percentage.visible {
+            display: block;
+        }
+
+    </style>
+
+    <!-- <link href="<?=base_url();?>assets/styles/style.min.css" rel="stylesheet" type="text/css" media="all"/> -->
+
+	<?php 
+//	$lecture = $lecture[$current_lecture];
+//	print_r($lecture);
+	$lecture_id = 0;
+	$i = 0;
+	$lecture = new lecture();
+	foreach ($lectures as $key => $individualLecture) {
+		if($i==$current_lecture)  {
+
+			$lecture = $individualLecture;
+			$lecture_id = $lecture -> lect_id;
+			break;
+		}
+		$i++;
+	}
+	print_r($lecture);
+	$videoUrl = $lecture->vid_path;
+	
+	if($current_lecture==0 && $course -> getNextLecture() == 0)
+	{
+		echo "You've Finished this course";
+	}
+
+	?>
+
 	<section class="container">
 	<section class="widgets">
 		<section class="widget-video-transition">
-			<h6>Video 1/8</h6>
-			<h4>Introduction to jQuery</h4>
+			<h6>Video <?=$current_lecture+1?>/<?=count($lectures);?></h6>
+			<h4><?=$lecture->vid_title;?></h4>
 			<ul>
-				<li class="previous"><a href="">Previous</a></li>
-				<li class="next"><a href="">Next</a></li>
+				<?php
+				if($current_lecture > 0)
+				{?>
+				<li class="previous"><a href="<?=base_url('index.php/courses/course_playback/' . $course_id.'/'.($current_lecture-1));?>">Previous</a></li>
+				<?php
+				}
+				?>
+
+				<?php
+				if($current_lecture < count($lectures)-1)
+				{?>
+				<li class="previous"><a href="<?=base_url('index.php/courses/course_playback/' . $course_id.'/'.($current_lecture+1));?>">Next</a></li>
+				<?php
+				}
+				?>
+
 			</ul>
 		</section>
 		
 		<section class="clear"></section>
 
-		
-		<section class="widget-course-progress">
+			<script>
+		$(document).ready(function(){
+
+				var track_progress = <?=$course -> getProgressPercent();?>;
+	        jQuery('#large_pro_bar').animate({width: track_progress+ '%'});
+	        jQuery('#large_pro_bar_percent').html(track_progress.toFixed(2) + '%');
+
+			});
+			
+
+		</script>
+
+			<section class="widget-course-progress">
 			<h4>Course Progress</h4>
-			<section class="progress-bar">
+			
+		<!-- 	<div class="pro-bar-container color-nephritis">
+					<div class="pro-bar bar-90 color-emerald" data-pro-bar-percent="90" data-pro-bar-delay="500">
+						<div class="pro-bar-candy candy-ltr"></div>
+						<span class="pro-bar-percentage" id="small_pro_bar_percent">10%</span>
+
+					</div>
+				</div> -->
+
+			<div class="pro-bar-container color-nephriti bm-remove">
+            <div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=$course -> getProgressPercent();?>" data-pro-bar-delay="500">
+                <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$course -> getProgressPercent();?>%</span>
+                <div class="pro-bar-candy candy-ltr"></div>
+            </div>
+        	</div>
+			
+
 			</section>
+			<section class="widget-take-quiz">
+			<h4>Take Quiz</h4>
+			<ul>
+				<li><span class="take-quiz"><img src="<?=base_url();?>assets/graphics/take-quiz.png" width="40px" height="40px" alt="take-quiz" /></span><a href="<?=base_url();?>index.php/quiz">Take Quiz</a></li>
+			</ul>
 		</section>
 		
 		<section class="clear"></section>  
+
+
 		
 		<section class="widget-project-files">
 			<h4>Download</h4>
@@ -37,26 +151,86 @@
 		</section>
 	</section>
 	
+	
 	<section class="content-md">
 		<section class="widget-video-player">
-		<h3 class="course-title">jQuery Basics Overview</h3>
-		 <section style="display:none;margin: 0 auto;" class="html5gallery" data-skin="vertical" data-width="720" data-height="480">
+		<h3 class="course-title "><?=$lecture->vid_title;?></h3>
+		  <video id="my_video" class="widget-video-player" width="900px" height="300px" controls>
+        <source src="<?=base_url().$lecture->vid_path;?>" type="video/mp4">
 
-            <!-- Add Videos to Gallery -->
-            <a href="<?=base_url();?>assets/graphics/gallery/2020-Technology.mp4">
-                <img src="<?=base_url();?>assets/graphics/gallery/video1.jpg" alt="2020 Technology" />
-            </a>
-            <a href="<?=base_url();?>assets/graphics/gallery/Amazing-Screen.mp4">
-                <img src="<?=base_url();?>assets/graphics/gallery/video2.jpg" alt="Amazing Screen" />
-            </a>
-            <a href="<?=base_url();?>assets/graphics/gallery/Coke-and-Milk.mp4">
-                <img src="<?=base_url();?>assets/graphics/gallery/video3.jpg" alt="Coke and Milk" />
-            </a>
-            <a href="<?=base_url();?>assets/graphics/gallery/Future-Technology-2019.mp4">
-                <img src="<?=base_url();?>assets/graphics/gallery/video4.jpg" alt="Future Technology 2019" />
-            </a>
-		</section>
-		<section class="teacher-notes">
+        Your browser does not support HTML5 video.
+    </video>
+
+    <script type="application/javascript">
+        jQuery(window).blur(function() {
+            var videoTag = document.getElementById('my_video');
+            videoTag.pause();
+        });
+        $(document).ready(function()
+        {
+           
+           var video = document.getElementById('my_video');
+        	$('#my_video').bind('loadedmetadata', function(){
+        		console.log("LOADED");
+        		
+			   	var vLength = parseInt(video.duration);
+				var percent = <?=$lecture->getProgress();?>;
+				var time = parseInt( vLength * percent)/100;
+				video.currentTime = time;
+				console.log("total: " + vLength + " current: " + time +  " (%): " + percent);
+        	});
+        		video.addEventListener("timeupdate", function () {
+		  //  Current time  
+		  	var vTime = parseInt(video.currentTime);
+		   	var vLength = parseInt(video.duration);
+			var remaining = parseInt(( vLength - vTime ));
+			
+			var percent =100 -  parseInt((remaining / vLength ) * 100);
+			console.log("total: " + vLength + " current: " + vTime +  " Remaining" +remaining + " (%): " + percent);
+			var url = '<?=base_url('index.php/courses/set_lecture_progress/' . $lecture_id  );?>' + '/' + percent; 
+			console.log(url);
+			jQuery.ajax({
+            	url: url,
+                type: 'get',
+                dataType: 'text', // dataType: 'html'
+                data: '', // Example data: 'video_ki_id=' + videoId + '&user_ki_id=' + userId + '&time=' + viewedAt
+                success: function (response) {
+                	console.log(response);
+                	//alert('lecture (iD: <?=$lecture_id;?>) progress set to 100%');
+                    //window.location = '<?=base_url('index.php/courses/course_playback/'.$course_id);?>';
+                    // document.getElementById('my_video').play();
+                }
+            });
+        	});
+       
+        
+
+
+		  
+		}, false);
+        
+        document.getElementById('my_video').onended = function(e) {
+           // alert('Yahan AJAX call ka code likhna, jo database mei entry kr dyga k video dekhli hy yh wali. Example code comment mei likha hy.')
+
+            
+            jQuery.ajax({
+            	url: '<?=base_url('index.php/courses/set_lecture_progress/' . $lecture_id . '/100' );?>',
+                type: 'get',
+                dataType: 'text', // dataType: 'html'
+                data: '', // Example data: 'video_ki_id=' + videoId + '&user_ki_id=' + userId + '&time=' + viewedAt
+                success: function (response) {
+                	//alert('lecture (iD: <?=$lecture_id;?>) progress set to 100%');
+                    window.location = '<?=base_url('index.php/courses/course_playback/'.$course_id);?>';
+                    // document.getElementById('my_video').play();
+                }
+            });
+            
+        };
+    </script>
+
+	<br />	<br />	<br />
+		<!-- <section class="teacher-notes"> -->		
+		<section>
 			<h4>Teacher's Notes</h4>
 			<ul>
 				<li><span class="notes"><img src="<?=base_url();?>assets/graphics/teacher-notes.png" width="20px" height="20px" /></span><a href="">Introduction to Programming</a></li>
@@ -64,41 +238,46 @@
 			</ul>
 		</section>
 	</section>
-	
+
+
+	<br />	<br />
 	<section class="content-md">
+	
+	
 		<section class="widget-facebook-commenter">
 			<h3>Discussions</h3>
-			    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'vitorials'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-//            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            dsq.src = '<?=base_url();?>assets/js/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the discussions.</noscript>
-    
+		
 		</section>
 	</section>
 	
 	</section>
 	<section class="clear"></section>
 
-	<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'vitorials'; // required: replace example with your forum shortname
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        dsq.src = '<?=base_url();?>assets/js/embed.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
-    <script src="<?=base_url();?>assets/js/html5gallery/html5gallery.js"></script>
+
+<!-- JavaScript -->
+<script src="<?=base_url();?>assets/js/jquery.min.js"></script>
+<script src="<?=base_url();?>assets/js/jquery-ui.min.js"></script>
+<script src="<?=base_url();?>assets/js/appear.min.js" type="text/javascript"></script>
+<script src="<?=base_url();?>assets/js/pro-bars.min.js" type="text/javascript"></script>
+
+<script>
+    jQuery(function() {
+//        alert('Validations ni hein so valid input(numeric/float) dena for calculation.');
+
+        jQuery('.pro-bar').hover(function() {
+            jQuery(this).find('.pro-bar-percentage').toggleClass('visible');
+        });
+
+    });
+    function calculateCourseProgress() {
+        var calculated_percentage = (jQuery('#videos_viewed').val() / jQuery('#total_videos').val()) * 100;
+        jQuery('#small_pro_bar').animate({width: calculated_percentage + '%'});
+        jQuery('#small_pro_bar_percent').html(calculated_percentage.toFixed(2) + '%');
+    }
+    function showTrackProgress() {
+        var track_progress = parseFloat(jQuery('#track_progress').val());
+        jQuery('#large_pro_bar').animate({width: track_progress+ '%'});
+        jQuery('#large_pro_bar_percent').html(track_progress.toFixed(2) + '%');
+    }
+</script>

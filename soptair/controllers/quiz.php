@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Quiz extends CI_Controller 
+class Quiz extends MY_Controller 
 {
 
 	public function add($course_id =  NULL)
@@ -126,5 +126,5 @@ $quiz_id= NULL;
 		$this->load->view('templates/footer');
 	}
 
-}/*class Quiz extends CI_Controller */
+}/*class Quiz extends MY_Controller */
 /*end of file: quiz.php*/

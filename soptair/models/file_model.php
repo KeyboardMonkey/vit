@@ -7,8 +7,21 @@ if (!defined('BASEPATH'))
  *
  * @author http://www.webtuts.in
  */
-class File_Model extends CI_Model {
+class File_Model extends MY_Model {
  
+   public function __construct() {
+    parent::__construct();
+  }
+  const DB_TABLE = 'files';
+  const DB_TABLE_PK = 'file_id';
+  
+    public $file_id;
+    public $course_id;
+    public $file_name;
+    public $file_orig_name;
+    public $file_path;
+    public $upload_date;
+
     //table name
     private $file = 'files';   // files    
      

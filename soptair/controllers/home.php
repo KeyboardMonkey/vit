@@ -41,5 +41,5 @@ class Home extends MY_Controller
 
 
 
-}/*class Home extends CI_Controller */
+}/*class Home extends MY_Controller */
 /*end of file: home.php*/

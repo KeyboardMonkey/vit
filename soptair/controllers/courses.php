@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Courses extends CI_Controller 
+class Courses extends MY_Controller 
 {
 
     public function view($id=NULL)
@@ -16,6 +16,9 @@ class Courses extends CI_Controller
 
         $course = new course();
         $course -> load($id);
+        $course_enrollment = new course_enrollment();
+        $course_enrollment -> load($id);
+        
         if(!isset($course->course_id))
         {
            redirect('library');
@@ -167,22 +170,61 @@ class Courses extends CI_Controller
 
 
 
-    public function course_playback()
+    public function course_playback($course_id = NULL, $start_lecture=-1)
     {
+        if($course_id == NULL) 
+        {
+          // redirct home
+        }
+        
+        $course = new course();
+        $course->load($course_id);
+        if(!isset($course->course_id)) redirect('home');
+        echo "START:" . $start_lecture;
+        if($start_lecture==-1)
+        {
+          $start_lecture = $course -> getNextLecture();
+          $rUrl = 'courses/course_playback/'.$course_id.'/'.$start_lecture;
+         
+          redirect($rUrl);
+        }
+
+        $lect_files = $this -> file_model -> getWithCondition(array('course_id' => $course_id));
+        $lectures = $this -> lecture -> getWithCondition(array('course_id' => $course_id));
+   
+
+        
+
+
         $this->load->view('templates/header');
         $this->load->view('templates/breadcrumbs');
-        $this->load->view('pages/course-playback');
+        $this->load->view('pages/course-playback', array('course_id' => $course_id, 'course' => $course, 'lect_files' => $lect_files, 'lectures' => $lectures, 'current_lecture' => $start_lecture));
         $this->load->view('templates/footer');
     }
 
     public function index()
-
     {
-
         redirect("library");
-
     }
 
+    public function set_lecture_progress($lecture_id, $progress)
+    {
+      $user_lecture_progress = new user_lecture_progress();
+      $user_lecture_progress = $this -> user_lecture_progress -> 
+      getWithConditionLimit1(
+                                  array('user_id' => $this -> session -> userdata('user_id')
+                                          ,'lecture_id' => $lecture_id
+                                  )
+                            );
+      $user_lecture_progress -> progress = $progress;
+      $user_lecture_progress -> lecture_id = $lecture_id;
+      $user_lecture_progress -> user_id = $this -> session -> userdata('user_id');
+      $user_lecture_progress -> save(); 
+      echo "OK";
 
-} /*class Courses extends CI_Controller */
+
+    }
+    
+
+} /*class Courses extends MY_Controller */
 /*end of file: courses.php*/

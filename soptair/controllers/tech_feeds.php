@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Tech_feeds extends CI_Controller 
+class Tech_feeds extends MY_Controller 
 {
 		public function view()
 	{
@@ -45,5 +45,5 @@ class Tech_feeds extends CI_Controller
 
 
 
-}/*class Tech_feeds extends CI_Controller */
+}/*class Tech_feeds extends MY_Controller */
 /*end of file: tech_feeds.php*/
