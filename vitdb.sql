@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 15, 2014 at 10:58 AM
+-- Generation Time: Nov 15, 2014 at 12:33 PM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.3
 
@@ -628,6 +628,20 @@ INSERT INTO `user_lecture_progress` (`progress_id`, `lecture_id`, `user_id`, `pr
 (4, 5, 13, 100),
 (5, 6, 13, 100),
 (6, 26, 13, 100);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_question_answer`
+--
+
+CREATE TABLE IF NOT EXISTS `user_question_answer` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) NOT NULL,
+  `question_id` int(11) NOT NULL,
+  `answer` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
