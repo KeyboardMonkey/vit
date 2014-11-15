@@ -100,16 +100,16 @@
 										</section>
 										<section id="section-underline-3">
 							
-							<a id="course-content" href=""><img src="<?=base_url();?>assets/graphics/arrow-down.png" width="20px" height="17px" alt="arrow-down" /><h3 id="course-content">What is UX?</h3></a>
+							<a id="course-content" href="#"><img src="<?=base_url();?>assets/graphics/arrow-down.png" width="20px" height="17px" alt="arrow-down" /><h3 id="course-content">What is UX?</h3></a>
 							<ul class="course-content">
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="">A Brief History of UX.</a></li>
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="">The Foundation of UX.</a></li>
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="">The Importance of UX.</a></li>
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="">What is UX?</a></li>
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="">A Brief History of UX.</a></li>
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="">The Foundation of UX.</a></li>
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="">The Importance of UX.</a></li>
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="">What is UX?</a></li>
+								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">A Brief History of UX.</a></li>
+								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">The Foundation of UX.</a></li>
+								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">The Importance of UX.</a></li>
+								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">What is UX?</a></li>
+								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">A Brief History of UX.</a></li>
+								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">The Foundation of UX.</a></li>
+								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">The Importance of UX.</a></li>
+								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">What is UX?</a></li>
 							</ul>
 						</section>
 									</section><!-- /content -->
@@ -132,3 +132,7 @@
 						})();
 					</script>
 
+					<script type="text/javascript">
+					$("#course-content").on("click",function(){
+					console.log($(this).text());
+					});</script>

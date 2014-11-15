@@ -54,13 +54,10 @@
 		}
 		$i++;
 	}
-	print_r($lecture);
+	//print_r($lecture);
 	$videoUrl = $lecture->vid_path;
 	
-	if($current_lecture==0 && $course -> getNextLecture() == 0)
-	{
-		echo "You've Finished this course";
-	}
+	
 
 	?>
 
@@ -69,6 +66,14 @@
 		<section class="widget-video-transition">
 			<h6>Video <?=$current_lecture+1?>/<?=count($lectures);?></h6>
 			<h4><?=$lecture->vid_title;?></h4>
+			<p> 
+			<?php
+					if( $course -> getCourseProgressPercent() == 100)
+					{
+						echo "You've Finished all lectures. Feel Free to watch again.";
+					} else echo $course -> getCourseProgressPercent();
+			?>
+			</p>
 			<ul>
 				<?php
 				if($current_lecture > 0)
@@ -94,7 +99,7 @@
 			<script>
 		$(document).ready(function(){
 
-				var track_progress = <?=$course -> getProgressPercent();?>;
+				var track_progress = <?=($course -> getLectureProgress() * 60 / 100);?>;
 	        jQuery('#large_pro_bar').animate({width: track_progress+ '%'});
 	        jQuery('#large_pro_bar_percent').html(track_progress.toFixed(2) + '%');
 
@@ -115,8 +120,8 @@
 				</div> -->
 
 			<div class="pro-bar-container color-nephriti bm-remove">
-            <div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=$course -> getProgressPercent();?>" data-pro-bar-delay="500">
-                <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$course -> getProgressPercent();?>%</span>
+            <div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=($course -> getLectureProgress() * 60 / 100);?>" data-pro-bar-delay="500">
+                <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=($course -> getLectureProgress() * 60 / 100);?>%</span>
                 <div class="pro-bar-candy candy-ltr"></div>
             </div>
         	</div>
@@ -126,7 +131,7 @@
 			<section class="widget-take-quiz">
 			<h4>Take Quiz</h4>
 			<ul>
-				<li><span class="take-quiz"><img src="<?=base_url();?>assets/graphics/take-quiz.png" width="40px" height="40px" alt="take-quiz" /></span><a href="<?=base_url();?>index.php/quiz">Take Quiz</a></li>
+				<li><a href="<?=base_url('index.php/quiz/index/' . $course -> course_id);?>" <span class="take-quiz"><img src="<?=base_url();?>assets/graphics/take-quiz.png" width="40px" height="40px" alt="take-quiz" /></span><a href="<?=base_url();?>index.php/quiz">Take Quiz</a></li>
 			</ul>
 		</section>
 		
@@ -176,7 +181,7 @@
 			   	var vLength = parseInt(video.duration);
 				var percent = <?=$lecture->getProgress();?>;
 				var time = parseInt( vLength * percent)/100;
-				video.currentTime = time;
+				video.currentTime = (percent < 90 ) ? time : 0;
 				console.log("total: " + vLength + " current: " + time +  " (%): " + percent);
         	});
         		video.addEventListener("timeupdate", function () {
@@ -230,14 +235,17 @@
 
 	<br />	<br />	<br />
 		<!-- <section class="teacher-notes"> -->		
-		<section>
+		<section class="teacher-notes">
 			<h4>Teacher's Notes</h4>
 			<ul>
 				<li><span class="notes"><img src="<?=base_url();?>assets/graphics/teacher-notes.png" width="20px" height="20px" /></span><a href="">Introduction to Programming</a></li>
 				<li><span class="notes"><img src="<?=base_url();?>assets/graphics/teacher-notes.png" width="20px" height="20px" /></span><a href="">JavaScript Foundations</a></li>
 			</ul>
 		</section>
-	</section>
+		</section>
+		</section>
+
+
 
 
 	<br />	<br />
@@ -246,7 +254,19 @@
 	
 		<section class="widget-facebook-commenter">
 			<h3>Discussions</h3>
-		
+	<ol>
+		<li>asdfsd</li>
+		<li>asdfsd</li>
+		<li>asdfsd</li>
+		<li>asdfsd</li>
+		<li>asdfsd</li>
+		<li>asdfsd</li>
+		<li>asdfsd</li>
+		<li>asdfsd</li>
+		<li>asdfsd</li>
+		<li>asdfsd</li>
+	</ol>
+
 		</section>
 	</section>
 	

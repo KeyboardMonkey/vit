@@ -119,10 +119,15 @@ $quiz_id= NULL;
 		$this->load->view('popups/quiz-result-popup');
 	//	$this->load->view('templates/footer');
 	}
-	public function index()
+	public function index($course_id = NULL, $question_index = 0)
 	{
+		if($course_id == NULL) redirect('library');
+		$course = new course();
+		$course -> load($course_id);
+		if(!isset($course -> course_id)) redirect('library');
+
 		$this->load->view('templates/header');
-		$this->load->view('pages/quiz');
+		$this->load->view('pages/quiz', array('course_id' => $course_id, 'start_question' => $question_index));
 		$this->load->view('templates/footer');
 	}
 

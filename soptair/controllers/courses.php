@@ -216,7 +216,8 @@ class Courses extends MY_Controller
                                           ,'lecture_id' => $lecture_id
                                   )
                             );
-      $user_lecture_progress -> progress = $progress;
+      if(!isset($user_lecture_progress -> progress )) $user_lecture_progress -> progress =0;
+      $user_lecture_progress -> progress = ($progress > $user_lecture_progress -> progress ) ? $progress : $user_lecture_progress -> progress;
       $user_lecture_progress -> lecture_id = $lecture_id;
       $user_lecture_progress -> user_id = $this -> session -> userdata('user_id');
       $user_lecture_progress -> save(); 

@@ -321,11 +321,17 @@ class course extends MY_Model{
         }
         return $returnLectures;
     }
-    public function getProgressPercent()
+    public function getLectureProgress()
     {
         $finishedLectures = $this -> getFinishedLecture();
         $totalLectures = $this -> getLectures();
         return (count($finishedLectures) / count($totalLectures)) * 100;
 
+    }
+    public function getCourseProgressPercent()
+    {
+        $lecture = $this -> getLectureProgress();
+
+        return $lecture;
     }
 }

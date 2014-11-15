@@ -1,3 +1,24 @@
+<?php
+	
+	$course = new course();
+	$course -> load($course_id);
+	$quiz = new quiz_model();
+	$quiz = $quiz -> getWithConditionLimit1(array('course_id' => $course_id));
+	$questions = $this -> quiz_question -> getWithCondition(array('quiz_id' => $quiz -> quiz_id));
+	//print_r($questions);
+	$question = new quiz_question();
+	$i = 0;
+	foreach($questions as $_question)
+	{
+		if($i==$start_question)
+		{
+			$question = $_question;
+			break;
+		}
+		$i ++;
+	}
+?>
+
 <section class="container">
 
 	<section class="widgets">		
@@ -14,18 +35,28 @@
 
 	<section class="content-md">
 		<h5 class="quiz">Quiz: Question 1/5</h5>
-		<h3 class="quiz-question">Which two languages form the foundation of structure and presentation on the web?</h3>
+		<h3 class="quiz-question"><?=$question->question_text;?></h3>
 		<form class="ac-custom ac-radio ac-circle" autocomplete="off">
 			<ul>
-				<li><input id="r5" name="r2" type="radio"><label for="r5">Content and Structure</label></li>
-				<li><input id="r6" name="r2" type="radio"><label for="r6">HTML and CSS</label></li>
-				<li><input id="r7" name="r2" type="radio"><label for="r7">Hypertext and CSS</label></li>
-				<li><input id="r8" name="r2" type="radio"><label for="r8">Semantics and HTML</label></li>
+				<li><input id="q_1" name="q_1" value="option_1" type="radio"><label for="r5"><?=$question->option_1;?> </label></li>
+				<li><input id="q_2" name="q_1" value="option_2"  type="radio"><label for="r6"><?=$question->option_2;?></label></li>
+				<li><input id="q_3" name="q_1" value="option_3"  type="radio"><label for="r7"><?=$question->option_3;?></label></li>
+				<li><input id="q_4" name="q_1" value="option_4"  type="radio"><label for="r8"><?=$question->option_4;?></label></li>
 			</ul>
 		</form>
-		<form class="quiz-answer" action="">
-			<input type="submit" name="submit" value="Next Question" />
-		</form>
+		
+			<input type="submit" id="submit_question" name="submit" value="Next Question" />
+		
+		<script>
+					$(document).ready(function(){
+						$('#submit_question').click(function(){
+							var answer = ($("input[name='q_1']:checked").val());
+							var question = <?=$question-> id;?>;
+							
+						});
+
+					});
+		</script>
 	</section>
 
 </section>
