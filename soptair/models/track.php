@@ -12,13 +12,14 @@ class track extends MY_Model{
     public $tiny_intro;
     public $track_description;
     public $status;
-    public $track_points;
-    public $track_progress;
+    public $track_points = 100;
+    public $track_progress = 0;
     public $difficulty_level;
     public $is_new;
     public $additional_file_title;
-    public $additional_file;
+    public $additional_file_path;
     public $created_date;
     public $updated_date;
+    public $created_by = 1;
  
 }

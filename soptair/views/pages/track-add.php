@@ -1,66 +1,69 @@
 <section class="container">
 	<section class="content-md">
-		<form action="">
+		<?=$message;?>
+		<?=validation_errors();?>
+		<form method="post">
 			<table class="editform">
 				<tr>
 					<td><label>Track Title</label></td>
-					<td><input type="text" name="" /></td>
+					<td><input type="text" name="track_title" /></td>
 				</tr>
 				<tr>
 					<td><label>One Line Intro</label></td>
-					<td><input type="text" name="" /></td>
+					<td><input type="text" name="one_line_intro" /></td>
 				</tr>
 				<tr>
 					<td><label>Difficulty Level</label></td>
-					<td><input type="radio" name="level" value="beginner" /> Beginner <input type="radio" name="level" value="beginner" /> Intermediate <input type="radio" name="level" value="beginner" /> Advanced</td>
+					<td><input type="radio" name="level" value="Beginner" /> Beginner <input type="radio" name="level" value="Intermediate" /> Intermediate <input type="radio" name="level" value="Advanced" /> Advanced</td>
 				</tr>
 			</tr>
 			<tr>
 				<td><label>Course Pool</label></td>
 				<td>
 					<select class="course-pool-left" id="category" multiple >
-						<option value="1">one</option>
-						<option value="2">two</option>
-						<option value="3">three</option>
-						<option value="4">four</option>
-						<option value="5">five</option>
-						<option value="6">six</option>
-						<option value="7">seven</option>
-						<option value="8">eight</option>
-						<option value="9">nine</option>
-						<option value="10">ten</option>
-						<option value="11">eleven</option>
-						<option value="12">twelve</option>
+					
+						
 					</select>
-					<button class="course-pool" type="button"><</button><br /><br />
-					<button class="course-pool" type="button">></button>
+					<button class="course-pool" type="button">&lt;</button><br /><br />
+					<button class="course-pool" type="button">&gt;</button>
 					<select class="course-pool-right" id="category" multiple >
-						<option value="1">one</option>
-						<option value="2">two</option>
-						<option value="3">three</option>
-						<option value="4">four</option>
-						<option value="5">five</option>
-						<option value="6">six</option>
-						<option value="7">seven</option>
-						<option value="8">eight</option>
-						<option value="9">nine</option>
-						<option value="10">ten</option>
-						<option value="11">eleven</option>
-						<option value="12">twelve</option>
+					<?php
+							$course = new course();
+							$course_list = $this -> course -> get();
+							foreach($course_list as $course)
+							{
+								?>
+								<option value="<?=$course -> course_id;?>"><?=$course->full_name;?></option>
+								<?php
+							}?>
 					</select>
 				</td>
 			</tr>
 			<tr>
 				<td><label>Track Description</label></td>
-				<td><textarea rows="4" cols="50" name=""></textarea></td>
+				<td><textarea rows="4" cols="50" name="track_description"></textarea></td>
 			</tr>
 			<tr>
-				<td><label>Teacher's Notes</label></td>
+				<td><label>Additional File</label></td>
 				<td>
-					<input id="teacher-notes" type="text" name="" placeholder="File Title" /> Additional File <input type="file" multiple=""/><button type="button">Upload</button><br />
-					<input id="teacher-notes" type="text" name="" placeholder="File Title" /> Additional File <input type="file" multiple=""/><button type="button">Upload</button>
+					<input id="teacher-notes" type="text" name="additional_file_title" placeholder="Teacher's Notes" /> Additional File <input type="file" name="additional_file_path" /><button type="button">Upload</button>
+					
 				</td>
 			</tr>
+
+			<tr>
+					<td><label>Visible:</label></td>
+					<td>
+						<section class="onoffswitch">
+							<input type="checkbox" name="status" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+							<label class="onoffswitch-label" for="myonoffswitch">
+								<span class="onoffswitch-inner"></span>
+								<span class="onoffswitch-switch"></span>
+							</label>
+						</section>
+					</td>
+				</tr>
+				
 			<tr>
 				<td></td>
 				<td>

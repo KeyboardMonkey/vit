@@ -129,6 +129,12 @@ class Courses extends MY_Controller
                 'field' => 'additionalfiletitle',
                 'label' => 'Addt. File Title',
                 'rules' => 'required|xss_clean|min_length[5]',
+                ),
+
+           array(
+                'field' => 'status',
+                'label' => 'Visibility',
+                'rules' => 'required',
                 )
 
 

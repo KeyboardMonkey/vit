@@ -211,8 +211,13 @@ span.total-courses:hover {
     background:#2ABB9B;
 }
 nav.side-navs ul li.courses {
-    padding:12px 15px;
     font-weight:bold;
+}
+nav.side-navs ul li.courses a {
+    padding:12px 15px;
+}
+nav.side-navs ul li.courses a:hover {
+    border-right:15px solid #2ABB9B;
 }
 nav.side-navs ul li.no-border {
     border:none;
@@ -741,8 +746,8 @@ form table.editform tr td input[type=text], form table.editform tr td input[type
 form table.editform tr td textarea { padding:5px; width:602.5px; font-size:16px; }
 form table.editform tr td select { padding:5px; width:613.5px; font-size:16px; color:#58585a; }
     form table.editform tr td select.course-pool-left { float:left; font-size:14px; height:250px; width:45%; }
-    form table.editform tr td select.course-pool-right { float:left; font-size:14px; margin-top:-45px; height:250px; width:45%; }
-    button.course-pool { margin:10px 10px 0; padding:5px 10px; float:left; }
+    form table.editform tr td select.course-pool-right { float:left; font-size:14px; margin:-67px 0 0 32px; height:250px; width:45%; }
+    button.course-pool { margin:0; padding:5px 10px; float:left; }
 form table.editform input[type=submit], form table.editform input[type=reset] { padding:5px 50px; font-size:16px; background:#2ABB9B; border:1px solid #2ABB9B; color:#FFFFFF; transition:all 0.5s ease-out; position:relative; cursor:pointer; }
 form table.editform input[type=submit]:hover, form table.editform input[type=reset]:hover { background:#ECF0F1; border:1px solid #2ABB9B; color:#2ABB9B; }
 /*-----------------------------------------------------------End Account Settings-----------------------------------------------------------*/

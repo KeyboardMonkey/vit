@@ -347,7 +347,6 @@ INSERT INTO `quiz_questions` (`question_id`, `quiz_id`, `question_text`, `option
 (22, 15, 'Who made Apple?', 'newton', 'steve jobs', 'einstine', 'billy', 'option1', '2014-11-11 17:53:13', '2014-11-11 17:53:13');
 
 -- --------------------------------------------------------
-
 --
 -- Table structure for table `tracks`
 --
@@ -360,13 +359,61 @@ CREATE TABLE IF NOT EXISTS `tracks` (
   `status` enum('yes','no') NOT NULL,
   `track_points` int(10) NOT NULL,
   `track_progress` int(20) NOT NULL,
-  `difficulty_level` enum('beginner','intermediate','advanced') NOT NULL,
+  `difficulty_level` enum('Beginner','Intermediate','Advanced') NOT NULL,
   `is_new` enum('yes','no') DEFAULT NULL,
   `additional_file_title` varchar(255) DEFAULT NULL,
-  `additional_file` varchar(255) DEFAULT NULL,
+  `additional_file_path` varchar(255) DEFAULT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by` int(11) NOT NULL,
   PRIMARY KEY (`track_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+
+--
+-- Dumping data for table `tracks`
+--
+
+INSERT INTO `tracks` (`track_id`, `track_title`, `tiny_intro`, `track_description`, `status`, `track_points`, `track_progress`, `difficulty_level`, `is_new`, `additional_file_title`, `additional_file_path`, `created_date`, `updated_date`, `created_by`) VALUES
+(1, 'asdfadfadsasd', 'fasdfasdfasdf', 'adfadfassadfsaf', 'yes', 100, 0, 'Beginner', NULL, NULL, NULL, '2014-11-15 17:15:52', '2014-11-15 17:15:52', 1),
+(2, 'Learn Web Design', 'Learn HTML and CSS, the building blocks of websites', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Beginner', '', 'Addt. File # 1', '0', '2014-11-15 17:34:34', '2014-11-15 17:34:34', 1),
+(3, 'Learn Front-end Web Development', 'Maecenas at leo eget nisl porta viverra.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Intermediate', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:36:50', '2014-11-15 17:36:50', 1),
+(4, 'Learn PHP Development', 'Maecenas at leo eget nisl porta viverra.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Advanced', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:37:18', '2014-11-15 17:37:18', 1),
+(5, 'Learn Android Development', 'Maecenas at leo eget nisl porta viverra.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Intermediate', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:38:13', '2014-11-15 17:38:13', 1),
+(6, 'Learn Wordpress Development', 'Maecenas at leo eget nisl porta viverra.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Advanced', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:38:33', '2014-11-15 17:38:33', 1),
+(7, 'Starting a Business', 'Maecenas at leo eget nisl porta viverra', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Intermediate', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:38:59', '2014-11-15 17:38:59', 1),
+(8, 'Learn Wordpress', 'Maecenas at leo eget nisl porta viverra', '\r\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Beginner', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:39:29', '2014-11-15 17:39:29', 1),
+(9, 'Learn Python', 'Maecenas at leo eget nisl porta viverra', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Advanced', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:42:44', '2014-11-15 17:42:44', 1),
+(10, 'Learn Freelancing', 'Maecenas at leo eget nisl porta viverra', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Intermediate', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:44:43', '2014-11-15 17:44:43', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tracks_enrollment`
+--
+
+CREATE TABLE IF NOT EXISTS `tracks_enrollment` (
+  `track_enrol_id` int(11) NOT NULL,
+  `course_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `track_enrol_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` enum('in-progress','cancelled','completed') NOT NULL,
+  `progress` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `track_content`
+--
+
+CREATE TABLE IF NOT EXISTS `track_content` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `track_id` int(11) NOT NULL,
+  `course_id` int(11) NOT NULL,
+  `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `created_by` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
@@ -636,12 +683,25 @@ INSERT INTO `user_lecture_progress` (`progress_id`, `lecture_id`, `user_id`, `pr
 --
 
 CREATE TABLE IF NOT EXISTS `user_question_answer` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL,
-  `question_id` int(11) NOT NULL,
-  `answer` int(11) NOT NULL,
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) NOT NULL,
+  `question_id` int(10) NOT NULL,
+  `correct_answer` tinyint(1) NOT NULL DEFAULT '0',
+  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=9;
+
+--
+-- Dumping data for table `user_question_answer`
+--
+
+INSERT INTO `user_question_answer` (`id`, `user_id`, `question_id`, `correct_answer`, `date`) VALUES
+(3, 1, 1, 0, '2014-11-15 12:11:33'),
+(4, 1, 2, 0, '2014-11-15 12:43:50'),
+(5, 1, 3, 0, '2014-11-15 12:43:53'),
+(6, 1, 4, 0, '2014-11-15 12:43:55'),
+(7, 1, 5, 0, '2014-11-15 12:43:58'),
+(8, 1, 6, 0, '2014-11-15 12:44:02');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -29,6 +29,7 @@ class course extends MY_Model{
     public $is_new;
     public $created_date;
     public $updated_date;
+    public $created_by = 1;
 
 
     public function getCategoryTitle(){

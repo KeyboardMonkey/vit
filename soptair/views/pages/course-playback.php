@@ -37,7 +37,6 @@
 
     </style>
 
-    <!-- <link href="<?=base_url();?>assets/styles/style.min.css" rel="stylesheet" type="text/css" media="all"/> -->
 
 	<?php 
 //	$lecture = $lecture[$current_lecture];

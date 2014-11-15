@@ -85,8 +85,8 @@
 						<tr>
 							<td></td>
 							<td>
-								<input class="submit_form" type="submit" name="submit" value="Save" />
 								<input type="reset" name="reset" value="Reset" />
+								<input class="submit_form" type="submit" name="submit" value="Save" />
 								<br /><br />
 								<small style="float:right">*Optional Fields</small>
 							</td>

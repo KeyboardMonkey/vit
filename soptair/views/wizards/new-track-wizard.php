@@ -68,4 +68,6 @@
 		</section>
 	</section>
 </section>
+
+
 <script src="<?=base_url();?>assets/js/svgcheckbx.js"></script> <!-- codedrop fancy selection script -->
