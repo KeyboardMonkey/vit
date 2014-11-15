@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 14, 2014 at 09:49 PM
+-- Generation Time: Nov 15, 2014 at 10:58 AM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.3
 
@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `course_enrollment` (
   `progress` int(11) NOT NULL,
   PRIMARY KEY (`enrol_id`),
   KEY `enrol_time` (`enrol_time`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `course_enrollment`
@@ -137,7 +137,8 @@ INSERT INTO `course_enrollment` (`enrol_id`, `course_id`, `user_id`, `enrol_time
 (1, 1, 6, '2014-11-14 17:05:10', 'in-progress', 0),
 (2, 1, 13, '2014-11-14 18:22:25', 'in-progress', 0),
 (3, 2, 6, '2014-11-14 19:11:50', 'in-progress', 0),
-(4, 4, 6, '2014-11-14 20:45:13', 'in-progress', 0);
+(4, 4, 6, '2014-11-14 20:45:13', 'in-progress', 0),
+(5, 2, 13, '2014-11-15 07:43:46', 'in-progress', 0);
 
 -- --------------------------------------------------------
 
@@ -283,7 +284,7 @@ CREATE TABLE IF NOT EXISTS `quiz` (
 INSERT INTO `quiz` (`quiz_id`, `course_id`, `quiz_title`, `quiz_progress_points`, `created_date`, `updated_date`) VALUES
 (1, 0, 'hgjhghjhj', NULL, '2014-11-11 15:54:50', '2014-11-11 15:54:50'),
 (2, 0, 'bcvxbxcvb', NULL, '2014-11-11 15:56:54', '2014-11-11 15:56:54'),
-(3, 0, 'Common Sense API', 20, '2014-11-11 17:00:58', '2014-11-11 17:00:58'),
+(3, 1, 'Common Sense API', 20, '2014-11-15 08:47:39', '2014-11-11 17:00:58'),
 (4, 0, '&lt;?php echo Common Sense API; ?&gt;', 20, '2014-11-11 17:02:03', '2014-11-11 17:02:03'),
 (5, 0, 'Special Sense API', 20, '2014-11-11 17:08:14', '2014-11-11 17:08:14'),
 (6, 0, 'Special Sense API', 20, '2014-11-11 17:09:15', '2014-11-11 17:09:15'),
@@ -322,13 +323,13 @@ CREATE TABLE IF NOT EXISTS `quiz_questions` (
 --
 
 INSERT INTO `quiz_questions` (`question_id`, `quiz_id`, `question_text`, `option_1`, `option_2`, `option_3`, `option_4`, `correct_answer`, `created_date`, `updated_date`) VALUES
-(1, 0, 'The Question field is required.', '0', '0', '0', '0', '0', '2014-11-11 15:40:37', '2014-11-11 15:40:37'),
-(2, 0, 'asdfasdf', '0', '0', '0', '0', '0', '2014-11-11 15:43:01', '2014-11-11 15:43:01'),
-(3, 0, 'jfgjfghj', '0', '0', '0', '0', '0', '2014-11-11 15:54:50', '2014-11-11 15:54:50'),
-(4, 0, 'xbvbxvcb', 'xcvbxvc', 'bxcvbxcvb', 'xvcbxc', 'bxvcbxcvb', '0', '2014-11-11 15:56:54', '2014-11-11 15:56:54'),
-(5, 0, 'What comes after zero?', 'one', 'two ', 'three', 'four', 'option1', '2014-11-11 17:00:59', '2014-11-11 17:00:59'),
-(6, 0, 'What comes after Earth?', 'venus', 'earth', 'mars', 'jupiter', 'option3', '2014-11-11 17:02:03', '2014-11-11 17:02:03'),
-(7, 0, 'What came first?', 'Egg', 'Chicken', 'Kukkar', 'Aanda', 'option2', '2014-11-11 17:08:14', '2014-11-11 17:08:14'),
+(1, 3, 'What is name of President of Pakistan.', 'Asif Ali Zardari', 'Nawaz Sharif', 'Imran Khan', 'Parvez Musharraf', '0', '2014-11-15 09:01:03', '2014-11-11 15:40:37'),
+(2, 3, 'asdfasdf', '0', '0', '0', '0', '0', '2014-11-15 08:48:05', '2014-11-11 15:43:01'),
+(3, 3, 'jfgjfghj', '0', '0', '0', '0', '0', '2014-11-15 08:48:09', '2014-11-11 15:54:50'),
+(4, 3, 'xbvbxvcb', 'xcvbxvc', 'bxcvbxcvb', 'xvcbxc', 'bxvcbxcvb', '0', '2014-11-15 08:48:10', '2014-11-11 15:56:54'),
+(5, 3, 'What comes after zero?', 'one', 'two ', 'three', 'four', 'option1', '2014-11-15 08:48:12', '2014-11-11 17:00:59'),
+(6, 3, 'What comes after Earth?', 'venus', 'earth', 'mars', 'jupiter', 'option3', '2014-11-15 08:48:13', '2014-11-11 17:02:03'),
+(7, 3, 'What came first?', 'Egg', 'Chicken', 'Kukkar', 'Aanda', 'option2', '2014-11-15 08:48:15', '2014-11-11 17:08:14'),
 (8, 0, 'What are you?', 'A dog', 'A man', 'A crow', 'A cat', 'option4', '2014-11-11 17:09:15', '2014-11-11 17:09:15'),
 (9, 0, 'dfdgfdgfgdf', 'gdfgdf', 'gdfgdfg', 'dfgfdgfd', 'gff', 'option2', '2014-11-11 17:22:34', '2014-11-11 17:22:34'),
 (10, 0, 'fadsasdfsdaf', 'asdfasdfasdfa', 'fgsdfasdf', 'asdfasdfasd', 'fasdfdsaf', 'option2', '2014-11-11 17:25:29', '2014-11-11 17:25:29'),
@@ -614,28 +615,19 @@ CREATE TABLE IF NOT EXISTS `user_lecture_progress` (
   `user_id` int(10) NOT NULL,
   `progress` int(3) NOT NULL,
   PRIMARY KEY (`progress_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `user_lecture_progress`
 --
 
 INSERT INTO `user_lecture_progress` (`progress_id`, `lecture_id`, `user_id`, `progress`) VALUES
-(25, 4, 6, 100),
-(27, 6, 6, 35),
-(28, 2, 6, 100),
-(29, 3, 6, 15),
-(30, 3, 0, 0),
-(31, 11, 67, 100),
-(32, 12, 67, 100),
-(33, 13, 67, 2),
-(34, 14, 67, 73),
-(35, 24, 67, 100),
-(36, 7, 67, 0),
-(37, 3, 68, 12),
-(38, 4, 68, 0),
-(39, 5, 68, 14),
-(40, 6, 68, 0);
+(1, 3, 13, 100),
+(2, 2, 13, 100),
+(3, 4, 13, 100),
+(4, 5, 13, 100),
+(5, 6, 13, 100),
+(6, 26, 13, 100);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
