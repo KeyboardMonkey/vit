@@ -157,11 +157,11 @@
 								</section><!-- /tabs -->
 							</section>
 						</section>
-<!-- similar courses widget  -->
+					<!-- similar courses widget  -->
 					</section>
 
 					<section class="clear"></section>
-					<!-- SCRIPTS FOR THIS PAGE -->
+					<!-- TABS SCRIPTS FOR THIS PAGE  -->
 					<script src="<?=base_url();?>assets/js/course-intro-tabs.js"></script>
 					<script>
 						(function() {
@@ -173,7 +173,7 @@
 						})();
 					</script>
 
-					<script type="text/javascript">
+				<!-- 	<script type="text/javascript">
 					$("#course-content").on("click",function(){
 					console.log($(this).text());
-					});</script>
+					});</script> -->

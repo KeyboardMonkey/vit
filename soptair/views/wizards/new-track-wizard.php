@@ -71,3 +71,4 @@
 
 
 <script src="<?=base_url();?>assets/js/svgcheckbx.js"></script> <!-- codedrop fancy selection script -->
+<script src="<?=base_url();?>assets/js/try.js">" type="text/javascript"></script> <!-- section transition script -->

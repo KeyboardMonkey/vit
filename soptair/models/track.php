@@ -21,5 +21,24 @@ class track extends MY_Model{
     public $created_date;
     public $updated_date;
     public $created_by = 1;
+
+    public function getOverAllRating()
+    {
+        $ratings  = $this -> track_rating -> getWithCondition(array('track_id' => $this -> track_id));
+        $score = 0;
+        foreach($ratings as $rating)
+        {
+            $score += $rating -> rating;
+        }
+        $count = (count($ratings));
+        if($count == 0) $count = 1;
+        return (int) ($score / $count);
+    }
+
+      public function numberOfRatings()
+    {
+        $ratings  = $this -> track_rating -> getWithCondition(array('track_id' => $this -> track_id));
+        return count($ratings);
+    }
  
 }

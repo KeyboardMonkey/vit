@@ -8,16 +8,18 @@ class track_rating extends MY_Model{
   const DB_TABLE_PK = 'rating_id';
   
     public $rating_id;
-
-//      foreign key, don't know if it should be included here or not, so added but commented
-//    public $course_id;
-
-
-//      foreign key, don't know if it should be included here or not, so added but commented
-//    public $user_id;
-
-
-
+    public $track_id;
+    public $user_id;
     public $rating;
+
+  public function hasUserRatedTrack($track_id, $user_id)
+        {
+            $tracks = $this ->getWithCondition(array('track_id' => $track_id, 'user_id' => $user_id));
+            if(count($tracks) > 0)
+            {
+                return TRUE;
+            }
+            else return FALSE;
+        }
 
 }
