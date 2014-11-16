@@ -17,9 +17,6 @@
        
         <!-- COMMON SCRIPTS FROM THE HEADER -->
         <script src="<?= base_url();?>assets/js/jquery-1.4.1.min.js"></script>
-
-
-
 	</head>
 <body>
 

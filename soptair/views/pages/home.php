@@ -1,4 +1,4 @@
-		<section class="container">
+<section class="container">
 	<section class="content-md">
 		<section class="title">
 			<h2>0</h2>
@@ -15,31 +15,33 @@
 		</section>
 	</section>
 
-<?php 
-$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
-
-?>
-		<section class="content-md">
-			<h4>My Courses</h4>
-			<ul>
-			<?php 
-			$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
-			foreach($myEnrolements as $myEnrolment)
-			{
-			   $myCourse = new course();
-			    $myCourse -> load($myEnrolment->course_id);
-			    $myCourseId = $myCourse -> course_id;
-			   ?>
-				<li>
-
-					<a href="<?=base_url();?>index.php/courses/course_playback/<?=$myCourseId;?>"><?=$myCourse->full_name;?></a>
-				</li>
-			   <?php
-
-			}
-			?>
+	<?php 
+	$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
+	?>
+	<section class="content-md">
+		<section class="my-courses">
+			<section class="not-registed">
 				
-			</ul>
+			</section>
+			<section class="registered">
+				<h3>My Courses</h3>
+				<ol class="course-widget">
+				<?php 
+				$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
+				foreach($myEnrolements as $myEnrolment)
+				{
+				   $myCourse = new course();
+				    $myCourse -> load($myEnrolment->course_id);
+				    $myCourseId = $myCourse -> course_id;
+				?>
+					<li>
+						<a href="<?=base_url();?>index.php/courses/course_playback/<?=$myCourseId;?>"><?=$myCourse->full_name;?></a>
+					</li>
+				<?php
+				}
+				?>
+				</ol>
+			</section>
 		</section>
 	</section>
 	

@@ -57,3 +57,4 @@
 		</section>
 	</section>
 </section>
+<section class="clear"></section>
