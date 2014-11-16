@@ -218,6 +218,7 @@ nav.side-navs ul li.courses a {
 }
 nav.side-navs ul li.courses a:hover {
     border-right:15px solid #2ABB9B;
+    border-left:none;
 }
 nav.side-navs ul li.no-border {
     border:none;
@@ -462,16 +463,16 @@ nav.default { padding:10px 20px 0; }
 nav.default a { list-style:inline-block; padding:10px 20px; transition:all 0.5s ease-out; }
 nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2ABB9B; }
 .split-library { padding:0 0 15px 0; }
-.half-one { border-top:2px solid #2ABB9B; width:450px; float:left; margin:20px 20px 0; background:#ECF0F1; }
-.half-two { border-top:2px solid #2ABB9B; width:450px; float:right; margin:20px 20px 0 0; background:#ECF0F1; }
-.course-info { padding:20px 0 20px 20px; }
-.course-info h4.course-name { padding: 0px 0px 10px 0px; color: #2ABB9B; font-size: 17px; }
-.course-info p.points { padding:1px 10px; font-size:14px; background:#ffffff; display:inline-block; }
-.rating { padding:20px 0 20px 20px; float:left; }
+.half-one { border-top:2px solid #2ABB9B; width:450px; height:200px; float:left; margin:20px 20px 0; background:#ECF0F1; }
+.half-two { border-top:2px solid #2ABB9B; width:450px; height:200px; float:right; margin:20px 20px 0 0; background:#ECF0F1; }
+.course-info { padding:0; }
+.course-info h4.course-name { padding:0; float:left; color:#2ABB9B; font-size:16px; }
+.course-info p.points { margin:10px 0; padding:1px 10px; font-size:14px; background:#ffffff; display:inline-block; } 
+.rating { margin-top:0; padding:0; float:left; }
 .rating p { font-size:14px; }
-.learn-now { padding:10px 0; float:right; }
+.color-tag { margin-top:42px; padding:0; float:left; }
+.learn-now { margin-top:20px; padding:0; float:right; }
 .learn-now a.learn-now { padding:5px 15px; display:inline-block; width:80px; text-align:center; background:#2ABB9B; font-size:14px; color:#FFFFFF; }
-.color-tag { padding:0; float:right; }
 
 
 .color-tag a.html, 
@@ -491,7 +492,7 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 { 
     text-align:center; 
     display:inline-block; 
-    width:80px; 
+    width:120px; 
     padding:3px 15px; 
     font-size:12px; 
     color:#ffffff; 
