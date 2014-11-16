@@ -22,7 +22,19 @@
 
 			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Category: <?=$course->getCategoryTitle();?></li>
 			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Level: <?=$course->difficulty_level;?></li>
-			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Points: <?=$course->points;?></li>
+			<li>
+                            <span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" />
+                            </span>
+                            Points: <?=$course->points;?>
+                        <?php 
+                            if($course->isUserEnrolled())
+                            {
+                                echo "(Earned: " . $course -> getEarnedPoints() . ")";
+                            }
+                        ?>
+                        
+                        
+                        </li>
 			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Times Enrolled: <?=$course->enrollmentCount();?></li>
 		<?php
 			if($course -> isUserEnrolled($this -> session -> userdata('user_id')))

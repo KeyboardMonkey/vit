@@ -130,6 +130,16 @@ $quiz_id= NULL;
                 $quiz = new quiz_model();
                 $quiz = $quiz -> getWithConditionLimit1(array('course_id' => $course_id));
                 $questions = $this -> quiz_question -> getWithCondition(array('quiz_id' => $quiz -> quiz_id));
+                if($course -> quizTaken())
+                {
+                    echo "1";
+                 $this->load->view('templates/header');
+                 $this->load->view('pages/quiz-result', array( 'course_id' => $course_id));
+                 $this->load->view('templates/footer');
+                
+                }  else {
+                    
+                
                 $randomQuestions = array();
                // echo " << " . count($_POST);
                 
@@ -163,21 +173,23 @@ $quiz_id= NULL;
                             echo "Question: {$question_id} => {$answers[$question_id]} <br /> <br />";
                             $quiz_question = new quiz_question();
                             $quiz_question -> load($question_id);
-                            echo "Correct Answer: {$quiz_question -> {$correct_answer}} You Answered: {$quiz_question->{ $answers[$question_id]}} <br />";
+                            echo "Correct Answer: {$quiz_question -> {$quiz_question -> correct_answer}} You Answered: {$quiz_question->{ $answers[$question_id]}} <br />";
                             $question_answer = new question_answer();
+                            $question_answer -> quiz_id = $quiz -> quiz_id;
                             $question_answer -> question_id = $question_id;
                             $question_answer -> user_id = $this -> session -> userdata('user_id');
                             $question_answer -> answer = $answers[$question_id];
                             $question_answer -> save();
                             if($quiz_question -> correct_answer == $answers[$question_id])
                             {
-                                echo "Correct Anser <br />";
+                                echo "Correct Answer <br />";
                             }
                             else
                             {
                                 echo "incorrect ans <br />";
                             }
                        }
+                       redirect('quiz/index/' . $course_id);
                    // print_r($question_ids);
                     
                 }
@@ -191,9 +203,9 @@ $quiz_id= NULL;
                     {
                         $key = 'question_' .  $i;
                         $this -> session -> set_userdata($key, $question -> question_id);
-                        echo "DONE {$key} <br />";
-                        echo  $this -> session -> userdata('question_' . $i);
-                        echo "<< <br />";
+                      //  echo "DONE {$key} <br />";
+                       // echo  $this -> session -> userdata('question_' . $i);
+                      //  echo "<< <br />";
                         $i ++;
                     }
                     
@@ -205,7 +217,8 @@ $quiz_id= NULL;
 		$this->load->view('templates/header');
 		$this->load->view('pages/quiz', array( 'course_id' => $course_id, 'questions' => $randomQuestions));
 		$this->load->view('templates/footer');
-	}
+            }
+        }
 
 }/*class Quiz extends MY_Controller */
 /*end of file: quiz.php*/

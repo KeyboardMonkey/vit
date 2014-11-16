@@ -99,8 +99,10 @@ class course extends MY_Model{
         if($count == 0) $count = 1;
         return (int) ($score / $count);
     }
-    public function isUserEnrolled($user_id)
+    public function isUserEnrolled($user_id=NULL)
     {
+        if($user_id==NULL)
+            $user_id=$this -> session -> userdata('user_id');
         $enrollment = $this -> course_enrollment -> getWithCondition(array('user_id' => $user_id, 'course_id' => $this -> course_id));
         if(count($enrollment) > 0 ) return TRUE;
         else return FALSE;
@@ -326,7 +328,10 @@ class course extends MY_Model{
     {
         $finishedLectures = $this -> getFinishedLecture();
         $totalLectures = $this -> getLectures();
-        return (count($finishedLectures) / count($totalLectures)) * 100;
+        $count = count($totalLectures);
+        
+        if($count == 0) $count = 1;
+        return (count($finishedLectures) / $count ) * 100;
 
     }
     public function getCourseProgressPercent()
@@ -344,11 +349,17 @@ class course extends MY_Model{
         if($this->getLectureProgress() == 100) return TRUE;
         else return FALSE;
     }
-    public function getRandomQuestions($limit=10)
+    public function getRandomQuestions($limit=-1)
     {
+            if($limit == -1)
+                $limit = $this -> config -> item('max_quiz_questions');
                 $quiz = new quiz_model();
                 $quiz = $quiz -> getWithConditionLimit1(array('course_id' => $this -> course_id));
+                //print_r($quiz);
                 $questions = $this -> quiz_question -> getWithCondition(array('quiz_id' => $quiz -> quiz_id));
+                
+               if(count($questions)< 1) return array();
+               if(count($questions) < 11) return $questions;
                 $random_questions = array();
                 $keys = array();
                 foreach($questions as $key => $question)
@@ -380,5 +391,47 @@ class course extends MY_Model{
                 }
                 BREAK_THE_LOOP_AND_AAM_THE_CHOOP:
                 return $random_questions;
+    }
+    public function quizTaken($user_id = NULL)
+    {
+        if($user_id == NULL)
+        $user_id = $this -> session -> userdata('user_id');
+        $quiz = new quiz_model();
+        $quiz = $quiz -> getWithConditionLimit1(array('course_id' => $this -> course_id));
+        $answers = $this -> question_answer -> getWithCondition(array('user_id' => $user_id, 'quiz_id' => $quiz -> quiz_id));
+        return count($answers) > 0;
+        
+    }
+    public function getCorrectAnswers($user_id = NULL)
+    {
+        if($user_id == NULL)
+        $user_id = $this -> session -> userdata('user_id');
+        $quiz = new quiz_model();
+        $quiz = $quiz -> getWithConditionLimit1(array('course_id' => $this -> course_id));
+        $answers = $this -> question_answer -> getWithCondition(array('user_id' => $user_id, 'quiz_id' => $quiz -> quiz_id));
+        $correct = 0;
+        foreach($answers as $answer)
+        {
+            $question = new quiz_question();
+            $question -> load($answer->quiz_id);
+            if($question -> correct_answer == $answer -> answer) $correct ++;
+        }
+        
+        return $correct;
+    }
+    public function getQuizEarnedPoints($user_id=NULL)
+    {
+         if($user_id == NULL)
+        $user_id = $this -> session -> userdata('user_id');
+        $totalPoints = $this -> points;
+        $totalQuestions = $this -> config -> item('max_quiz_questions');
+        $correctQuestions = $this ->getCorrectAnswers($user_id);
+        $earnedPoints = $totalPoints * $correctQuestions / $totalQuestions;
+        return $earnedPoints;
+                                            
+    }
+    public function getEarnedPoints()
+    {
+        return $this ->getQuizEarnedPoints();
     }
 }

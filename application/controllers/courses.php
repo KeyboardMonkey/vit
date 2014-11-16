@@ -216,7 +216,12 @@ class Courses extends MY_Controller
     {
         redirect("library");
     }
-
+    public function get_next_lecture($course_id=1)
+    {
+        $course = new course();
+        $course -> load($course_id);
+        print_r($course ->getNextLecture());
+    }
     public function set_lecture_progress($lecture_id, $progress)
     {
       $user_lecture_progress = new user_lecture_progress();

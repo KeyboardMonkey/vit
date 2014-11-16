@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 16, 2014 at 05:10 PM
+-- Generation Time: Nov 16, 2014 at 07:30 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -60,11 +60,11 @@ CREATE TABLE IF NOT EXISTS `courses` (
 --
 
 INSERT INTO `courses` (`course_id`, `full_name`, `tiny_intro`, `course_thumbnail`, `category`, `difficulty_level`, `status`, `description`, `points`, `developed_by`, `learning_outcome`, `target_audience`, `section_title`, `video_title`, `video_file`, `srt`, `full_course_files_zip`, `additional_file_title`, `additional_file`, `is_new`, `created_date`, `updated_date`, `created_by`) VALUES
-(1, 'Build an Interactive Website', 'Build an Interactive Website', NULL, '6', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 10, 'Lynda', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
+(1, 'Build an Interactive Website', 'Build an Interactive Website', NULL, '6', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 1000, 'Lynda', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
 (2, 'Introduction to Programming', 'Introduction to Programming', NULL, '6', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 20, 'Tree House', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
 (3, 'How to Write a Business Plan', 'How to Write a Business Plan', NULL, '12', 'Beginner', 'yes', 'hitestLorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 30, 'New Boston', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
 (4, 'PHP & Stripe API', 'PHP & Stripe API', NULL, '2', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 200, 'Lynda', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
-(5, 'Using PHP with MySQL', 'Using PHP with MySQL', NULL, '2', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 1000, 'Udemy', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
+(5, 'Using PHP with MySQL', 'Using PHP with MySQL', NULL, '2', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 500, 'Udemy', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
 (6, 'WordPress Admin Settings', 'WordPress Admin Settings', NULL, '10', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 5000, 'Udemy', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
 (7, 'Git Basics', 'Git Basics', NULL, '11', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 500, 'Alison', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
 (8, 'SEO Basics', 'SEO Basics', NULL, '14', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 55, 'Coursera', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
@@ -128,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `course_enrollment` (
   `progress` int(11) NOT NULL,
   PRIMARY KEY (`enrol_id`),
   KEY `enrol_time` (`enrol_time`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
 
 --
 -- Dumping data for table `course_enrollment`
@@ -139,7 +139,10 @@ INSERT INTO `course_enrollment` (`enrol_id`, `course_id`, `user_id`, `enrol_time
 (4, 4, 6, '2014-11-14 20:45:13', 'in-progress', 0),
 (5, 2, 13, '2014-11-15 07:43:46', 'in-progress', 0),
 (6, 18, 1, '2014-11-16 05:20:32', 'in-progress', 0),
-(10, 1, 1, '2014-11-16 06:38:35', 'in-progress', 0);
+(10, 1, 1, '2014-11-16 06:38:35', 'in-progress', 0),
+(11, 2, 1, '2014-11-16 19:20:10', 'in-progress', 0),
+(12, 6, 1, '2014-11-16 19:25:00', 'in-progress', 0),
+(13, 5, 1, '2014-11-16 19:27:31', 'in-progress', 0);
 
 -- --------------------------------------------------------
 
@@ -185,14 +188,15 @@ CREATE TABLE IF NOT EXISTS `course_review` (
   `review` text NOT NULL,
   `submittion_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `course_review`
 --
 
 INSERT INTO `course_review` (`id`, `course_id`, `user_id`, `review`, `submittion_date`) VALUES
-(2, 1, 1, '                                                  \r\n                                                  "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."\r\n"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."\r\n\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2014-11-16 07:15:38');
+(2, 1, 1, '                                                  \r\n                                                  "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."\r\n"There is no one who loves pain itself, who seeks after it and wants to have it, simply because it is pain..."\r\n\r\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.', '2014-11-16 07:15:38'),
+(3, 5, 1, '                                                  \r\n                                     A Beginner''s Guide to Production Linux\r\nLet to run your own secure web server on Linux.A Beginner''s Guide to Production Linux\r\nLet to run your own secure web server on Linux.A Beginner''s Guide to Production Linux\r\nLet to run your own secure web server on Linux.A Beginner''s Guide to Production Linux\r\nLet to run your own secure web server on Linux.A Beginner''s Guide to Production Linux\r\nLet to run your own secure web server on Linux.A Beginner''s Guide to Production Linux\r\nLet to run your own secure web server on Linux.A Beginner''s Guide to Production Linux\r\nLet to run your own secure web server on Linux.A Beginner''s Guide to Production Linux\r\nLet to run your own secure web server on Linux.A Beginner''s Guide to Production Linux\r\nLet to run your own secure web server on Linux.A Beginner''s Guide to Production Linux\r\nLet to run your own secure web server on Linux.A Beginner''s Guide to Production Linux\r\nLet to run your own secure web server on Linux.A Beginner''s Guide to Production Linux\r\nLet to run your own secure web server on Linux.A Beginner''s Guide to Production Linux\r\nLet to run your own secure web server on Linux.             ', '2014-11-16 19:29:45');
 
 -- --------------------------------------------------------
 
@@ -333,8 +337,25 @@ CREATE TABLE IF NOT EXISTS `quiz_answers` (
   `user_id` int(10) NOT NULL,
   `answer` varchar(100) NOT NULL,
   `submittion_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `question_id` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+
+--
+-- Dumping data for table `quiz_answers`
+--
+
+INSERT INTO `quiz_answers` (`id`, `quiz_id`, `user_id`, `answer`, `submittion_date`, `question_id`) VALUES
+(15, 3, 1, 'option_1', '2014-11-16 18:50:40', 9),
+(16, 3, 1, 'option_1', '2014-11-16 18:50:40', 11),
+(17, 3, 1, 'option_1', '2014-11-16 18:50:40', 14),
+(18, 3, 1, 'option_1', '2014-11-16 18:50:40', 23),
+(19, 3, 1, 'option_1', '2014-11-16 18:50:40', 24),
+(20, 3, 1, 'option_1', '2014-11-16 18:50:40', 25),
+(21, 3, 1, 'option_1', '2014-11-16 18:50:40', 28),
+(22, 3, 1, 'option_1', '2014-11-16 18:50:40', 3),
+(23, 3, 1, 'option_1', '2014-11-16 18:50:40', 4),
+(24, 3, 1, 'option_1', '2014-11-16 18:50:40', 6);
 
 -- --------------------------------------------------------
 
@@ -361,33 +382,33 @@ CREATE TABLE IF NOT EXISTS `quiz_questions` (
 --
 
 INSERT INTO `quiz_questions` (`question_id`, `quiz_id`, `question_text`, `option_1`, `option_2`, `option_3`, `option_4`, `correct_answer`, `created_date`, `updated_date`) VALUES
-(2, 3, 'asdfasdf', '0', '0', '0', '0', 'option_1', '2014-11-16 15:43:04', '2014-11-11 15:43:01'),
-(3, 3, 'jfgjfghj', '0', '0', '0', '0', 'option_1', '2014-11-16 15:43:00', '2014-11-11 15:54:50'),
-(4, 3, 'xbvbxvcb', 'xcvbxvc', 'bxcvbxcvb', 'xvcbxc', 'bxvcbxcvb', 'option_1', '2014-11-16 15:43:02', '2014-11-11 15:56:54'),
-(5, 3, 'What comes after zero?', 'one', 'two ', 'three', 'four', 'option_1', '2014-11-16 13:19:28', '2014-11-11 17:00:59'),
-(6, 3, 'What comes after Earth?', 'venus', 'earth', 'mars', 'jupiter', 'option_2', '2014-11-16 13:19:37', '2014-11-11 17:02:03'),
-(7, 3, 'What came first?', 'Egg', 'Chicken', 'Kukkar', 'Aanda', 'option_3', '2014-11-16 15:43:20', '2014-11-11 17:08:14'),
-(8, 3, 'What are you?', 'A dog', 'A man', 'A crow', 'A cat', 'option_2', '2014-11-16 13:19:56', '2014-11-11 17:09:15'),
-(9, 3, 'dfdgfdgfgdf', 'gdfgdf', 'gdfgdfg', 'dfgfdgfd', 'gff', 'option_3', '2014-11-16 13:20:19', '2014-11-11 17:22:34'),
-(10, 3, 'fadsasdfsdaf', 'asdfasdfasdfa', 'fgsdfasdf', 'asdfasdfasd', 'fasdfdsaf', 'option_2', '2014-11-16 13:20:02', '2014-11-11 17:25:29'),
-(11, 3, 'asdfasdfa', 'sdfasdf', 'asdfasdfasd', 'asdfasdfasdf', 'asdfsdaf', 'option_3', '2014-11-16 15:43:22', '2014-11-11 17:25:48'),
-(12, 3, 'HTML stands for?', 'Hathi', 'Hyper text terminal protocol', 'Hoohaaa', 'Hola', 'option_2', '2014-11-16 13:20:06', '2014-11-11 17:29:04'),
-(13, 3, 'Who made the HTML?', 'Steve Jobs', 'Tim B. Lee', 'Bill Gates', 'You', 'option_3', '2014-11-16 13:20:25', '2014-11-11 17:29:41'),
-(14, 3, 'Is Osama real?', 'yes', 'no', 'pata nahi', 'no comments', 'option_3', '2014-11-16 13:20:27', '2014-11-11 17:33:09'),
-(15, 3, 'Where is George W Bush?', 'At home', 'Library', 'Underground Bunker', 'Afghanistan', 'option_3', '2014-11-16 13:20:31', '2014-11-11 17:33:54'),
-(16, 0, 'Who is Zaid Hamid?', 'ISI Agent', 'Douchbag', 'RAW Agent', 'Musad Agent', 'option_3', '2014-11-16 15:43:25', '2014-11-11 17:35:00'),
-(17, 0, 'Who killed BB?', 'Me', 'You', 'Zardari', 'Mush', 'option_2', '2014-11-16 15:43:37', '2014-11-11 17:36:29'),
-(18, 0, 'Is ISIS real?', 'LOL', 'CIA created em', 'Yes', 'No way', 'option_2', '2014-11-16 15:43:36', '2014-11-11 17:38:59'),
-(19, 15, 'Is Batman real?', 'aho', 'nai pata', 'lol', 'haan na bhai', 'option_3', '2014-11-16 15:43:28', '2014-11-11 17:51:35'),
-(20, 15, 'Does Altaf bhai loves peace?', 'sure', 'lol', 'why not', 'most', 'option_4', '2014-11-16 15:43:52', '2014-11-11 17:52:15'),
-(21, 15, 'Is IK pagal?', 'yeah ', 'sure is ', 'no ', 'to or kya', 'option_4', '2014-11-16 15:43:47', '2014-11-11 17:52:43'),
-(22, 15, 'Who made Apple?', 'newton', 'steve jobs', 'einstine', 'billy', 'option_2', '2014-11-16 15:43:39', '2014-11-11 17:53:13'),
-(23, 3, 'What is name of President of Pakistan.', 'Asif Ali Zardari', 'Nawaz Sharif', 'Imran Khan', 'Parvez Musharraf', 'option_3', '2014-11-16 13:20:46', '2014-11-11 15:40:37'),
-(24, 3, 'asdfasdf', '0', '0', '0', '0', 'option_3', '2014-11-16 13:20:47', '2014-11-11 15:43:01'),
-(25, 3, 'What is name of President of Pakistan.', 'Asif Ali Zardari', 'Nawaz Sharif', 'Imran Khan', 'Parvez Musharraf', 'option_3', '2014-11-16 13:20:49', '2014-11-11 15:40:37'),
-(26, 3, 'What came first?', 'Egg', 'Chicken', 'Kukkar', 'Aanda', 'option_3', '2014-11-16 13:20:40', '2014-11-11 17:08:14'),
-(27, 3, 'What comes after Earth?', 'venus', 'earth', 'mars', 'jupiter', 'option_3', '2014-11-16 13:20:38', '2014-11-11 17:02:03'),
-(28, 3, 'What is name of President of Pakistan.', 'Asif Ali Zardari', 'Nawaz Sharif', 'Imran Khan', 'Parvez Musharraf', 'option_3', '2014-11-16 13:20:37', '2014-11-11 15:40:37');
+(2, 3, 'asdfasdf', '0', '0', '0', '0', 'option_1', '2014-11-16 10:43:04', '2014-11-11 10:43:01'),
+(3, 3, 'jfgjfghj', '0', '0', '0', '0', 'option_1', '2014-11-16 10:43:00', '2014-11-11 10:54:50'),
+(4, 3, 'xbvbxvcb', 'xcvbxvc', 'bxcvbxcvb', 'xvcbxc', 'bxvcbxcvb', 'option_1', '2014-11-16 10:43:02', '2014-11-11 10:56:54'),
+(5, 3, 'What comes after zero?', 'one', 'two ', 'three', 'four', 'option_1', '2014-11-16 08:19:28', '2014-11-11 12:00:59'),
+(6, 3, 'What comes after Earth?', 'venus', 'earth', 'mars', 'jupiter', 'option_2', '2014-11-16 08:19:37', '2014-11-11 12:02:03'),
+(7, 3, 'What came first?', 'Egg', 'Chicken', 'Kukkar', 'Aanda', 'option_3', '2014-11-16 10:43:20', '2014-11-11 12:08:14'),
+(8, 3, 'What are you?', 'A dog', 'A man', 'A crow', 'A cat', 'option_2', '2014-11-16 08:19:56', '2014-11-11 12:09:15'),
+(9, 3, 'dfdgfdgfgdf', 'gdfgdf', 'gdfgdfg', 'dfgfdgfd', 'gff', 'option_3', '2014-11-16 08:20:19', '2014-11-11 12:22:34'),
+(10, 3, 'fadsasdfsdaf', 'asdfasdfasdfa', 'fgsdfasdf', 'asdfasdfasd', 'fasdfdsaf', 'option_2', '2014-11-16 08:20:02', '2014-11-11 12:25:29'),
+(11, 3, 'asdfasdfa', 'sdfasdf', 'asdfasdfasd', 'asdfasdfasdf', 'asdfsdaf', 'option_3', '2014-11-16 10:43:22', '2014-11-11 12:25:48'),
+(12, 3, 'HTML stands for?', 'Hathi', 'Hyper text terminal protocol', 'Hoohaaa', 'Hola', 'option_2', '2014-11-16 08:20:06', '2014-11-11 12:29:04'),
+(13, 3, 'Who made the HTML?', 'Steve Jobs', 'Tim B. Lee', 'Bill Gates', 'You', 'option_3', '2014-11-16 08:20:25', '2014-11-11 12:29:41'),
+(14, 3, 'Is Osama real?', 'yes', 'no', 'pata nahi', 'no comments', 'option_3', '2014-11-16 08:20:27', '2014-11-11 12:33:09'),
+(15, 3, 'Where is George W Bush?', 'At home', 'Library', 'Underground Bunker', 'Afghanistan', 'option_3', '2014-11-16 08:20:31', '2014-11-11 12:33:54'),
+(16, 0, 'Who is Zaid Hamid?', 'ISI Agent', 'Douchbag', 'RAW Agent', 'Musad Agent', 'option_3', '2014-11-16 10:43:25', '2014-11-11 12:35:00'),
+(17, 0, 'Who killed BB?', 'Me', 'You', 'Zardari', 'Mush', 'option_2', '2014-11-16 10:43:37', '2014-11-11 12:36:29'),
+(18, 0, 'Is ISIS real?', 'LOL', 'CIA created em', 'Yes', 'No way', 'option_2', '2014-11-16 10:43:36', '2014-11-11 12:38:59'),
+(19, 15, 'Is Batman real?', 'aho', 'nai pata', 'lol', 'haan na bhai', 'option_3', '2014-11-16 10:43:28', '2014-11-11 12:51:35'),
+(20, 15, 'Does Altaf bhai loves peace?', 'sure', 'lol', 'why not', 'most', 'option_4', '2014-11-16 10:43:52', '2014-11-11 12:52:15'),
+(21, 15, 'Is IK pagal?', 'yeah ', 'sure is ', 'no ', 'to or kya', 'option_4', '2014-11-16 10:43:47', '2014-11-11 12:52:43'),
+(22, 15, 'Who made Apple?', 'newton', 'steve jobs', 'einstine', 'billy', 'option_2', '2014-11-16 10:43:39', '2014-11-11 12:53:13'),
+(23, 3, 'What is name of President of Pakistan.', 'Asif Ali Zardari', 'Nawaz Sharif', 'Imran Khan', 'Parvez Musharraf', 'option_3', '2014-11-16 08:20:46', '2014-11-11 10:40:37'),
+(24, 3, 'asdfasdf', '0', '0', '0', '0', 'option_3', '2014-11-16 08:20:47', '2014-11-11 10:43:01'),
+(25, 3, 'What is name of President of Pakistan.', 'Asif Ali Zardari', 'Nawaz Sharif', 'Imran Khan', 'Parvez Musharraf', 'option_3', '2014-11-16 08:20:49', '2014-11-11 10:40:37'),
+(26, 3, 'What came first?', 'Egg', 'Chicken', 'Kukkar', 'Aanda', 'option_3', '2014-11-16 08:20:40', '2014-11-11 12:08:14'),
+(27, 3, 'What comes after Earth?', 'venus', 'earth', 'mars', 'jupiter', 'option_3', '2014-11-16 08:20:38', '2014-11-11 12:02:03'),
+(28, 3, 'What is name of President of Pakistan.', 'Asif Ali Zardari', 'Nawaz Sharif', 'Imran Khan', 'Parvez Musharraf', 'option_3', '2014-11-16 08:20:37', '2014-11-11 10:40:37');
 
 -- --------------------------------------------------------
 
@@ -706,25 +727,25 @@ CREATE TABLE IF NOT EXISTS `user_lecture_progress` (
   `user_id` int(10) NOT NULL,
   `progress` int(3) NOT NULL,
   PRIMARY KEY (`progress_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
 
 --
 -- Dumping data for table `user_lecture_progress`
 --
 
 INSERT INTO `user_lecture_progress` (`progress_id`, `lecture_id`, `user_id`, `progress`) VALUES
-(1, 3, 13, 100),
-(2, 2, 13, 100),
-(3, 4, 13, 100),
-(4, 5, 13, 100),
-(5, 6, 13, 100),
-(6, 26, 13, 100),
-(7, 2, 1, 100),
-(8, 26, 1, 100),
-(9, 3, 1, 100),
-(10, 4, 1, 100),
-(11, 6, 1, 100),
-(12, 5, 1, 100);
+(14, 0, 1, 100),
+(15, 2, 1, 100),
+(16, 3, 1, 100),
+(17, 7, 1, 0),
+(18, 4, 1, 100),
+(19, 5, 1, 100),
+(20, 6, 1, 100),
+(21, 26, 1, 100),
+(22, 19, 1, 100),
+(23, 20, 1, 100),
+(24, 21, 1, 100),
+(25, 22, 1, 100);
 
 -- --------------------------------------------------------
 

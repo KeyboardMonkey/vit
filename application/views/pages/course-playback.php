@@ -134,6 +134,7 @@
 			<section class="widget-take-quiz">
 				<h4>Take Quiz</h4>
 				<ul>
+                                    
 					<li><span class="take-quiz"><img src="<?=base_url();?>assets/graphics/take-quiz.png" width="30px" height="30px" alt="take-quiz" /></span><a href="<?=base_url();?>index.php/quiz/index/<?=$course->course_id;?>">Take Quiz</a></li>
 				</ul>
 			</section>
@@ -143,7 +144,7 @@
 			<section class="widget-course-summary">
 				<h4>Write Course Summary</h4>
 				<ul>
-					<li><span class="summary"><img src="<?=base_url();?>assets/graphics/summary.png" width="20px" height="18px" alt="summary" /></span><a href="">Write Course Summary</a></li>
+					<li><a href="<?=base_url();?>index.php/courses/view/<?=$course->course_id;?>#section-underline-2"><span class="summary"><img src="<?=base_url();?>assets/graphics/summary.png" width="20px" height="18px" alt="summary" /></span>Write Course Summary</a></li>
 				</ul>
 			</section>
 
