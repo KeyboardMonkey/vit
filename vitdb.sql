@@ -281,7 +281,7 @@ INSERT INTO `lectures` (`lect_id`, `course_id`, `vid_title`, `vid_path`, `srt_pa
 (22, 5, 'Working with GitHub', 'upload/48d88e2b6c8c3558712982f8e159d177.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-13 10:34:47', '2014-11-13 10:34:47', NULL),
 (23, 2, 'Adding a Contact Form', 'upload/ecbeb817c1b611efaf4d34d17926ab88.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-13 10:25:56', '2014-11-13 10:25:56', NULL),
 (24, 3, 'Adding a Contact Form', 'upload/ecbeb817c1b611efaf4d34d17926ab88.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-13 10:25:56', '2014-11-13 10:25:56', NULL),
-(25, 4, 'Adding a Contact Form', 'upload/ecbeb817c1b611efaf4d34d17926ab88.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-13 10:25:56', '2014-11-13 10:25:56', NULL);
+(25, 4, 'Adding a Contact Form', 'upload/ecbeb817c1b611efaf4d34d17926ab88.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-13 10:25:56', '2014-11-13 10:25:56', NULL),
 (26, 1, 'Adding a Contact Form', 'upload/ecbeb817c1b611efaf4d34d17926ab88.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-13 10:25:56', '2014-11-13 10:25:56', NULL);
 
 -- --------------------------------------------------------
