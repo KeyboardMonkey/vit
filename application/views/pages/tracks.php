@@ -20,7 +20,7 @@
 				<ul>
 					<li><?=$track->track_description;?></li>
 				</ul>
-				<section class="rating"><p>Rating: <?=$track->getOverAllRating();?> (<?=$track->numberOfRatings();?>)</p></section>
+<!-- 				<section class="rating"><p>Rating: <?=$track->getOverAllRating();?> (<?=$track->numberOfRatings();?>)</p></section> -->
 			</section>
 			<section class="inline-buttons">
 				<a href="">Start Track</a>
