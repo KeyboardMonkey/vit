@@ -155,12 +155,20 @@ $quiz_id= NULL;
                         {
                             $answers[$question_id] = $this -> input -> post('q_'.$question_id);
                         }
+                        $correct = 0;
+                        $incorrect = 0;
+                        $total = count($question_ids);
                         foreach ($question_ids as $question_id)
                         {
                             echo "Question: {$question_id} => {$answers[$question_id]} <br /> <br />";
                             $quiz_question = new quiz_question();
                             $quiz_question -> load($question_id);
-                            echo "Correct Answer: {$quiz_question -> {$quiz_question -> correct_answer}} You Answered: {$quiz_question->{ $answers[$question_id]}} <br />";
+                            echo "Correct Answer: {$quiz_question -> {$correct_answer}} You Answered: {$quiz_question->{ $answers[$question_id]}} <br />";
+                            $question_answer = new question_answer();
+                            $question_answer -> question_id = $question_id;
+                            $question_answer -> user_id = $this -> session -> userdata('user_id');
+                            $question_answer -> answer = $answers[$question_id];
+                            $question_answer -> save();
                             if($quiz_question -> correct_answer == $answers[$question_id])
                             {
                                 echo "Correct Anser <br />";
