@@ -335,4 +335,13 @@ class course extends MY_Model{
 
         return $lecture;
     }
+    public function reviewedByUser($user_id = NULL)
+    {
+        return $this -> course_review -> reviewSubmittedByUser($this -> course_id, $user_id);
+    }
+    public function isCourseFinishedByUser()
+    {
+        if($this->getLectureProgress() == 100) return TRUE;
+        else return FALSE;
+    }
 }

@@ -44,6 +44,7 @@
 	$lecture_id = 0;
 	$i = 0;
 	$lecture = new lecture();
+       // print_r($lectures);
 	foreach ($lectures as $key => $individualLecture) {
 		if($i==$current_lecture)  {
 
@@ -54,6 +55,7 @@
 		$i++;
 	}
 	//print_r($lecture);
+        
 	$videoUrl = $lecture->vid_path;
 	
 	
@@ -77,7 +79,8 @@
 				<?php
 				if($current_lecture > 0)
 				{?>
-				<li class="previous"><a href="<?=base_url('index.php/courses/course_playback/' . $course_id.'/'.($current_lecture-1));?>">Previous</a></li>
+				<li class="previous">
+                                    <a href="<?=base_url('index.php/courses/course_playback/' . $course_id.'/'.($current_lecture-1));?>">Previous</a></li>
 				<?php
 				}
 				?>

@@ -180,12 +180,16 @@ class Courses extends MY_Controller
     {
         if($course_id == NULL) 
         {
-          // redirct home
+          redirect('library');
         }
         
         $course = new course();
         $course->load($course_id);
         if(!isset($course->course_id)) redirect('home');
+        if(!$course -> isUserEnrolled($this -> session -> userdata('user_id')))
+	{
+            redirect('courses/view/' . $course_id);
+        }
         echo "START:" . $start_lecture;
         if($start_lecture==-1)
         {
@@ -230,6 +234,27 @@ class Courses extends MY_Controller
       echo "OK";
 
 
+    }
+    public function submit_review($course_id=NULL)
+    {
+        if($course_id==NULL) redirect('library');
+        $course = new course();
+        $course -> load($course_id);
+        if(!isset($course->course_id)) redirect('library');
+        if(!$course -> isUserEnrolled($this -> session -> userdata('user_id')))
+                                       redirect('library');
+        if($course -> reviewedByUser())
+                                        redirect('library');
+        if( $course -> getCourseProgressPercent() != 100)
+                                         redirect('library');
+        if(strlen($this -> input -> post('review')) < 250) redirect('courses/view/' . $course_id);
+        $review = new course_review();
+        $review -> user_id = $this -> session -> userdata('user_id');
+        $review -> review = $this -> input -> post('review');
+        $review -> course_id = $course_id;
+        $review -> save();
+        redirect('courses/view/' . $course_id);
+        
     }
     
 

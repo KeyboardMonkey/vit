@@ -1,7 +1,7 @@
 <?php 
 			$enrollement = new course_enrollment();
 			$enrollement = $this -> course_enrollment -> getWithConditionLimit1(array('user_id' => $this -> session -> userdata('user_id'), 'course_id' => $course -> course_id));
-	        $enrol_date = $enrollement -> enrol_time;
+                        $enrol_date = $enrollement -> enrol_time;
 			$enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
 		
 
@@ -28,6 +28,8 @@
 			if($course -> isUserEnrolled($this -> session -> userdata('user_id')))
 			{
 				echo "<li><span><img src=\"".base_url()."assets/graphics/tech-feeds.svg\" width=\"15px\" height=\"15px\" /></span>Enrolled on: ".$enrol_date_formatted."</li>";
+                                echo "<li><a href=\"" . base_url('index.php/courses/course_playback/' . $course -> course_id) . "\"> <span><img src=\"".base_url()."assets/graphics/tech-feeds.svg\" width=\"15px\" height=\"15px\" /></span>Goto Course</a></li>";
+                                
 			}
 		?>
 		</ul>
@@ -86,31 +88,70 @@
 						<h4>Who Should Do This</h4>
 						<p><?=$course->target_audience;?></p>
 					</section>
-					<section id="section-underline-2">
-						<h5>John Doe:</h5>
-						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<p>
-							<h5>John Doe:</h5>
-							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<p>
-								<h5>John Doe:</h5>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<p>
-									<h5>John Doe:</h5>
-									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<p>
-										<h5>John Doe:</h5>
-										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.<p>
-										</section>
+					  <section id="section-underline-2">
+                                            <?php
+                                            
+                                                if($course -> isUserEnrolled($this -> session -> userdata('user_id')))
+                                                {
+                                                   if($course -> isCourseFinishedByUser())
+                                                   {
+                                                       if($course -> reviewedByUser())
+                                                        {
+                                                           $review = new course_review();
+                                                           $review = $review -> getWithConditionLimit1(array('course_id' => $course -> course_id, 'user_id' => $this -> session -> userdata('user_id')));
+                                                        ?>
+                                              
+                                                        <h3> My Review </h3>
+                                                        <br />
+                                                        <p> <?=$review->review;?></p>
+                                              <?php
+                                                        }
+                                                        else{
+                                                   ?>
+                                              <h5> Please submit review </h5>
+                                              <form action='<?=base_url("index.php/courses/submit_review/{$course->course_id}");?>' method='post'>
+                                                  <label>Review</lable>
+                                                  <textarea width='500px' height='500px' name='review'>
+                                                  
+                                                  </textarea>
+                                                  <input type='submit' value='Submit' />
+                                              </form>
+                                              <?php
+                                                        }
+                                                   }
+                                                   else{
+                                                ?>
+                                                    <h5>Please finish course first.</h5>
+                                              <?php 
+                                                   }
+                                                }
+                                                    else{
+                                               ?>
+                                                    
+                                                    <h5> Please Enroll to submit review </h5>
+						
+                                               <?php 
+                                               }
+                                            ?>
+                                                    </section>
+                                              
 										<section id="section-underline-3">
 							
 							<a id="course-content" href="#"><img src="<?=base_url();?>assets/graphics/arrow-down.png" width="20px" height="17px" alt="arrow-down" /><h3 id="course-content">What is UX?</h3></a>
 							<ul class="course-content">
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">A Brief History of UX.</a></li>
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">The Foundation of UX.</a></li>
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">The Importance of UX.</a></li>
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">What is UX?</a></li>
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">A Brief History of UX.</a></li>
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">The Foundation of UX.</a></li>
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">The Importance of UX.</a></li>
-								<li><span><img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><a href="#">What is UX?</a></li>
-							</ul>
+                                                            <?php
+                                                                $lectures = $this -> lecture -> getWithCondition(array('course_id' => $course -> course_id));
+                                                                $i = 0;
+                                                                foreach($lectures as $lecture)
+                                                                {
+                                                            ?>
+								<li> <a href="<?=base_url('index.php/courses/course_playback/' . $course -> course_id . '/' . $i);?>"> <span> <img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><?=$lecture->vid_title;?></a> </li>
+                                                                
+                                                                <?php
+                                                                 $i ++;
+                                                                }
+                                                            ?>
+                                                        </ul>
 						</section>
 									</section><!-- /content -->
 								</section><!-- /tabs -->
