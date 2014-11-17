@@ -1,8 +1,45 @@
 <section class="container">
 	<section class="content-md">
 		<section class="title">
-			<h2>0</h2>
+			<h2>1,985</h2>
 			<h4>Total Points</h4>
+		</section>
+		<section class="line-border"></section>
+		<section class="course-cols">
+			<section class="col1">
+				<ul class="cols">
+					<li><strong>1,641</strong><br/>HTML</li>
+					<li><strong>180</strong><br/>CSS</li>
+					<li><strong>7</strong><br/>C++</li>
+				</ul>
+			</section>
+			<section class="col2">
+				<ul class="cols">
+					<li><strong>937</strong><br/>PHP</li>
+					<li><strong>91</strong><br/>JavaScript</li>
+					<li><strong>0</strong><br/>jQuery</li>
+				</ul>
+			</section>
+			<section class="col3">
+				<ul class="cols">
+					<li><strong>831</strong><br/>ASP.Net</li>
+					<li><strong>18</strong><br/>Android</li>
+					<li><strong>0</strong><br/>Java</li>
+				</ul>
+			</section>
+			<section class="col4">
+				<ul class="cols">
+					<li><strong>193</strong><br/>WordPress</li>
+					<li><strong>7</strong><br/>Development Tools</li>
+					<li><strong>0</strong><br/>Business</li>
+				</ul>
+			</section>
+			<section class="clear"></section>
+		</section>
+		<section class="line-border"></section>
+		<section class="info">
+			<p>Points are earned whenever you take an important action on Vitorials.
+			<br/><a href="">Learn more</a> about when and how points are earned.</p>
 		</section>
 	</section>
 	
@@ -19,30 +56,62 @@
 	$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
 	?>
 	<section class="content-md">
-		<section class="my-courses">
-			<section class="not-registed">
-				
+			<!--
+			<h3>My Courses</h3>
+			<ol class="course-widget">
+			<?php 
+		//	$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
+		//	foreach($myEnrolements as $myEnrolment)
+			{
+		//	   $myCourse = new course();
+		//	    $myCourse -> load($myEnrolment->course_id);
+		//	    $myCourseId = $myCourse -> course_id;
+			?>
+				<li>
+					<a href="<?=base_url();?>index.php/courses/course_playback/<?=$myCourseId;?>"><?=$myCourse->full_name;?></a>
+				</li>
+			<?php
+			}
+			?>
+			</ol>
+			-->
+		<section class="not-registered">
+			<h3>You haven't registered any course yet.<br /><small>If you want to registered any of our courses then visit our <a href="#">Course Library</a></h3></small></h3>
+		</section>
+
+
+		<section class="registered">
+			<section class="my-courses">
+				<section class="color-tag">
+					<a href="" class="">HTML</a>
+				</section>
+				<h5 class="level">Intermediate</h5>
+				<section class="clear"></section>
+				<h4 class="course-name">Build a Simple Website</h4>
+				<section class="clear"></section>
+				<p class="points">50 Points</p>
+				<h4 class="rating">Rating: -----</h4>
+				<section class="clear"></section>
+				<section class="progress-bar-mini"></section>
+				<button class="default" type="button">Resume Track</button>
 			</section>
-			<section class="registered">
-				<h3>My Courses</h3>
-				<ol class="course-widget">
-				<?php 
-				$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
-				foreach($myEnrolements as $myEnrolment)
-				{
-				   $myCourse = new course();
-				    $myCourse -> load($myEnrolment->course_id);
-				    $myCourseId = $myCourse -> course_id;
-				?>
-					<li>
-						<a href="<?=base_url();?>index.php/courses/course_playback/<?=$myCourseId;?>"><?=$myCourse->full_name;?></a>
-					</li>
-				<?php
-				}
-				?>
-				</ol>
+			<section class="my-courses">
+				<section class="color-tag">
+					<a href="" class="">HTML</a>
+				</section>
+				<h5 class="level">Intermediate</h5>
+				<section class="clear"></section>
+				<h4 class="course-name">Build a Simple Website</h4>
+				<section class="clear"></section>
+				<p class="points">50 Points</p>
+				<h4 class="rating">Rating: -----</h4>
+				<section class="clear"></section>
+				<section class="progress-bar-mini"></section>
+				<button class="default" type="button">Resume Track</button>
 			</section>
 		</section>
+
+		
 	</section>
 	
 	<section class="content-md">
@@ -62,31 +131,7 @@
 				<li><a href="">Introduction to ASP.NET MVC</a></li>
 			</ul>
 		</section>
-		<section class="clear"></section>		
-		<section class="top-students">
-			<h3>Top 3 Students</h3>
-			<section class="first-trophy">
-				<section class="content">
-					<img src="<?=base_url();?>assets/graphics/trophy1.svg" width="100px" height="111px" />
-					<a href="">Kashif Nadeem</a>
-					<p>3025 Points</p>
-				</section>
-			</section>
-			<section class="second-trophy">
-				<section class="content">
-					<img src="<?=base_url();?>assets/graphics/trophy2.svg" width="100px" height="111px" />
-					<a href="">Qamar Abbasi</a>
-					<p>2905 Points</p>
-				</section>
-			</section>
-			<section class="third-trophy">
-				<section class="content">
-					<img src="<?=base_url();?>assets/graphics/trophy3.svg" width="100px" height="111px" />
-					<a href="">Shehroz Malik</a>
-					<p>2900 Points</p>
-				</section>
-			</section>
-		</section>
+		<section class="clear"></section>
 	</section>
 	
 	</section>
