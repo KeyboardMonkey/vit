@@ -204,21 +204,18 @@
 	"buffers":
 	[
 		{
-			"contents": "<?php\n\n$username = 'root';\n$password = '';\n$database = 'pagination_db';\n\n$conn = mysqli_connect('localhost', $username, $password) or die(mysqli_error());\n$db_handle = mysqli_select_db($conn, $database) or die(mysqli_error());\n\nif($_POST) {\n	$return = array();\n	\n	$return['success'] = true;\n	\n	$sql = 'SELECT * FROM enteries LIMIT ' . $_POST['limit'] . ', 10';\n	$query = mysqli_query($conn, $sql) or die(mysqli_error($conn)) or die(mysqli_error($conn));\n	/*file_get_contents('http://google.com/');*/\n	\n	if($query && mysqli_num_rows($query) > 0) {\n		$html_to_echo = '';\n		while($row = mysqli_fetch_assoc($query)) {\n			$html_to_echo .= '<li>';\n			$html_to_echo .= '<div class=\"entry-title\"><h3>' . $row['title'] . '</h3></div>';\n			$html_to_echo .= '<div class=\"entry-desc\">' . $row['desc'] . '</div>';\n			$html_to_echo .= '</li>';\n		}\n		$return['append_html'] = $html_to_echo;\n	}\n	echo json_encode($return);\n	exit;\n} else {\n	$sql = 'SELECT * FROM enteries LIMIT 0, 10';\n	$query = mysqli_query($conn, $sql) or die(mysqli_error($conn));\n}\n\n?>\n<!DOCTYPE html>\n<html>\n<head>\n	<title>jQuery Sortable</title>\n	\n	<link rel=\"stylesheet\" href=\"//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/themes/smoothness/jquery-ui.css\" />\n	<style>\n		ul { list-style-type: none; margin: 0; padding: 0;}\n		ul li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; width: 40%; float: left; height: 500px; overflow: hidden; }\n		.entry-desc { color: #e3e3e3; }\n		body.loading { background: url('loader3.gif') no-repeat center center; }\n		.loader {\n			display:    none;\n			position:   fixed;\n			z-index:    1000;\n			top:        0;\n			left:       0;\n			height:     100%;\n			width:      100%;\n			background: rgba( 255, 255, 255, .8 ) \n						url('loader3.gif') \n						50% 50% \n						no-repeat;\n		}\n		body.loading .loader { display: block; }\n	</style>\n</head>\n\n\n<body>\n	<ul id=\"entries-data\">\n	<?php\n		while($row = mysqli_fetch_assoc($query)) {\n	?>\n		<li>\n			<div class=\"entry-title\"><h3><?php echo $row['title']; ?></h3></div>\n			<div class=\"entry-desc\">\n				<h3><?php echo $row['desc']; ?>\n			</div>\n		</li>\n	<?php\n		}\n	?>\n	</ul>\n\n	<div class=\"loader\"></div>\n	\n	\n	<script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js\"></script>\n	<script src=\"//ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js\"></script>\n	<script>\n		$(function() {\n			var limit = 0;\n			var timeout; // This is for fixing multiple scrolls triggering ajax call multiple times, comment thi if not needed\n			$(window).scroll(function() {\n				if($(window).scrollTop() + $(window).height() > $(document).height() - 100) {\n					clearTimeout(timeout); // Comment this if not needed\n					timeout = setTimeout(function() { // Comment this if not needed\n						limit += 10;\n						$.ajax({\n							type: 'POST',\n							dataType: 'json',\n							data: 'limit=' + limit,\n							success: function(response) {\n								if(response.success) {\n									if(response.append_html) {\n										$('#entries-data').append(response.append_html);\n									} else {\n										//alert('No more data to load.');\n									}\n								}\n								$('body').removeClass('loading');\n							},\n							beforeSend: function() {\n								$('body').addClass('loading');\n							}\n						});\n					}, 75);  // Comment this if not needed\n				}\n			});\n		});\n	</script>\n</body>\n</html>",
-			"file": "/A/xampp/htdocs/ssss/loadmore/index.php",
-			"file_size": 3326,
-			"file_write_time": 130606199190292663,
+			"file": "application/controllers/tracks.php",
 			"settings":
 			{
-				"buffer_size": 3330,
-				"line_ending": "Unix"
+				"buffer_size": 5320,
+				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "/B/-- FYP/3. Development/HTMLS/New folder/welcome.html",
+			"file": "application/views/pages/explore-track.php",
 			"settings":
 			{
-				"buffer_size": 1863,
+				"buffer_size": 3739,
 				"line_ending": "Windows"
 			}
 		}
@@ -250,6 +247,8 @@
 	},
 	"file_history":
 	[
+		"/B/-- FYP/3. Development/HTMLS/New folder/welcome.html",
+		"/A/xampp/htdocs/ssss/loadmore/index.php",
 		"/A/xampp/htdocs/vit/soptair/views/widgets/similar-courses-widget.php",
 		"/A/xampp/htdocs/vit/soptair/views/pages/library.php",
 		"/A/xampp/htdocs/vit/application/config/autoload.php",
@@ -375,9 +374,7 @@
 		"/C/Users/The Unusual Suspect/Desktop/vito/FROM SATTI/video playback jadu script/undex.php",
 		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/course playback screen/add-track.html",
 		"/A/xampp/htdocs/vit/soptair/views/pages/course-playback-old2.php",
-		"/A/xampp/htdocs/ssss/dynamic.php",
-		"/A/xampp/htdocs/vit/Vitorials.phpproj",
-		"/A/xampp/htdocs/vit/soptair/views/templates/side-navs.php"
+		"/A/xampp/htdocs/ssss/dynamic.php"
 	],
 	"find":
 	{
@@ -556,65 +553,65 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "/A/xampp/htdocs/ssss/loadmore/index.php",
+					"file": "application/controllers/tracks.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3330,
+						"buffer_size": 5320,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								260,
-								260
+								618,
+								618
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/B/-- FYP/3. Development/HTMLS/New folder/welcome.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1863,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								436,
-								436
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/views/pages/explore-track.php",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 3739,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -696,7 +693,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 191.0,
+	"side_bar_width": 232.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

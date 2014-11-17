@@ -2,6 +2,7 @@
 
 class Tracks extends MY_Controller 
 {
+
 		public function explore($track_id=NULL)
                 {
                     if($track_id==NULL)
@@ -12,10 +13,27 @@ class Tracks extends MY_Controller
                     
                     $this->load->view('templates/header');
                     $this->load->view('templates/breadcrumbs');
-                    $this->load->view('pages/explore-track', array('track_id' => $track_id));
+                    $this->load->view('pages/track-explore', array('track_id' => $track_id));
                     $this->load->view('templates/footer');
 
                 }
+
+
+        public function view($track_id=NULL)
+                {
+                    if($track_id==NULL)
+                        redirect('tracks');
+                    $track =new track();
+                    $track -> load($track_id);
+                    if(!isset($track -> track_id))redirect('tracks');
+                    
+                    $this->load->view('templates/header');
+                    $this->load->view('templates/breadcrumbs');
+                    $this->load->view('pages/track-in-progress', array('track_id' => $track_id));
+                    $this->load->view('templates/footer');
+
+                }
+
 
 
 
@@ -131,7 +149,7 @@ class Tracks extends MY_Controller
                     if(!isset($track -> track_id))redirect('tracks');
                     if($track ->isUserEnrolled())
                     {
-                        redirect('tracks/explore/' . $track_id);
+                        redirect('tracks/view/' . $track_id);
                     }
                     else
                     {
@@ -149,7 +167,7 @@ class Tracks extends MY_Controller
                             $course_enrollment -> user_id = $this -> session -> userdata('user_id');
                             $course_enrollment -> save();
                         }
-                        redirect('tracks/explore/' . $track_id);
+                        redirect('tracks/view/' . $track_id);
                     }
                     
         }
