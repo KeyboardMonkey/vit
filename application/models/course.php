@@ -427,13 +427,21 @@ class course extends MY_Model{
         $totalPoints = $this -> points;
         $totalQuestions = $this -> config -> item('max_quiz_questions');
         $correctQuestions = $this ->getCorrectAnswers($user_id);
-        $earnedPoints = $totalPoints * $correctQuestions / $totalQuestions;
-        return $earnedPoints;
+        $earnedPoints = $correctQuestions / $totalQuestions;
+        return $earnedPoints * $this -> config -> item('quiz_points') / $totalPoints;
                                             
     }
     public function getEarnedPoints($user_id=NULL)
     {
-        return $this ->getQuizEarnedPoints($user_id);
+        $earned = $this ->getQuizEarnedPoints($user_id);
+        if($this ->reviewedByUser())
+        {
+            // 100 review_point
+            // ppont x
+            // x =
+            $earned +=    $this -> config -> item('review_points')  * $this -> points / 100;
+        }
+        return $earned;
     }
     public function getTracks()
     {
