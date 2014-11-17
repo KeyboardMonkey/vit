@@ -426,9 +426,23 @@ class course extends MY_Model{
         $user_id = $this -> session -> userdata('user_id');
         $totalPoints = $this -> points;
         $totalQuestions = $this -> config -> item('max_quiz_questions');
+       // echo "TOTAL{$totalQuestions}<br/>";
         $correctQuestions = $this ->getCorrectAnswers($user_id);
-        $earnedPoints = $correctQuestions / $totalQuestions;
-        return $earnedPoints * $this -> config -> item('quiz_points') / $totalPoints;
+      //  echo "Correct{$correctQuestions}<br/>";
+        
+        $ratio = $correctQuestions / $totalQuestions;
+      //  echo "Ratio{$ratio}<br/>";
+        $earningRatio = $this -> config -> item('quiz_points') * $ratio;
+     //  echo "Earned TOTAL{$earningRatio}<br/>";
+        
+        $earnedPoints =  $earningRatio * $this -> points / 100;//$correctQuestions / $totalQuestions;
+      //  echo "Points{$earnedPoints}<br/>";
+        
+        return $earnedPoints; //* $this -> config -> item('quiz_points') / $totalPoints;
+        // 1 70
+        // (RATIO) Y
+        // 
+        //
                                             
     }
     public function getEarnedPoints($user_id=NULL)
