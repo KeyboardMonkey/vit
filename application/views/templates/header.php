@@ -44,7 +44,7 @@
             <li>This is the oldest of notifications<br/><span class="notif-time">2 hr</span></li>
         </ul>
         <section id="see-all-notif">
-            <a href="index.php/notifications">See all notifications</a>
+            <a href="<?php echo base_url();?>index.php/notifications">See all notifications</a>
         </section>
     </section>
 </header>

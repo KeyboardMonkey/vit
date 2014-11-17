@@ -72,7 +72,7 @@
 						if( $course -> getCourseProgressPercent() == 100)
 						{
 							echo "You've Finished all lectures. Feel Free to watch again.";
-						} else echo $course -> getCourseProgressPercent();
+						}// else echo $course -> getCourseProgressPercent();
 				?>
 				</p>
 				<ul>
@@ -102,8 +102,12 @@
 
 				<script>
 			$(document).ready(function(){
+				// to get full course progress
+				// $course -> getCourseProgressPercent()
 
-					var track_progress = <?=($course -> getLectureProgress() * 60 / 100);?>;
+				// to get videoplayback progress (100% means 60 progress points)
+				//var track_progress = <?=($course -> getLectureProgress() * 60 / 100);?>;
+				var track_progress = <?=$course -> getCourseProgressPercent();?>;
 		        jQuery('#large_pro_bar').animate({width: track_progress+ '%'});
 		        jQuery('#large_pro_bar_percent').html(track_progress.toFixed(2) + '%');
 
@@ -114,18 +118,9 @@
 
 			<section class="widget-course-progress">
 				<h4>Course Progress</h4>
-					<!--
-					<div class="pro-bar-container color-nephritis">
-							<div class="pro-bar bar-90 color-emerald" data-pro-bar-percent="90" data-pro-bar-delay="500">
-								<div class="pro-bar-candy candy-ltr"></div>
-								<span class="pro-bar-percentage" id="small_pro_bar_percent">10%</span>
-
-							</div>
-					</div>
-					-->
 					<div class="pro-bar-container color-nephriti bm-remove">
-		            <div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=($course -> getLectureProgress() * 60 / 100);?>" data-pro-bar-delay="500">
-		                <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=($course -> getLectureProgress() * 60 / 100);?>%</span>
+		            <div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=$course -> getCourseProgressPercent();?>" data-pro-bar-delay="500">
+		                <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$course -> getCourseProgressPercent();?>%</span>
 		                <div class="pro-bar-candy candy-ltr"></div>
 		            </div>
 		        	</div>
