@@ -106,14 +106,14 @@ class Tracks extends MY_Controller
 
 
 
-	public function index($type = NULL, $value = NULL)
+	public function index()
 	{
 
-		if($type != 'category') $type = NULL;
+		
 
 		$this->load->view('templates/header');
 		$this->load->view('templates/breadcrumbs');
-		$this->load->view('pages/tracks', array('filter_type' => $type, 'filter_value' => $value ));
+		$this->load->view('pages/tracks');
 		$this->load->view('templates/footer');
 
 	}
