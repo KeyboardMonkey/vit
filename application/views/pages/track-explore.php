@@ -32,7 +32,7 @@
                     <?php
                             if($track ->isUserEnrolled())
                             {?>
-                                <button id="start_track"  type="button">Start Track</button>
+                                <button id="start_track"  type="button">Resume Track</button>
                                 <script>
                                     $(document).ready(function(){
                                         $('#start_track').click(function(){

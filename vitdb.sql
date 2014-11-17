@@ -1,9 +1,9 @@
-﻿-- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump
 -- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 17, 2014 at 03:38 PM
+-- Generation Time: Nov 17, 2014 at 07:36 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -522,14 +522,29 @@ CREATE TABLE IF NOT EXISTS `tracks_enrollment` (
   `status` enum('in-progress','cancelled','completed') NOT NULL,
   `progress` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`track_enrol_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `tracks_enrollment`
 --
 
 INSERT INTO `tracks_enrollment` (`track_enrol_id`, `track_id`, `user_id`, `track_enrol_time`, `status`, `progress`) VALUES
-(1, 1, 1, '2014-11-17 15:36:05', 'in-progress', 0);
+(1, 1, 1, '2014-11-17 15:36:05', 'in-progress', 0),
+(2, 2, 1, '2014-11-17 17:29:19', 'in-progress', 0),
+(3, 1, 1, '2014-11-17 17:36:42', 'in-progress', 0),
+(4, 1, 1, '2014-11-17 17:37:09', 'in-progress', 0),
+(5, 1, 1, '2014-11-17 17:37:45', 'in-progress', 0),
+(6, 1, 1, '2014-11-17 17:38:08', 'in-progress', 0),
+(7, 1, 1, '2014-11-17 17:38:15', 'in-progress', 0),
+(8, 1, 1, '2014-11-17 17:39:13', 'in-progress', 0),
+(9, 1, 1, '2014-11-17 17:39:32', 'in-progress', 0),
+(10, 1, 1, '2014-11-17 17:39:56', 'in-progress', 0),
+(11, 1, 1, '2014-11-17 17:40:20', 'in-progress', 0),
+(12, 1, 1, '2014-11-17 17:41:12', 'in-progress', 0),
+(13, 1, 1, '2014-11-17 17:45:16', 'in-progress', 0),
+(14, 1, 1, '2014-11-17 17:46:31', 'in-progress', 0),
+(15, 1, 1, '2014-11-17 18:19:13', 'in-progress', 0),
+(16, 1, 1, '2014-11-17 18:19:23', 'in-progress', 0);
 
 -- --------------------------------------------------------
 
@@ -546,7 +561,7 @@ CREATE TABLE IF NOT EXISTS `track_content` (
   `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `track_content`
@@ -555,7 +570,9 @@ CREATE TABLE IF NOT EXISTS `track_content` (
 INSERT INTO `track_content` (`id`, `track_id`, `course_id`, `course_index`, `created_date`, `updated_date`, `created_by`) VALUES
 (1, 1, 1, 1, '2014-11-17 14:41:29', '2014-11-17 14:41:29', 0),
 (2, 1, 2, 2, '2014-11-17 14:41:29', '2014-11-17 14:41:29', 0),
-(3, 1, 3, 3, '2014-11-17 14:41:29', '2014-11-17 14:41:29', 0);
+(3, 1, 3, 3, '2014-11-17 14:41:29', '2014-11-17 14:41:29', 0),
+(4, 2, 2, 2, '2014-11-17 14:41:29', '2014-11-17 14:41:29', 0),
+(5, 3, 2, 2, '2014-11-17 14:41:29', '2014-11-17 14:41:29', 0);
 
 -- --------------------------------------------------------
 
@@ -803,7 +820,7 @@ CREATE TABLE IF NOT EXISTS `user_lecture_progress` (
   `user_id` int(10) NOT NULL,
   `progress` int(3) NOT NULL,
   PRIMARY KEY (`progress_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=32 ;
 
 --
 -- Dumping data for table `user_lecture_progress`
@@ -813,7 +830,7 @@ INSERT INTO `user_lecture_progress` (`progress_id`, `lecture_id`, `user_id`, `pr
 (14, 0, 1, 100),
 (15, 2, 1, 100),
 (16, 3, 1, 100),
-(17, 7, 1, 0),
+(17, 7, 1, 100),
 (18, 4, 1, 100),
 (19, 5, 1, 100),
 (20, 6, 1, 100),
@@ -821,7 +838,13 @@ INSERT INTO `user_lecture_progress` (`progress_id`, `lecture_id`, `user_id`, `pr
 (22, 19, 1, 100),
 (23, 20, 1, 100),
 (24, 21, 1, 100),
-(25, 22, 1, 100);
+(25, 22, 1, 100),
+(26, 8, 1, 100),
+(27, 9, 1, 100),
+(28, 10, 1, 100),
+(29, 23, 1, 100),
+(30, 11, 1, 100),
+(31, 12, 1, 0);
 
 -- --------------------------------------------------------
 
