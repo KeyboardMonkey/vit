@@ -336,8 +336,8 @@ class course extends MY_Model{
     }
     public function getCourseProgressPercent()
     {
-        $lecture = $this -> getLectureProgress();
-
+        $lecture = $this -> getLectureProgress() * 60 / 100;
+        if($this -> quizTaken()) $lecture += 20;
         return $lecture;
     }
     public function reviewedByUser($user_id = NULL)
@@ -430,8 +430,76 @@ class course extends MY_Model{
         return $earnedPoints;
                                             
     }
-    public function getEarnedPoints()
+    public function getEarnedPoints($user_id=NULL)
     {
-        return $this ->getQuizEarnedPoints();
+        return $this ->getQuizEarnedPoints($user_id);
     }
+    public function getTracks()
+    {
+        $tracks_content = $this -> track_content -> getWithCondition(array('course_id' => $this -> course_id));
+        $tracks = array();
+        foreach ($tracks_content as $content)
+        {
+            $track = new track();
+            $track -> load($content -> track_id);
+            array_push($tracks, $track);
+        }
+        return $tracks;
+        //print_r($tracks);
+    }
+   
+            
+    public function getTopStudents($limit=3)
+    {
+        $enrolments = new course_enrollment();
+        $enrolments = $enrolments ->getWithCondition(array('course_id' => $this -> course_id));
+        $students = array();
+        $i = 0;
+        foreach($enrolments as $enrolment)
+        {
+            $student = new user();
+            $student -> load($enrolment -> user_id);
+            $marks = $this ->getEarnedPoints($user_id);
+        }
+    }
+  /*  public function getContinuationTrack()
+    {
+        $tracks = $this ->getTracks();
+        
+        $continuation = new track();
+        foreach($tracks as $track)
+        {
+            $track_content = new track_content();
+            $track_content = $track_content ->getWithCondition(array('course_id' => $this -> course_id,
+                        'track_id' => $track -> $track_id
+                ));
+            $indexInThisTrack = $this -> track_content -> getWithConditionLimit1(array('course_id' => $this -> course_id,
+                        'track_id' => $track -> $track_id
+                ))->course_index;
+            $i = 0;
+            $AllPreviousFinished=TRUE;
+            $AnyNextFinished=FALSE;
+            foreach($track_content as $content)
+            {
+                $course = new course();
+                $course -> load($content -> course_id);
+                if($course->getLectureProgress() < 100)
+                {
+                    $AllPreviousFinished = FALSE;
+                    break;
+                }
+                $continuation = TRUE;
+                if($i  == $indexInThisTrack)
+                {
+                    if($course->getLectureProgress() < 100)
+                    {
+                        $AnyNextFinished = FALSE;
+                        break;
+                    }
+                }
+            }
+            
+        }
+        
+    }*/
 }

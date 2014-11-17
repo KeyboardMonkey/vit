@@ -52,6 +52,21 @@ class track extends MY_Model{
         }
         return $courses;
     }
+  public function getProgress()
+  {
+        $track_contents = $this -> track_content -> getWithConditionAndOrder(array('track_id' => $this -> track_id), 'course_index asc');
+        $courses = array();
+        $progress = 0;
+        $count = 0;
+        foreach($track_contents as $content)
+        {
+            $course = new course();
+            $course -> load($content -> course_id);
+            $progress += $course ->getCourseProgressPercent();
+            $count ++;
+        }
+        return $progress / $count;
+  }
  public function isUserEnrolled($user_id=NULL)
     {
         if($user_id==NULL)

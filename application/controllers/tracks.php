@@ -10,7 +10,10 @@ class Tracks extends MY_Controller
                     $track =new track();
                     $track -> load($track_id);
                     if(!isset($track -> track_id))redirect('tracks');
-                    
+                    if($track ->isUserEnrolled())
+                    {
+                        redirect('tracks/view/' . $track_id);
+                    }
                     $this->load->view('templates/header');
                     $this->load->view('templates/breadcrumbs');
                     $this->load->view('pages/track-explore', array('track_id' => $track_id));
@@ -26,7 +29,11 @@ class Tracks extends MY_Controller
                     $track =new track();
                     $track -> load($track_id);
                     if(!isset($track -> track_id))redirect('tracks');
-                    
+                     
+                    if(!$track ->isUserEnrolled())
+                    {
+                        redirect('tracks/explore/' . $track_id);
+                    }
                     $this->load->view('templates/header');
                     $this->load->view('templates/breadcrumbs');
                     $this->load->view('pages/track-in-progress', array('track_id' => $track_id));
@@ -171,7 +178,49 @@ class Tracks extends MY_Controller
                     }
                     
         }
-
+        public function resume($track_id = NULL)
+        {
+                    if($track_id==NULL)
+                    redirect('tracks');
+                    $track =new track();
+                    $track -> load($track_id);
+                    if(!isset($track -> track_id))redirect('tracks');
+                    if(!$track ->isUserEnrolled())
+                    {
+                        redirect('tracks/view/' . $track_id);
+                    }
+                    else
+                    {
+                        $myId = $this -> session -> userdata('user_id');
+                        $enrollment = new tracks_enrollment();
+                        $enrollment -> user_id = $this -> session -> userdata('user_id');
+                        $enrollment -> track_id = $track_id;
+                        $enrollment -> save();
+                        $courses = $track ->getCourses();
+                        $next_course =new  course();
+                        foreach($courses as $course)
+                        {
+                            if($course -> getLectureProgress() < 100)
+                            {
+                                echo "<br /> <br />";
+                                echo $course -> getLectureProgress() . "<br />";
+                                print_r($course);
+                                echo "<br /> <br /> PROGRESS LESS THAN 100";
+                               
+                                $next_course = $course;
+                                break;
+                            }
+                            else{
+                                echo "<br /> <br />";
+                                print_r($course);
+                                echo "<br /> <br /> PROGRESS  100";
+                            }
+                        }
+                        redirect('/courses/course_playback/' . $next_course->course_id);
+                        
+                    }
+                    
+        }
 
 }/*class Tracks extends MY_Controller */
 /*end of file: tracks.php*/

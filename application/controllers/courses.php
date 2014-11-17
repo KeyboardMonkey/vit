@@ -16,6 +16,7 @@ class Courses extends MY_Controller
 
         $course = new course();
         $course -> load($id);
+        
         $course_enrollment = new course_enrollment();
         $course_enrollment -> load($id);
         

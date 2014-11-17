@@ -24,7 +24,7 @@
 			<h4>Difficulty: <?=$track -> difficulty_level;?></h4>
 		</section>		
 		<section class="clear"></section>
-		<section class="progress-bar"></section>
+                <section class="progress-bar"><?=$track ->getProgress();?>  </section>
 		<section class="course-progress">
 
 		 <?php
@@ -65,12 +65,12 @@
                     $i =0;
                         foreach($courses as $course){
                     ?>
-			<section class="course-number-col course-number-col-completed">
+			<section class="course-number-col <?php if($course -> isCourseFinishedByUser()) echo "course-number-col-completed" ?>">
 				<h2><?=$i+1;?></h2>
 			</section>
-			<section class="course-track-border course-track-border-completed">
+			<section class="course-track-border <?php if($course -> isCourseFinishedByUser()) echo "course-track-border-completed" ?>">
 			</section>
-			<section class="course-col course-col-completed">
+			<section class="course-col <?php if($course -> isCourseFinishedByUser()) echo "course-col-completed" ?> ">
 				<h5 class="html"><?php
                                     if($course -> isUserEnrolled())
                                     {
@@ -86,7 +86,7 @@
 				<p class="points"><?=$course -> points;?> Points</p>
 				<h4 class="rating">Rating: <?=$course -> getOverAllRating();?></h4>
 				<section class="clear"></section>
-				<section class="progress-bar-mini"></section>
+				<section class="progress-bar-mini"><?=$course -> getCourseProgressPercent();?></section>
 			</section>
 
 			<section class="clear"></section>
