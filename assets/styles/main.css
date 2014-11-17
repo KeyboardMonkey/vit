@@ -371,7 +371,11 @@ nav.side-navs ul li a.active-notifications, aside nav ul li a.active-notificatio
 .track-progress{ padding:20px; }
 .track-progress .progress-bar { margin:20px 0; width:80%; border:10px solid #58585a; }
 a.resume-track { padding:10px; display:inline-block; text-decoration:none; font-size:14px; background:#2ABB9B; color:#ffffff; transition:all 0.5s ease-out; }
-.my-courses { margin:10px 20px; padding:0; float:left; border-top:2px solid #2ABB9B; width:350px; height:180px; background:#ECF0F1; opacity:1; }
+.not-registered { margin:20px 0; text-align:center; }
+.not-registered h3 { line-height:1.5; }
+.not-registered a { color:#2ABB9B; transition:all 0.5s ease-out; }
+.not-registered a:hover { opacity:0.5; }
+.my-courses { margin:10px 0 20px 20px; padding:0; float:left; border-top:2px solid #2ABB9B; width:450px; height:180px; background:#ECF0F1; opacity:1; }
     .my-courses h5.level { margin:10px 10px; padding:0; float:left; color:#58585A; opacity:0.7; }
     .my-courses h4.course-name { margin:0 10px; padding:0 0 10px 0; font-size:17px; float:left; color:#2ABB9B; }
     .my-courses p.points { margin:0 10px; padding:0 10px; font-size:14px; float:left; background:#ffffff; display:inline-block; }
