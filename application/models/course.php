@@ -460,7 +460,29 @@ class course extends MY_Model{
             $student = new user();
             $student -> load($enrolment -> user_id);
             $marks = $this ->getEarnedPoints($user_id);
+            if(count($students) > 0)
+            {
+                for($i = 0; $i < count($students); $i ++)
+                {
+                    if($marks > $students[$i][1])
+                    {
+                        $students[$i+1] = $students[$i];
+                        $students[$i][0] = $student;
+                        $students[$i][1] = $marks;
+                    }
+                }
+            }
+            else{
+                $students[0] = array($student, $points);
+                
+            }
         }
+        $return = array();
+        foreach($students as $student)
+        {
+            array_push($return, $student);
+        }
+        return $return;
     }
   /*  public function getContinuationTrack()
     {
