@@ -54,20 +54,19 @@
                     if($class == "half-two") $class = "half-one"; else $class = "half-two";
             ?>
                 <section class="<?=$class?>">
+			<section class="color-tag">
+				<a href="<?=base_url();?>index.php/library/index/category/<?=$course->getCategory()->id;?>" class="<?=$course->getCategory()->color_tag;?>"><?=$course->getCategoryTitle();?></a>
+			</section>
 			<section class="course-info">
+				<h5>Intermediate</h5>
 				<h4 class="course-name"><?=$course->full_name;?></h4>
-					<section class="clear"></section>
+				<section class="clear"></section>
 				<p class="points"><?=$course->points;?> Points</p>
 					<section class="clear"></section>
-				<section class="rating">
+			</section>
+			<section class="rating">
 					<p>Rating: <?=$course->getOverAllRating();?> (<?=$course->numberOfRatings();?>)</p>
 				</section>
-					<section class="clear"></section>
-			</section>
-			<section class="clear"></section>
-			<section class="color-tag">
-					<a href="<?=base_url();?>index.php/library/index/category/<?=$course->getCategory()->id;?>" class="<?=$course->getCategory()->color_tag;?>"><?=$course->getCategoryTitle();?></a>
-			</section>
 			<section class="learn-now">
 				<a href="<?=base_url();?>index.php/courses/view/<?=$course->course_id;?>" class="learn-now">Learn Now</a>
 			</section>
