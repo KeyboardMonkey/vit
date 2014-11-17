@@ -40,6 +40,7 @@ class Leaderboard extends MY_Controller
 		$this->load->view('templates/header');
 		$this->load->view('templates/breadcrumbs');
 	 	$this->load->view('templates/side-navs');
+	 	$this->load->view('widgets/top-three-students');
 		$this->load->view('pages/leaderboard');
 		$this->load->view('templates/footer');
 
