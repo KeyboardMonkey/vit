@@ -13,5 +13,6 @@ class track_content extends MY_Model
     public $created_date;
     public $updated_date;
     public $created_by = 1;
+    public $course_index;
 }
 ?>

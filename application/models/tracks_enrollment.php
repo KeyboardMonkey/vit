@@ -6,10 +6,10 @@ class tracks_enrollment extends MY_Model{
     const DB_TABLE = 'tracks_enrollment';
     const DB_TABLE_PK = 'track_enrol_id';
     public $track_enrol_id;
-    public $course_id;
+    public $track_id;
     public $user_id;
     public $track_enrol_time;
     public $status= 'in-progress';
-    public $progress;
+    public $progress = 0;
 }
 ?>

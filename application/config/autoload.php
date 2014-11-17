@@ -109,7 +109,7 @@ $autoload['language'] = array();
 |
 */
 
-$autoload['model'] = array('question_answer', 'user_lecture_progress', 'user', 'course', 'course_cat', 'course_rating', 'course_enrollment', 'user_interest_categories', 'file_model', 
+$autoload['model'] = array('tracks_enrollment','track_content', 'question_answer', 'user_lecture_progress', 'user', 'course', 'course_cat', 'course_rating', 'course_enrollment', 'user_interest_categories', 'file_model', 
 	'lecture', 'track', 'track_rating', 'quiz_model', 'quiz_question', 'course_review');
 
 

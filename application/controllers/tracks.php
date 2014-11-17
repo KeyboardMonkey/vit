@@ -2,15 +2,20 @@
 
 class Tracks extends MY_Controller 
 {
-		public function explore()
-	{
+		public function explore($track_id=NULL)
+                {
+                    if($track_id==NULL)
+                        redirect('tracks');
+                    $track =new track();
+                    $track -> load($track_id);
+                    if(!isset($track -> track_id))redirect('tracks');
+                    
+                    $this->load->view('templates/header');
+                    $this->load->view('templates/breadcrumbs');
+                    $this->load->view('pages/explore-track', array('track_id' => $track_id));
+                    $this->load->view('templates/footer');
 
-		$this->load->view('templates/header');
-		$this->load->view('templates/breadcrumbs');
-		$this->load->view('pages/explore-track');
-		$this->load->view('templates/footer');
-		
-	}
+                }
 
 
 
@@ -117,7 +122,37 @@ class Tracks extends MY_Controller
 		$this->load->view('templates/footer');
 
 	}
-
+        public function enroll($track_id = NULL)
+        {
+                    if($track_id==NULL)
+                    redirect('tracks');
+                    $track =new track();
+                    $track -> load($track_id);
+                    if(!isset($track -> track_id))redirect('tracks');
+                    if($track ->isUserEnrolled())
+                    {
+                        redirect('tracks/explore/' . $track_id);
+                    }
+                    else
+                    {
+                        $myId = $this -> session -> userdata('user_id');
+                        $enrollment = new tracks_enrollment();
+                        $enrollment -> user_id = $this -> session -> userdata('user_id');
+                        $enrollment -> track_id = $track_id;
+                        $enrollment -> save();
+                        $courses = $track ->getCourses();
+                        foreach($courses as $course)
+                        {
+                            $course_enrollment = new course_enrollment();
+                            $course_enrollment = $course_enrollment ->getWithConditionLimit1(array('course_id' => $course -> course_id, 'user_id' => $myId));
+                            $course_enrollment -> course_id = $course -> course_id;
+                            $course_enrollment -> user_id = $this -> session -> userdata('user_id');
+                            $course_enrollment -> save();
+                        }
+                        redirect('tracks/explore/' . $track_id);
+                    }
+                    
+        }
 
 
 }/*class Tracks extends MY_Controller */

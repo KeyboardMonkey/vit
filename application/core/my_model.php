@@ -107,7 +107,7 @@ public function getWithConditionLimit1($condition){
 
 }
         public function getWithConditionAndOrder($condition, $orderby){
-			$this -> db ->order_by($orderby[0], $orderby[1]);
+			$this -> db ->order_by($orderby);
 			$query = $this -> db -> get_where($this::DB_TABLE, $condition);
 			$rel_val = array();
 			$class = get_class($this);

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 16, 2014 at 07:30 PM
+-- Generation Time: Nov 17, 2014 at 03:38 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -128,7 +128,7 @@ CREATE TABLE IF NOT EXISTS `course_enrollment` (
   `progress` int(11) NOT NULL,
   PRIMARY KEY (`enrol_id`),
   KEY `enrol_time` (`enrol_time`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
 
 --
 -- Dumping data for table `course_enrollment`
@@ -142,7 +142,8 @@ INSERT INTO `course_enrollment` (`enrol_id`, `course_id`, `user_id`, `enrol_time
 (10, 1, 1, '2014-11-16 06:38:35', 'in-progress', 0),
 (11, 2, 1, '2014-11-16 19:20:10', 'in-progress', 0),
 (12, 6, 1, '2014-11-16 19:25:00', 'in-progress', 0),
-(13, 5, 1, '2014-11-16 19:27:31', 'in-progress', 0);
+(13, 5, 1, '2014-11-16 19:27:31', 'in-progress', 0),
+(14, 3, 1, '2014-11-17 15:31:47', 'in-progress', 0);
 
 -- --------------------------------------------------------
 
@@ -457,13 +458,21 @@ INSERT INTO `tracks` (`track_id`, `track_title`, `tiny_intro`, `track_descriptio
 --
 
 CREATE TABLE IF NOT EXISTS `tracks_enrollment` (
-  `track_enrol_id` int(11) NOT NULL,
-  `course_id` int(11) NOT NULL,
+  `track_enrol_id` int(11) NOT NULL AUTO_INCREMENT,
+  `track_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `track_enrol_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `status` enum('in-progress','cancelled','completed') NOT NULL,
-  `progress` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `progress` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`track_enrol_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `tracks_enrollment`
+--
+
+INSERT INTO `tracks_enrollment` (`track_enrol_id`, `track_id`, `user_id`, `track_enrol_time`, `status`, `progress`) VALUES
+(1, 1, 1, '2014-11-17 15:36:05', 'in-progress', 0);
 
 -- --------------------------------------------------------
 
@@ -475,11 +484,21 @@ CREATE TABLE IF NOT EXISTS `track_content` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `track_id` int(11) NOT NULL,
   `course_id` int(11) NOT NULL,
+  `course_index` int(10) NOT NULL,
   `created_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+
+--
+-- Dumping data for table `track_content`
+--
+
+INSERT INTO `track_content` (`id`, `track_id`, `course_id`, `course_index`, `created_date`, `updated_date`, `created_by`) VALUES
+(1, 1, 1, 1, '2014-11-17 14:41:29', '2014-11-17 14:41:29', 0),
+(2, 1, 2, 2, '2014-11-17 14:41:29', '2014-11-17 14:41:29', 0),
+(3, 1, 3, 3, '2014-11-17 14:41:29', '2014-11-17 14:41:29', 0);
 
 -- --------------------------------------------------------
 
@@ -489,7 +508,7 @@ CREATE TABLE IF NOT EXISTS `track_content` (
 
 CREATE TABLE IF NOT EXISTS `track_rating` (
   `rating_id` int(11) NOT NULL AUTO_INCREMENT,
-  `course_id` int(11) NOT NULL,
+  `track_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `rating` int(11) NOT NULL,
   PRIMARY KEY (`rating_id`)

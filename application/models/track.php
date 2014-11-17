@@ -40,5 +40,33 @@ class track extends MY_Model{
         $ratings  = $this -> track_rating -> getWithCondition(array('track_id' => $this -> track_id));
         return count($ratings);
     }
- 
+    public function getCourses()
+    {
+        $track_contents = $this -> track_content -> getWithConditionAndOrder(array('track_id' => $this -> track_id), 'course_index asc');
+        $courses = array();
+        foreach($track_contents as $content)
+        {
+            $course = new course();
+            $course -> load($content -> course_id);
+            array_push($courses, $course);
+        }
+        return $courses;
+    }
+ public function isUserEnrolled($user_id=NULL)
+    {
+        if($user_id==NULL)
+         $user_id=$this -> session -> userdata('user_id');
+        $enrollment = $this -> tracks_enrollment -> getWithCondition(array('user_id' => $user_id, 'track_id' => $this -> track_id));
+       //print_r($enrollment);
+       //die();
+        if(count($enrollment) > 0 ){
+           // echo "ENROLLED";
+            return TRUE;
+        }
+        else{
+            //echo "NOT ENROLLED";
+            return FALSE;
+        }
+        
+    }
 }

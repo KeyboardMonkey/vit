@@ -24,7 +24,7 @@
 			</section>
 			<section class="inline-buttons">
 				<a href="">Start Track</a>
-				<a href="">Explore</a>
+				<a href="<?=base_url('index.php/tracks/explore/' . $track -> track_id);?>">Explore</a>
 			</section>
 		</section>
 		<?php
