@@ -243,22 +243,29 @@ class Courses extends MY_Controller
     }
     public function submit_review($course_id=NULL)
     {
-        if($course_id==NULL) redirect('library');
+       if($course_id==NULL) redirect('library');
         $course = new course();
         $course -> load($course_id);
         if(!isset($course->course_id)) redirect('library');
         if(!$course -> isUserEnrolled($this -> session -> userdata('user_id')))
+                                     redirect('library');
+       if($course -> reviewedByUser())
                                        redirect('library');
-        if($course -> reviewedByUser())
+      // echo $course -> getLectureProgress();
+      // die();   
+        if( $course -> getLectureProgress() != 100)
                                         redirect('library');
-        if( $course -> getCourseProgressPercent() != 100)
-                                         redirect('library');
-        if(strlen($this -> input -> post('review')) < 250) redirect('courses/view/' . $course_id);
-        $review = new course_review();
+        //if(strlen($this -> input -> post('review')) < 250) redirect('courses/view/' . $course_id);
+        $review = new course_review();  
+        $review = $review ->getWithConditionLimit1(array('user_id' => $this -> session -> userdata('user_id'),
+                'course_id' => $course_id 
+            ));
         $review -> user_id = $this -> session -> userdata('user_id');
         $review -> review = $this -> input -> post('review');
         $review -> course_id = $course_id;
         $review -> save();
+        print_r($review);
+        
         redirect('courses/view/' . $course_id);
         
     }

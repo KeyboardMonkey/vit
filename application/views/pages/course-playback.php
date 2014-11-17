@@ -139,7 +139,7 @@
 			<section class="widget-course-summary">
 				<h4>Write Course Summary</h4>
 				<ul>
-					<li><a href="<?=base_url();?>index.php/courses/view/<?=$course->course_id;?>#section-underline-2"><span class="summary"><img src="<?=base_url();?>assets/graphics/summary.png" width="20px" height="18px" alt="summary" /></span>Write Course Summary</a></li>
+					<li><a href="<?=base_url();?>index.php/courses/view/<?=$course->course_id;?>"><span class="summary"><img src="<?=base_url();?>assets/graphics/summary.png" width="20px" height="18px" alt="summary" /></span>Write Course Summary</a></li>
 				</ul>
 			</section>
 
