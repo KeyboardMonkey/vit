@@ -203,22 +203,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "application/controllers/tracks.php",
-			"settings":
-			{
-				"buffer_size": 5320,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/pages/explore-track.php",
-			"settings":
-			{
-				"buffer_size": 3739,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -247,6 +231,10 @@
 	},
 	"file_history":
 	[
+		"/A/xampp/htdocs/vit/application/controllers/tracks.php",
+		"/A/xampp/htdocs/vit/application/views/pages/track-explore.php",
+		"/A/xampp/htdocs/vit/application/views/pages/track-in-progress.php",
+		"/A/xampp/htdocs/vit/application/views/pages/explore-track.php",
 		"/B/-- FYP/3. Development/HTMLS/New folder/welcome.html",
 		"/A/xampp/htdocs/ssss/loadmore/index.php",
 		"/A/xampp/htdocs/vit/soptair/views/widgets/similar-courses-widget.php",
@@ -370,11 +358,7 @@
 		"/F/AR/add-track.html",
 		"/A/xampp/htdocs/vit/soptair/views/pages/course-playback-old.php",
 		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/course playback screen/course-playback.html",
-		"/A/xampp/htdocs/ssss/buttons/free-css3-buttons.html",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM SATTI/video playback jadu script/undex.php",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/course playback screen/add-track.html",
-		"/A/xampp/htdocs/vit/soptair/views/pages/course-playback-old2.php",
-		"/A/xampp/htdocs/ssss/dynamic.php"
+		"/A/xampp/htdocs/ssss/buttons/free-css3-buttons.html"
 	],
 	"find":
 	{
@@ -553,67 +537,13 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "application/controllers/tracks.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5320,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								618,
-								618
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "application/views/pages/explore-track.php",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 3739,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
@@ -634,11 +564,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.540622565716,
 			1.0
 		],
 		"rows":
@@ -693,7 +630,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 232.0,
+	"side_bar_width": 50.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
