@@ -189,3 +189,42 @@
 					$("#course-content").on("click",function(){
 					console.log($(this).text());
 					});</script> -->
+                                        
+<?php
+    $topStudents = $course -> getTopStudents();
+           // print_r($topStudents);
+            if(count($topStudents)>0)
+            {
+?>
+          <section class="top-students">
+			<h3>Top  Students</h3>
+			<section class="first-trophy">
+				<section class="content">
+					<img src="http://localhost/vit/assets/graphics/trophy1.svg" width="100px" height="111px">
+					<a href=""><?=$topStudents[0][0]->username;?></a>
+					<p><?=$course -> getEarnedPoints($topStudents[0][0]->user_id);?> Points</p>
+				</section>
+			</section>
+<?php if(count($topStudents) > 1)
+{ ?>
+			<section class="second-trophy">
+				<section class="content">
+					<img src="http://localhost/vit/assets/graphics/trophy2.svg" width="100px" height="111px">
+					<a href="">Qamar Abbasi</a>
+					<p>2905 Points</p>
+				</section>
+			</section>
+<?php
+} if(count($topStudents) > 2)
+{ ?>
+			<section class="third-trophy">
+				<section class="content">
+					<img src="http://localhost/vit/assets/graphics/trophy3.svg" width="100px" height="111px">
+					<a href="">Shehroz Malik</a>
+					<p>2900 Points</p>
+				</section>
+			</section>
+		</section>
+                                        
+<?php }} ?>
+                                        

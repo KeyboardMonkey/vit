@@ -338,6 +338,7 @@ class course extends MY_Model{
     {
         $lecture = $this -> getLectureProgress() * 60 / 100;
         if($this -> quizTaken()) $lecture += 20;
+        if($this -> reviewedByUser()) $lecture += 20;
         return $lecture;
     }
     public function reviewedByUser($user_id = NULL)
@@ -459,7 +460,7 @@ class course extends MY_Model{
         {
             $student = new user();
             $student -> load($enrolment -> user_id);
-            $marks = $this ->getEarnedPoints($user_id);
+            $marks = $this ->getEarnedPoints($student->user_id);
             if(count($students) > 0)
             {
                 for($i = 0; $i < count($students); $i ++)
@@ -473,7 +474,7 @@ class course extends MY_Model{
                 }
             }
             else{
-                $students[0] = array($student, $points);
+                $students[0] = array($student, $marks);
                 
             }
         }
