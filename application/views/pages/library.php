@@ -5,7 +5,7 @@
 		<ul>
 		<li class="courses"><a href="<?=base_url();?>index.php/library">All Courses</a></li>
 	
-	<?php
+				<?php
 	                $cats = $this->course_cat->get();
                     $tempu = new course();
 					

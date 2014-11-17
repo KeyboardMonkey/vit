@@ -42,6 +42,8 @@ h1, h2, h3, h4, h5, h6, p { color:#58585a; }
 .notification-badge { display:block; position:absolute; margin:-40px 83px; padding:0 5px; font-size:12px; color:#00A8E7; background:#FFFFFF; }
 .inline-buttons { padding:20px; float:left; }
 .inline-buttons a { display:inline-block; padding:5px 10px; background:#2ABB9B; font-size:14px; color:#ffffff; }
+button.default { padding:5px 15px; font-size:14px; background:#2ABB9B; color:#FFFFFF; border:1px solid #2ABB9B; cursor:pointer; transition:all 0.5s ease-out; }
+    button.default:hover { background:#ECF0F1; border:1px solid #2ABB9B; color:#2ABB9B; }
 
 .content-md {
     margin-top:18px;
@@ -369,13 +371,29 @@ nav.side-navs ul li a.active-notifications, aside nav ul li a.active-notificatio
 .track-progress{ padding:20px; }
 .track-progress .progress-bar { margin:20px 0; width:80%; border:10px solid #58585a; }
 a.resume-track { padding:10px; display:inline-block; text-decoration:none; font-size:14px; background:#2ABB9B; color:#ffffff; transition:all 0.5s ease-out; }
-.my-courses {
-    border-top:2px solid #2ABB9B;
-    width:920px;
-    float:left;
-    margin:20px 0 20px 20px;
-    background:#ECF0F1;
-}
+.my-courses { margin:10px 20px; padding:0; float:left; border-top:2px solid #2ABB9B; width:350px; height:180px; background:#ECF0F1; opacity:1; }
+    .my-courses h5.level { margin:10px 10px; padding:0; float:left; color:#58585A; opacity:0.7; }
+    .my-courses h4.course-name { margin:0 10px; padding:0 0 10px 0; font-size:17px; float:left; color:#2ABB9B; }
+    .my-courses p.points { margin:0 10px; padding:0 10px; font-size:14px; float:left; background:#ffffff; display:inline-block; }
+    .my-courses h4.rating { margin:0 10px; padding:0; float:right; font-size:14px; }
+    .my-courses img { margin:15px 125px 30px; }
+    .my-courses h5 { margin:10px 0 0 0; padding:0 20px; color:#FFFFFF; float:right; }
+        .my-courses h5.html { background:#19B5FE; }
+        .my-courses h5.css { background:#FCDC05; }
+        .my-courses h5.cpp { background:#67809F; }
+        .my-courses h5.php { background:#3A539B; }
+        .my-courses h5.javascript{ background:#DDA423; }
+        .my-courses h5.jquery { background:#2AE7C3; }
+        .my-courses h5.asp { background:#C0392B; }
+        .my-courses h5.android { background:#2ECC71; }
+        .my-courses h5.java{ background:#F22613; }
+        .my-courses h5.wordpress { background:#6C7A89; }
+        .my-courses h5.d-tools { background:#913D88; }
+        .my-courses h5.business { background:#34495e; }
+        .my-courses h5.design { background:#E67E22; }
+        .my-courses h5.other { background:#915E25; }
+    .my-courses .progress-bar-mini { margin:20px auto 0; width:90%; border:10px solid #58585a; }
+    .my-courses button.default { margin:15px 0; float:right; }
 .popular-courses {
     border-top:2px solid #2ABB9B;
     width:450px;
