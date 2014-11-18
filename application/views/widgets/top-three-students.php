@@ -1,25 +1,28 @@
+<?php
+    
+?>
 <section class="content-md">
 	<section class="top-students">
 		<h3>Top 3 Students</h3>
 		<section class="first-trophy">
 			<section class="content">
 				<img src="<?=base_url();?>assets/graphics/trophy1.svg" width="100px" height="111px" />
-				<a href="">Kashif Nadeem</a>
-				<p>3025 Points</p>
+				<a href="<?=base_url('index.php/profile/index/' . $leaders[0] -> user_id) ;?>"><?=$leaders[0]->username;?></a>
+				<p><?= $leaders[0]->getAllPoints();?> Points</p>
 			</section>
 		</section>
 		<section class="second-trophy">
 			<section class="content">
 				<img src="<?=base_url();?>assets/graphics/trophy2.svg" width="100px" height="111px" />
-				<a href="">Qamar Abbasi</a>
-				<p>2905 Points</p>
+				<a href="<?=base_url('index.php/profile/index/' . $leaders[1] -> user_id) ;?>"><?=$leaders[1]->username;?></a>
+				<p><?= $leaders[1]->getAllPoints();?> Points</p>
 			</section>
 		</section>
 		<section class="third-trophy">
 			<section class="content">
 				<img src="<?=base_url();?>assets/graphics/trophy3.svg" width="100px" height="111px" />
-				<a href="">Shehroz Malik</a>
-				<p>2900 Points</p>
+				<a href="<?=base_url('index.php/profile/index/' . $leaders[2] -> user_id) ;?>"><?=$leaders[2]->username;?></a>
+				<p><?= $leaders[2]->getAllPoints();?> Points</p>
 			</section>
 		</section>
 	</section>

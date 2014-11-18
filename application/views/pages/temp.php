@@ -1,56 +1,62 @@
 <?php
         $cats = $this -> course_cat -> get();
-        $total = 0;
-         foreach($cats as $cat)
-         {
-             $total += $cat->getPointsEarnedInCategory();
-         }
+        
 ?>
 <section class="container">
 	<section class="content-md">
 		<section class="title">
-			<h2><?=$total;?></h2>
+			<h2>1,985</h2>
 			<h4>Total Points</h4>
 		</section>
 		<section class="line-border"></section>
 		<section class="course-cols">
-                     <section class="col1">
-				<ul class="cols">
                     <?php 
-                    $col = 1;
-                    
-                    $i = 0;
                             foreach($cats as $cat)
                             {
                                 ?>
-                               
+                         <section class="col1">
+				<ul class="cols">
                     <?php
                                 
                                 $courses = $cat -> getCourses();
-                               
+                                foreach($courses as $course)
+                                {
                     ?>
 			
                                     
-					<li class="<?= $cat -> color_tag;?>"><strong><?=$cat->getPointsEarnedInCategory();?></strong><br/><?=$cat -> category ;?></li>
+					<li class="<?= $cat -> color_tag;?>"><strong>1,641</strong><br/><?=$course -> full_name;?></li>
 					
 				
-                  
-                              
+                    <?php 
+                                }
+                    ?>
+                                </ul>
+			</section>
                     <?php
-                            $i ++;
-                            if($i == 4)
-                            {
-                                $i = 0;
-                                $col ++;
-                                echo '</ul></section> <section class="col'.$col.'">
-				<ul class="cols">';
-                                
-                            }
                             } 
                      ?>
-                                          </ul>
+			<section class="col2">
+				<ul class="cols">
+					<li class="android"><strong>18</strong><br/>Android</li>
+					<li class="javascript"><strong>91</strong><br/>JavaScript</li>
+					<li class="jquery"><strong>0</strong><br/>jQuery</li>
+					<li class="css"><strong>180</strong><br/>CSS</li>
+				</ul>
 			</section>
-			
+			<section class="col3">
+				<ul class="cols">
+					<li class="cpp"><strong>7</strong><br/>C++</li>
+					<li class="wordpress"><strong>193</strong><br/>WordPress</li>
+					<li class="d-tools"><strong>7</strong><br/>Dev. Tools</li>
+					<li class="business"><strong>0</strong><br/>Business</li>
+				</ul>
+			</section>
+			<section class="col4">
+				<ul class="cols">
+					<li class="design"><strong>10</strong><br/>Design</li>
+					<li class="other"><strong>10</strong><br/>Others</li>
+				</ul>
+			</section>
 			<section class="clear"></section>
 		</section>
 		<section class="line-border"></section>

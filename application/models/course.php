@@ -343,6 +343,7 @@ class course extends MY_Model{
     }
     public function reviewedByUser($user_id = NULL)
     {
+        
         return $this -> course_review -> reviewSubmittedByUser($this -> course_id, $user_id);
     }
     public function isCourseFinishedByUser()
@@ -448,7 +449,7 @@ class course extends MY_Model{
     public function getEarnedPoints($user_id=NULL)
     {
         $earned = $this ->getQuizEarnedPoints($user_id);
-        if($this ->reviewedByUser())
+        if($this ->reviewedByUser($user_id))
         {
             // 100 review_point
             // ppont x
