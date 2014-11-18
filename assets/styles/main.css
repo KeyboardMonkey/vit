@@ -441,13 +441,29 @@ ol.course-widget li:hover, ol.course-widget li a:hover, ul.course-widget li:hove
 .user-info { padding:15px 20px; }
 .user-info p { font-size:14px; }
 .course-cols { padding:20px; }
-.course-cols ul { list-style:none; font-size:16px; }
-.course-cols ul.cols li { padding:20px 0; }
-.course-cols .col1 { width:20%; float:left; }
-.course-cols .col2 { width:20%; float:left; }
-.course-cols .col3 { width:20%; float:left; }
-.course-cols .col4 { width:20%; float:left; }
+.course-cols ul { list-style:none; font-size:14px; }
+.course-cols ul.cols li { margin:30px 0; padding:5px; width:80px; }
+.course-cols .col1 { margin-left:10px; float:left; }
+.course-cols .col2 { margin-left:30px; float:left; }
+.course-cols .col3 { margin-left:30px; float:left; }
+.course-cols .col4 { margin-left:30px; float:left; }
+    ul.cols li.html{ border-top:5px solid #19B5FE; border-left:1px solid #19B5FE; border-right:1px solid #19B5FE; }
+    ul.cols li.php { border-top:5px solid #3A539B; border-left:1px solid #3A539B; border-right:1px solid #3A539B; }
+    ul.cols li.asp { border-top:5px solid #C0392B; border-left:1px solid #C0392B; border-right:1px solid #C0392B; }
+    ul.cols li.java { border-top:5px solid #F22613; border-left:1px solid #F22613; border-right:1px solid #F22613; }
+    ul.cols li.android { border-top:5px solid #2ECC71; border-left:1px solid #2ECC71; border-right:1px solid #2ECC71; }
+    ul.cols li.javascript { border-top:5px solid #DDA423; border-left:1px solid #DDA423; border-right:1px solid #DDA423; }
+    ul.cols li.jquery { border-top:5px solid #2AE7C3; border-left:1px solid #2AE7C3; border-right:1px solid #2AE7C3; }
+    ul.cols li.css { border-top:5px solid #FCDC05; border-left:1px solid #FCDC05; border-right:1px solid #FCDC05; }
+    ul.cols li.cpp { border-top:5px solid #67809F; border-left:1px solid #67809F; border-right:1px solid #67809F; }
+    ul.cols li.wordpress { border-top:5px solid #6C7A89; border-left:1px solid #6C7A89; border-right:1px solid #6C7A89; }
+    ul.cols li.d-tools { border-top:5px solid #913D88; border-left:1px solid #913D88; border-right:1px solid #913D88; }
+    ul.cols li.business { border-top:5px solid #34495e; border-left:1px solid #34495e; border-right:1px solid #34495e; }
+    ul.cols li.design { border-top:5px solid #e67e22; border-left:1px solid #e67e22; border-right:1px solid #e67e22; }
+    ul.cols li.other { border-top:5px solid #915E25; border-left:1px solid #915E25; border-right:1px solid #915E25; }
 .info { padding:10px 20px; font-size:14px; }
+.info img { margin:0; float:left; opacity:0.7; }
+.info p { margin:0; padding-top:10px; }
 .cols-categories { padding:20px 20px; }
 ul.profile { padding-bottom:20px; list-style:none; font-size:16px; }
 ul.profile li  { padding:20px 100px 20px 0; }
