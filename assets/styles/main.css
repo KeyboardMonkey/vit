@@ -558,7 +558,8 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 #roadmap h2 { padding-bottom:10px; }
 #roadmap p { padding:10px 0; line-height:1.5; text-align:justify; }
 .upcoming-courses { margin:20px 2.5%; border:1px solid #2ABB9B; border-top:5px solid #2ABB9B; }
-.upcoming-courses h3 { padding:20px 20px 0; }
+.upcoming-courses h5 { padding:20px 20px 0; opacity:0.7; }
+.upcoming-courses h3 { padding:5px 20px 0; }
 .upcoming-courses .color-tag { margin:-22px 0; float:right; }
 .upcoming-courses p.developed-by { padding:5px 20px 10px; line-height:1.5; }
 .upcoming-courses p { padding:10px 20px; line-height:1.5; text-align:justify; }
@@ -842,9 +843,9 @@ form table.editform input[type=submit]:hover, form table.editform input[type=res
 
 
 /*------------Privacy Settings------------*/
-form#privacy-settings { margin:60px 2.5%; }
+form#privacy-settings { margin:20px 2.5%;  }
 form#privacy-settings input[type=checkbox] { margin-right:10px; display:inline-block; color:#58585A; cursor:pointer; }
-form#privacy-settings label { margin-bottom:20px; font-size:14px; opacity:0.7; }
+form#privacy-settings label { font-size:14px; opacity:0.7; }
 form#privacy-settings input[type=submit] { padding:8px 40px; font-size:16px; background:#2ABB9B; border:1px solid #2ABB9B; color:#FFFFFF; transition:all 0.5s ease-out; position:relative; cursor:pointer; }
 form#privacy-settings input[type=submit]:hover { background:#ECF0F1; border:1px solid #2ABB9B; color:#2ABB9B; }
 /*------------End Privacy Settings------------*/

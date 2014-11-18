@@ -9,6 +9,7 @@
 	<section class="content-md">
 		
 		<section class="upcoming-courses">
+			<h5>Intermediate</h5>
 			<h3>Latest Web Trends</h3>
 			<section class="color-tag">
 				<a href="#" class="html">HTML</a>
@@ -19,6 +20,7 @@
 		</section>
 
 		<section class="upcoming-courses">
+			<h5>Intermediate</h5>
 			<h3>Built a Photo Browser Android App</h3>
 			<section class="color-tag">
 				<a href="#" class="android">Android</a>
