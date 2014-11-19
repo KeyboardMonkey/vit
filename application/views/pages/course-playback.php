@@ -75,11 +75,20 @@
 						}// else echo $course -> getCourseProgressPercent();
 				?>
 				</p>
-				<ul>
+				<p class="buttons">
 					<?php
 					if($current_lecture > 0)
 					{?>
-					<li class="previous"><a href="<?=base_url('index.php/courses/course_playback/' . $course_id.'/'.($current_lecture-1));?>">Previous</a></li>
+				<!--	<li class="previous"><a href="<?=base_url('index.php/courses/course_playback/' . $course_id.'/'.($current_lecture-1));?>">Previous</a></li> -->
+					<button id="btn_previous" type="button">Previous</button>
+
+					<script>
+                        $(document).ready(function(){
+                            $('#btn_previous').click(function(){
+                                window.location = '<?=base_url('index.php/courses/course_playback/' . $course_id.'/'.($current_lecture-1));?>';
+                            });
+                        });
+                    </script>
 					<?php
 					}
 					?>
@@ -87,20 +96,25 @@
 					<?php
 					if($current_lecture < count($lectures)-1)
 					{?>
-					<li class="previous"><a href="<?=base_url('index.php/courses/course_playback/' . $course_id.'/'.($current_lecture+1));?>">Next</a></li>
+	
+					<button id="btn_next" type="button">Next</button>
+					<script>
+                        $(document).ready(function(){
+                            $('#btn_next').click(function(){
+                                window.location = '<?=base_url('index.php/courses/course_playback/' . $course_id.'/'.($current_lecture+1));?>';
+                            });
+                        });
+                    </script>
+				<!--	<li class="previous"><a href="<?=base_url('index.php/courses/course_playback/' . $course_id.'/'.($current_lecture+1));?>">Next</a></li> -->
 					<?php
 					}
 					?>
-				</ul>
-				<p class="buttons">
-					<button id="#" type="button">Previous</button>
-					<button id="#" type="button">Next</button>
 				</p>
 			</section>
 			
 			<section class="clear"></section>
 
-				<script>
+			<script>
 			$(document).ready(function(){
 				// to get full course progress
 				// $course -> getCourseProgressPercent()
@@ -247,18 +261,21 @@
 	<section class="content-md">
 		<section class="widget-facebook-commenter">
 			<h3>Discussions</h3>
-			<ul>
-				<li>asdfsd</li>
-				<li>asdfsd</li>
-				<li>asdfsd</li>
-				<li>asdfsd</li>
-				<li>asdfsd</li>
-				<li>asdfsd</li>
-				<li>asdfsd</li>
-				<li>asdfsd</li>
-				<li>asdfsd</li>
-				<li>asdfsd</li>
-			</ul>
+		
+<div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'vitorials'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">discussions.</a></noscript>
+		
 		</section>
 	</section>
 	<section class="clear"></section>

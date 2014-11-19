@@ -33,8 +33,6 @@
                                     
 					<li class="<?= $cat -> color_tag;?>"><strong><?=$cat->getPointsEarnedInCategory();?></strong><br/><?=$cat -> category ;?></li>
 					
-				
-                  
                               
                     <?php
                             $i ++;
@@ -74,59 +72,57 @@
 	$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
 	?>
 	<section class="content-md">
-			<!--
-			<h3>My Courses</h3>
-			<ol class="course-widget">
-			<?php 
-		//	$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
-		//	foreach($myEnrolements as $myEnrolment)
-			{
-		//	   $myCourse = new course();
-		//	    $myCourse -> load($myEnrolment->course_id);
-		//	    $myCourseId = $myCourse -> course_id;
-			?>
-				<li>
-					<a href="<?=base_url();?>index.php/courses/course_playback/<?=$myCourseId;?>"><?=$myCourse->full_name;?></a>
-				</li>
-			<?php
-			}
-			?>
-			</ol>
-			-->
+
+	
+
+
 		<section class="not-registered">
 			<h3>You haven't registered any course yet.<br /><small>If you want to registered any of our courses then visit our <a href="#">Course Library</a></h3></small></h3>
 		</section>
 
 
 		<section class="registered">
+		<?php 
+			$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
+			foreach($myEnrolements as $myEnrolment)
+					{
+			    $myCourse = new course();
+			    $myCourse -> load($myEnrolment->course_id);
+			    $myCourseId = $myCourse -> course_id;
+		?>
+
 			<section class="my-courses">
 				<section class="color-tag">
-					<a href="" class="html">HTML</a>
+					<a href="<?=base_url();?>index.php/library/index/category/<?=$myCourse->getCategory()->id;?>" class="<?=$myCourse->getCategory()->color_tag;?>"><?=$myCourse->getCategoryTitle();?></a>
 				</section>
-				<h5 class="level">Intermediate</h5>
+				<h5 class="level"><?=$myCourse->difficulty_level;?></h5>
 				<section class="clear"></section>
-				<h4 class="course-name">Build a Simple Website</h4>
+				<h4 class="course-name"><a href="<?=base_url();?>index.php/courses/course_playback/<?=$myCourseId;?>"><?=$myCourse->full_name;?></h4></a>
 				<section class="clear"></section>
-				<p class="points">50 Points</p>
-				<h4 class="rating">Rating: -----</h4>
+				<p class="points"><?=$myCourse->points;?> Points</p>
+				<h4 class="rating">Rating: <?=$myCourse->getOverAllRating();?> (<?=$myCourse->numberOfRatings();?>)</h4>
 				<section class="clear"></section>
-				<section class="progress-bar-mini"></section>
-				<button class="default" type="button">Resume Track</button>
+		
+
+				<section class="progress-bar-mini">
+		
+					<div class="pro-bar-container color-nephriti bm-remove">
+		            <div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=$myCourse -> getCourseProgressPercent();?>" data-pro-bar-delay="500">
+		                <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$myCourse -> getCourseProgressPercent();?>%</span>
+		                <div class="pro-bar-candy candy-ltr"></div>
+		            </div>
+		        	</div>
+		        </section>
+			<!-- 	<a href="<?=base_url();?>index.php/courses/view/<?=$myCourse->course_id;?>" class="learn-now">Resume</a> -->
+				<button id="btn_resume" class="default" type="button">Resume Course</button>
+
+
+
 			</section>
-			<section class="my-courses">
-				<section class="color-tag">
-					<a href="" class="html">HTML</a>
-				</section>
-				<h5 class="level">Intermediate</h5>
-				<section class="clear"></section>
-				<h4 class="course-name">Build a Simple Website</h4>
-				<section class="clear"></section>
-				<p class="points">50 Points</p>
-				<h4 class="rating">Rating: -----</h4>
-				<section class="clear"></section>
-				<section class="progress-bar-mini"></section>
-				<button class="default" type="button">Resume Track</button>
-			</section>
+
+			<?php
+			}
+			?>
 		</section>
 
 		
@@ -155,3 +151,13 @@
 	</section>
 	
 	<section class="clear"></section>
+
+	<!-- Scripts for this page -->
+
+                <script>
+                    $(document).ready(function(){
+                        $('#btn_resume').click(function(){
+                            window.location = '<?=base_url();?>index.php/courses/view/<?=$myCourse->course_id;?>';
+                        });
+                    });
+                    </script>
