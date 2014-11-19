@@ -53,7 +53,7 @@
                 {
                     if($class == "half-two") $class = "half-one"; else $class = "half-two";
             ?>
-                <section class="<?=$class?>">
+        <section class="<?=$class?>">
 			<section class="color-tag">
 				<a href="<?=base_url();?>index.php/library/index/category/<?=$course->getCategory()->id;?>" class="<?=$course->getCategory()->color_tag;?>"><?=$course->getCategoryTitle();?></a>
 			</section>

@@ -11,20 +11,19 @@
 		{
 			?>
 			
-		<section class="half-one">
-			<section class="course-info">
-				<h2 class="course-name"><?=$track -> track_title;?></h2>
-					<small><?=$track->tiny_intro;?></small>
-					<br /><br />
+		<section id="tracks">
+			<section class="half-one">
+				<section class="course-info">
+					<h2 class="course-name"><?=$track -> track_title;?></h2>
+					<h5><?=$track->tiny_intro;?></h5>
 					<p class="points">Points: <?=$track->track_points;?></p>
-				<ul>
-					<li><?=$track->track_description;?></li>
-				</ul>
-<!-- 				<section class="rating"><p>Rating: <?=$track->getOverAllRating();?> (<?=$track->numberOfRatings();?>)</p></section> -->
-			</section>
-			<section class="inline-buttons">
-				<a href="">Start Track</a>
-				<a href="<?=base_url('index.php/tracks/explore/' . $track -> track_id);?>">Explore</a>
+					<p class="desc"><?=$track->track_description;?></p>
+	<!-- 				<section class="rating"><p>Rating: <?=$track->getOverAllRating();?> (<?=$track->numberOfRatings();?>)</p></section> -->
+				</section>
+				<section class="buttons">
+					<button type="button" class="default">Start Track</button>
+					<button href="<?=base_url('index.php/tracks/explore/' . $track -> track_id);?>" type="button" class="default">Explore</button>
+				</section>
 			</section>
 		</section>
 		<?php

@@ -101,7 +101,7 @@
 		<section class="registered">
 			<section class="my-courses">
 				<section class="color-tag">
-					<a href="" class="">HTML</a>
+					<a href="" class="html">HTML</a>
 				</section>
 				<h5 class="level">Intermediate</h5>
 				<section class="clear"></section>
@@ -115,7 +115,7 @@
 			</section>
 			<section class="my-courses">
 				<section class="color-tag">
-					<a href="" class="">HTML</a>
+					<a href="" class="html">HTML</a>
 				</section>
 				<h5 class="level">Intermediate</h5>
 				<section class="clear"></section>
