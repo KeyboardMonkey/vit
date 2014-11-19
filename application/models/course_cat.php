@@ -17,15 +17,18 @@ class course_cat extends MY_Model{
     }
     public function getPointsEarnedInCategory($user_id = NULL)
     {
+       // echo ">> {$user_id}";
         if($user_id == NULL)
         $user_id = $this -> session -> userdata('user_id');
+      //  echo ">>>> {$user_id}";
         $courses = $this ->getCourses();
         $points = 0;
         foreach($courses as $course)
         {
             if($course -> isUserEnrolled($user_id))
             {
-                $points += $course -> getEarnedPoints();
+              //  echo "user {$user_id} scored " . $course -> getEarnedPoints($user_id) . " in {$course -> tiny_intro} <br />";
+                $points += $course -> getEarnedPoints($user_id);
             }
         }
         return $points;
@@ -33,7 +36,7 @@ class course_cat extends MY_Model{
     
     public function getLeaders($limit = 5)
     {
-        
+        return $this -> user -> getLeaders($this -> id, $leader_count = 3);
     }
 }
 ?>

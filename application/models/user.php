@@ -24,7 +24,7 @@ class user extends MY_Model{
         $total = 0;
          foreach($cats as $cat)
          {
-             echo "Userid: {$user_id} Points in Category: {$cat->getPointsEarnedInCategory($user_id)} <br /> <br />";
+           //  echo "Userid: {$user_id} Points in Category: {$cat->getPointsEarnedInCategory($user_id)} <br /> <br />";
              $total += $cat->getPointsEarnedInCategory($user_id);
          }
         // die();
