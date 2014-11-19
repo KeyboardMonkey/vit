@@ -61,9 +61,8 @@
 				<h5><?=$course->difficulty_level;?></h5>
 				<h4 class="course-name"><?=$course->full_name;?></h4>
 				<section class="clear"></section>
+				<h5 class="tiny-intro"><?=$course->tiny_intro;?></h5>
 				<p class="points"><?=$course->points;?> Points</p>
-				<section class="clear"></section>
-				<h5 class=""><?=$course->tiny_intro;?></h5>
 				<section class="clear"></section>
 			</section>
 			<section class="rating">
