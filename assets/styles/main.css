@@ -486,12 +486,12 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 .color-tag { margin-top:10px; padding:0; float:right; }
 .course-info { padding:0; }
 .course-info h5 { margin-top:15px; padding:0 10px; opacity:0.7; }
-.course-info h4.course-name { padding:10px; float:left; color:#2ABB9B; font-size:17px; }
-/*.course-info p.points { margin:0 10px; padding:1px 10px; font-size:14px; background:#ECF0F1; display:inline-block; }*/ 
-.course-info p.points{ margin:0 10px; padding: 2px 9px; font-size:14px; float:left; background:#DFDCDC; border-radius: 15px; display:inline-block; }
-.rating { margin:75px 20px 0; padding:0; float:left; }
+.course-info h4.course-name { padding:10px 10px 0; float:left; color:#2ABB9B; font-size:17px; }
+.course-info h5.tiny-intro { margin:5px 0; padding:0 10px; opacity:1; }
+.course-info p.points{ margin:20px 10px 0; padding:2px 10px; font-size:14px; float:left; background:#ECF0F1; border-radius:15px; display:inline-block; }
+.rating { margin:40px 20px 0; padding:0; float:left; }
 .rating p { font-size:14px; }
-.learn-now { margin-top:35px; padding:0; float:right; }
+.learn-now { margin-top:18px; padding:0; float:right; }
 .learn-now a.learn-now { padding:5px 15px; display:inline-block; width:80px; text-align:center; background:#2ABB9B; font-size:14px; color:#FFFFFF; }
 
 
@@ -562,8 +562,8 @@ ul.suggest-me-track { margin:20px auto 0; padding:0; width:18%; }
 #tracks .course-info { margin:0; }
 #tracks .course-info h2.course-name { padding:10px 20px 0; color:#2ABB9B; }
 #tracks .course-info h5 { padding:10px 20px; }
-#tracks .course-info p.points { margin:0 20px; background:#ECF0F1; }
-#tracks .course-info p.desc { padding:10px 20px; height:65px; line-height:1.5; text-align:justify; overflow:hidden; }
+#tracks .course-info p.points { margin:15px 20px; float:right; background:#ECF0F1; }
+#tracks .course-info p.desc { padding:10px 20px; height:65px; line-height:1.5; overflow:hidden; }
 #tracks .buttons { margin:10px 20px; float:right; }
 
 #course-progress-left { margin:20px; float:left; }

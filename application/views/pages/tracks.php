@@ -14,9 +14,9 @@
 		<section id="tracks">
 			<section class="half-one">
 				<section class="course-info">
+					<p class="points">Points: <?=$track->track_points;?></p>
 					<h2 class="course-name"><?=$track -> track_title;?></h2>
 					<h5><?=$track->tiny_intro;?></h5>
-					<p class="points">Points: <?=$track->track_points;?></p>
 					<p class="desc"><?=$track->track_description;?></p>
 	<!-- 				<section class="rating"><p>Rating: <?=$track->getOverAllRating();?> (<?=$track->numberOfRatings();?>)</p></section> -->
 				</section>
