@@ -79,17 +79,15 @@
             $leaders = array(new user(), new user(), new user());
             $cat = new course_cat();
                              
-            if($filter_type == 'category')
-                    {
-                     $cat -> load($filter_value);
-                     $leaders = $this -> user -> getLeaders($filter_value);
-                    // $leaders = $cat ->getLeaders();
-                     //print_r($cat ->getLeaders());
-                     
-                    }
-                    else{
-                        $leaders = $this -> user -> getLeaders();
-                    }
+            if($filter_type == 'category') {
+            	$cat -> load($filter_value);
+            	$leaders = $this -> user -> getLeaders($filter_value);
+            	// $leaders = $cat ->getLeaders();
+            	//print_r($cat ->getLeaders());
+            }
+            else {
+            	$leaders = $this -> user -> getLeaders();
+            }
             ?>
         <section class="clear"></section>
 
