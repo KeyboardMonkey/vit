@@ -1,3 +1,19 @@
+<?php
+            $leaders = array(new user(), new user(), new user());
+            $cat = new course_cat();
+                             
+            if($filter_type == 'category')
+                    {
+                     $cat -> load($filter_value);
+                     $leaders = $this -> user -> getLeaders($filter_value);
+                    // $leaders = $cat ->getLeaders();
+                     //print_r($cat ->getLeaders());
+                     
+                    }
+                    else{
+                        $leaders = $this -> user -> getLeaders();
+                    }
+            ?>
 <section class="top-students">
 			<h3>Top 3 Students</h3>
 			<section class="first-trophy">
