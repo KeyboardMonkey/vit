@@ -560,9 +560,10 @@ ul.suggest-me-track { margin:20px auto 0; padding:0; width:18%; }
 #tracks .half-one { margin:20px 0 0 1.5%; padding:20px 0; width:47.5%; float:left; border:1px solid #2ABB9B; border-top:5px solid #2ABB9B; }
 #tracks .half-two { margin:20px 1.5% 0 0; padding:20px 0; width:47.5%; float:right; border:1px solid #2ABB9B; border-top:5px solid #2ABB9B; }
 #tracks .course-info { margin:0; }
-#tracks .course-info h2.course-name { padding:10px 20px 0; color:#2ABB9B; }
-#tracks .course-info h5 { padding:10px 20px; }
+#tracks .course-info h5 { margin:0; padding:0; }
 #tracks .course-info p.points { margin:15px 20px; float:right; background:#ECF0F1; }
+#tracks .course-info h2.course-name { padding:0 20px 0; color:#2ABB9B; }
+#tracks .course-info h5 { padding:10px 20px; }
 #tracks .course-info p.desc { padding:10px 20px; height:65px; line-height:1.5; overflow:hidden; }
 #tracks .buttons { margin:10px 20px; float:right; }
 
