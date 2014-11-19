@@ -203,6 +203,65 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "<?php\n        $cats = $this -> course_cat -> get();\n        $total = 0;\n         foreach($cats as $cat)\n         {\n             $total += $cat->getPointsEarnedInCategory();\n         }\n?>\n<section class=\"container\">\n	<section class=\"content-md\">\n		<section class=\"title\">\n			<h2><?=$total;?></h2>\n			<h4>Total Points</h4>\n		</section>\n		<section class=\"line-border\"></section>\n		<section class=\"course-cols\">\n                     <section class=\"col1\">\n				<ul class=\"cols\">\n                    <?php \n                    $col = 1;\n                    \n                    $i = 0;\n                            foreach($cats as $cat)\n                            {\n                                ?>\n                               \n                    <?php\n                                \n                                $courses = $cat -> getCourses();\n                               \n                    ?>\n			\n                                    \n					<li class=\"<?= $cat -> color_tag;?>\"><strong><?=$cat->getPointsEarnedInCategory();?></strong><br/><?=$cat -> category ;?></li>\n					\n                              \n                    <?php\n                            $i ++;\n                            if($i == 4)\n                            {\n                                $i = 0;\n                                $col ++;\n                                echo '</ul></section> <section class=\"col'.$col.'\">\n				<ul class=\"cols\">';\n                                \n                            }\n                            } \n                     ?>\n                                          </ul>\n			</section>\n			\n			<section class=\"clear\"></section>\n		</section>\n		<section class=\"line-border\"></section>\n		<section class=\"info\">\n			<img src=\"<?=base_url();?>assets/graphics/info.png\" width=\"50px\" height=\"50px\" alt=\"info\" />\n			<p>Points are earned whenever you take an important action on Vitorials.\n			<br/><a href=\"\">Learn more</a> about when and how points are earned.</p>\n		</section>\n	</section>\n	\n	<section class=\"content-md\">\n		<section class=\"track-progress\">\n			<h2>WordPress Development</h2>\n			<section class=\"progress-bar\">\n			</section>\n			<a class=\"resume-track\" href=\"<?=base_url();?>index.php/courses/course_playback\">Resume Track</a>\n		</section>\n	</section>\n\n	<?php \n	$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));\n	?>\n	<section class=\"content-md\">\n\n	\n\n\n		<section class=\"not-registered\">\n			<h3>You haven't registered any course yet.<br /><small>If you want to registered any of our courses then visit our <a href=\"#\">Course Library</a></h3></small></h3>\n		</section>\n\n\n		<section class=\"registered\">\n		<?php \n			$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));\n			foreach($myEnrolements as $myEnrolment)\n					{\n			    $myCourse = new course();\n			    $myCourse -> load($myEnrolment->course_id);\n			    $myCourseId = $myCourse -> course_id;\n			?>\n\n			<section class=\"my-courses\">\n				<section class=\"color-tag\">\n					<a href=\"<?=base_url();?>index.php/library/index/category/<?=$myCourse->getCategory()->id;?>\" class=\"<?=$myCourse->getCategory()->color_tag;?>\"><?=$myCourse->getCategoryTitle();?></a>\n				</section>\n				<h5 class=\"level\"><?=$myCourse->difficulty_level;?></h5>\n				<section class=\"clear\"></section>\n				<h4 class=\"course-name\"><a href=\"<?=base_url();?>index.php/courses/course_playback/<?=$myCourseId;?>\"><?=$myCourse->full_name;?></h4></a>\n				<section class=\"clear\"></section>\n				<p class=\"points\"><?=$myCourse->points;?> Points</p>\n				<h4 class=\"rating\">Rating: <?=$myCourse->getOverAllRating();?> (<?=$myCourse->numberOfRatings();?>)</h4>\n				<section class=\"clear\"></section>\n				<section class=\"progress-bar-mini\"></section>\n			<!-- 	<a href=\"<?=base_url();?>index.php/courses/view/<?=$myCourse->course_id;?>\" class=\"learn-now\">Resume</a> -->\n				<button class=\"default\" type=\"button\">Resume Course</button>\n\n\n                                <script>\n                                    $(document).ready(function(){\n                                        $('#resume_track').click(function(){\n                                            window.location = '<?=base_url('index.php/tracks/resume/' . $track -> track_id);?>';\n                                        });\n                                    });\n                                    </script>\n\n			</section>\n\n			<?php\n			}\n			?>\n		</section>\n\n		\n	</section>\n	\n	<section class=\"content-md\">\n		<section class=\"popular-courses\">\n			<h3>Popular Courses</h3>\n			<ul class=\"course-widget\">\n				<li><a href=\"\"><i class=\"fa fa-play-circle\"></i>Programming Fundamentals</a></li>\n				<li><a href=\"\">Introduction to Android</a></li>\n				<li><a href=\"\">Windows Phone Development</a></li>\n			</ul>\n		</section>\n		<section class=\"new-courses\">\n			<h3>New Courses</h3>\n			<ul class=\"course-widget\">\n				<li><a href=\"\">Cloud Computing</a></li>\n				<li><a href=\"\">Windows Store Authorization</a></li>\n				<li><a href=\"\">Introduction to ASP.NET MVC</a></li>\n			</ul>\n		</section>\n		<section class=\"clear\"></section>\n	</section>\n	\n	</section>\n	\n	<section class=\"clear\"></section>",
+			"file": "application/views/pages/home.php",
+			"file_size": 4922,
+			"file_write_time": 130608947940660659,
+			"settings":
+			{
+				"buffer_size": 5229,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/pages/track-in-progress.php",
+			"settings":
+			{
+				"buffer_size": 4009,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/pages/library.php",
+			"settings":
+			{
+				"buffer_size": 3866,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/styles/main.css",
+			"settings":
+			{
+				"buffer_size": 54981,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/models/course.php",
+			"settings":
+			{
+				"buffer_size": 21879,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/models/course_rating.php",
+			"settings":
+			{
+				"buffer_size": 658,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/models/course_enrollment.php",
+			"settings":
+			{
+				"buffer_size": 668,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -231,8 +290,13 @@
 	},
 	"file_history":
 	[
-		"/A/xampp/htdocs/vit/application/controllers/tracks.php",
 		"/A/xampp/htdocs/vit/application/views/pages/track-explore.php",
+		"/A/xampp/htdocs/vit/application/controllers/home.php",
+		"/C/Users/The Unusual Suspect/Downloads/vitdb.sql",
+		"/A/xampp/htdocs/vit/vitdb.sql",
+		"/A/xampp/htdocs/vit/application/views/pages/course-playback.php",
+		"/A/xampp/htdocs/vit/application/config/config.php",
+		"/A/xampp/htdocs/vit/application/controllers/tracks.php",
 		"/A/xampp/htdocs/vit/application/views/pages/track-in-progress.php",
 		"/A/xampp/htdocs/vit/application/views/pages/explore-track.php",
 		"/B/-- FYP/3. Development/HTMLS/New folder/welcome.html",
@@ -240,12 +304,10 @@
 		"/A/xampp/htdocs/vit/soptair/views/widgets/similar-courses-widget.php",
 		"/A/xampp/htdocs/vit/soptair/views/pages/library.php",
 		"/A/xampp/htdocs/vit/application/config/autoload.php",
-		"/A/xampp/htdocs/vit/vitdb.sql",
 		"/A/xampp/htdocs/vit/soptair/models/course.php",
 		"/A/xampp/htdocs/vit/soptair/views/pages/quiz.php",
 		"/A/xampp/htdocs/vit/soptair/controllers/quiz.php",
 		"/A/xampp/htdocs/vit/application/controllers/quiz.php",
-		"/C/Users/The Unusual Suspect/Downloads/vitdb.sql",
 		"/A/xampp/htdocs/vit/soptair/views/wizards/new-track-wizard.php",
 		"/B/-- FYP/3. Development/HTMLS/New folder/styles/js/try.js",
 		"/A/xampp/htdocs/vit/assets/js/try.js",
@@ -355,10 +417,7 @@
 		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/newCoolStuff/track-explore.html",
 		"/C/Users/The Unusual Suspect/Desktop/course-add.php",
 		"/F/course-add.php",
-		"/F/AR/add-track.html",
-		"/A/xampp/htdocs/vit/soptair/views/pages/course-playback-old.php",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/course playback screen/course-playback.html",
-		"/A/xampp/htdocs/ssss/buttons/free-css3-buttons.html"
+		"/F/AR/add-track.html"
 	],
 	"find":
 	{
@@ -387,6 +446,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"p.points",
+			"Points",
 			"`updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,",
 			"r1",
 			"course-desc",
@@ -512,9 +573,7 @@
 			"new-track-wizard.php",
 			"new-track-wizard",
 			"quiz_id",
-			"}",
-			">",
-			"track_id"
+			"}"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -537,13 +596,220 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "application/views/pages/home.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5229,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4018,
+								4018
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1014.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/views/pages/track-in-progress.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4009,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1405,
+								1408
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
 			]
 		},
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 2,
+					"file": "application/views/pages/library.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3866,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2492,
+								2492
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 41.0,
+						"translation.y": 429.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "assets/styles/main.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 54981,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								24055,
+								24055
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6068.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/models/course.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21879,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								772,
+								772
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 195.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/models/course_rating.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "application/models/course_enrollment.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -575,7 +841,7 @@
 		"cols":
 		[
 			0.0,
-			0.540622565716,
+			0.488399987259,
 			1.0
 		],
 		"rows":
@@ -610,7 +876,7 @@
 		[
 			[
 				"",
-				"A:\\xampp\\htdocs\\vito\\index.sublime-project"
+				"A:\\xampp\\htdocs\\__taps\\__taps.sublime-project"
 			]
 		],
 		"width": 380.0

@@ -379,11 +379,12 @@ a.resume-track { padding:10px; display:inline-block; text-decoration:none; font-
     .my-courses .color-tag { margin-top:5px; float:right; }
     .my-courses h5.level { margin:10px 10px; padding:0; float:left; color:#58585A; opacity:0.7; }
     .my-courses h4.course-name { margin:0 10px; padding:0 0 10px 0; font-size:17px; float:left; color:#2ABB9B; }
-    .my-courses p.points { margin:0 10px; padding:0 10px; font-size:14px; float:left; background:#ffffff; display:inline-block; }
+    /*.my-courses p.points { margin:0 10px; padding:0 10px; font-size:14px; float:left; background:#ffffff; display:inline-block; }*/
+    .my-courses p.points{ margin:0 10px; padding: 2px 9px; font-size:14px; float:left; background:#DFDCDC; border-radius: 15px; display:inline-block; }
     .my-courses h4.rating { margin:0 10px; padding:0; float:right; font-size:14px; }
     .my-courses img { margin:15px 125px 30px; }
     .my-courses h5 { margin:10px 0 0 0; padding:0 20px; color:#FFFFFF; float:right; }
-    .my-courses .progress-bar-mini { margin:20px auto 0; width:90%; border:10px solid #58585a; }
+    .my-courses .progress-bar-mini { margin:20px auto 0; width:90%;/* border:10px solid #58585a;*/ }
     .my-courses button.default { margin:25px 10px;  float:right; }
 .popular-courses {
     border:1px solid #2ABB9B; border-top:5px solid #2ABB9B;
@@ -486,7 +487,8 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 .course-info { padding:0; }
 .course-info h5 { margin-top:15px; padding:0 10px; opacity:0.7; }
 .course-info h4.course-name { padding:10px; float:left; color:#2ABB9B; font-size:17px; }
-.course-info p.points { margin:0 10px; padding:1px 10px; font-size:14px; background:#ECF0F1; display:inline-block; } 
+/*.course-info p.points { margin:0 10px; padding:1px 10px; font-size:14px; background:#ECF0F1; display:inline-block; }*/ 
+.course-info p.points{ margin:0 10px; padding: 2px 9px; font-size:14px; float:left; background:#DFDCDC; border-radius: 15px; display:inline-block; }
 .rating { margin:75px 20px 0; padding:0; float:left; }
 .rating p { font-size:14px; }
 .learn-now { margin-top:35px; padding:0; float:right; }
@@ -599,7 +601,7 @@ ul.suggest-me-track { margin:20px auto 0; padding:0; width:18%; }
         .course-col h5.business { background:#34495e; }
         .course-col h5.design { background:#E67E22; }
         .course-col h5.other { background:#915E25; }
-    .progress-bar-mini { margin:30px auto 10px; width:80%; border:10px solid #58585a; }
+    .progress-bar-mini { /*margin:30px auto 10px; width:80%; border:10px solid #58585a;*/ }
 /*-----------------------------------------------------------End Learning Paths-----------------------------------------------------------*/
 /*-----------------------------------------------------------Course Introduction-----------------------------------------------------------*/
 .content-lg h2.course-heading { padding:10px 20px;}
