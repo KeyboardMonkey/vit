@@ -75,7 +75,24 @@
             <?php 
                 }
             ?>
+<<<<<<< HEAD
           
+=======
+            <?php
+            $leaders = array(new user(), new user(), new user());
+            $cat = new course_cat();
+                             
+            if($filter_type == 'category') {
+            	$cat -> load($filter_value);
+            	$leaders = $this -> user -> getLeaders($filter_value);
+            	// $leaders = $cat ->getLeaders();
+            	//print_r($cat ->getLeaders());
+            }
+            else {
+            	$leaders = $this -> user -> getLeaders();
+            }
+            ?>
+>>>>>>> origin/master
         <section class="clear"></section>
 
 	</section>

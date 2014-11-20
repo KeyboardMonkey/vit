@@ -71,103 +71,87 @@ class Courses extends MY_Controller
         }
         redirect('courses/view/'. $course_id);
     }
-
-    public function add()
+    public function add_new_course()
     {
-
-        /* if($this -> session -> userdata('type') != "Teacher" && $this -> session -> userdata('type') != 'Admin')
-         {
-             redirect('library');
-         }*/
-
-         $message = "";
-         $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
-         $this -> form_validation -> set_rules ( array(
+        $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
+        $this -> form_validation -> set_rules ( array(
 
             array(
-              'field' => 'coursefullname',
-              'label' => 'Course Name',
-              'rules' => 'required|xss_clean',
-              ),
+                'field' => 'coursefullname',
+                'label' => 'Course Name',
+                'rules' => 'required|xss_clean',
+            ),
 
             array(
-              'field' => 'courseshortname',
-              'label' => 'One Line Intro',
-              'rules' => 'required|xss_clean',
-              ),
+                'field' => 'courseshortname',
+                'label' => 'One Line Intro',
+                'rules' => 'required|xss_clean',
+            ),
 
             array(
                 'field' => 'category',
                 'label' => 'Category',
                 'rules' => 'required|number|in[course_category.id]',
-                ),
+            ),
 
             array(
                 'field' => 'description',
                 'label' => 'Description',
                 'rules' => 'required|xss_clean|min_length[10]',
-                ),
+            ),
 
             array(
                 'field' => 'level',
                 'label' => 'Difficulty Level',
                 'rules' => 'required|xss_clean',
-                ),
+            ),
+
+
+
 
             array(
-                'field' => 'sectiontitle',
-                'label' => 'Section Name',
-                'rules' => 'required|xss_clean|min_length[5]',
-                ),
-
-            array(
-                'field' => 'videotitle',
-                'label' => 'Video Title',
-                'rules' => 'required|xss_clean|min_length[5]',
-                ),
-
-            array(
-                'field' => 'additionalfiletitle',
-                'label' => 'Addt. File Title',
-                'rules' => 'required|xss_clean|min_length[5]',
-                ),
-
-           array(
                 'field' => 'status',
                 'label' => 'Visibility',
                 'rules' => 'required',
-                )
+            )
 
 
-            ));
+        ));
+        if($this->form_validation->run())
+        {
+            $newCourse = new course();
+            $newCourse -> full_name  = $this -> input -> post('coursefullname');
+            $newCourse -> tiny_intro  = $this -> input -> post('courseshortname');
+            $newCourse -> description  = $this -> input -> post('description');
+            $newCourse -> difficulty_level  = $this -> input -> post('level');
 
-         if($this->form_validation->run())
-         {
-                $newCourse = new course();
-                $newCourse -> full_name  = $this -> input -> post('coursefullname');
-                $newCourse -> tiny_intro  = $this -> input -> post('courseshortname');
-                $newCourse -> description  = $this -> input -> post('description');
-                $newCourse -> difficulty_level  = $this -> input -> post('level');
- 
-                 $newCourse -> section_title  = $this -> input -> post('sectiontitle');
-                 $newCourse -> video_title  = $this -> input -> post('videotitle');
-                 $newCourse -> video_file  = $this -> input -> post('videofile');
-                 $newCourse -> srt  = $this -> input -> post('srt');
-                 $newCourse -> full_course_files_zip  = $this -> input -> post('fullcoursefileszip');
-                 $newCourse -> additional_file_title  = $this -> input -> post('additionalfiletitle');
-                 $newCourse -> additional_file  = $this -> input -> post('additionalfile');
- 
-                 $newCourse -> category  = $this -> input -> post('category');
-                 $newCourse -> status  = ($this -> input -> post('status') == 'on' ) ? 'yes' : 'no';
+            $newCourse -> section_title  = "n/a"; //$this -> input -> post('sectiontitle');
+            $newCourse -> video_title  = $this -> input -> post('videotitle');
+            $newCourse -> video_file  = $this -> input -> post('videofile');
+            $newCourse -> srt  = $this -> input -> post('srt');
+            $newCourse -> full_course_files_zip  = $this -> input -> post('fullcoursefileszip');
+            $newCourse -> additional_file_title  = $this -> input -> post('additionalfiletitle');
+            $newCourse -> additional_file  = $this -> input -> post('additionalfile');
 
-                /* print_r($newCourse);
-                 die();
+            $newCourse -> category  = $this -> input -> post('category');
+            $newCourse -> status  = ($this -> input -> post('status') == 'on' ) ? 'yes' : 'no';
+
+            /* print_r($newCourse);
+             die();
 */
-                $newCourse -> save();
-                $message = "<h5>Course {$newCourse->full_name} registered successfully!";
-         }
+            $newCourse -> save();
+            echo json_encode(array('status' => 'ok', 'id' => $newCourse -> course_id));
+        }
+        else{
+            echo json_encode(array('status' => 'error', 'msg' => json_encode(validation_errors())));
+        }
+
+    }
+    public function add()
+    {
 
 
+        $message = "";
         $this->load->view('templates/header');
         $this->load->view('templates/breadcrumbs');
         // $this->load->view('pages/course_add', array('message' => $message));

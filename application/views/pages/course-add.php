@@ -2,19 +2,20 @@
 	<section class="content-lg">
 		<?=$message;?>
 		<?=validation_errors();?>
-		<form class="add-course dashboard" method="post">
+		<form action="<?=base_url('index.php/courses/add_new_course');?>" class="add-course dashboard" method="post" enctype="multipart/form-data">
 			<table class="add-course">
 				<tr>
+                    <input type="hidden" value="-1" id="course_id" />
 					<td><label>Course Full Name:</label></td>
-					<td><input class="name" type="text" name="coursefullname" placeholder="Course Full Name" /></td>
+					<td><input class="name" id="coursefullname" type="text" name="coursefullname" placeholder="Course Full Name" /></td>
 				</tr>
 				<tr>
 					<td><label>One Line Intro:</label></td>
-					<td><input class="name" type="text" name="courseshortname" placeholder="Course Short Name" /></td>
+					<td><input class="name" type="text" id="courseshortname" name="courseshortname" placeholder="Course Short Name" /></td>
 				</tr>
 				<tr>
 					<td><label>Description:</label></td>
-					<td><textarea rows="4" cols="50" placeholder="Write Course Summary Here" name="description"></textarea></td>
+					<td><textarea rows="4" cols="50" placeholder="Write Course Summary Here" id="description" name="description"></textarea></td>
 				</tr>
 				<tr>
 					<td><label>Category:</label></td>
@@ -47,23 +48,123 @@
 				</tr>
 				<tr>
 					<td><label>Difficulty Level</label></td>
-					<td><input type="radio" name="level" value="beginner" /> Beginner <input type="radio" name="level" value="intermediate" /> Intermediate <input type="radio" name="level" value="advanced" /> Advanced</td>
+					<td><input type="radio"  checked name="diff_level" value="beginner" /> Beginner
+                        <input type="radio"   name="diff_level" value="intermediate" /> Intermediate
+                        <input type="radio"   name="diff_level" value="advanced" /> Advanced</td>
 				</tr>
-				
+				<tr>
+                    <td>
+                        <button id="register_course"   value="Save" > Save </button>
 
+                    </td>
+				</tr>
+                <script>
+                    $(document).ready(function () {
+                        $('form').submit(function(e){
+                            e.preventDefault();
+                        });
+                            $('#register_course').click(function (e) {
+                                e.preventDefault();
+                            var coursefullname = $("#coursefullname").val();
+                            var courseshortname = $('#courseshortname').val();
+                            var description = $('#description').val();
+                            var category = $('#category option:selected').val();
+                            var status = 'no';
+                                if($('#myonoffswitch').is(':checked'))
+                                {
+                                    status = 'yes';
+                                }
+                            var level = $('input[name=diff_level]:checked').val();
+                               // alert(level + " " + status);
+                            var url="<?=base_url('index.php/courses/add_new_course');?>";
+                            var posting =
+                                $.ajax({
+                                    type: 'POST',
+                                    url: url,
+                                    data: {
+                                        coursefullname: coursefullname,
+                                        courseshortname: courseshortname,
+                                        description: description,
+                                        category: category,
+                                        status: status,
+                                        level: level
+
+                                    },
+                                    success: function (data) {
+                                        //alert(data);
+                                        var obj = jQuery.parseJSON(data);
+                                        console.log(obj);
+                                        if(obj.status == 'ok')
+                                        {
+                                            $('#register_course').hide();
+                                            $('#course_id').val(obj.id);
+                                            $("#coursefullname").attr('disabled', true);
+                                            $("#courseshortname").attr('disabled', true);
+                                            $("#description").attr('disabled', true);
+                                            $("#category").attr('disabled', true);
+                                            $("#myonoffswitch").attr('disabled', true);
+                                            $("input[name=diff_level]").attr('disabled', true);
+                                            $('#submit_video').show();
+
+                                        }
+                                        $('#error_div').html(obj.msg);
+
+                                    },
+                                    error: function (request, status, error) {
+                                        alert(request.responseText);
+                                    }
+                                });
+                                var uploadVideo = function(){
+
+                                };
+                        });
+                    });
+                </script>
 				<tr>
 					<td><label>Section 1</label></td>
 					<td><input class="name" type="text" name="sectiontitle" placeholder="" /></td>
 				</tr>
 				<tr>
 					<td><label>Video 1</label></td>
-					<td><input class="name" type="text" name="videotitle" placeholder="Video Title Here" /></td>
+					<td><input class="name" type="text" id="videotitle" name="videotitle" placeholder="Video Title Here" /></td>
 				</tr>
 				<tr>
 					<td></td>
-					<td>Video:1 &nbsp;&nbsp;&nbsp;<input type="file" name="videofile" multiple=""/></td>
+					<td>Video:1 &nbsp;&nbsp;&nbsp;<input type="file" id="videofile" name="videofile" /></td>
 				</tr>
-				<tr>
+                <tr>
+                    <td><button id="submit_video">Submit Video</button></td>
+                </tr>
+                <script>
+                    $(document).ready(function () {
+                        $('#submit_video').hide();
+                        $('#submit_video').click(function(e) {
+
+                            $.ajaxFileUpload({
+                                url 			:'<?=base_url('index.php/upload/upload_course_lecture' );?>/' + $('#course_id').val(),
+                                secureuri		:false,
+                                fileElementId	:'videofile',
+                                dataType		: 'json',
+                                data			: {
+                                    'title'				: $('#videotitle').val()
+                                },
+                                success	: function (data, status)
+                                {
+                                    if(data.status != 'error')
+                                    {
+
+                                        //  refresh_files();
+                                        $('#title').val('');
+                                    }
+                                    alert(data.msg);
+                                }
+                            });
+                            return false;
+                        });
+                    });
+                </script>
+
+			<!--	<tr>
 					<td><label>Add SRT*</label></td>
 					<td><input type="file" multiple="" name="srt" /></td>
 				</tr>
@@ -81,7 +182,7 @@
 				<tr>
 					<td></td>
 					<td>Addition File &nbsp;&nbsp;&nbsp;<input type="file" name="additionalfile" multiple=""/></td>
-				</tr>
+				</tr> -->
 						<tr>
 							<td></td>
 							<td>
@@ -97,7 +198,11 @@
 
 					<input type='hidden' value='0' name='total_videos' id='total_values'>
 					
-            
+            <tr>
+                <td>
+                    <div id="error_div"></div>
+                </td>
+            </tr>
             
 				</form>
 				<button id="add_video">&nbsp;+&nbsp;</button>

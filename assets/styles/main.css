@@ -183,189 +183,48 @@ input#login-checkbox { margin-left:5px; position:absolute; }
     #welcome #get-started button:hover { opacity:1; }
 /*-----------------------------------------------------------End Welcome-----------------------------------------------------------*/
 /*-----------------------------------------------------------Side Navigations-----------------------------------------------------------*/
-nav.side-navs {
-    margin-top:18px;
-    margin-right:5%;
-    float:right;
-    width:240px;
-    background:#ffffff;
-}
-nav.side-navs ul {
-    list-style:none;
-}
-nav.side-navs ul li {
-    list-style:block;
-    border-bottom:1px solid #ECF0F1;
-    cursor:pointer;
-    list-style:none;
-    font-size:14px;
-}
-span.total-courses {
-    margin:7px 180px;
-    padding:5px;
-    position:absolute;
-    border-radius:5px;
-    background:#ECF0F1;
-}
-span.total-courses:hover {
-    transition:all 0.5s ease-out;
-    color:#FFFFFF;
-    background:#2ABB9B;
-}
-nav.side-navs ul li.courses {
-    font-weight:bold;
-}
-nav.side-navs ul li.courses a {
-    padding:12px 15px;
-}
-nav.side-navs ul li.courses a:hover {
-    border-right:15px solid #2ABB9B;
-    border-left:none;
-}
-nav.side-navs ul li.no-border {
-    border:none;
-}
-nav.side-navs ul li a {
-    padding:12px 15px;
-    display:block;
-    text-decoration:none;
-    color:#58585a;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.html {
-    border-right:5px #19B5FE solid;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.html:hover {
-    border-right:15px #19B5FE solid;
-    border-left:none;
-    color:#19B5FE;
-}
-nav.side-navs ul li a.css {
-    border-right:5px #FCDC05 solid;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.css:hover {
-    border-right:15px #FCDC05 solid;
-    border-left:none;
-    color:#FCDC05;
-}
-nav.side-navs ul li a.cpp {
-    border-right:5px #67809F solid;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.cpp:hover {
-    border-right:15px #67809F solid;
-    border-left:none;
-    color:#67809F;
-}
-nav.side-navs ul li a.php {
-    border-right:5px #3A539B solid;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.php:hover {
-    border-right:15px #3A539B solid;
-    border-left:none;
-    color:#3A539B;
-}
-nav.side-navs ul li a.javascript {
-    border-right:5px #DDA423 solid;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.javascript:hover {
-    border-right:15px #DDA423 solid;
-    border-left:none;
-    color:#DDA423;
-}
-nav.side-navs ul li a.jquery {
-    border-right:5px #2AE7C3 solid;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.jquery:hover {
-    border-right:15px #2AE7C3 solid;
-    border-left:none;
-    color:#2AE7C3;
-}
-nav.side-navs ul li a.asp {
-    border-right:5px #C0392B solid;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.asp:hover {
-    border-right:15px #C0392B solid;
-    border-left:none;
-    color:#C0392B;
-}
-nav.side-navs ul li a.android {
-    border-right:5px #2ECC71 solid;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.android:hover {
-    border-right:15px #2ECC71 solid;
-    border-left:none;
-    color:#2ECC71;
-}
-nav.side-navs ul li a.java {
-    border-right:5px #F22613 solid;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.java:hover {
-    border-right:15px #F22613 solid;
-    border-left:none;
-    color:#F22613;
-}
-nav.side-navs ul li a.wordpress {
-    border-right:5px #6C7A89 solid;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.wordpress:hover {
-    border-right:15px #6C7A89 solid;
-    border-left:none;
-    color:#6C7A89;
-}
-nav.side-navs ul li a.d-tools {
-    border-right:5px #913D88 solid;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.d-tools:hover {
-    border-right:15px #913D88 solid;
-    border-left:none;
-    color:#913D88;
-}
-nav.side-navs ul li a.business {
-    border-right:5px #34495e solid;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.business:hover {
-    border-right:15px #34495e solid;
-    border-left:none;
-    color:#34495e;
-}nav.side-navs ul li a.design {
-    border-right:5px #e67e22 solid;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.design:hover {
-    border-right:15px #e67e22 solid;
-    border-left:none;
-    color:#e67e22;
-}nav.side-navs ul li a.other {
-    border-right:5px #915E25 solid;
-    transition:all 0.5s ease-out;
-}
-nav.side-navs ul li a.other:hover {
-    border-right:15px #915E25 solid;
-    border-left:none;
-    color:#915E25;
-}
-nav.side-navs ul li a:hover {
-    color:#2ABB9B;
-    background:#ffffff;
-    border-left:15px solid #2ABB9B;
-}
-nav.side-navs ul li a.active-notifications, aside nav ul li a.active-notifications:hover {
-    color:#58585a;
-    background:#ffffff;
-    border-right:10px solid #58585a;
-}
+nav.side-navs { margin-top:18px; margin-right:5%; float:right; width:240px; background:#ffffff; }
+nav.side-navs ul { list-style:none; }
+nav.side-navs ul li { list-style:block; border-bottom:1px solid #ECF0F1; cursor:pointer; list-style:none; font-size:14px; }
+nav.side-navs ul li.courses { font-weight:bold; }
+nav.side-navs ul li.courses a { padding:12px 15px; }
+    nav.side-navs ul li.courses a:hover { border-right:15px solid #2ABB9B; border-left:none; }
+    nav.side-navs ul li.no-border { border:none; }
+nav.side-navs ul li a { padding:12px 15px; display:block; text-decoration:none; color:#58585a; border-right:5px #2ABB9B solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a:hover { color:#2ABB9B; border-right:15px #2ABB9B solid; border-left:none; }
+span.total-courses { margin:7px 180px; padding:5px; position:absolute; border-radius:5px; background:#ECF0F1; }
+span.total-courses:hover { color:#FFFFFF; background:#2ABB9B; transition:all 0.5s ease-out; }
+
+nav.side-navs ul li a.html { border-right:5px #19B5FE solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a.html:hover { border-right:15px #19B5FE solid; border-left:none; color:#19B5FE; }
+nav.side-navs ul li a.css { border-right:5px #FCDC05 solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a.css:hover { border-right:15px #FCDC05 solid; border-left:none; color:#FCDC05; }
+nav.side-navs ul li a.cpp { border-right:5px #67809F solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a.cpp:hover { border-right:15px #67809F solid; border-left:none; color:#67809F; }
+nav.side-navs ul li a.php { border-right:5px #3A539B solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a.php:hover { border-right:15px #3A539B solid; border-left:none; color:#3A539B; }
+nav.side-navs ul li a.javascript { border-right:5px #DDA423 solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a.javascript:hover { border-right:15px #DDA423 solid; border-left:none; color:#DDA423; }
+nav.side-navs ul li a.jquery { border-right:5px #2AE7C3 solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a.jquery:hover { border-right:15px #2AE7C3 solid; border-left:none; color:#2AE7C3; }
+nav.side-navs ul li a.asp { border-right:5px #C0392B solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a.asp:hover { border-right:15px #C0392B solid; border-left:none; color:#C0392B; }
+nav.side-navs ul li a.android { border-right:5px #2ECC71 solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a.android:hover { border-right:15px #2ECC71 solid; border-left:none; color:#2ECC71; }
+nav.side-navs ul li a.java { border-right:5px #F22613 solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a.java:hover { border-right:15px #F22613 solid; border-left:none; color:#F22613; }
+nav.side-navs ul li a.wordpress { border-right:5px #6C7A89 solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a.wordpress:hover { border-right:15px #6C7A89 solid; border-left:none; color:#6C7A89; }
+nav.side-navs ul li a.d-tools { border-right:5px #913D88 solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a.d-tools:hover { border-right:15px #913D88 solid; border-left:none; color:#913D88; }
+nav.side-navs ul li a.business { border-right:5px #34495e solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a.business:hover { border-right:15px #34495e solid; border-left:none; color:#34495e; }
+nav.side-navs ul li a.design { border-right:5px #e67e22 solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a.design:hover { border-right:15px #e67e22 solid; border-left:none; color:#e67e22; }
+nav.side-navs ul li a.other { border-right:5px #915E25 solid; transition:all 0.5s ease-out; }
+    nav.side-navs ul li a.other:hover { border-right:15px #915E25 solid; border-left:none; color:#915E25; }
+
+nav.side-navs ul li a.active-notifications, aside nav ul li a.active-notifications:hover { color:#58585A; background:#FFFFFF; border-left:15px solid #58585A; }
 /*-----------------------------------------------------------End Side Navigations-----------------------------------------------------------*/
 /*-----------------------------------------------------------Home-----------------------------------------------------------*/
 .track-progress{ padding:20px; }
@@ -445,16 +304,17 @@ ul.notifications li.day { padding-bottom:15px; font-size:16px; font-weight:bold;
 /*-----------------------------------------------------------End Notifications-----------------------------------------------------------*/
 /*-----------------------------------------------------------Leaderboard-----------------------------------------------------------*/
 .top-students { margin:20px 2%; padding:0; border:1px solid #2ABB9B; border-top:5px solid #2ABB9B; width:96%; float:left; }
-.top-students .first-trophy { float:left; padding:40px 20px; }
-.top-students .first-trophy .content a { float:left; padding:40px 20px 0; text-decoration:none; color:#58585a; font-size:18px; transition:all 0.5s ease-out; }
-.top-students .second-trophy { float:left; padding:40px 20px; }
-.top-students .second-trophy .content a { float:left; padding:40px 20px 0; text-decoration:none; color:#58585a; font-size:18px; transition:all 0.5s ease-out; }
-.top-students .third-trophy { float:right; padding:40px 0; }
-.top-students .third-trophy .content a { float:left; padding:40px 20px 0; text-decoration:none; color:#58585a; font-size:18px; transition:all 0.5s ease-out; }
-.top-students .content img { float:left; }
-.top-students .content a:hover { color:#2ABB9B; }
-.top-students .content p { padding-left:120px; font-size:14px; font-style:italic; }
-.my-courses h3, .popular-courses h3, .new-courses h3, .top-students h3 { padding:20px 0 0 20px; color:#2ABB9B; }
+.top-students h3 { margin:0 auto 10px; padding:10px 0; color:#FFFFFF; text-align:center; background:#2ABB9B; width:35%; display:block; }
+#trophies { margin-left:4%; }
+.top-students .first-trophy, .top-students .second-trophy, .top-students .third-trophy { padding:20px 0; float:left; width:32%; }
+.winner-info { margin:0 auto; padding:10px 0; width:85%; background:#2ABB9B; }
+.top-students .first-trophy .content a, .top-students .second-trophy .content a, .top-students .third-trophy .content a
+    { padding-bottom:0; text-align:center; display:block; text-decoration:none; color:#58585a; font-size:18px; transition:all 0.5s ease-out; }
+    .top-students .content a:hover { color:#FFFFFF; }
+.top-students .content img { margin:0 auto; width:100%; }
+.top-students .content p { margin-top:5px; color:#FFFFFF; text-align:center; font-size:14px; font-style:italic; }
+
+.my-courses h3, .popular-courses h3, .new-courses h3 { padding:20px 0 0 20px; color:#2ABB9B; }
 
 table.leaderboard {
     *border-collapse:collapse; /* IE7 and lower */
