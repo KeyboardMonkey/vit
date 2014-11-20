@@ -309,7 +309,7 @@ ul.notifications li.day { padding-bottom:15px; font-size:16px; font-weight:bold;
 .top-students .first-trophy, .top-students .second-trophy, .top-students .third-trophy { padding:20px 0; float:left; width:32%; }
 .top-students .first-trophy { margin-top:-26px; }
 .top-students .third-trophy { margin-top:26px; }
-.top-students .content img { margin:0 auto; width:100%; }
+.top-students .content img { margin:0 auto -4px; width:100%; }
 .content #block-a { margin:1px auto; width:25%; height:25px; background:#2ABB9B; }
 .content #block-b { margin:1px auto; width:45%; height:25px; background:#2ABB9B; }
 .content #block-c { margin:1px auto; width:65%; height:25px; background:#2ABB9B; }
