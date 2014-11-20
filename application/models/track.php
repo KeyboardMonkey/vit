@@ -65,6 +65,7 @@ class track extends MY_Model{
             $progress += $course ->getCourseProgressPercent();
             $count ++;
         }
+        if($count == 0) $count =1;
         return $progress / $count;
   }
  public function isUserEnrolled($user_id=NULL)
