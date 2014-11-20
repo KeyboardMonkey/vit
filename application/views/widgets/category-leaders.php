@@ -1,5 +1,5 @@
 <?php
-<<<<<<< HEAD
+
             $leaders = array(new user(), new user(), new user());
             $cat = new course_cat();
                              
@@ -51,7 +51,7 @@
                                                 }
                                                ?> Points</p>
 				</section>
-=======
+<?php
   $leaders = array(new user(), new user(), new user());
   $cat = new course_cat();                 
   if($filter_type == 'category') {
@@ -105,12 +105,12 @@
             </p>
 				  </section>
         </section>
->>>>>>> origin/master
+
 			</section>
 			<section class="third-trophy">
 				<section class="content">
 					<img src="http://localhost/vit/assets/graphics/trophy3.svg" width="100px" height="111px">
-<<<<<<< HEAD
+
 					<a href=""><?=$leaders[2]->first_name." ".$leaders[2]->last_name;?></a>
 					<p><?php
                                                 if(isset($filter_type))
@@ -123,7 +123,7 @@
                                                 }
                                                ?> Points</p>
 				</section>
-=======
+
 					<section class="clear"></section>
           <section class="winner-info">
             <a href=""><?=$leaders[2] -> username;?></a>
@@ -139,7 +139,7 @@
             </p>
 				  </section>
         </section>
->>>>>>> origin/master
+
 			</section>
     </section>
   </section>
