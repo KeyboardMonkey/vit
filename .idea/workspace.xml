@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0faaeb2-8c84-4a2f-b3d6-2a9f1115c242" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vit.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pages/course-add.php" afterPath="$PROJECT_DIR$/application/views/pages/course-add.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/courses.php" afterPath="$PROJECT_DIR$/application/controllers/courses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/header.php" afterPath="$PROJECT_DIR$/application/views/templates/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/mimes.php" afterPath="$PROJECT_DIR$/application/config/mimes.php" />
-    </list>
+    <list default="true" id="b0faaeb2-8c84-4a2f-b3d6-2a9f1115c242" name="Default" comment="" />
     <ignored path="vit.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -62,8 +51,8 @@
       <file leaf-file-name="course-add.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/pages/course-add.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6081772" vertical-offset="255" max-vertical-offset="3893">
-              <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.23168655" vertical-offset="255" max-vertical-offset="3893">
+              <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
               <folding>
                 <element signature="n#style#0;n#small#0;n#td#1;n#tr#11;n#table#0;n#form#0;n#section#0;n#section#0;n#!!top" expanded="true" />
                 <marker date="1416475804553" expanded="true" signature="282:422" placeholder="..." />
@@ -340,6 +329,9 @@
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b0faaeb2-8c84-4a2f-b3d6-2a9f1115c242" name="Default" comment="" />
@@ -350,7 +342,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1319" height="784" extended-state="7" />
+    <frame x="-8" y="-8" width="1319" height="784" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -458,8 +450,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages/course-add.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6081772" vertical-offset="255" max-vertical-offset="3893">
-          <caret line="36" column="20" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.23168655" vertical-offset="255" max-vertical-offset="3893">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
           <folding>
             <element signature="n#style#0;n#small#0;n#td#1;n#tr#11;n#table#0;n#form#0;n#section#0;n#section#0;n#!!top" expanded="true" />
             <marker date="1416475804553" expanded="true" signature="282:422" placeholder="..." />
