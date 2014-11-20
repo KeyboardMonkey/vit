@@ -19,7 +19,7 @@
 			<section class="first-trophy">
 				<section class="content">
 					<img src="http://localhost/vit/assets/graphics/trophy1.svg" width="100px" height="111px">
-					<a href=""><?=$leaders[0] -> username;?></a>
+					<a href=""><?=$leaders[0]->first_name." ".$leaders[0]->last_name;?></a>
 					<p>
                                                <?php
                                                 if(isset($filter_type))
@@ -38,7 +38,7 @@
 			<section class="second-trophy">
 				<section class="content">
 					<img src="http://localhost/vit/assets/graphics/trophy2.svg" width="100px" height="111px">
-					<a href=""><?=$leaders[1] -> username;?></a>
+					<a href=""><?=$leaders[1]->first_name." ".$leaders[1]->last_name;?></a>
 					<p><?php
                                                 if(isset($filter_type))
                                                 {
@@ -54,7 +54,7 @@
 			<section class="third-trophy">
 				<section class="content">
 					<img src="http://localhost/vit/assets/graphics/trophy3.svg" width="100px" height="111px">
-					<a href=""><?=$leaders[2] -> username;?></a>
+					<a href=""><?=$leaders[2]->first_name." ".$leaders[2]->last_name;?></a>
 					<p><?php
                                                 if(isset($filter_type))
                                                 {

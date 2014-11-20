@@ -9,12 +9,14 @@ class user extends MY_Model{
   public $email;
   public $password;
   public $type = "User";
-  public $active = "No";
+  public $active = "Yes";
   public $last_login;
   public $hash = "";
   public $register_date;
   public $username;
   public $logged_in = "0";
+  public $first_name;
+  public $last_name;
   
   public function getAllPoints($user_id = NULL)
   {

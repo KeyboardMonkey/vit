@@ -17,6 +17,11 @@ class Register extends CI_Controller
 
 
         public function login(){
+
+        	if($this->session->userdata('logged_in')){
+     		 redirect('home');
+    		}
+
         	$success= NULL;
             $message = "";
                 $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
@@ -25,24 +30,28 @@ class Register extends CI_Controller
 				array(
 						'field' => 'login',
 						'label' => 'E-Mail Address',
-						'rules' => 'required',
+						'rules' => 'required|xss_clean',
 					),
 				array(
 						'field' => 'password',
 						'label' => 'password',
-						'rules' => 'required|min_length[5]',
+						'rules' => 'required|min_length[5]|xss_clean',
 					),
 				
 			));
+
+            
+
                 
                 if($this->form_validation->run())
                 {
+
+                	
                     $users =  $this -> user -> getWithCondition(
                                         array(
                                             'email' => $this -> input -> post('login'), 
                                             'password' => $this -> input -> post('password')
                                         )
-                            
                       );
                   
                     if(count($users ) > 0)
@@ -60,7 +69,7 @@ class Register extends CI_Controller
                         }
                        
                     }else{
-                        $message = "<h4>No record found!</h4>";
+                        $message = "<h4>No such record found!</h4>";
                     }
                     
                     
@@ -71,6 +80,10 @@ class Register extends CI_Controller
         }
 	public function index()
 	{
+
+		if($this->session->userdata('logged_in')){
+     		 redirect('home');
+    		}
                 $message = "";
                 $success=FALSE;
                 $this->form_validation->set_error_delimiters('<div class="error">', '</div>');
@@ -107,16 +120,18 @@ class Register extends CI_Controller
                 {
                 	//ho "sab theeak hay bhai";
                     $user = new user();
-                    $user -> username = $this -> input -> post('first_name')  . " " . $this -> input -> post("last_name");
+                    $user -> first_name = $this -> input -> post('first_name');
+                    $user -> last_name = $this -> input -> post('last_name');
                     $user -> password = $this -> input -> post('password');
+                    $user -> username = strtolower($user -> first_name . '-' . $user -> last_name);
                     $user -> email = $this -> input -> post('login');
                     $user -> type = "User";
                     $user -> save();
 
-              			        $this -> session -> set_userdata('logged_in', true);
-                                $this -> session -> set_userdata('user_id', $user -> user_id);
-                                $this -> session -> set_userdata('email', $user -> email);
-                                $this -> session -> set_userdata('type', $user -> type);
+  			        $this -> session -> set_userdata('logged_in', true);
+                    $this -> session -> set_userdata('user_id', $user -> user_id);
+                    $this -> session -> set_userdata('email', $user -> email);
+                    $this -> session -> set_userdata('type', $user -> type);
                                 
 
                     $message = "<h4>Kindly check email({$user -> email}) for further verification</h4>";

@@ -168,12 +168,12 @@
 			
 			<section class="clear"></section>
 			
-			<section class="widget-facebook-recommendations">
+		<!-- 	<section class="widget-facebook-recommendations">
 				<h4>Facebook Recommendations</h4>
 				<p class="fb-feeds">"Asdsfk afd fdfdk adsfdsf dfdj dfjdjf djdj jd jdjdjdj jd jd jjjdjds swizadfdd asdadnafas."</p>
 				<p class="fb-feeds">"Asdsfk afd fdfdk adsfdsf dfdj dfjdjf djdj jd jdjdjdj jd jd jjjdjds swizadfdd asdadnafas."</p>
 				<p class="fb-feeds">"Asdsfk afd fdfdk adsfdsf dfdj dfjdjf djdj jd jdjdjdj jd jd jjjdjds swizadfdd asdadnafas."</p>
-			</section>
+			</section> -->
 		</section>
 	
 	

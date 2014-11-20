@@ -116,15 +116,6 @@ class Tracks extends MY_Controller
 
 	}
 
-		public function resume_track()
-	{
-
-		$this->load->view('templates/header');
-		$this->load->view('templates/breadcrumbs');
-		$this->load->view('pages/track-in-progress');
-		$this->load->view('templates/footer');
-
-	}
 		public function suggest_track()
 	{
 
@@ -187,16 +178,21 @@ class Tracks extends MY_Controller
                     if(!isset($track -> track_id))redirect('tracks');
                     if(!$track ->isUserEnrolled())
                     {
+                        echo "User not enrolled";
+                        die();
                         redirect('tracks/view/' . $track_id);
                     }
                     else
                     {
                         $myId = $this -> session -> userdata('user_id');
-                        $enrollment = new tracks_enrollment();
-                        $enrollment -> user_id = $this -> session -> userdata('user_id');
-                        $enrollment -> track_id = $track_id;
-                        $enrollment -> save();
+                       //print_r($track);
                         $courses = $track ->getCourses();
+                        //print_r($courses);
+                        if(count($courses) == 0) 
+                        {
+                            echo "No course in track";
+                            die();
+                        }
                         $next_course =new  course();
                         foreach($courses as $course)
                         {
@@ -212,7 +208,7 @@ class Tracks extends MY_Controller
                             }
                             else{
                                 echo "<br /> <br />";
-                                print_r($course);
+                               // print_r($course);
                                 echo "<br /> <br /> PROGRESS  100";
                             }
                         }

@@ -87,6 +87,7 @@ public function getWithCondition($condition){
 	return $rel_val;
 
 }
+
 public function getWithConditionLimit1($condition){
 	//print_r($condition);
 	$query = $this -> db -> get_where($this::DB_TABLE, $condition);

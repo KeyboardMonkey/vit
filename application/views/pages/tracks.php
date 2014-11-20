@@ -1,8 +1,8 @@
 <section class="container">
 	<section class="content-lg">
-		<ul class="suggest-me-track">
+	<!-- 	<ul class="suggest-me-track">
 			<li><span class="suggest-me-track"><img src="<?=base_url();?>assets/graphics/suggest-track.png" width="75px" height="75px" /></span><a href="<?=base_url();?>index.php/tracks/suggest_track">SUGGEST ME A TRACK!</a></li>
-		</ul>
+		</ul> -->
 		<?php
 		$allTracks = new track();
 		$allTracks = $allTracks -> getWithCondition(array('status' => 'yes'));
@@ -22,8 +22,24 @@
 	<!-- 				<section class="rating"><p>Rating: <?=$track->getOverAllRating();?> (<?=$track->numberOfRatings();?>)</p></section> -->
 				</section>
 				<section class="buttons">
-					<button type="button" class="default">Start Track</button>
-					<button href="<?=base_url('index.php/tracks/explore/' . $track -> track_id);?>" type="button" class="default">Explore</button>
+				<?php
+				if($track ->isUserEnrolled())
+                    {
+                    	?>
+                     <button type="button" data-resume_id="<?=$track->track_id;?>" class="default resume-track">Resume Track</button>
+                <?php
+                    }
+
+                else
+                    {
+
+                ?>
+
+					<button type="button" data-resume_id="<?=$track->track_id;?>" class="default resume-track">Start Track</button>
+                <?php
+                    }
+                ?>
+					<button data-explore_id="<?=$track->track_id;?>" type="button" class="default explore-track">Explore</button>
 				</section>
 			</section>
 		</section>
@@ -34,5 +50,21 @@
 	?>
 </section>
 </section>
+	<script>
+	$(document).ready(function(){
+	    $('.explore-track').click(function(){
+	    	var track_id = $(this).attr('data-explore_id');
+	        window.location = '<?=base_url();?>index.php/tracks/explore/' + track_id;
+	    });
+	});
+	</script>	
 
+	<script>
+	$(document).ready(function(){
+	    $('.resume-track').click(function(){
+	    	var resume_id = $(this).attr('data-resume_id');
+	        window.location = '<?=base_url();?>index.php/tracks/resume/' + resume_id;
+	    });
+	});
+	</script>
 <section class="clear"></section>

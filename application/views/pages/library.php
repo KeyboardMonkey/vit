@@ -59,7 +59,7 @@
 			</section>
 			<section class="course-info">
 				<h5><?=$course->difficulty_level;?></h5>
-				<h4 class="course-name"><?=$course->full_name;?></h4>
+				<a href="<?=base_url();?>index.php/courses/view/<?=$course->course_id;?>"><h4 class="course-name"><?=$course->full_name;?></h4></a>
 				<section class="clear"></section>
 				<h5 class="tiny-intro"><?=$course->tiny_intro;?></h5>
 				<p class="points"><?=$course->points;?> Points</p>
@@ -75,22 +75,7 @@
             <?php 
                 }
             ?>
-            <?php
-            $leaders = array(new user(), new user(), new user());
-            $cat = new course_cat();
-                             
-            if($filter_type == 'category')
-                    {
-                     $cat -> load($filter_value);
-                     $leaders = $this -> user -> getLeaders($filter_value);
-                    // $leaders = $cat ->getLeaders();
-                     //print_r($cat ->getLeaders());
-                     
-                    }
-                    else{
-                        $leaders = $this -> user -> getLeaders();
-                    }
-            ?>
+          
         <section class="clear"></section>
 
 	</section>

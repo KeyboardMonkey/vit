@@ -7,7 +7,7 @@
 
 <section class="container">
 
-	<section class="widgets">		
+<!-- 	<section class="widgets">		
 		
             <section class="clear"></section>
             
@@ -18,7 +18,7 @@
 			</ul>
 			<p class="info">You need minimum 4 correct answers to pass the quiz.</p>
 		</section>
-	</section>
+	</section> -->
 
 	<section class="content-md">
             <h2>Please submit quiz carefully! Re-submittion is PROHIBITED!</h2>

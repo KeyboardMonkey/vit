@@ -21,6 +21,13 @@
             return $enrollement -> enrol_time;
         }*/
 
+        public function getMyEnrolledCourses($user_id=NULL){
+            if($user_id==NULL)
+                 $user_id=$this -> session -> userdata('user_id');
+             $allEnrollments = $this -> course_enrollment -> getWithCondition(array('user_id' => $user_id));
+             return count($allEnrollments);
+        }
+
     }
 
 ?>

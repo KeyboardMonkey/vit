@@ -17,7 +17,7 @@
 				<img src="<?=base_url();?>assets/graphics/profile-pic.jpg" width="120px" height="120px" />
 			</section>
 			<section class="user-info">
-				<h1><?=$user -> username;?></h1>
+				<h1><?=$user -> first_name . " " . $user->last_name;?></h1>
 				<h5>Rawalpindi, Pakistan</h5> <br />
 				<p>I am a Software Engineering graduate student with love for Web Development. I love to play cricket and I am a fitness freak.</p>
 			</section>
@@ -73,7 +73,7 @@
 		
 		<section class="content-md">
 			<section class="title">
-				<h3>Skills & Experience</h3>
+				<h3>Skills &amp; Experience</h3>
 			</section>
 			<section class="line-border"></section>
 			<section class="cols-categories">

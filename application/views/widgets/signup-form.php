@@ -13,7 +13,7 @@
 					<input type="password" name="password" placeholder="Password" value="<?=set_value('password');?>" />
 				</p>
 				<p>
-					<input type="text" name="password_conf" placeholder="Re-enter Password" "<?=set_value('password_conf');?>"/>
+					<input type="password" name="password_conf" placeholder="Re-enter Password" "<?=set_value('password_conf');?>"/>
 				</p>
 				<p>
 					<input type="submit" name="submit" value="Sign Up" />

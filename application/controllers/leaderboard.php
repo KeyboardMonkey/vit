@@ -2,35 +2,6 @@
 
 class Leaderboard extends MY_Controller 
 {
-	
-		public function view()
-	{
-
-		$this->load->view('templates/header');
-		$this->load->view('templates/breadcrumbs');
-	 	$this->load->view('templates/side-navs');
-		$this->load->view('pages/leaderboard');
-		$this->load->view('templates/footer');
-		
-		
-
-	}
-
-
-
-		public function edit()
-	{
-
-	
-
-	}
-
-		public function delete()
-	{
-
-	
-
-	}
 
 
 

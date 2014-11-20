@@ -1,4 +1,6 @@
 <?php
+
+		$myCourse = new course();
         $cats = $this -> course_cat -> get();
         $total = 0;
          foreach($cats as $cat)
@@ -60,12 +62,27 @@
 	</section>
 	
 	<section class="content-md">
+	<?php
+	$myTracks = new tracks_enrollment();
+	$myTracks = $myTracks -> getMyEnrolledTracks($this -> session -> userdata('user_id'));
+	//print_r($myTracks);
+	//die();
+	foreach ($myTracks as $myTrack) {
+		//print_r($myTrack);
+	?>
 		<section class="track-progress">
-			<h2>WordPress Development</h2>
+			<h2><?=$myTrack->track_title;?></h2>
 			<section class="progress-bar">
+			<?=$progress = number_format($myTrack->getProgress());?>%
 			</section>
-			<a class="resume-track" href="<?=base_url();?>index.php/courses/course_playback">Resume Track</a>
+			<a class="resume-track" href="<?=base_url();?>index.php/tracks/resume/<?=$myTrack->track_id;?>">Resume Track</a>
 		</section>
+	<?php
+	}
+	?>
+
+		
+
 	</section>
 
 	<?php 
@@ -74,30 +91,26 @@
 	<section class="content-md">
 
 	
+<?php
+  if($this->course_enrollment -> getMyEnrolledCourses ($this -> session -> userdata('user_id'))>0)
+	{	
 
-
-		<section class="not-registered">
-			<h3>You haven't registered any course yet.<br /><small>If you want to registered any of our courses then visit our <a href="#">Course Library</a></h3></small></h3>
-		</section>
-
-
-		<section class="registered">
-		<?php 
-			$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
-			foreach($myEnrolements as $myEnrolment)
-					{
-			    $myCourse = new course();
-			    $myCourse -> load($myEnrolment->course_id);
-			    $myCourseId = $myCourse -> course_id;
+		$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
+		foreach($myEnrolements as $myEnrolment)
+		{
+		    
+		    $myCourse -> load($myEnrolment->course_id);
+		    $myCourseId = $myCourse -> course_id;
 		?>
-
+           
+		<section class="registered">
 			<section class="my-courses">
 				<section class="color-tag">
 					<a href="<?=base_url();?>index.php/library/index/category/<?=$myCourse->getCategory()->id;?>" class="<?=$myCourse->getCategory()->color_tag;?>"><?=$myCourse->getCategoryTitle();?></a>
 				</section>
 				<h5 class="level"><?=$myCourse->difficulty_level;?></h5>
 				<section class="clear"></section>
-				<h4 class="course-name"><a href="<?=base_url();?>index.php/courses/course_playback/<?=$myCourseId;?>"><?=$myCourse->full_name;?></h4></a>
+				<a href="<?=base_url();?>index.php/courses/view/<?=$myCourseId;?>"><h4 class="course-name"><?=$myCourse->full_name;?></h4></a>
 				<section class="clear"></section>
 				<p class="points"><?=$myCourse->points;?> Points</p>
 				<h4 class="rating">Rating: <?=$myCourse->getOverAllRating();?> (<?=$myCourse->numberOfRatings();?>)</h4>
@@ -114,19 +127,24 @@
 		        	</div>
 		        </section>
 			<!-- 	<a href="<?=base_url();?>index.php/courses/view/<?=$myCourse->course_id;?>" class="learn-now">Resume</a> -->
-				<button id="btn_resume" class="default" type="button">Resume Course</button>
+				<button data-resume_id="<?=$myCourse -> course_id;?>" class="default btn_resume" type="button">Resume Course</button>
 
 
 
 			</section>
-
+		</section> 
 			<?php
 			}
+		}
+		else{
 			?>
+		<section class="not-registered">
+			<h3>You haven't registered any course yet.<br /><small>If you want to registered any of our courses then visit our <a href="<?=base_url();?>index.php/library">Course Library</a></h3></small></h3>
 		</section>
-
-		
-	</section>
+<?php
+}
+?>
+	</section> <!-- end of the first content-md -->
 	
 	<section class="content-md">
 		<section class="popular-courses">
@@ -156,8 +174,9 @@
 
                 <script>
                     $(document).ready(function(){
-                        $('#btn_resume').click(function(){
-                            window.location = '<?=base_url();?>index.php/courses/view/<?=$myCourse->course_id;?>';
+                        $('.btn_resume').click(function(){
+                        	var course_id = $(this).attr('data-resume_id');
+                            window.location = '<?=base_url();?>index.php/courses/course_playback/'+course_id;
                         });
                     });
                     </script>

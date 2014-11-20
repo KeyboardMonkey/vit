@@ -102,7 +102,7 @@ class course extends MY_Model{
     public function isUserEnrolled($user_id=NULL)
     {
         if($user_id==NULL)
-            $user_id=$this -> session -> userdata('user_id');
+          $user_id=$this -> session -> userdata('user_id');
         $enrollment = $this -> course_enrollment -> getWithCondition(array('user_id' => $user_id, 'course_id' => $this -> course_id));
         if(count($enrollment) > 0 ) return TRUE;
         else return FALSE;
