@@ -307,12 +307,12 @@ ul.notifications li.day { padding-bottom:15px; font-size:16px; font-weight:bold;
 .top-students h3 { margin:0 auto 10px; padding:10px 0; color:#FFFFFF; text-align:center; background:#2ABB9B; width:35%; display:block; }
 #trophies { margin-left:4%; }
 .top-students .first-trophy, .top-students .second-trophy, .top-students .third-trophy { padding:20px 0; float:left; width:32%; }
-.winner-info { margin:0 auto; padding:10px 0; width:85%; background:#2ABB9B; }
-.top-students .first-trophy .content a, .top-students .second-trophy .content a, .top-students .third-trophy .content a
-    { padding-bottom:0; text-align:center; display:block; text-decoration:none; color:#58585a; font-size:18px; transition:all 0.5s ease-out; }
-    .top-students .content a:hover { color:#FFFFFF; }
 .top-students .content img { margin:0 auto; width:100%; }
+.winner-info { margin:0 auto; padding:10px 0; width:85%; background:#2ABB9B; }
 .top-students .content p { margin-top:5px; color:#FFFFFF; text-align:center; font-size:14px; font-style:italic; }
+.winner-info a, .winner-info a, .winner-info a
+    { padding-bottom:0; text-align:center; display:block; text-decoration:none; color:#58585A; font-size:18px; transition:all 0.5s ease-out; }
+    .winner-info a:hover { color:#FFFFFF; }
 
 .my-courses h3, .popular-courses h3, .new-courses h3 { padding:20px 0 0 20px; color:#2ABB9B; }
 
@@ -369,14 +369,7 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 .color-tag a.business,
 .color-tag a.design,
 .color-tag a.other
-{ 
-    text-align:center; 
-    display:inline-block; 
-    width:80px; 
-    padding:3px 15px; 
-    font-size:12px; 
-    color:#ffffff; 
-}
+{ padding:3px 15px; text-align:center; display:block; width:80px; font-size:12px; color:#ffffff; }
 
 .color-tag a.html{ background:#19B5FE; }
 .color-tag a.css { background:#FCDC05; } 
@@ -394,19 +387,19 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 .color-tag a.other { background:#915E25; }
 
 
-/*------------Upcoming Projects------------*/
+/*------------Upcoming Courses------------*/
 #roadmap { margin:20px 2.5%; }
 #roadmap h2 { padding-bottom:10px; }
-#roadmap p { padding:10px 0; line-height:1.5; text-align:justify; }
+#roadmap p { padding:10px 0; line-height:1.5; font-size:13px; }
 .upcoming-courses { margin:20px 2.5%; border:1px solid #2ABB9B; border-top:5px solid #2ABB9B; }
 .upcoming-courses h5 { padding:20px 20px 0; opacity:0.7; }
 .upcoming-courses h3 { padding:5px 20px 0; }
 .upcoming-courses .color-tag { margin:-22px 0; float:right; }
 .upcoming-courses p.developed-by { padding:5px 20px 10px; line-height:1.5; }
-.upcoming-courses p { padding:10px 20px; line-height:1.5; text-align:justify; }
+.upcoming-courses p { padding:10px 20px; line-height:1.5; font-size:13px; }
 .upcoming-courses button { margin:10px 20px 20px; }
 .upcoming-courses h4 { margin:10px 20px 20px; color:#2ABB9B; }
-/*------------End Upcoming Projects------------*/
+/*------------End Upcoming Courses------------*/
 
 
 /*-----------------------------------------------------------End Library-----------------------------------------------------------*/
@@ -420,11 +413,11 @@ ul.suggest-me-track { margin:20px auto 0; padding:0; width:18%; }
 #tracks .half-one { margin:20px 0 0 1.5%; padding:20px 0; width:47.5%; float:left; border:1px solid #2ABB9B; border-top:5px solid #2ABB9B; }
 #tracks .half-two { margin:20px 1.5% 0 0; padding:20px 0; width:47.5%; float:right; border:1px solid #2ABB9B; border-top:5px solid #2ABB9B; }
 #tracks .course-info { margin:0; }
-#tracks .course-info h5 { margin:0; padding:0; }
-#tracks .course-info p.points { margin:15px 20px; float:right; background:#ECF0F1; }
+#tracks .course-info h5 { margin:0; padding:0; padding:10px 20px; }
+#tracks .course-info p.points { margin:-30px 20px; float:right; background:#ECF0F1; }
 #tracks .course-info h2.course-name { padding:0 20px 0; color:#2ABB9B; }
-#tracks .course-info h5 { padding:10px 20px; }
-#tracks .course-info p.desc { padding:10px 20px; height:65px; line-height:1.5; overflow:hidden; }
+#tracks .course-info h5.tiny-intro { padding:10px 20px; opacity:1; }
+#tracks .course-info p.desc { padding:10px 20px; height:65px; line-height:1.5; overflow:hidden; font-size:13px; }
 #tracks .buttons { margin:10px 20px; float:right; }
 
 #course-progress-left { margin:20px; float:left; }
