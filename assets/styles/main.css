@@ -305,14 +305,19 @@ ul.notifications li.day { padding-bottom:15px; font-size:16px; font-weight:bold;
 /*-----------------------------------------------------------Leaderboard-----------------------------------------------------------*/
 .top-students { margin:20px 2%; padding:0; border:1px solid #2ABB9B; border-top:5px solid #2ABB9B; width:96%; float:left; }
 .top-students h3 { margin:0 auto 10px; padding:10px 0; color:#FFFFFF; text-align:center; background:#2ABB9B; width:35%; display:block; }
-#trophies { margin-left:4%; }
+#trophies { margin-left:4%; padding:30px 0; }
 .top-students .first-trophy, .top-students .second-trophy, .top-students .third-trophy { padding:20px 0; float:left; width:32%; }
+.top-students .first-trophy { margin-top:-26px; }
+.top-students .third-trophy { margin-top:26px; }
 .top-students .content img { margin:0 auto; width:100%; }
-.winner-info { margin:0 auto; padding:10px 0; width:85%; background:#2ABB9B; }
-.top-students .content p { margin-top:5px; color:#FFFFFF; text-align:center; font-size:14px; font-style:italic; }
-.winner-info a, .winner-info a, .winner-info a
-    { padding-bottom:0; text-align:center; display:block; text-decoration:none; color:#58585A; font-size:18px; transition:all 0.5s ease-out; }
-    .winner-info a:hover { color:#FFFFFF; }
+.content #block-a { margin:1px auto; width:25%; height:25px; background:#2ABB9B; }
+.content #block-b { margin:1px auto; width:45%; height:25px; background:#2ABB9B; }
+.content #block-c { margin:1px auto; width:65%; height:25px; background:#2ABB9B; }
+    .content #block-c p { padding-top:7px; color:#FFFFFF; text-align:center; font-size:12px; }
+.content #block-d { margin:1px auto; width:85%; height:25px; background:#2ABB9B; }
+    .content #block-d a { padding-top:3px; text-align:center; display:block; text-decoration:none; font-weight:bold; color:#58585A; font-size:16px; transition:all 0.5s ease-out; }
+        .content #block-d a:hover { color:#FFFFFF; }
+.top-students .content p { padding:5px 0; color:#FFFFFF; text-align:center; font-size:14px; }
 
 .my-courses h3, .popular-courses h3, .new-courses h3 { padding:20px 0 0 20px; color:#2ABB9B; }
 
