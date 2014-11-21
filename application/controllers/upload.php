@@ -8,6 +8,7 @@ class upload extends MY_Controller{
     {
         $status = "";
         $msg = "";
+        $path = "";
         $file_element_name = 'videofile';
         if($course_id == NULL)
         {
@@ -24,7 +25,7 @@ class upload extends MY_Controller{
         {
             $config['upload_path'] = './upload/';
             $config['allowed_types'] = 'mp4|3gp|flv';
-            $config['max_size'] = 1024 * 8;
+            $config['max_size'] = 1024 * 800;
             $config['encrypt_name'] = TRUE;
 
             $this->load->library('upload', $config);
@@ -39,14 +40,15 @@ class upload extends MY_Controller{
                 $data = $this->upload->data();
                 $lecture = new lecture();
                 $lecture -> course_id = $course_id;
-                $lecture -> vid_path = 'files/' .  $data['file_name'];
+                $lecture -> vid_path = 'upload/' .  $data['file_name'];
                 $lecture -> vid_title = $this -> input -> post('title');
                 $lecture -> save();
                 //$file_id = $this->files_model->insert_file($data['file_name'], $_POST['title']);
-                if($lecture -> $lect_id)
+                if($lecture -> lect_id)
                 {
                     $status = "success";
                     $msg = "File successfully uploaded";
+                    $path = $lecture -> vid_path;
                 }
                 else
                 {
@@ -57,7 +59,7 @@ class upload extends MY_Controller{
             }
             @unlink($_FILES[$file_element_name]);
         }
-        echo json_encode(array('status' => $status, 'msg' => $msg));
+        echo json_encode(array('status' => $status, 'msg' => $msg, 'path' => $path));
     }
 }
 

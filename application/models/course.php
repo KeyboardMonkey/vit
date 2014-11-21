@@ -293,9 +293,12 @@ class course extends MY_Model{
             $i = 0;
             foreach ($allLectures as $key => $lecture) {
                 
-                $lecture_progress = $this -> user_lecture_progress -> getWithConditionLimit1(array('lecture_id' => $lecture -> lect_id));
+                $lecture_progress = $this -> user_lecture_progress -> getWithConditionLimit1(array('lecture_id' => $lecture -> lect_id, 'user_id' => $this -> session ->userdata('user_id')));
+               // print_r($lecture_progress);
+                //echo "<br />";
                 if($lecture_progress -> progress < 100)
                 {
+                  //echo "RETURNING {$i}";
                   return $i;
                 }
                 $i++;

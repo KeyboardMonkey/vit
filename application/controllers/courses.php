@@ -180,7 +180,8 @@ class Courses extends MY_Controller
         {
           $start_lecture = $course -> getNextLecture();
           $rUrl = 'courses/course_playback/'.$course_id.'/'.$start_lecture;
-         
+       //  echo $rUrl;
+     //    die();
           redirect($rUrl);
         }
 

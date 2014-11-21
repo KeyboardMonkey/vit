@@ -15,10 +15,10 @@
 			<section class="half-one">
 				<section class="course-info">
 					<h5>Intermediate</h5>
-					<p class="points">Points: <?=$track->track_points;?></p>
+					<p class="points">Points: <?=$track -> track_points;?></p>
 					<h2 class="course-name"><?=$track -> track_title;?></h2>
-					<h5><?=$track->tiny_intro;?></h5>
-					<p class="desc"><?=$track->track_description;?></p>
+					<h5><?=$track -> tiny_intro;?></h5>
+					<p class="desc"><?=$track -> track_description;?></p>
 	<!-- 				<section class="rating"><p>Rating: <?=$track->getOverAllRating();?> (<?=$track->numberOfRatings();?>)</p></section> -->
 				</section>
 				<section class="buttons">
@@ -35,11 +35,11 @@
 
                 ?>
 
-					<button type="button" data-resume_id="<?=$track->track_id;?>" class="default resume-track">Start Track</button>
+					<!-- <button type="button" data-resume_id="<?=$track->track_id;?>" class="default resume-track">Start Track</button> -->
                 <?php
                     }
                 ?>
-					<button data-explore_id="<?=$track->track_id;?>" type="button" class="default explore-track">Explore</button>
+					<button data-explore_id="<?=$track->track_id;?>" type="button" class="default explore-track">Explore Track</button>
 				</section>
 			</section>
 		</section>
