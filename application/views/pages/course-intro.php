@@ -15,41 +15,41 @@
 <section class="container">
 
 	<section class="content-lg">
-		<h2 class="course-heading"><?=$course->full_name;?></h2>
-		<ul class="course-desc">
-
-			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Category: <?=$course->getCategoryTitle();?></li>
-			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Level: <?=$course->difficulty_level;?></li>
-			<li>
-                            <span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" />
-                            </span>
-                            Points: <?=$course->points;?>
-                        <?php 
-                            if($course->isUserEnrolled())
-                            {
-                                echo "(Earned: " . $course -> getEarnedPoints() . ")";
-                            }
-                        ?>
-                        
-                        
-                        </li>
-			<li><span><img src="<?=base_url();?>assets/graphics/tech-feeds.svg" width="15px" height="15px" /></span>Times Enrolled: <?=$course->enrollmentCount();?></li>
-		<?php
+		<section id="goto-course">
+			<?php
 			if($course -> isUserEnrolled($this -> session -> userdata('user_id')))
 			{
-				echo "<li><span><img src=\"".base_url()."assets/graphics/tech-feeds.svg\" width=\"15px\" height=\"15px\" /></span>Enrolled on: ".$enrol_date_formatted."</li>";
-                                echo "<li><a href=\"" . base_url('index.php/courses/course_playback/' . $course -> course_id) . "\"> <span><img src=\"".base_url()."assets/graphics/tech-feeds.svg\" width=\"15px\" height=\"15px\" /></span>Goto Course</a></li>";
-                                
+				echo "<a href=\"" . base_url('index.php/courses/course_playback/' . $course -> course_id) . "\">Goto Course</a>";
 			}
-		?>
-		</ul>
+			?>
+		</section>
+		<h2 class="course-heading"><?=$course->full_name;?></h2>
+		<p class="developed-by"><span id="developed-by"><img src="<?=base_url();?>assets/graphics/developed-by.png" width="25px" height="21px" /></span>Developed By: <?=$course->developed_by;?></p>
+		<section class="clear"></section>
 
+		<ul class="course-desc">
+			<li><span id="category"><img src="<?=base_url();?>assets/graphics/category.png" width="20px" height="20px" /></span>Category: <?=$course->getCategoryTitle();?></li>
+			<li><span id="level"><img src="<?=base_url();?>assets/graphics/level.png" width="30px" height="30px" /></span>Level: <?=$course->difficulty_level;?></li>
+			<li>
+                <span id="points"><img src="<?=base_url();?>assets/graphics/points.png" width="17px" height="25px" />
+                </span>
+                Points: <?=$course->points;?>
+            	<?php 
+                if($course->isUserEnrolled())
+                {
+                    echo "(Earned: " . $course -> getEarnedPoints() . ")";
+                }
+            	?>
+            </li>
+			<li><span id="enrolled-students"><img src="<?=base_url();?>assets/graphics/enrolled-students.png" width="25px" height="18px" /></span>Times Enrolled: <?=$course->enrollmentCount();?></li>
+			<?php
+			echo "<li><span id=\"enrolled-on\"><img src=\"".base_url()."assets/graphics/enrolled-on.png\" width=\"30px\" height=\"30px\" /></span>Enrolled on: ".$enrol_date_formatted."</li>";
+			?>
+		</ul>
+		<section class="clear"></section>
 		<?php
 		if($course -> isUserEnrolled($this -> session -> userdata('user_id')))
 		{
-	
-
-
 			if($course -> isRatedByUser())
 			{
 				echo '<div class="ratingButton">';
@@ -69,11 +69,7 @@
 			echo "<input type=\"submit\" name=\"submit\" value=\"Enroll Me!\" /></form>";
 		}
 		?>
-
-
-		<section class="clear"></section>
 		<p class="course-desc"><?=$course->tiny_intro;?></p>
-		<p class="developed-by">Developed By: <?=$course->developed_by;?></p>
 		<section class="clear"></section>
 	</section>
 
@@ -190,39 +186,52 @@
                                         
 <?php
     $topStudents = $course -> getTopStudents();
-           // print_r($topStudents);
-            if(count($topStudents)>0)
-            {
+    // print_r($topStudents);
+    if(count($topStudents)>0)
+    {
 ?>
-          <section class="top-students">
-			<h3>Top  Students In This Course</h3>
+<section class="content-lg">
+	<section class="top-students">
+		<h3>Top  Students In This Course</h3>
+		<section id="trophies">
+			
 			<section class="first-trophy">
 				<section class="content">
 					<img src="http://localhost/vit/assets/graphics/trophy1.svg" width="100px" height="111px">
-					<a href=""><?=$topStudents[0][0]->username;?></a>
-					<p><?=$course -> getEarnedPoints($topStudents[0][0]->user_id);?> Points</p>
+					<section id="block-a"></section>
+					<section id="block-b"></section>
+					<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[0][0]->user_id);?> Points</p></section>
+					<section id="block-d"><a href=""><?=$topStudents[0][0]->username;?></a></section>
 				</section>
 			</section>
-<?php if(count($topStudents) > 1)
-{ ?>
+
+			<?php if(count($topStudents) > 1)
+			{
+			?>
 			<section class="second-trophy">
 				<section class="content">
 					<img src="http://localhost/vit/assets/graphics/trophy2.svg" width="100px" height="111px">
-					<a href="">Qamar Abbasi</a>
-					<p>2905 Points</p>
+					<section id="block-b"></section>
+					<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[1][1]->user_id);?> Points</p></section>
+					<section id="block-d"><a href=""><?=$topStudents[1][1]->username;?></a></section>
 				</section>
 			</section>
-<?php
-} if(count($topStudents) > 2)
-{ ?>
+
+			<?php
+			}
+			if(count($topStudents) > 2)
+			{
+			?>
+			
 			<section class="third-trophy">
 				<section class="content">
 					<img src="http://localhost/vit/assets/graphics/trophy3.svg" width="100px" height="111px">
-					<a href="">Shehroz Malik</a>
-					<p>2900 Points</p>
+					<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[2][2]->user_id);?> Points</p></section>
+					<section id="block-d"><a href=""><?=$topStudents[2][2]->username;?></a></section>
 				</section>
 			</section>
+
 		</section>
-                                        
+	</section>
+</section>
 <?php }} ?>
-                                        

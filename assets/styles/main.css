@@ -463,13 +463,23 @@ ul.suggest-me-track { margin:20px auto 0; padding:0; width:18%; }
     .progress-bar-mini { /*margin:30px auto 10px; width:80%; border:10px solid #58585a;*/ }
 /*-----------------------------------------------------------End Learning Paths-----------------------------------------------------------*/
 /*-----------------------------------------------------------Course Introduction-----------------------------------------------------------*/
-.content-lg h2.course-heading { padding:10px 20px;}
-.content-lg ul.course-desc { float:left;padding:5px 20px; list-style:none; }
-    .content-lg ul.course-desc li { padding-right:15px; display:inline; }
-    .content-lg ul.course-desc li span { vertical-align:middle; padding:0 5px; }
-.content-lg p.developed-by { padding:0 20px; float:right; padding:14px; }
-.content-lg p.course-desc { float:left; padding:5px 20px; width:70%; }
-form.enroll-me { padding:0 20px 10px; float:right; position:relative; text-align:center; }
+#goto-course { margin:25px 20px; float:right; }
+#goto-course a { padding:6px 20px; color:#FFFFFF; background:#2ABB9B; font-size:14px; border:1px solid #2ABB9B; }
+#goto-course a:hover { color:#2ABB9B; background:#ECF0F1; border:1px solid #2ABB9B; }
+.content-lg h2.course-heading { margin:20px 20px 0; float:left; }
+.content-lg p.developed-by { margin:28px 40px 0; float:left; font-size:14px; }
+.content-lg p.developed-by span#developed-by { margin-top:-5px; margin-left:-30px; position:absolute; }
+.content-lg ul.course-desc { padding:0 20px 10px; float:left; list-style:none; }
+    .content-lg ul.course-desc li { padding:0 25px; display:inline; font-size:14px; }
+    .content-lg ul.course-desc li span { margin-left:-30px; }
+    .content-lg ul.course-desc li span#category { margin-top:0; margin-left:-25px; position:absolute; opacity:0.7; }
+    .content-lg ul.course-desc li span#level { margin-top:-8px; position:absolute; opacity:0.7; }
+    .content-lg ul.course-desc li span#points { margin-top:-5px; margin-left:-25px; position:absolute; opacity:0.7; }
+    .content-lg ul.course-desc li span#enrolled-students { margin-top:-2px; position:absolute; opacity:0.7; }
+    .content-lg ul.course-desc li span#enrolled-on { margin-top:-8px; position:absolute; opacity:0.7; }
+.content-lg p.course-desc { margin:20px; float:left; }
+.ratingButton { margin-top:25px; float:right; }
+form.enroll-me { margin:20px 20px 10px; float:right; position:relative; text-align:center; }
 form.enroll-me input[type=submit] { padding:5px 50px; font-size:16px; background:#2ABB9B; border:1px solid #2ABB9B; color:#FFFFFF; transition:all 0.5s ease-out; position:relative; cursor:pointer; }
 form.enroll-me input[type=submit]:hover { background:#ECF0F1; border:1px solid #2ABB9B; color:#2ABB9B; }
 
@@ -519,8 +529,12 @@ h3.widget-similar-courses { margin:20px 0; padding:0 0 10px 60px; width:100%; bo
 .widgets { float:right; margin-right:5%; }
 .widgets .widget-video-transition { margin-top:18px; padding:10px 0; width:240px; background:#ffffff; }
 .widgets .widget-video-transition h6 { padding:10px 10px 0; }
-.widgets .widget-video-transition h4 { padding:5px 10px 0; }
+.widgets .widget-video-transition h4 { padding:5px 10px 0; overflow:hidden; }
 .widgets .widget-video-transition p { padding:5px 10px 0; font-size:14px; }
+
+.widgets .widget-video-transition p.buttons { text-align:center; }
+.widgets .widget-video-transition p button { margin:20px 0; padding:5px 0; width:45%; font-size:16px; background:#2ABB9B; color:#FFFFFF; border:1px solid #2ABB9B; cursor:pointer; transition:all 0.5s ease-out; }
+    .widgets .widget-video-transition p button:hover { background:#ECF0F1; color:#2ABB9B; }
 /*------ TO BE REMOVED -----*/
 /*---*/.widgets .widget-video-transition ul { margin:0 auto; padding:10px 0 40px 0; list-style:none; }
 /*---*/.widgets .widget-video-transition ul li { padding:5px 0; display:inline-block; border-bottom:1px solid #ECF0F1; text-align:center; cursor:pointer; font-size:14px; background:#2ABB9B; transition:all 0.2s ease-out; opacity:0.8; }
@@ -529,9 +543,6 @@ h3.widget-similar-courses { margin:20px 0; padding:0 0 10px 60px; width:100%; bo
 /*---*/.widgets .widget-video-transition ul li.previous { width:35%; float:left; margin-left:14%; }
 /*---*/.widgets .widget-video-transition ul li.next { width:35%; float:right; margin-right:14%; }
 /*------ TO BE REMOVED -----*/
-.widgets .widget-video-transition p.buttons { text-align:center; }
-.widgets .widget-video-transition p button { margin:20px 0; padding:5px 0; width:45%; font-size:16px; background:#2ABB9B; color:#FFFFFF; border:1px solid #2ABB9B; cursor:pointer; transition:all 0.5s ease-out; }
-    .widgets .widget-video-transition p button:hover { background:#ECF0F1; color:#2ABB9B; }
 
 .widgets .widget-course-progress { margin-top:18px; padding:10px 0 20px; width:240px; background:#ffffff; }
 .widgets .widget-course-progress h4 { margin:1px 8px 11px;}
@@ -544,11 +555,11 @@ h3.widget-similar-courses { margin:20px 0; padding:0 0 10px 60px; width:100%; bo
     .widgets .widget-take-quiz ul li { margin:2px 0; padding:10px 0; list-style:none; background:#2ABB9B; opacity:0.8; }
          .widgets .widget-take-quiz ul li:hover { opacity:1; }
         .widgets .widget-take-quiz ul li a { padding-left:90px; color:#FFFFFF;  display:block; transition:all 0.5s ease-out; }
-        span.take-quiz { margin:-7px 55px; position:absolute; }
+        span.take-quiz { margin:-10px 55px; position:absolute; }
     .widgets .widget-course-summary ul li { margin:2px 0; padding:10px 0; list-style:none; background:#2ABB9B; opacity:0.8; }
         .widgets .widget-course-summary ul li:hover { opacity:1; }
         .widgets .widget-course-summary ul li a { padding-left:55px; color:#FFFFFF;  display:block; transition:all 0.5s ease-out; }
-        span.summary { margin:-1px 25px; position:absolute; }
+        span.summary { margin:-4px 25px; margin-left:-30px; position:absolute; }
     .widgets .widget-project-files ul li { margin:2px 0; padding:10px 0; list-style:none; background:#2ABB9B; opacity:0.8; }
         .widgets .widget-project-files ul li:hover { opacity:1; }
         .widgets .widget-project-files ul li a { padding-left:55px; color:#FFFFFF;  display:block; transition:all 0.5s ease-out; }
