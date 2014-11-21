@@ -1,11 +1,9 @@
 <?php 
-			$enrollement = new course_enrollment();
-			$enrollement = $this -> course_enrollment -> getWithConditionLimit1(array('user_id' => $this -> session -> userdata('user_id'), 'course_id' => $course -> course_id));
-                        $enrol_date = $enrollement -> enrol_time;
-			$enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
-		
-
-			//print_r($enrollement);
+	$enrollement = new course_enrollment();
+	$enrollement = $this -> course_enrollment -> getWithConditionLimit1(array('user_id' => $this -> session -> userdata('user_id'), 'course_id' => $course -> course_id));
+	            $enrol_date = $enrollement -> enrol_time;
+	$enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
+	//print_r($enrollement);
 ?>
 
 <style type="text/css">
@@ -197,7 +195,7 @@
             {
 ?>
           <section class="top-students">
-			<h3>Top  Students</h3>
+			<h3>Top  Students In This Course</h3>
 			<section class="first-trophy">
 				<section class="content">
 					<img src="http://localhost/vit/assets/graphics/trophy1.svg" width="100px" height="111px">

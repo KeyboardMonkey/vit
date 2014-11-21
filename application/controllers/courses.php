@@ -29,7 +29,7 @@ class Courses extends MY_Controller
         $this -> load -> view('templates/header');
         $this -> load -> view('templates/breadcrumbs'); 
         $this -> load -> view('pages/course-intro', array('course' => $course));
-        $this -> load -> view('widgets/similar-courses-widget');
+    //    $this -> load -> view('widgets/similar-courses-widget');
         $this -> load -> view('templates/footer');
     }  
 
