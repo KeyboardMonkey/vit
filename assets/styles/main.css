@@ -228,7 +228,7 @@ nav.side-navs ul li a.active-notifications, aside nav ul li a.active-notificatio
 /*-----------------------------------------------------------End Side Navigations-----------------------------------------------------------*/
 /*-----------------------------------------------------------Home-----------------------------------------------------------*/
 .track-progress{ padding:20px; }
-.track-progress .progress-bar { margin:20px 0; width:80%; border:10px solid #58585a; }
+.track-progress .progress-bar { margin:20px 0; width:80%; }
 a.resume-track { padding:10px; display:inline-block; text-decoration:none; font-size:14px; background:#2ABB9B; color:#ffffff; transition:all 0.5s ease-out; }
 .not-registered { margin:20px 0; text-align:center; }
 .not-registered h3 { line-height:1.5; }
@@ -428,7 +428,7 @@ ul.suggest-me-track { margin:20px auto 0; padding:0; width:18%; }
 #course-progress-left { margin:20px; float:left; }
 #course-progress-right { margin:20px; float:right; }
 #track-description { margin:20px; }
-.progress-bar { margin:0 auto; padding:5px 15px; width:80%; border-bottom:10px solid #58585a; }
+.progress-bar { margin:0; padding:5px 5px; width:80%; }
 .course-progress { margin:30px 20px 0; float:right; }
 .course-progress button { padding:3px 20px; font-size:14px; background:#2ABB9B; color:#FFFFFF; border:1px solid #2ABB9B; transition:all 0.2s ease-out; opacity:0.8; }
     .course-progress button:hover { opacity:1; }

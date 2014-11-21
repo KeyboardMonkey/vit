@@ -15,7 +15,7 @@ class course_review extends MY_Model{
     public function reviewSubmittedByUser( $_course_id = NULL,$_user_id = NULL)
     {
         if($_user_id == NULL) $_user_id = $this -> session -> userdata('user_id');
-        if($_course_id == NULL) $_course_id = $this -> $course_id;
+        if($_course_id == NULL) $_course_id = $this -> course_id;
         $reviews = $this-> course_review -> getWithCondition(array('user_id' => $_user_id, 'course_id' => $_course_id));
       //  print_r($reviews);
        // echo ">" . count($reviews);

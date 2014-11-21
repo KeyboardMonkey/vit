@@ -175,7 +175,7 @@ class Courses extends MY_Controller
 	{
             redirect('courses/view/' . $course_id);
         }
-        echo "START:" . $start_lecture;
+     //   echo "START:" . $start_lecture;
         if($start_lecture==-1)
         {
           $start_lecture = $course -> getNextLecture();
@@ -187,10 +187,6 @@ class Courses extends MY_Controller
 
         $lect_files = $this -> file_model -> getWithCondition(array('course_id' => $course_id));
         $lectures = $this -> lecture -> getWithCondition(array('course_id' => $course_id));
-   
-
-        
-
 
         $this->load->view('templates/header');
         $this->load->view('templates/breadcrumbs');

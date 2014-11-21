@@ -69,9 +69,10 @@
 				<h4><?=$lecture->vid_title;?></h4>
 				<p> 
 				<?php
-						if( $course -> getCourseProgressPercent() == 100)
+						if( $course -> getCourseProgressPercent() == 60)
 						{
-							echo "You've Finished all lectures. Feel Free to watch again.";
+							echo '<h6>You\'ve Finished all lectures. Write Summary and Quiz to finish this course.</h6>';
+							//echo 'You\'ve Finished all lectures. Feel free to watch lectures again.';
 						}// else echo $course -> getCourseProgressPercent();
 				?>
 				</p>
@@ -126,8 +127,6 @@
 		        jQuery('#large_pro_bar_percent').html(track_progress.toFixed(2) + '%');
 
 				});
-				
-
 			</script>
 
 			<section class="widget-course-progress">
@@ -290,7 +289,6 @@
 
 <script>
     jQuery(function() {
-//        alert('Validations ni hein so valid input(numeric/float) dena for calculation.');
 
         jQuery('.pro-bar').hover(function() {
             jQuery(this).find('.pro-bar-percentage').toggleClass('visible');
