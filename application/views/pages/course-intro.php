@@ -19,7 +19,7 @@
 			<?php
 			if($course -> isUserEnrolled($this -> session -> userdata('user_id')))
 			{
-				echo "<a href=\"" . base_url('index.php/courses/course_playback/' . $course -> course_id) . "\">Goto Course</a>";
+				echo "<a class=\"default\" href=\"" . base_url('index.php/courses/course_playback/' . $course -> course_id) . "\">Play Course</a>";
 			}
 			?>
 		</section>

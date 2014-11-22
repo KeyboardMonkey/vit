@@ -62,7 +62,7 @@
 			</section>
 			<section class="rating">
 					<p>Rating: <?=$course->getOverAllRating();?> (<?=$course->numberOfRatings();?>)</p>
-				</section>
+			</section>
 			<section class="learn-now">
 				<a href="<?=base_url();?>index.php/courses/view/<?=$course->course_id;?>" class="learn-now">Learn Now</a>
 			</section>

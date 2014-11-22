@@ -9,8 +9,8 @@
         $number ++;
     }
 ?>
-	
 <section class="container">
+
 	<section class="content-md">
 		<table class="leaderboard">
 			<thead>
@@ -27,7 +27,7 @@
 			</tfoot>
 	        
 	        <?php 
-	        $i = 0;
+	        $i = 1;
 	        foreach($leaders as $leader) {
 	        ?>
 			

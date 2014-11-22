@@ -15,55 +15,28 @@
     <link href="<?=base_url();?>assets/styles/pro-bars.min.css" rel="stylesheet" type="text/css" media="all"/>
 
     <style>
-        .main-content {
-            width: 65%;
-            margin-right: 3%;
-            float: left;
-        }
-
-        .progress-bar-control-form {
-            width: 100%;
-            float: left;
-        }
-
-        .progress-bar-control-form table {
-            width: 50%;
-            float: left;
-        }
-
-        .right-sidebar {
-            width: 30%;
-            float: left;
-        }
-
-        .pro-bar {
-            text-align: center;
-        }
-        .pro-bar-percentage {
-            color: #FFFFFF;
-            line-height: 15px;
-            display: none;
-            cursor: default;
-        }
-        .pro-bar-percentage.visible {
-            display: block;
-        }
-
+        .main-content { width: 65%; margin-right: 3%; float: left; }
+        .progress-bar-control-form { width: 100%; float: left; }
+        .progress-bar-control-form table { width: 50%; float: left; }
+        .right-sidebar { width: 30%; float: left; }
+        .pro-bar { text-align: center; }
+        .pro-bar-percentage { color: #FFFFFF; line-height: 15px; display: none; cursor: default; }
+        .pro-bar-percentage.visible { display: block; }
     </style>
 
-    		<script>
-			$(document).ready(function(){
-				// to get full course progress
-				// $myCourse -> getCourseProgressPercent()
+	<script>
+	$(document).ready(function(){
+		// to get full course progress
+		// $myCourse -> getCourseProgressPercent()
 
-				// to get videoplayback progress (100% means 60 progress points)
-				//var course_progress = <?=($myCourse -> getLectureProgress() * 60 / 100);?>;
-				var course_progress = <?=$myCourse -> getCourseProgressPercent();?>;
-		        jQuery('#large_pro_bar').animate({width: course_progress+ '%'});
-		        jQuery('#large_pro_bar_percent').html(course_progress.toFixed(2) + '%');
+		// to get videoplayback progress (100% means 60 progress points)
+		//var course_progress = <?=($myCourse -> getLectureProgress() * 60 / 100);?>;
+		var course_progress = <?=$myCourse -> getCourseProgressPercent();?>;
+        jQuery('#large_pro_bar').animate({width: course_progress+ '%'});
+        jQuery('#large_pro_bar_percent').html(course_progress.toFixed(2) + '%');
 
-				});
-			</script>
+		});
+	</script>
 
 <!-- ProBar stuff end -->
 
@@ -79,42 +52,32 @@
 		</section>
 		<section class="line-border"></section>
 		<section class="course-cols">
-                     <section class="col1">
+			<section class="col1">
 				<ul class="cols">
                     <?php 
                     $col = 1;
-                    
                     $i = 0;
-                            foreach($cats as $cat)
-                            {
-                                ?>
-                               
-                    <?php
-                                
-                                $courses = $cat -> getCourses();
-                               
+                    	foreach($cats as $cat) {
                     ?>
-			
-                                    
-					<li class="<?= $cat -> color_tag;?>"><strong><?=$cat->getPointsEarnedInCategory();?></strong><br/><?=$cat -> category ;?></li>
-					
-                              
                     <?php
-                            $i ++;
-                            if($i == 4)
-                            {
-                                $i = 0;
-                                $col ++;
-                                echo '</ul></section> <section class="col'.$col.'">
-				<ul class="cols">';
-                                
-                            }
-                            } 
-                     ?>
-                                          </ul>
+                    	$courses = $cat -> getCourses();
+                    ?>
+					<li class="<?= $cat -> color_tag;?>"><strong><?=$cat->getPointsEarnedInCategory();?></strong><br/><?=$cat -> category ;?></li>        
+                    <?php
+                    	$i ++;
+                    	if($i == 4) {
+	                        $i = 0;
+	                        $col ++;
+	                        echo '</ul></section> <section class="col'.$col.'">
+	                        <ul class="cols">';
+	                    }
+	                    }
+	                ?>
+	            </ul>
 			</section>
 			
 			<section class="clear"></section>
+
 		</section>
 		<section class="line-border"></section>
 		<section class="info">
@@ -137,44 +100,36 @@
 		<section class="track-progress">
 			<h2><?=$myTrack->track_title;?></h2>
 			<section class="progress-bar">
-<!-- 			<?=$progress = number_format($myTrack->getProgress());?>% -->
-<!-- Course Progress -->
+			<!--
+			<?=$progress = number_format($myTrack->getProgress());?>%
+			-->
+			<!-- Course Progress -->
 				<div class="pro-bar-container color-nephriti bm-remove" style="margin:0px !important;">
 		            <div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=$myTrack->getProgress();?>" data-pro-bar-delay="500">
 			            <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$myTrack->getProgress();?>%</span>
 			            <div class="pro-bar-candy candy-ltr"></div>
 			       	</div>
 	        	</div>
-
 			</section>
 			<a class="resume-track" href="<?=base_url();?>index.php/tracks/resume/<?=$myTrack->track_id;?>">Resume Track</a>
-	</section>
-
+		</section>
 	<?php
 	}
 	?>
-
-		
-
 	</section>
 
 	<?php 
-	$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
+		$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
 	?>
 	<section class="content-md">
-
-	
-<?php
-  if($this->course_enrollment -> getMyEnrolledCourses ($this -> session -> userdata('user_id'))>0)
-	{	
-
+	<?php
+		if($this->course_enrollment -> getMyEnrolledCourses ($this -> session -> userdata('user_id'))>0) {	
 		$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
 		foreach($myEnrolements as $myEnrolment)
 		{
-		    
 		    $myCourse -> load($myEnrolment->course_id);
 		    $myCourseId = $myCourse -> course_id;
-		?>
+	?>
            
 		<section class="registered">
 			<section class="my-courses">

@@ -1,11 +1,9 @@
 <?php 
-        $track = new track();
-        $track -> load($track_id);
-        $courses = $track ->getCourses();
-       // print_r($courses);
-        
+    $track = new track();
+    $track -> load($track_id);
+    $courses = $track ->getCourses();
+   // print_r($courses);        
 ?>
-
 <section class="container">
 	<section class="content-lg">
 		<section id="course-progress-left">
@@ -23,7 +21,9 @@
 			<section class="clear"></section>
 			<h4>Difficulty: <?=$track -> difficulty_level;?></h4>
 		</section>		
+		
 		<section class="clear"></section>
+
         <section class="progress-bar"><?=$track ->getProgress();?>  </section>
 		<section class="course-progress">
 

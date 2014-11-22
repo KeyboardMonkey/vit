@@ -32,6 +32,7 @@
     </nav>
     <section id="user-settings-list" style="display:none;">
         <ul>
+            <li><a href="<?php echo base_url();?>index.php/preference/set_preference">Preferences</a></li>
             <li><a href="<?php echo base_url();?>index.php/profile">Account Settings</a></li>
             <li><a href="<?php echo base_url();?>index.php/users/logout">Logout</a></li>
         </ul>

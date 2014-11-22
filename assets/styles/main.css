@@ -1,20 +1,19 @@
-/*  
-
+/*
 -> THEME COLORS
 Header      Neela wala      #00A8E7
 Buttons     Sabazzzz        #2ABB9B
 Background  Greyish         #ECF0F1
 
 -> COLOR TAGS
-html        blue:           #19B5FE
-php         lightblue:      #3A539B
+html        blue            #19B5FE
+php         lightblue       #3A539B
 asp         lightred        #C0392B 
 java        red             #F22613 
 android     green           #2ECC71 
-javascript  orange:         #DDA423 
+javascript  orange          #DDA423 
 jquery      pheekablue      #2AE7C3 
-css         voilet:         #FCDC05 
-cpp         darkgrey:       #67809F 
+css         voilet          #FCDC05 
+cpp         darkgrey        #67809F 
 wordpress   silver          #6C7A89 
 d-tools     green           #913D88  
 business    win8green       #34495e  
@@ -42,8 +41,24 @@ h1, h2, h3, h4, h5, h6, p { color:#58585a; }
 .notification-badge { display:block; position:absolute; margin:-40px 83px; padding:0 5px; font-size:12px; color:#00A8E7; background:#FFFFFF; }
 .inline-buttons { padding:20px; float:left; }
 .inline-buttons a { display:inline-block; padding:5px 10px; background:#2ABB9B; font-size:14px; color:#ffffff; }
+/*
 button.default { padding:5px 15px; font-size:14px; background:#2ABB9B; color:#FFFFFF; border:1px solid #2ABB9B; cursor:pointer; transition:all 0.5s ease-out; }
     button.default:hover { background:#ECF0F1; border:1px solid #2ABB9B; color:#2ABB9B; }
+*/
+button.default { padding:5px 20px; color:#FFFFFF; background:#2ABB9B; border:1 px solid #2ABB9B; transition:all 0.5s ease-out; cursor:pointer;
+    -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; }
+button.default:hover { border:1px solid #249f84; background:#249f84; }
+button.default:active { background:#249f84; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; -webkit-transform:translateY(5px); -moz-transform:translateY(5px); -ms-transform:translateY(5px); -o-transform:translateY(5px); transform:translateY(5px); }
+
+button { padding:5px 20px; color:#FFFFFF; background:#2ABB9B; border:1 px solid #2ABB9B; transition:all 0.5s ease-out; cursor:pointer;
+    -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; }
+button:hover { border:1px solid #249f84; background:#249f84; }
+button:active { background:#249f84; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; -webkit-transform:translateY(5px); -moz-transform:translateY(5px); -ms-transform:translateY(5px); -o-transform:translateY(5px); transform:translateY(5px); }
+
+a.default { margin:0 auto; padding:5px 0; width:150px; font-size:14px; text-align:center; display:inline-block; cursor:-pointer; color:#FFFFFF; background-color:#2ABB9B; border:none; transition:all 0.5s ease-out;
+    -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; }
+a.default:hover { background-color:#249f84; }
+a.default:active { background-color:#249f84; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; -webkit-transform:translateY(5px); -moz-transform:translateY(5px); -ms-transform:translateY(5px); -o-transform:translateY(5px); transform:translateY(5px); }
 
 .content-md {
     margin-top:18px;
@@ -66,7 +81,12 @@ button.default { padding:5px 15px; font-size:14px; background:#2ABB9B; color:#FF
 .content-pref-wizard { margin:20px auto; padding:10px 0 70px; width:960px; background:#ffffff; }
 .content-pref-wizard h2 { padding:20px; text-align:center; color:#2ABB9B; }
 .content-pref-wizard h2 small { font-size:12px; color:#58585a; }
-.content-pref-wizard .inline-buttons { padding-top:10px; padding-right:67px; }
+.content-pref-wizard .btn-pref-set { margin:20px 65px; }
+.btn-pref-set a, .btn-pref-set input[type=button] { margin:0 auto; padding:5px 0; width:150px; font-size:14px; text-align:center; display:inline-block; cursor:pointer; color:#FFFFFF; background-color:#2ABB9B; border:none; transition:all 0.5s ease-out;
+    -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; }
+.btn-pref-set a:hover, .btn-pref-set input[type=button]:hover { background-color:#249f84; }
+.btn-pref-set a:active, .btn-pref-set input[type=button]:active { background-color:#249f84; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; -webkit-transform:translateY(5px); -moz-transform:translateY(5px); -ms-transform:translateY(5px); -o-transform:translateY(5px); transform:translateY(5px); }
+
 form table.recommendations { margin:0 auto; padding:20px; border-spacing:0; width:90%; font-size:14px; }
 form table.recommendations td, table.recommendations th { padding:10px; padding-left:40px; color:#58585a; }
 form table.recommendations tbody tr:nth-child(even) { background:#ECF0F1; }
@@ -77,7 +97,13 @@ form table.recommendations tr td input { padding:2px 0; width:35px; font-size:16
 .recommended-courses .course { float:left; margin:20px 5px; padding:10px; width:150px; border:1px solid #ECF0F1; }
 .recommended-courses .course a { color:#2ABB9B; }
     .recommended-courses .course a:hover { text-decoration:underline; }
-.recommended-courses .course h6 { padding:10px 0; }
+.recommended-courses h3 { margin:5px 0; padding:5px 10px; color:#FFFFFF; background:#2ABB9B; }
+.recommended-courses .course { margin:20px 8.5px 20px 8.5px; width:29%; float:left; border:1px solid #2ABB9B; height:120px; border-top:5px solid #2ABB9B; }
+.recommended-courses .course a { padding:10px 5px 0; color:#2ABB9B; font-size:17px; font-weight:bold; }
+.recommended-courses .course h6 { padding:5px; }
+.recommended-courses .course p.points { margin:50px 5px 0; padding:2px 10px; font-size:14px; float:left; background:#ECF0F1; border-radius:15px; display:inline-block; }
+.recommended-courses .course .rating { margin:50px 5px 0; float:right; }
+
 /*-----------------------------------------------------------End Pref-Wizard-----------------------------------------------------------*/
 /*-----------------------------------------------------------Header-----------------------------------------------------------*/
 header {
@@ -229,7 +255,10 @@ nav.side-navs ul li a.active-notifications, aside nav ul li a.active-notificatio
 /*-----------------------------------------------------------Home-----------------------------------------------------------*/
 .track-progress{ padding:20px; }
 .track-progress .progress-bar { margin:20px 0; width:80%; }
-a.resume-track { padding:10px; display:inline-block; text-decoration:none; font-size:14px; background:#2ABB9B; color:#ffffff; transition:all 0.5s ease-out; }
+a.resume-track { margin:0 10px; padding:5px 0; width:150px; font-size:14px; text-align:center; display:block; color:#FFFFFF; background-color:#2ABB9B; border:none; transition:all 0.5s ease-out;
+    -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; }
+a.resume-track:hover { background-color:#249f84; }
+a.resume-track:active { background-color:#249f84; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; -webkit-transform:translateY(5px); -moz-transform:translateY(5px); -ms-transform:translateY(5px); -o-transform:translateY(5px); transform:translateY(5px); }
 .not-registered { margin:20px 0; text-align:center; }
 .not-registered h3 { line-height:1.5; }
 .not-registered a { color:#2ABB9B; transition:all 0.5s ease-out; }
@@ -244,7 +273,7 @@ a.resume-track { padding:10px; display:inline-block; text-decoration:none; font-
     .my-courses img { margin:15px 125px 30px; }
     .my-courses h5 { margin:10px 0 0 0; padding:0 20px; color:#FFFFFF; float:right; }
     .my-courses .progress-bar-mini { margin:20px auto 0; width:90%;/* border:10px solid #58585a;*/ }
-    .my-courses button.default { margin:25px 10px;  float:right; }
+    .my-courses button.default { margin:35px 0;  float:right; border:none; border-radius:5px 0 0 5px; }
 .popular-courses {
     border:1px solid #2ABB9B; border-top:5px solid #2ABB9B;
     width:450px;
@@ -356,24 +385,41 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 .course-info p.points{ margin:20px 10px 0; padding:2px 10px; font-size:14px; float:left; background:#ECF0F1; border-radius:15px; display:inline-block; }
 .rating { margin:40px 20px 0; padding:0; float:left; }
 .rating p { font-size:14px; }
-.learn-now { margin-top:18px; padding:0; float:right; }
-.learn-now a.learn-now { padding:5px 15px; display:inline-block; width:80px; text-align:center; background:#2ABB9B; font-size:14px; color:#FFFFFF; }
+.learn-now { margin-top:15px; padding:0; float:right; }
+.learn-now a.learn-now { padding:5px 20px; width:80px; font-size:14px; text-align:center; display:block; color:#FFFFFF; background-color:#2ABB9B; border:none; transition:all 0.5s ease-out;
+    -webkit-border-radius:5px 0 0 5px; -moz-border-radius:5px 0 0 5px; border-radius:5px 0 0 5px; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; }
+.learn-now a.learn-now:hover { background-color:#249f84; }
+.learn-now a.learn-now:active { background-color:#249f84; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; -webkit-transform:translateY(5px); -moz-transform:translateY(5px); -ms-transform:translateY(5px); -o-transform:translateY(5px); transform:translateY(5px); }
 
 
-.color-tag a.html, 
-.color-tag a.css, 
+.color-tag a.html,
+.color-tag a.css,
 .color-tag a.cpp,
 .color-tag a.php,
 .color-tag a.javascript,
-.color-tag a.jquery, 
-.color-tag a.asp, 
-.color-tag a.android, 
-.color-tag a.java, 
-.color-tag a.wordpress, 
-.color-tag a.d-tools, 
+.color-tag a.jquery,
+.color-tag a.asp,
+.color-tag a.android,
+.color-tag a.java,
+.color-tag a.wordpress,
+.color-tag a.d-tools,
 .color-tag a.business,
 .color-tag a.design,
-.color-tag a.other
+.color-tag a.other,
+.split-library .color-tag a.html,
+.split-library .color-tag a.css,
+.split-library .color-tag a.cpp,
+.split-library .color-tag a.php,
+.split-library .color-tag a.javascript,
+.split-library .color-tag a.jquery,
+.split-library .color-tag a.asp,
+.split-library .color-tag a.android,
+.split-library .color-tag a.java,
+.split-library .color-tag a.wordpress,
+.split-library .color-tag a.d-tools,
+.split-library .color-tag a.business,
+.split-library .color-tag a.design,
+.split-library .color-tag a.other
 { padding:3px 15px; text-align:center; display:block; width:80px; font-size:12px; color:#ffffff; }
 
 .color-tag a.html{ background:#19B5FE; }
@@ -402,7 +448,7 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 .upcoming-courses .color-tag { margin:-22px 0; float:right; }
 .upcoming-courses p.developed-by { padding:5px 20px 10px; line-height:1.5; }
 .upcoming-courses p { padding:10px 20px; line-height:1.5; font-size:13px; }
-.upcoming-courses button { margin:10px 20px 20px; }
+.upcoming-courses button { margin:10px 20px 20px; border:none; }
 .upcoming-courses h4 { margin:10px 20px 20px; color:#2ABB9B; }
 /*------------End Upcoming Courses------------*/
 
@@ -424,14 +470,16 @@ ul.suggest-me-track { margin:20px auto 0; padding:0; width:18%; }
 #tracks .course-info h5.tiny-intro { padding:10px 20px; opacity:1; }
 #tracks .course-info p.desc { padding:10px 20px; height:65px; line-height:1.5; overflow:hidden; font-size:13px; }
 #tracks .buttons { margin:10px 20px; float:right; }
+#tracks .buttons button { border:none; cursor:pointer; }
 
 #course-progress-left { margin:20px; float:left; }
+#course-progress-left h2, #course-progress-left h4, #course-progress-left h5 { padding:5px 0; }
+#course-progress-right h4 { padding:5px 0; }
 #course-progress-right { margin:20px; float:right; }
 #track-description { margin:20px; }
 .progress-bar { margin:0; padding:5px 5px; width:80%; }
 .course-progress { margin:30px 20px 0; float:right; }
-.course-progress button { padding:3px 20px; font-size:14px; background:#2ABB9B; color:#FFFFFF; border:1px solid #2ABB9B; transition:all 0.2s ease-out; opacity:0.8; }
-    .course-progress button:hover { opacity:1; }
+.course-progress button { border:none; cursor:pointer; }
 .content-lg #course-col-track { margin:20px 20px; }
 .course-number-col { margin:85px 0 0 10px; float:left; background:#58585A; width:100px; height:100px; border-radius:50%; opacity:0.4; }
 .course-number-col-completed { margin:85px 0 0 10px; float:left; background:#2ABB9B; width:100px; height:100px; border-radius:50%; opacity:1; }
@@ -460,20 +508,17 @@ ul.suggest-me-track { margin:20px auto 0; padding:0; width:18%; }
         .course-col h5.business { background:#34495e; }
         .course-col h5.design { background:#E67E22; }
         .course-col h5.other { background:#915E25; }
-    .progress-bar-mini { /*margin:30px auto 10px; width:80%; border:10px solid #58585a;*/ }
 /*-----------------------------------------------------------End Learning Paths-----------------------------------------------------------*/
 /*-----------------------------------------------------------Course Introduction-----------------------------------------------------------*/
 #goto-course { margin:25px 20px; float:right; }
-#goto-course a { padding:6px 20px; color:#FFFFFF; background:#2ABB9B; font-size:14px; border:1px solid #2ABB9B; }
-#goto-course a:hover { color:#2ABB9B; background:#ECF0F1; border:1px solid #2ABB9B; }
 .content-lg h2.course-heading { margin:20px 20px 0; float:left; }
 .content-lg p.developed-by { margin:28px 40px 0; float:left; font-size:14px; }
 .content-lg p.developed-by span#developed-by { margin-top:-5px; margin-left:-30px; position:absolute; }
-.content-lg ul.course-desc { padding:0 20px 10px; float:left; list-style:none; }
+.content-lg ul.course-desc { padding:15px 20px 10px; float:left; list-style:none; }
     .content-lg ul.course-desc li { padding:0 25px; display:inline; font-size:14px; }
     .content-lg ul.course-desc li span { margin-left:-30px; }
     .content-lg ul.course-desc li span#category { margin-top:0; margin-left:-25px; position:absolute; opacity:0.7; }
-    .content-lg ul.course-desc li span#level { margin-top:-8px; position:absolute; opacity:0.7; }
+    .content-lg ul.course-desc li span#level { margin-top:-8px; margin-left:-32px; position:absolute; opacity:0.7; }
     .content-lg ul.course-desc li span#points { margin-top:-5px; margin-left:-25px; position:absolute; opacity:0.7; }
     .content-lg ul.course-desc li span#enrolled-students { margin-top:-2px; position:absolute; opacity:0.7; }
     .content-lg ul.course-desc li span#enrolled-on { margin-top:-8px; position:absolute; opacity:0.7; }
@@ -533,8 +578,10 @@ h3.widget-similar-courses { margin:20px 0; padding:0 0 10px 60px; width:100%; bo
 .widgets .widget-video-transition p { padding:5px 10px 0; font-size:14px; }
 
 .widgets .widget-video-transition p.buttons { text-align:center; }
-.widgets .widget-video-transition p button { margin:20px 0; padding:5px 0; width:45%; font-size:16px; background:#2ABB9B; color:#FFFFFF; border:1px solid #2ABB9B; cursor:pointer; transition:all 0.5s ease-out; }
-    .widgets .widget-video-transition p button:hover { background:#ECF0F1; color:#2ABB9B; }
+.widgets .widget-video-transition p button { margin:20px 0; padding:5px 0; width:45%; font-size:16px; color:#FFFFFF; background:#2ABB9B; border:1px solid #2ABB9B; cursor:pointer; transition:all 0.5s ease-out;
+    -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; }
+.widgets .widget-video-transition p button:hover { border:1px solid #249f84; background:#249f84; }
+.widgets .widget-video-transition p button:active { background:#249f84; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; -webkit-transform:translateY(5px); -moz-transform:translateY(5px); -ms-transform:translateY(5px); -o-transform:translateY(5px); transform:translateY(5px); }
 /*------ TO BE REMOVED -----*/
 /*---*/.widgets .widget-video-transition ul { margin:0 auto; padding:10px 0 40px 0; list-style:none; }
 /*---*/.widgets .widget-video-transition ul li { padding:5px 0; display:inline-block; border-bottom:1px solid #ECF0F1; text-align:center; cursor:pointer; font-size:14px; background:#2ABB9B; transition:all 0.2s ease-out; opacity:0.8; }
@@ -571,6 +618,8 @@ h3.widget-similar-courses { margin:20px 0; padding:0 0 10px 60px; width:100%; bo
 
 .widget-video-player { margin:0 auto; width:100%; height:500px; }
 .widget-video-player video { margin:0 auto; padding:0; }
+
+.widget-video-player a.default { margin:20px 3.8%; float:right; }
 
 .content-md h3.course-title { margin:0 2.5%; padding:20px 0; }
 .content-md .teacher-notes { margin:40px 2.5% 10px; }
@@ -621,9 +670,11 @@ ul.quiz-options { margin:0; padding:20px 40px;}
 
 /*--------------End Plugin------------------*/
 
-form.quiz-answer { padding:0 20px 10px; float:right; position:relative; text-align:center; }
-form.quiz-answer input[type=submit] { padding:5px 50px; font-size:16px; background:#2ABB9B; border:1px solid #2ABB9B; color:#FFFFFF; transition:all 0.5s ease-out; position:relative; cursor:pointer; }
-form.quiz-answer input[type=submit]:hover { background:#ECF0F1; border:1px solid #2ABB9B; color:#2ABB9B; }
+#quiz h2 { margin:20px 20px 0; text-align:center; }
+#quiz input[type=submit] { margin:20px; padding:5px 0; width:150px; font-size:14px; text-align:center; display:inline-block; cursor:pointer; color:#FFFFFF; background-color:#2ABB9B; border:none; transition:all 0.5s ease-out;
+    -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; }
+#quiz input[type=submit]:hover { background-color:#249f84; }
+#quiz input[type=submit]:active { background-color:#249f84; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; -webkit-transform:translateY(5px); -moz-transform:translateY(5px); -ms-transform:translateY(5px); -o-transform:translateY(5px); transform:translateY(5px); }
 
 #quiz-result { margin:80px auto; padding:20px; width:500px; background:url(../graphics/quiz-result-bg.png); }
 #quiz-result h1 { margin:60px 200px; padding:50px 0; position:absolute; text-align:center; color:#F06060; font-size:36px; }
@@ -640,8 +691,10 @@ form.quiz-answer input[type=submit]:hover { background:#ECF0F1; border:1px solid
 #main-quiz-result h2#fail { padding:20px; font-size:46px; color:#D72020; }
 #main-quiz-result p { line-height:2; }
 #main-quiz-result p label { font-size:16px; }
-#main-quiz-result p button { margin:20px; padding:5px 40px; font-size:16px; background:#2ABB9B; color:#FFFFFF; border:1px solid #2ABB9B; cursor:pointer; transition:all 0.5s ease-out; }
-    #main-quiz-result p button:hover { background:#ECF0F1; color:#2ABB9B; }
+#main-quiz-result p button { margin:20px; padding:5px 0; width:150px; font-size:16px; text-align:center; display:inline-block; cursor:pointer; color:#FFFFFF; background-color:#2ABB9B; border:none; transition:all 0.5s ease-out;
+    -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; }
+#main-quiz-result p button:hover { background-color:#249f84; }
+#main-quiz-result p button:active { background-color:#249f84; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; -webkit-transform:translateY(5px); -moz-transform:translateY(5px); -ms-transform:translateY(5px); -o-transform:translateY(5px); transform:translateY(5px); }
 /*-----------------------------------------------------------End Quiz-----------------------------------------------------------*/
 /*-----------------------------------------------------------Technology Feeds-----------------------------------------------------------*/
 .feeds-col1 { margin:10px 0 10px 2.2%; float:left; width:22%; border:1px solid #ECF0F1; }
@@ -698,8 +751,11 @@ form table.editform input[type=submit]:hover, form table.editform input[type=res
 form#privacy-settings { margin:20px 2.5%;  }
 form#privacy-settings input[type=checkbox] { margin-right:10px; display:inline-block; color:#58585A; cursor:pointer; }
 form#privacy-settings label { font-size:14px; opacity:0.7; }
-form#privacy-settings input[type=submit] { padding:8px 40px; font-size:16px; background:#2ABB9B; border:1px solid #2ABB9B; color:#FFFFFF; transition:all 0.5s ease-out; position:relative; cursor:pointer; }
-form#privacy-settings input[type=submit]:hover { background:#ECF0F1; border:1px solid #2ABB9B; color:#2ABB9B; }
+form#privacy-settings input[type=submit] { margin:20px; padding:5px 0; width:150px; font-size:16px; text-align:center; display:inline-block; cursor:pointer; color:#FFFFFF; background-color:#2ABB9B; border:none; transition:all 0.5s ease-out;
+    -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; }
+form#privacy-settings input[type=submit]:hover { background-color:#249f84; }
+form#privacy-settings input[type=submit]:active { background-color:#249f84; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; -webkit-transform:translateY(5px); -moz-transform:translateY(5px); -ms-transform:translateY(5px); -o-transform:translateY(5px); transform:translateY(5px); }
+
 /*------------End Privacy Settings------------*/
 
 /*-----------------------------------------------------------End Account Settings-----------------------------------------------------------*/
