@@ -1,7 +1,34 @@
-<!-- Login widget starts -->
+<section class="container">
+	<section id="login-panel">
+		<form id="login" action="">
+			<h2>SIGN IN NOW</h2>
+			<section class="login-wrap">
+				<input type="text" class="form-control" name="login" placeholder="User ID" autofocus>
+	            <br />
+	            <input type="password" name="password" class="form-control" placeholder="Password">
+	            <br />
+	            <a id="forgot-password" href="#">Forgot Password?</a>
+	            <section class="clear"></section>
+	            <button id="sign-in" href="index.html" type="submit">SIGN IN</button>
+	            <br /><br />
+	            <hr />
+	            <p>or you can sign in via your social network</p>
+	            <section id="social">
+		            <button id="facebook" href="#" type="submit">Facebook</button>
+		            <button id="twitter" href="#" type="submit">Twitter</button>
+		         </section>
+	            <section class="registration">
+	            	<p>Don't have an account yet?</p>
+	            	<a href="#">Create an Account</a>
+			</section>
+		</form>
+	</section>
+</section>
 
-	  <div id="login-page">
-	  	<div class="container">
+<!--
+
+<div id="login-page">
+<div class="container">
 	  	
 		      <form class="form-login" action="<?=base_url();?>index.php/login/index" method="post">
 		        <h2 class="form-login-heading">sign in now</h2>
@@ -32,7 +59,7 @@
 		
 		        </div>
 		
-		          <!-- Modal -->
+		          
 		          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
 		              <div class="modal-dialog">
 		                  <div class="modal-content">
@@ -52,9 +79,10 @@
 		                  </div>
 		              </div>
 		          </div>
-		          <!-- modal -->
+		          
 		
 		      </form>	  	
 	  	
 	  	</div>
 	  </div>
+-->
