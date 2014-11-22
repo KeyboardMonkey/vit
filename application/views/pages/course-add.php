@@ -139,25 +139,35 @@
                     $(document).ready(function () {
                         $('#submit_video').hide();
                         $('#submit_video').click(function(e) {
-
-                            $.ajaxFileUpload({
+                        	console.log("Submitting video");
+                            $.ajaxFileUpload(
+                            {
                                 url 			:'<?=base_url('index.php/upload/upload_course_lecture' );?>/' + $('#course_id').val(),
                                 secureuri		:false,
                                 fileElementId	:'videofile',
                                 dataType		: 'json',
                                 data			: {
-                                    'title'				: $('#videotitle').val()
-                                },
-                                success	: function (data, status)
+					                                    'title' : $('#videotitle').val()
+					                              },
+                                success	: function (data)
                                 {
+                                	console.log(data.status);
+                                
                                     if(data.status != 'error')
                                     {
-
+                                    	console.log("OK");
                                         //  refresh_files();
-                                        $('#title').val('');
+                                       $('#result_div').append('<p>' + $('#videotitle').val() + ' added </p>');
+                                       $('#result_div').append('<p><a href="<?=base_url();?>' + data.path + '"> file path</a> </p>');
+                                       
+                                       $('#videotitle').val('');
+
                                     }
-                                    alert(data.msg);
-                                }
+                                   
+                                },
+                                 error: function (request, status, error) {
+                                        alert(request.responseText);
+                                    }
                             });
                             return false;
                         });
@@ -203,7 +213,11 @@
                     <div id="error_div"></div>
                 </td>
             </tr>
-            
+              <tr>
+                <td>
+                    <div id="result_div"></div>
+                </td>
+            </tr>
 				</form>
 				<button id="add_video">&nbsp;+&nbsp;</button>
 			</section>

@@ -13,8 +13,8 @@
         
         <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/graphics/favicon_vitorials.ico">
         <!-- COMMON STYLE SHEETS FROM THE HEADER -->
-		<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/styles/main.css" />
-        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>ajaxfileupload.css" />
+        <!--<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>ajaxfileupload.css" />-->
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/styles/main.css" />
 
         <!-- COMMON SCRIPTS FROM THE HEADER -->
         <script src="<?= base_url();?>assets/js/jquery-1.4.1.min.js"></script>
@@ -32,8 +32,9 @@
     </nav>
     <section id="user-settings-list" style="display:none;">
         <ul>
+            <li><a href="<?php echo base_url();?>index.php/preference/set_preference">Preferences</a></li>
             <li><a href="<?php echo base_url();?>index.php/profile">Account Settings</a></li>
-            <li><a href="<?php echo base_url();?>index.php/users/logout">Logout</a></li>
+            <li><a href="<?php echo base_url();?>index.php/logout">Logout</a></li>
         </ul>
     </section>
     <section id="notifications-list" style="display: none;">

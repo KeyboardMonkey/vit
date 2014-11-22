@@ -1,10 +1,6 @@
-	<section class="container">
-                
-            
-            
+<section class="container">
         <?=
-
-validation_errors();?>
+        validation_errors();?>
 	<section class="content-pref-wizard">
 		<h2>What would you like to learn?<br /><small>Let us know your interests and we'll recommend courses for you. Update these preferences any time from the My Interests menu.</small></h2>
 		<form method="post" id="pref_form">
@@ -17,50 +13,48 @@ validation_errors();?>
 						<th>Interested</th>
 					</tr>
 				</thead>
-                                <?php
-                                    $allCategories = $this -> course_cat -> get();
-                                    
-                                    foreach($allCategories as $singleCategory)
-                                    {
-                                 ?>
-                                     <?php
-                                     /*
-                                      *     0 -> Not Interested
-                                      *     1 -> No Openion
-                                      *     2 -> Interested
-                                      * 
-                                      */
-                                     ?>
-                                    <tr>
-					<td><?=$singleCategory->category;?></td>
-					<td><input type="radio" name="<?=$singleCategory->id;?>" value="0" checked="checked"/></td> 
-					<td><input type="radio" name="<?=$singleCategory->id;?>" value="1" /></td>
-					<td><input type="radio" name="<?=$singleCategory->id;?>" value="2" /></td>
-                                    </tr>
-                                
-                                <?php 
-                                    }
-                                ?>
-				
+                    <?php
+                        $allCategories = $this -> course_cat -> get();
+                        
+                        foreach($allCategories as $singleCategory)
+                        {
+                     ?>
+                         <?php
+                         /*
+                          *     0 -> Not Interested
+                          *     1 -> No Openion
+                          *     2 -> Interested
+                          * 
+                          */
+                         ?>
+					<tr>
+						<td><?=$singleCategory->category;?></td>
+						<td><input type="radio" name="<?=$singleCategory->id;?>" value="0" checked="checked"/></td> 
+						<td><input type="radio" name="<?=$singleCategory->id;?>" value="1" /></td>
+						<td><input type="radio" name="<?=$singleCategory->id;?>" value="2" /></td>
+					</tr>
+                    <?php 
+                        }
+                    ?>
 			</table>
 		</form>
-		<section class="inline-buttons">
+		<section class="btn-pref-set">
 			<a href="<?=base_url();?>index.php/home">Not Right Now</a>
 			<!-- <a href="<?=base_url();?>index.php/preference/rank_preference">Next Step</a> -->
 			<a id="submit_pref">Next Step</a>
 			<input type="button" value="Recommendations" onclick="newDoc()">
-                        <script>
-                            $(document).ready(function(){
-                               $("#submit_pref").click(function(){
-                                   $("#pref_form").submit();
-                               });
-                            });
-                        </script>
-<script>
-function newDoc() {
-    window.location.assign("<?=base_url();?>index.php/recommendations");
-}
-</script>
+                <script>
+                    $(document).ready(function(){
+                       $("#submit_pref").click(function(){
+                           $("#pref_form").submit();
+                       });
+                    });
+                </script>
+				<script>
+					function newDoc() {
+					    window.location.assign("<?=base_url();?>index.php/recommendations");
+					}
+				</script>
 <!-- redirect script -->
           <!--               <?php
 			//if()
@@ -97,6 +91,6 @@ function newDoc() {
 	?> -->
 		</section>
 	</section>
-	</section>
+</section>
 	
 	<section class="clear"></section>

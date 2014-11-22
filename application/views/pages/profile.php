@@ -17,8 +17,12 @@
 				<img src="<?=base_url();?>assets/graphics/profile-pic.jpg" width="120px" height="120px" />
 			</section>
 			<section class="user-info">
-				<h1><?=$user -> first_name . " " . $user->last_name;?></h1>
-				<h5>Rawalpindi, Pakistan</h5> <br />
+				<ul>
+					<li>Last Login: 21/Nov/14</li>
+					<li>Register Date: 10/Nov/14</li>
+				</ul>
+				<h1><?=$user -> first_name . " " . $user->last_name;?><small id="user-type">Admin</small></h1>
+				<h5>Rawalpindi, Pakistan</h5>
 				<p>I am a Software Engineering graduate student with love for Web Development. I love to play cricket and I am a fitness freak.</p>
 			</section>
 		</section>
@@ -73,24 +77,30 @@
 		
 		<section class="content-md">
 			<section class="title">
-				<h3>Skills &amp; Experience</h3>
+				<h3>Information</h3>
 			</section>
 			<section class="line-border"></section>
 			<section class="cols-categories">
 				<section class="col1">
 					<ul class="profile">
-						<li><strong>Company Name</strong></li>
-						<li><strong>Job Title</strong></li>
-						<li><strong>Interests</strong></li>
-						<li><strong>Looking for Job</strong></li>
+						<li><strong>First Name</strong></li>
+						<li><strong>Last Name</strong></li>
+						<li><strong>Email ID</strong></li>
+						<li><strong>Facebook Profile URL</strong></li>
+						<li><strong>Twitter Profile URL</strong></li>
+						<li><strong>Linkedin Profile URL</strong></li>
+						<li><strong>Google+ Profile URL</strong></li>
 					</ul>
 				</section>
 				<section class="col2">
 					<ul class="profile">
-						<li>Soft Tech.</li>
-						<li>Web Developer</li>
-						<li>Web Designing, Web Development</li>
-						<li>Yes</li>
+						<li>Abdul</li>
+						<li>Rehman</li>
+						<li>ar.malik@vitorials.com</li>
+						<li><a href="www.facebook.com/">www.facebook.com/</a></li>
+						<li><a href="www.twitter.com/">www.twitter.com/</a></li>
+						<li><a href="www.linkedin.com/">www.linkedin.com/</a></li>
+						<li><a href="www.gmail.com/">www.gmail.com/</a></li>
 					</ul>
 				</section>
 			</section>

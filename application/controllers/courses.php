@@ -29,7 +29,7 @@ class Courses extends MY_Controller
         $this -> load -> view('templates/header');
         $this -> load -> view('templates/breadcrumbs'); 
         $this -> load -> view('pages/course-intro', array('course' => $course));
-        $this -> load -> view('widgets/similar-courses-widget');
+    //    $this -> load -> view('widgets/similar-courses-widget');
         $this -> load -> view('templates/footer');
     }  
 
@@ -175,21 +175,18 @@ class Courses extends MY_Controller
 	{
             redirect('courses/view/' . $course_id);
         }
-        echo "START:" . $start_lecture;
+     //   echo "START:" . $start_lecture;
         if($start_lecture==-1)
         {
           $start_lecture = $course -> getNextLecture();
           $rUrl = 'courses/course_playback/'.$course_id.'/'.$start_lecture;
-         
+       //  echo $rUrl;
+     //    die();
           redirect($rUrl);
         }
 
         $lect_files = $this -> file_model -> getWithCondition(array('course_id' => $course_id));
         $lectures = $this -> lecture -> getWithCondition(array('course_id' => $course_id));
-   
-
-        
-
 
         $this->load->view('templates/header');
         $this->load->view('templates/breadcrumbs');

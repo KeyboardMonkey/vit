@@ -36,10 +36,9 @@ class Profile extends MY_Controller
                 if(!isset($user -> user_id))   
                 {
                     $this->load->view('templates/header');
-                    $this->load->view('templates/breadcrumbs');
-                    $this->load->view('templates/side-navs');
-                    $this->load->view('pages/no-user
-                        ', array('user_id' => $user_id));
+                //    $this->load->view('templates/breadcrumbs');
+                //    $this->load->view('templates/side-navs');
+                    $this->load->view('pages/no-user', array('user_id' => $user_id));
                     $this->load->view('templates/footer');
                 }
                 else{

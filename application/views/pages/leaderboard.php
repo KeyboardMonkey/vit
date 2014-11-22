@@ -9,8 +9,8 @@
         $number ++;
     }
 ?>
-	
 <section class="container">
+
 	<section class="content-md">
 		<table class="leaderboard">
 			<thead>
@@ -27,14 +27,14 @@
 			</tfoot>
 	        
 	        <?php 
-	        $i = 0;
+	        $i = 1;
 	        foreach($leaders as $leader) {
 	        ?>
 			
 			<tr>
-	                            
+	                           
 				<td><?=$i;?></td>
-				<td><a href="<?=base_url('index.php/profile/index/' . $leader -> user_id) ;?>"><?=$leader -> username;?></a></td>
+				<td><a href="<?=base_url('index.php/profile/index/' . $leader -> user_id) ;?>"><?=$leader ->first_name." ".$leader->last_name;?></a></td>
 				<td><?= $leader -> getAllPoints();?></td>
 			</tr>
 

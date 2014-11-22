@@ -1,5 +1,8 @@
 <?php
-
+		$user = new user();
+		$user ->load($this -> session -> userdata('user_id'));
+	/*	print_r($user);
+		die();*/
 		$myCourse = new course();
         $cats = $this -> course_cat -> get();
         $total = 0;
@@ -8,7 +11,40 @@
              $total += $cat->getPointsEarnedInCategory();
          }
 ?>
+<!-- ProBar stuff start -->
+    <link href="<?=base_url();?>assets/styles/pro-bars.min.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <style>
+        .main-content { width: 65%; margin-right: 3%; float: left; }
+        .progress-bar-control-form { width: 100%; float: left; }
+        .progress-bar-control-form table { width: 50%; float: left; }
+        .right-sidebar { width: 30%; float: left; }
+        .pro-bar { text-align: center; }
+        .pro-bar-percentage { color: #FFFFFF; line-height: 15px; display: none; cursor: default; }
+        .pro-bar-percentage.visible { display: block; }
+    </style>
+
+	<script>
+	$(document).ready(function(){
+		// to get full course progress
+		// $myCourse -> getCourseProgressPercent()
+
+		// to get videoplayback progress (100% means 60 progress points)
+		//var course_progress = <?=($myCourse -> getLectureProgress() * 60 / 100);?>;
+		var course_progress = <?=$myCourse -> getCourseProgressPercent();?>;
+        jQuery('#large_pro_bar').animate({width: course_progress+ '%'});
+        jQuery('#large_pro_bar_percent').html(course_progress.toFixed(2) + '%');
+
+		});
+	</script>
+
+<!-- ProBar stuff end -->
+
 <section class="container">
+	<section class="content-md">
+	<h5 style="margin:10px 0px 10px 10px; display:inline;">Welcome back <h4 style="margin:10px 0px 10px px; display:inline;"><a href="<?=base_url();?>index.php/profile/index/<?=$this->session->userdata('user_id')?>"><?=$user->first_name." ".$user->last_name;?>!</a></h4></h5>
+	<h5 style="margin:10px;">You're about to learn amazing new things today :)</h5>
+	</section>
 	<section class="content-md">
 		<section class="title">
 			<h2><?=$total;?></h2>
@@ -16,42 +52,32 @@
 		</section>
 		<section class="line-border"></section>
 		<section class="course-cols">
-                     <section class="col1">
+			<section class="col1">
 				<ul class="cols">
                     <?php 
                     $col = 1;
-                    
                     $i = 0;
-                            foreach($cats as $cat)
-                            {
-                                ?>
-                               
-                    <?php
-                                
-                                $courses = $cat -> getCourses();
-                               
+                    	foreach($cats as $cat) {
                     ?>
-			
-                                    
-					<li class="<?= $cat -> color_tag;?>"><strong><?=$cat->getPointsEarnedInCategory();?></strong><br/><?=$cat -> category ;?></li>
-					
-                              
                     <?php
-                            $i ++;
-                            if($i == 4)
-                            {
-                                $i = 0;
-                                $col ++;
-                                echo '</ul></section> <section class="col'.$col.'">
-				<ul class="cols">';
-                                
-                            }
-                            } 
-                     ?>
-                                          </ul>
+                    	$courses = $cat -> getCourses();
+                    ?>
+					<li class="<?= $cat -> color_tag;?>"><strong><?=$cat->getPointsEarnedInCategory();?></strong><br/><?=$cat -> category ;?></li>        
+                    <?php
+                    	$i ++;
+                    	if($i == 4) {
+	                        $i = 0;
+	                        $col ++;
+	                        echo '</ul></section> <section class="col'.$col.'">
+	                        <ul class="cols">';
+	                    }
+	                    }
+	                ?>
+	            </ul>
 			</section>
 			
 			<section class="clear"></section>
+
 		</section>
 		<section class="line-border"></section>
 		<section class="info">
@@ -70,38 +96,40 @@
 	foreach ($myTracks as $myTrack) {
 		//print_r($myTrack);
 	?>
+
 		<section class="track-progress">
 			<h2><?=$myTrack->track_title;?></h2>
 			<section class="progress-bar">
+			<!--
 			<?=$progress = number_format($myTrack->getProgress());?>%
+			-->
+			<!-- Course Progress -->
+				<div class="pro-bar-container color-nephriti bm-remove" style="margin:0px !important;">
+		            <div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=$myTrack->getProgress();?>" data-pro-bar-delay="500">
+			            <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$myTrack->getProgress();?>%</span>
+			            <div class="pro-bar-candy candy-ltr"></div>
+			       	</div>
+	        	</div>
 			</section>
 			<a class="resume-track" href="<?=base_url();?>index.php/tracks/resume/<?=$myTrack->track_id;?>">Resume Track</a>
 		</section>
 	<?php
 	}
 	?>
-
-		
-
 	</section>
 
 	<?php 
-	$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
+		$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
 	?>
 	<section class="content-md">
-
-	
-<?php
-  if($this->course_enrollment -> getMyEnrolledCourses ($this -> session -> userdata('user_id'))>0)
-	{	
-
+	<?php
+		if($this->course_enrollment -> getMyEnrolledCourses ($this -> session -> userdata('user_id'))>0) {	
 		$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
 		foreach($myEnrolements as $myEnrolment)
 		{
-		    
 		    $myCourse -> load($myEnrolment->course_id);
 		    $myCourseId = $myCourse -> course_id;
-		?>
+	?>
            
 		<section class="registered">
 			<section class="my-courses">
@@ -117,15 +145,14 @@
 				<section class="clear"></section>
 		
 
-				<section class="progress-bar-mini">
-		
-					<div class="pro-bar-container color-nephriti bm-remove">
+				<!-- Course Progress -->
+				<div class="pro-bar-container color-nephriti bm-remove" style="margin-top:10px !important;">
 		            <div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=$myCourse -> getCourseProgressPercent();?>" data-pro-bar-delay="500">
-		                <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$myCourse -> getCourseProgressPercent();?>%</span>
-		                <div class="pro-bar-candy candy-ltr"></div>
-		            </div>
-		        	</div>
-		        </section>
+			            <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$myCourse -> getCourseProgressPercent();?>%</span>
+			            <div class="pro-bar-candy candy-ltr"></div>
+			       	</div>
+	        	</div>
+	       
 			<!-- 	<a href="<?=base_url();?>index.php/courses/view/<?=$myCourse->course_id;?>" class="learn-now">Resume</a> -->
 				<button data-resume_id="<?=$myCourse -> course_id;?>" class="default btn_resume" type="button">Resume Course</button>
 
@@ -150,7 +177,7 @@
 		<section class="popular-courses">
 			<h3>Popular Courses</h3>
 			<ul class="course-widget">
-				<li><a href=""><i class="fa fa-play-circle"></i>Programming Fundamentals</a></li>
+				<li><a href="">Programming Fundamentals</a></li>
 				<li><a href="">Introduction to Android</a></li>
 				<li><a href="">Windows Phone Development</a></li>
 			</ul>
@@ -172,11 +199,38 @@
 
 	<!-- Scripts for this page -->
 
-                <script>
-                    $(document).ready(function(){
-                        $('.btn_resume').click(function(){
-                        	var course_id = $(this).attr('data-resume_id');
-                            window.location = '<?=base_url();?>index.php/courses/course_playback/'+course_id;
-                        });
-                    });
-                    </script>
+<script>
+    $(document).ready(function(){
+        $('.btn_resume').click(function(){
+        	var course_id = $(this).attr('data-resume_id');
+            window.location = '<?=base_url();?>index.php/courses/course_playback/'+course_id;
+        });
+    });
+</script>
+
+
+   	<!-- More ProBar scripts -->
+<script src="<?=base_url();?>assets/js/jquery.min.js"></script>
+<script src="<?=base_url();?>assets/js/jquery-ui.min.js"></script>
+<script src="<?=base_url();?>assets/js/appear.min.js" type="text/javascript"></script>
+<script src="<?=base_url();?>assets/js/pro-bars.min.js" type="text/javascript"></script>
+
+<script>
+    jQuery(function() {
+
+        jQuery('.pro-bar').hover(function() {
+            jQuery(this).find('.pro-bar-percentage').toggleClass('visible');
+        });
+
+    });
+    function calculateCourseProgress() {
+        var calculated_percentage = (jQuery('#videos_viewed').val() / jQuery('#total_videos').val()) * 100;
+        jQuery('#small_pro_bar').animate({width: calculated_percentage + '%'});
+        jQuery('#small_pro_bar_percent').html(calculated_percentage.toFixed(2) + '%');
+    }
+    function showTrackProgress() {
+        var course_progress = parseFloat(jQuery('#course_progress').val());
+        jQuery('#large_pro_bar').animate({width: course_progress+ '%'});
+        jQuery('#large_pro_bar_percent').html(course_progress.toFixed(2) + '%');
+    }
+</script>

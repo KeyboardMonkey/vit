@@ -1,21 +1,16 @@
-
-	<section class="container">
-
+<section class="container">
 	<nav class="side-navs">
 		<ul>
-		<li class="courses"><a href="<?=base_url();?>index.php/library">All Courses</a></li>
-	
-				<?php
-	                $cats = $this->course_cat->get();
-                    $tempu = new course();
-					
-                    foreach($cats as $cat){
-                   	$lulu = $tempu -> getCategoryCourseCount($cat->id);
-                ?>
+			<li class="courses"><a href="<?=base_url();?>index.php/library">All Courses</a></li>
+			<?php
+	            $cats = $this->course_cat->get();
+	            $tempu = new course();
 				
+	            foreach($cats as $cat){
+	           	$lulu = $tempu -> getCategoryCourseCount($cat->id);
+	        ?>
 			<li><span class="total-courses"><?php if($lulu>0)echo "$lulu";else echo '0';?></span><a href="<?=base_url();?>index.php/library/index/category/<?=$cat->id;?>" class="<?=$cat->color_tag;?>"><?=$cat->category;?></a></li>
-	
-	 		<?php }?>
+			<?php }?>
 		</ul>
 	</nav>
 	
@@ -67,7 +62,7 @@
 			</section>
 			<section class="rating">
 					<p>Rating: <?=$course->getOverAllRating();?> (<?=$course->numberOfRatings();?>)</p>
-				</section>
+			</section>
 			<section class="learn-now">
 				<a href="<?=base_url();?>index.php/courses/view/<?=$course->course_id;?>" class="learn-now">Learn Now</a>
 			</section>
@@ -80,6 +75,6 @@
 	</section>
 	</section>
 	
-	</section>
+</section>
 
-	<section class="clear"></section>
+<section class="clear"></section>
