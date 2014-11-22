@@ -40,9 +40,16 @@
 			</form>
 		</section>
 		<section class="clear"></section>
-		
+		<!--Copyleft-->
+
 		<section class="copyrights">
-			<p>&copy; 2014 <strong>Vitorials</strong> - All Rights Reserved.</p>
+		<!--[if lte IE 8]><span style="filter: FlipH; -ms-filter: "FlipH"; display: inline-block;"><![endif]-->
+		<span style="-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); display: inline-block;">
+		&copy;
+		</span>
+		<!--[if lte IE 8]></span><![endif]-->
+			2014 <strong>Vitorials</strong> - No Rights Reserved.
+			<p style=" font-size:10px; color:#00A8E7;">All courses presented on this website are for educational purposes only. If you get any benefit of it then kindly contribute to the orignial authors to encourage them. We have absolutely <strong>NO</strong> liability whatsoever.</p>
 		</section>
 	</footer>
 </body>

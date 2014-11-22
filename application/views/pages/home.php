@@ -104,7 +104,7 @@
 			<?php $progress = number_format($myTrack->getProgress());?>
 			
 			<!-- Course Progress -->
-				<div class="pro-bar-container color-nephriti bm-remove" style="margin:0px !important;">
+				<div class="pro-bar-container color-nephriti bm-remove" style="margin:0px !important; width:900px !important;">
 		            <div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=$progress;?>" data-pro-bar-delay="500">
 			            <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$progress?> %</span>
 			            <div class="pro-bar-candy candy-ltr"></div>

@@ -45,7 +45,7 @@
 				if($current_lecture > 0)
 				{?>
 			<!--	<li class="previous"><a href="<?=base_url('index.php/courses/course_playback/' . $course_id.'/'.($current_lecture-1));?>">Previous</a></li> -->
-				<button id="btn_previous" type="button">Previous</button>
+				<button id="btn_previous" type="button">&lt;- Previous</button>
 
 				<script>
                     $(document).ready(function(){
@@ -62,7 +62,7 @@
 				if($current_lecture < count($lectures)-1)
 				{?>
 
-				<button id="btn_next" type="button">Next</button>
+				<button id="btn_next" type="button">Next -&gt;</button>
 				<script>
                     $(document).ready(function(){
                         $('#btn_next').click(function(){
@@ -143,7 +143,7 @@
 
 <section class="content-md">
 	<section class="widget-video-player">
-		<a href="#" class="default">Course Intro</a>
+		<a href="<?=base_url();?>index.php/courses/view/<?=$course->course_id;?>" class="default"> &lt;--  Course Intro</a>
 		<h3 class="course-title "><?=$lecture->vid_title;?></h3>
 		<video id="my_video" width="960px" height="500px" controls>
 			<source src="<?=base_url().$lecture->vid_path;?>" type="video/mp4">

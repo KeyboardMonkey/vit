@@ -19,7 +19,7 @@ $enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
 			<?php
 			if($course -> isUserEnrolled($this -> session -> userdata('user_id')))
 			{
-				echo "<a class=\"default\" href=\"" . base_url('index.php/courses/course_playback/' . $course -> course_id) . "\">Play Course</a>";
+				echo "<a class=\"default\" href=\"" . base_url('index.php/courses/course_playback/' . $course -> course_id) . "\">Play Course --&gt;</a>";
 			}
 			?>
 		</section>
@@ -41,10 +41,21 @@ $enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
 				}
 				?>
 			</li>
-			<li><span id="enrolled-students"><img src="<?=base_url();?>assets/graphics/enrolled-students.png" width="25px" height="18px" /></span>Times Enrolled: <?=$course->enrollmentCount();?></li>
-			<?php
-			echo "<li><span id=\"enrolled-on\"><img src=\"".base_url()."assets/graphics/enrolled-on.png\" width=\"30px\" height=\"30px\" /></span>Enrolled on: ".$enrol_date_formatted."</li>";
-			?>
+			<?php 
+			echo '<li>
+					<span id="enrolled-students">
+						<img src="'.base_url().'assets/graphics/enrolled-students.png" width="25px" height="18px" />
+					</span>
+					Times Enrolled: '. $course->enrollmentCount().'
+				  </li>';
+			
+				if($course->isUserEnrolled())
+				{
+					
+					echo "<li><span id=\"enrolled-on\"><img src=\"".base_url()."assets/graphics/enrolled-on.png\" width=\"30px\" height=\"30px\" /></span>Enrolled on: ".$enrol_date_formatted."</li>";
+				
+				}
+				?>
 		</ul>
 		<section class="clear"></section>
 		<?php
