@@ -26,12 +26,17 @@
                           *     2 -> Interested
                           * 
                           */
+                            $user_interest_categories =  new user_interest_categories();
+                            $user_interest_categories = $user_interest_categories->getWithConditionLimit1(array('cat_id' => $singleCategory -> id, 'user_id' => $this -> session -> userdata('user_id')));
+                         //   echo '<pre>';
+                          //  print_r($user_interest_categories);
+                          //  echo '</pre>';
                          ?>
 					<tr>
 						<td><?=$singleCategory->category;?></td>
-						<td><input type="radio" name="<?=$singleCategory->id;?>" value="0" checked="checked"/></td> 
-						<td><input type="radio" name="<?=$singleCategory->id;?>" value="1" /></td>
-						<td><input type="radio" name="<?=$singleCategory->id;?>" value="2" /></td>
+						<td><input <?php if($user_interest_categories->interest_level == 0) echo "checked"; ?> type="radio" name="cat_<?=$singleCategory->id;?>" value="0" /></td>
+						<td><input <?php if($user_interest_categories->interest_level == 1) echo "checked"; ?>  type="radio" name="cat_<?=$singleCategory->id;?>" value="1" /></td>
+						<td><input <?php if($user_interest_categories->interest_level == 2) echo "checked"; ?>  type="radio" name="cat_<?=$singleCategory->id;?>" value="2" /></td>
 					</tr>
                     <?php 
                         }

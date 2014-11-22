@@ -55,7 +55,11 @@ $quiz = $quiz ->getWithConditionLimit1(array('course_id' => $course_id));
 					<label>Wrong Answers:</label>
 				</section>
 				<section class="col-right">
-					<label><strong><?=$this -> config -> item('max_quiz_questions') - $course ->getCorrectAnswers();?> (<?= ( $this -> config -> item('max_quiz_questions') - $course ->getCorrectAnswers() ) * (100 / $this -> config -> item('max_quiz_questions')) ;?>%)</strong></label>
+					<label><strong>
+                            <?php $max_quiz_questions = intval($this -> sys_config -> get_value('max_quiz_questions')); ?>
+                            <?=$max_quiz_questions - $course ->getCorrectAnswers();?>
+                            (<?= ( $max_quiz_questions - $course ->getCorrectAnswers() )
+                            * (100 / $max_quiz_questions) ;?>%)</strong></label>
 
 				</section>
 			</p>

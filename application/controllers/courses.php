@@ -231,12 +231,13 @@ class Courses extends MY_Controller
         if(!$course -> isUserEnrolled($this -> session -> userdata('user_id')))
                                      redirect('library');
        if($course -> reviewedByUser())
-                                       redirect('library');
+                                       redirect('courses/view/' . $course_id);
+        if($course -> getLectureProgress() < 100)
+            redirect('courses/view/' . $course_id);
       // echo $course -> getLectureProgress();
       // die();   
-        if( $course -> getLectureProgress() != 100)
-                                        redirect('library');
-        //if(strlen($this -> input -> post('review')) < 250) redirect('courses/view/' . $course_id);
+
+         //if(strlen($this -> input -> post('review')) < 250) redirect('courses/view/' . $course_id);
         $review = new course_review();  
         $review = $review ->getWithConditionLimit1(array('user_id' => $this -> session -> userdata('user_id'),
                 'course_id' => $course_id 
@@ -245,8 +246,15 @@ class Courses extends MY_Controller
         $review -> review = $this -> input -> post('review');
         $review -> course_id = $course_id;
         $review -> save();
-        print_r($review);
-        
+        //print_r($review);
+        if($course -> quizTaken())
+        {
+            $enrolment = new course_enrollment();
+            $enrolment = $enrolment -> getWithConditionLimit1(array('user_id' => $this -> session -> userdata('user_id'), 'course_id' => $course_id));
+            $enrolment -> progress = 100;
+            $enrolment -> status = 'completed';
+            $enrolment -> save();
+        }
         redirect('courses/view/' . $course_id);
         
     }

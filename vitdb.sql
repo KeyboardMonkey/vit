@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 22, 2014 at 05:17 PM
--- Server version: 5.6.11
--- PHP Version: 5.5.3
+-- Generation Time: Nov 22, 2014 at 08:52 PM
+-- Server version: 5.6.12-log
+-- PHP Version: 5.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `vitdb` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
 USE `vitdb`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `config`
+--
+
+CREATE TABLE IF NOT EXISTS `config` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `key` varchar(100) NOT NULL,
+  `value` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `key` (`key`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `config`
+--
+
+INSERT INTO `config` (`id`, `key`, `value`) VALUES
+(1, 'max_quiz_questions', '10');
 
 -- --------------------------------------------------------
 
@@ -206,7 +227,7 @@ INSERT INTO `course_enrollment` (`enrol_id`, `course_id`, `user_id`, `enrol_time
 (3, 2, 6, '2014-11-14 19:11:50', 'in-progress', 0),
 (5, 2, 2, '2014-11-18 14:18:52', 'in-progress', 0),
 (6, 18, 1, '2014-11-16 05:20:32', 'in-progress', 0),
-(10, 1, 1, '2014-11-16 06:38:35', 'in-progress', 0),
+(10, 1, 1, '2014-11-16 06:38:35', 'completed', 100),
 (11, 2, 1, '2014-11-16 19:20:10', 'in-progress', 0),
 (12, 6, 1, '2014-11-16 19:25:00', 'in-progress', 0),
 (13, 5, 2, '2014-11-18 14:20:47', 'in-progress', 0),
@@ -269,7 +290,7 @@ CREATE TABLE IF NOT EXISTS `course_review` (
   `review` text NOT NULL,
   `submittion_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `course_review`
@@ -278,7 +299,8 @@ CREATE TABLE IF NOT EXISTS `course_review` (
 INSERT INTO `course_review` (`id`, `course_id`, `user_id`, `review`, `submittion_date`) VALUES
 (12, 3, 1, '                                           agvaaaaaaaaaaaaaaaaa       \r\n                                                  ', '2014-11-17 20:19:04'),
 (13, 5, 2, '                                           agvaaaaaaaaaaaaaaaaa       \r\n                                                  ', '2014-11-17 20:19:04'),
-(14, 1, 6, '                                                  Build an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive Website\r\n                                                  ', '2014-11-18 14:30:26');
+(14, 1, 6, '                                                  Build an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive Website\r\n                                                  ', '2014-11-18 14:30:26'),
+(15, 1, 1, '\r\n		ewagewagaw waeg waeg wea gawe aw agwseg wagwagwgwag									', '2014-11-22 20:10:31');
 
 -- --------------------------------------------------------
 
@@ -440,36 +462,23 @@ CREATE TABLE IF NOT EXISTS `quiz_answers` (
   `submittion_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `question_id` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data for table `quiz_answers`
 --
 
 INSERT INTO `quiz_answers` (`id`, `quiz_id`, `user_id`, `answer`, `submittion_date`, `question_id`) VALUES
-(15, 3, 1, 'option_1', '2014-11-16 18:50:40', 9),
-(16, 3, 1, 'option_1', '2014-11-16 18:50:40', 11),
-(17, 3, 1, 'option_1', '2014-11-16 18:50:40', 14),
-(18, 3, 1, 'option_1', '2014-11-16 18:50:40', 23),
-(19, 3, 1, 'option_1', '2014-11-16 18:50:40', 24),
-(20, 3, 1, 'option_2', '2014-11-17 20:00:10', 25),
-(21, 3, 1, 'option_1', '2014-11-16 18:50:40', 28),
-(22, 3, 1, 'option_1', '2014-11-16 18:50:40', 3),
-(23, 3, 1, 'option_1', '2014-11-16 18:50:40', 4),
-(24, 3, 1, 'option_1', '2014-11-16 18:50:40', 6),
-(25, 5, 2, 'option_1', '2014-11-18 14:22:06', 5),
-(26, 5, 6, 'option_1', '2014-11-20 08:53:49', 5),
-(27, 5, 6, 'option_3', '2014-11-20 08:53:49', 23),
-(28, 3, 77, 'option_3', '2014-11-21 10:10:26', 6),
-(29, 3, 77, 'option_2', '2014-11-21 10:10:26', 8),
-(30, 3, 77, 'option_1', '2014-11-21 10:10:26', 10),
-(31, 3, 77, 'option_1', '2014-11-21 10:10:26', 11),
-(32, 3, 77, 'option_2', '2014-11-21 10:10:27', 15),
-(33, 3, 77, 'option_2', '2014-11-21 10:10:27', 25),
-(34, 3, 77, 'option_2', '2014-11-21 10:10:27', 27),
-(35, 3, 77, 'option_2', '2014-11-21 10:10:27', 28),
-(36, 3, 77, 'option_2', '2014-11-21 10:10:27', 2),
-(37, 3, 77, 'option_2', '2014-11-21 10:10:27', 3);
+(1, 3, 1, 'option_1', '2014-11-22 20:11:11', 2),
+(2, 3, 1, 'option_2', '2014-11-22 20:11:11', 3),
+(3, 3, 1, 'option_2', '2014-11-22 20:11:11', 6),
+(4, 3, 1, 'option_1', '2014-11-22 20:11:11', 8),
+(5, 3, 1, 'option_3', '2014-11-22 20:11:11', 9),
+(6, 3, 1, 'option_4', '2014-11-22 20:11:11', 12),
+(7, 3, 1, 'option_2', '2014-11-22 20:11:11', 13),
+(8, 3, 1, 'option_4', '2014-11-22 20:11:11', 14),
+(9, 3, 1, 'option_2', '2014-11-22 20:11:12', 25),
+(10, 3, 1, 'option_2', '2014-11-22 20:11:12', 4);
 
 -- --------------------------------------------------------
 
@@ -903,20 +912,47 @@ INSERT INTO `user_interest_categories` (`id`, `user_id`, `cat_id`, `interest_lev
 (231, 77, 12, 0),
 (232, 77, 13, 0),
 (233, 77, 14, 0),
-(234, 80, 1, 0),
-(235, 80, 2, 0),
-(236, 80, 3, 0),
+(234, 80, 1, 2),
+(235, 80, 2, 2),
+(236, 80, 3, 2),
 (237, 80, 4, 0),
 (238, 80, 5, 0),
-(239, 80, 6, 0),
-(240, 80, 7, 0),
-(241, 80, 8, 0),
+(239, 80, 6, 2),
+(240, 80, 7, 2),
+(241, 80, 8, 2),
 (242, 80, 9, 0),
-(243, 80, 10, 0),
+(243, 80, 10, 1),
 (244, 80, 11, 0),
 (245, 80, 12, 0),
 (246, 80, 13, 0),
 (247, 80, 14, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user_interest_level`
+--
+
+CREATE TABLE IF NOT EXISTS `user_interest_level` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `user_id` int(10) NOT NULL,
+  `cat_id` int(10) NOT NULL,
+  `level` int(10) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=109 ;
+
+--
+-- Dumping data for table `user_interest_level`
+--
+
+INSERT INTO `user_interest_level` (`id`, `user_id`, `cat_id`, `level`) VALUES
+(102, 80, 1, 7),
+(103, 80, 2, 8),
+(104, 80, 3, 7),
+(105, 80, 6, 7),
+(106, 80, 7, 7),
+(107, 80, 8, 7),
+(108, 80, 10, 7);
 
 -- --------------------------------------------------------
 

@@ -124,15 +124,20 @@ $quiz_id= NULL;
             $show_quiz = FALSE;
                 //print_r($_POST);
 		if($course_id == NULL) redirect('library');
+
 		$course = new course();
 		$course -> load($course_id);
 		if(!isset($course -> course_id)) redirect('library');
+        if(!$course->isUserEnrolled())
+            redirect('courses/view/'.$course_id);
+        if($course -> getLectureProgress() < 100)
+            redirect('courses/view/'.$course_id);
                 $quiz = new quiz_model();
                 $quiz = $quiz -> getWithConditionLimit1(array('course_id' => $course_id));
                 $questions = $this -> quiz_question -> getWithCondition(array('quiz_id' => $quiz -> quiz_id));
                 if($course -> quizTaken())
                 {
-                    echo "1";
+
                  $this->load->view('templates/header');
                  $this->load->view('pages/quiz-result', array( 'course_id' => $course_id));
                  $this->load->view('templates/footer');
@@ -189,6 +194,14 @@ $quiz_id= NULL;
                                 echo "incorrect ans <br />";
                             }
                        }
+                    if($course -> reviewedByUser())
+                    {
+                        $enrolment = new course_enrollment();
+                        $enrolment = $enrolment -> getWithConditionLimit1(array('user_id' => $this -> session -> userdata('user_id'), 'course_id' => $course_id));
+                        $enrolment -> progress = 100;
+                        $enrolment -> status = 'completed';
+                        $enrolment -> save();
+                    }
                        redirect('quiz/index/' . $course_id);
                    // print_r($question_ids);
                     

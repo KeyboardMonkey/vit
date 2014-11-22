@@ -22,7 +22,7 @@ class Login extends CI_Controller
                 array(
                         'field' => 'password',
                         'label' => 'password',
-                        'rules' => 'required|min_length[5]|xss_clean',
+                        'rules' => 'required|min_length[5]|xss_clean', // for MD5 ENCRYPTION |md5
                     ),
                 
             ));

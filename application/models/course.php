@@ -212,37 +212,42 @@ class course extends MY_Model{
             }
 
         }
-        
-        foreach($course_points as $key => $arrays)
+
+        /*foreach($course_points as $key => $arrays)
         {
             //$arrays = $this -> _sort_array($arrays);
             //echo "<br />";
             //print_r($arrays);
            // echo "<br />";
             $course_points[$key] = $arrays;
-        }
+        }*/
          foreach($categories as $singleCat)
         {
              $recommendations[$singleCat -> id] = array();
              $i = 0;
+          #  echo $singleCat -> id . " <br />";
              $courses = $this -> course -> getWithCondition(array('category' => $singleCat -> id));
                foreach($courses as $singleCourse)
                {
                    
                   //$recommendations[$singleCat -> id][$index] = array();
-                  array_push($recommendations[$singleCat->id], array('points' => $course_points[$singleCat -> id][$singleCourse -> course_id], 'course_id' => $singleCourse -> course_id) );
+                  array_push($recommendations[$singleCat->id],
+                      array(
+                          'points' => $course_points[$singleCat -> id][$singleCourse -> course_id],
+                          'course_id' => $singleCourse -> course_id)
+                  );
                   //$recommendations[$singleCat -> id][$index]['points'] = $course_points[$singleCat -> id][$singleCourse -> course_id];
                   //$recommendations[$singleCat -> id][$index]['course_id'] = $singleCourse -> course_id;
                }
          }
-         foreach ($recommendations as $key => $catRecom)
+         foreach ($recommendations as $categoryId => $catRecom)
          {
             // echo "<br/>processing:";
           //  / print_r($catRecom);
             // echo "<br/>";
              if(count($catRecom) == 0) 
              {
-                 unset($recommendations[$key]);
+                 unset($recommendations[$categoryId]);
                // echo "removed:{$key}";
                // continue;
              }
@@ -274,7 +279,7 @@ class course extends MY_Model{
                // print_r($catRecom);
                // echo "<br />";
                 $catRecom = array_slice($catRecom, 0, 5);
-                $recommendations[$key] = $catRecom;
+                $recommendations[$categoryId] = $catRecom;
              } 
          }
          
@@ -362,7 +367,8 @@ class course extends MY_Model{
     public function getRandomQuestions($limit=-1)
     {
             if($limit == -1)
-                $limit = $this -> config -> item('max_quiz_questions');
+                $conf =
+                $limit = $this -> sys_config -> get_value( 'max_quiz_questions');
                 $quiz = new quiz_model();
                 $quiz = $quiz -> getWithConditionLimit1(array('course_id' => $this -> course_id));
                 //print_r($quiz);
