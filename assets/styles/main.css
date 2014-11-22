@@ -397,6 +397,7 @@ table.leaderboard th { text-align:left; background-color:#2ABB9B; font-size:18px
 table.leaderboard tfoot td { border-bottom: 0; text-align:center; font-weight:bold; color:#ffffff; background:#2ABB9B; }
 /*-----------------------------------------------------------End Leaderboard-----------------------------------------------------------*/
 /*-----------------------------------------------------------Library-----------------------------------------------------------*/
+#upcoming-courses { margin:0 20px 20px; float:left; }
 .library-intro { padding:20px; }
 .library-intro p { font-size:14px; }
 .library-intro a { color:#2ABB9B; font-size:14px; }

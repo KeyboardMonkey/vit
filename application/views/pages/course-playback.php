@@ -106,7 +106,6 @@
 		<section class="widget-take-quiz">
 			<h4>Take Quiz</h4>
 			<ul>
-                                
 				<li><span class="take-quiz"><img src="<?=base_url();?>assets/graphics/take-quiz.png" width="35px" height="35px" alt="take-quiz" /></span><a href="<?=base_url();?>index.php/quiz/index/<?=$course->course_id;?>">Take Quiz</a></li>
 			</ul>
 		</section>
