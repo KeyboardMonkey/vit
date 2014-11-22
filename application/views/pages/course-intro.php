@@ -1,9 +1,9 @@
 <?php 
-	$enrollement = new course_enrollment();
-	$enrollement = $this -> course_enrollment -> getWithConditionLimit1(array('user_id' => $this -> session -> userdata('user_id'), 'course_id' => $course -> course_id));
-	            $enrol_date = $enrollement -> enrol_time;
-	$enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
-	//print_r($enrollement);
+$enrollement = new course_enrollment();
+$enrollement = $this -> course_enrollment -> getWithConditionLimit1(array('user_id' => $this -> session -> userdata('user_id'), 'course_id' => $course -> course_id));
+$enrol_date = $enrollement -> enrol_time;
+$enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
+//print_r($enrollement);
 ?>
 
 <style type="text/css">
@@ -31,16 +31,16 @@
 			<li><span id="category"><img src="<?=base_url();?>assets/graphics/category.png" width="20px" height="20px" /></span>Category: <?=$course->getCategoryTitle();?></li>
 			<li><span id="level"><img src="<?=base_url();?>assets/graphics/level.png" width="30px" height="30px" /></span>Level: <?=$course->difficulty_level;?></li>
 			<li>
-                <span id="points"><img src="<?=base_url();?>assets/graphics/points.png" width="17px" height="25px" />
-                </span>
-                Points: <?=$course->points;?>
-            	<?php 
-                if($course->isUserEnrolled())
-                {
-                    echo "(Earned: " . $course -> getEarnedPoints() . ")";
-                }
-            	?>
-            </li>
+				<span id="points"><img src="<?=base_url();?>assets/graphics/points.png" width="17px" height="25px" />
+				</span>
+				Points: <?=$course->points;?>
+				<?php 
+				if($course->isUserEnrolled())
+				{
+					echo "(Earned: " . $course -> getEarnedPoints() . ")";
+				}
+				?>
+			</li>
 			<li><span id="enrolled-students"><img src="<?=base_url();?>assets/graphics/enrolled-students.png" width="25px" height="18px" /></span>Times Enrolled: <?=$course->enrollmentCount();?></li>
 			<?php
 			echo "<li><span id=\"enrolled-on\"><img src=\"".base_url()."assets/graphics/enrolled-on.png\" width=\"30px\" height=\"30px\" /></span>Enrolled on: ".$enrol_date_formatted."</li>";
@@ -94,144 +94,144 @@
 						<h4>Who Should Do This</h4>
 						<p><?=$course->target_audience;?></p>
 					</section>
-					  <section id="section-underline-2">
-                                            <?php
-                                            
-                                                if($course -> isUserEnrolled($this -> session -> userdata('user_id')))
-                                                {
-                                                   if($course -> isCourseFinishedByUser())
-                                                   {
-                                                       if($course -> reviewedByUser())
-                                                        {
-                                                           $review = new course_review();
-                                                           $review = $review -> getWithConditionLimit1(array('course_id' => $course -> course_id, 'user_id' => $this -> session -> userdata('user_id')));
-                                                        ?>
-                                              
-                                                        <h3> My Review </h3>
-                                                        <br />
-                                                        <p> <?=$review->review;?></p>
-                                              <?php
-                                                        }
-                                                        else{
-                                                   ?>
-                                              <h5> Please submit review </h5>
-                                              <form action='<?=base_url("index.php/courses/submit_review/{$course->course_id}");?>' method='post'>
-                                                  <label>Review</lable>
-                                                  <textarea width='500px' height='500px' name='review'>
-                                                  
-                                                  </textarea>
-                                                  <input type='submit' value='Submit' />
-                                              </form>
-                                              <?php
-                                                        }
-                                                   }
-                                                   else{
-                                                ?>
-                                                    <h5>Please finish course first.</h5>
-                                              <?php 
-                                                   }
-                                                }
-                                                    else{
-                                               ?>
-                                                    
-                                                    <h5> Please Enroll to submit review </h5>
-						
-                                               <?php 
-                                               }
-                                            ?>
-                                                    </section>
-                                              
-										<section id="section-underline-3">
-							
+					<section id="section-underline-2">
+						<?php
+
+						if($course -> isUserEnrolled($this -> session -> userdata('user_id')))
+						{
+							if($course -> isCourseFinishedByUser())
+							{
+								if($course -> reviewedByUser())
+								{
+									$review = new course_review();
+									$review = $review -> getWithConditionLimit1(array('course_id' => $course -> course_id, 'user_id' => $this -> session -> userdata('user_id')));
+									?>
+
+									<h3> My Review </h3>
+									<br />
+									<p> <?=$review->review;?></p>
+									<?php
+								}
+								else{
+									?>
+									<h5> Please submit review </h5>
+									<form action='<?=base_url("index.php/courses/submit_review/{$course->course_id}");?>' method='post'>
+										<label>Review</lable>
+											<textarea width='500px' height='500px' name='review'>
+
+											</textarea>
+											<input type='submit' value='Submit' />
+										</form>
+										<?php
+									}
+								}
+								else{
+									?>
+									<h5>Please finish course first.</h5>
+									<?php 
+								}
+							}
+							else{
+								?>
+
+								<h5> Please Enroll to submit review </h5>
+
+								<?php 
+							}
+							?>
+						</section>
+
+						<section id="section-underline-3">
+
 							<a id="course-content" href="#"><img src="<?=base_url();?>assets/graphics/arrow-down.png" width="20px" height="17px" alt="arrow-down" /><h3 id="course-content">What is UX?</h3></a>
 							<ul class="course-content">
-                                                            <?php
-                                                                $lectures = $this -> lecture -> getWithCondition(array('course_id' => $course -> course_id));
-                                                                $i = 0;
-                                                                foreach($lectures as $lecture)
-                                                                {
-                                                            ?>
-								<li> <a href="<?=base_url('index.php/courses/course_playback/' . $course -> course_id . '/' . $i);?>"> <span> <img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><?=$lecture->vid_title;?></a> </li>
-                                                                
-                                                                <?php
-                                                                 $i ++;
-                                                                }
-                                                            ?>
-                                                        </ul>
+								<?php
+								$lectures = $this -> lecture -> getWithCondition(array('course_id' => $course -> course_id));
+								$i = 0;
+								foreach($lectures as $lecture)
+								{
+									?>
+									<li> <a href="<?=base_url('index.php/courses/course_playback/' . $course -> course_id . '/' . $i);?>"> <span> <img src="<?=base_url();?>assets/graphics/bullet.svg" width="25px" height="25px" /></span><?=$lecture->vid_title;?></a> </li>
+									
+									<?php
+									$i ++;
+								}
+								?>
+							</ul>
 						</section>
-									</section><!-- /content -->
-								</section><!-- /tabs -->
-							</section>
+					</section><!-- /content -->
+				</section><!-- /tabs -->
+			</section>
+		</section>
+		<!-- similar courses widget  -->
+	</section>
+
+	<section class="clear"></section>
+	<!-- TABS SCRIPTS FOR THIS PAGE  -->
+	<script src="<?=base_url();?>assets/js/course-intro-tabs.js"></script>
+	<script>
+		(function() {
+
+			[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+				new CBPFWTabs( el );
+			});
+
+		})();
+	</script>
+
+<!-- 	<script type="text/javascript">
+$("#course-content").on("click",function(){
+console.log($(this).text());
+});</script> -->
+
+<?php
+$topStudents = $course -> getTopStudents();
+// print_r($topStudents);
+if(count($topStudents)>0)
+{
+	?>
+	<section class="content-lg">
+		<section class="top-students">
+			<h3>Top  Students In This Course</h3>
+			<section id="trophies">
+
+				<section class="first-trophy">
+					<section class="content">
+						<img src="http://localhost/vit/assets/graphics/trophy1.svg" width="100px" height="111px">
+						<section id="block-a"></section>
+						<section id="block-b"></section>
+						<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[0][0]->user_id);?> Points</p></section>
+						<section id="block-d"><a href=""><?=$topStudents[0][0]->username;?></a></section>
+					</section>
+				</section>
+
+				<?php if(count($topStudents) > 1)
+				{
+					?>
+					<section class="second-trophy">
+						<section class="content">
+							<img src="http://localhost/vit/assets/graphics/trophy2.svg" width="100px" height="111px">
+							<section id="block-b"></section>
+							<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[1][1]->user_id);?> Points</p></section>
+							<section id="block-d"><a href=""><?=$topStudents[1][1]->username;?></a></section>
 						</section>
-					<!-- similar courses widget  -->
 					</section>
 
-					<section class="clear"></section>
-					<!-- TABS SCRIPTS FOR THIS PAGE  -->
-					<script src="<?=base_url();?>assets/js/course-intro-tabs.js"></script>
-					<script>
-						(function() {
+					<?php
+				}
+				if(count($topStudents) > 2)
+				{
+					?>
 
-							[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
-								new CBPFWTabs( el );
-							});
+					<section class="third-trophy">
+						<section class="content">
+							<img src="http://localhost/vit/assets/graphics/trophy3.svg" width="100px" height="111px">
+							<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[2][2]->user_id);?> Points</p></section>
+							<section id="block-d"><a href=""><?=$topStudents[2][2]->username;?></a></section>
+						</section>
+					</section>
 
-						})();
-					</script>
-
-				<!-- 	<script type="text/javascript">
-					$("#course-content").on("click",function(){
-					console.log($(this).text());
-					});</script> -->
-                                        
-<?php
-    $topStudents = $course -> getTopStudents();
-    // print_r($topStudents);
-    if(count($topStudents)>0)
-    {
-?>
-<section class="content-lg">
-	<section class="top-students">
-		<h3>Top  Students In This Course</h3>
-		<section id="trophies">
-			
-			<section class="first-trophy">
-				<section class="content">
-					<img src="http://localhost/vit/assets/graphics/trophy1.svg" width="100px" height="111px">
-					<section id="block-a"></section>
-					<section id="block-b"></section>
-					<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[0][0]->user_id);?> Points</p></section>
-					<section id="block-d"><a href=""><?=$topStudents[0][0]->username;?></a></section>
 				</section>
 			</section>
-
-			<?php if(count($topStudents) > 1)
-			{
-			?>
-			<section class="second-trophy">
-				<section class="content">
-					<img src="http://localhost/vit/assets/graphics/trophy2.svg" width="100px" height="111px">
-					<section id="block-b"></section>
-					<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[1][1]->user_id);?> Points</p></section>
-					<section id="block-d"><a href=""><?=$topStudents[1][1]->username;?></a></section>
-				</section>
-			</section>
-
-			<?php
-			}
-			if(count($topStudents) > 2)
-			{
-			?>
-			
-			<section class="third-trophy">
-				<section class="content">
-					<img src="http://localhost/vit/assets/graphics/trophy3.svg" width="100px" height="111px">
-					<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[2][2]->user_id);?> Points</p></section>
-					<section id="block-d"><a href=""><?=$topStudents[2][2]->username;?></a></section>
-				</section>
-			</section>
-
 		</section>
-	</section>
-</section>
-<?php }} ?>
+		<?php }} ?>

@@ -13,12 +13,12 @@
         
         <link rel="shortcut icon" href="<?php echo base_url(); ?>assets/graphics/favicon_vitorials.ico">
         <!-- COMMON STYLE SHEETS FROM THE HEADER -->
-        <!--<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>ajaxfileupload.css" />-->
+        <!--<link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/styles/ajaxfileupload.css" />-->
         <link rel="stylesheet" type="text/css" href="<?php echo base_url(); ?>assets/styles/main.css" />
 
         <!-- COMMON SCRIPTS FROM THE HEADER -->
         <script src="<?= base_url();?>assets/js/jquery-1.4.1.min.js"></script>
-        <script src="<?= base_url();?>ajaxfileupload.js"></script>
+        <script src="<?= base_url();?>assets/js/ajaxfileupload.js"></script>
 	</head>
 <body>
 
