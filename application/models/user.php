@@ -8,15 +8,23 @@ class user extends MY_Model{
   public $user_id;
   public $email;
   public $password;
-  public $type = "User";
+  public $type = "USER";
   public $active = "Yes";
   public $last_login;
-  public $hash = "";
+  public $hash = "5d6c48cd6d651753324ff8441b4718344ffd7f7559e2a92d330b99b88926dff2f03f9d4c04fd3565db4139309ee885e7a0c9b1ace912a320024e701f54a23108";
   public $register_date;
   public $username;
   public $logged_in = "0";
   public $first_name;
   public $last_name;
+  public $city;
+  public $country;
+  public $intro;
+  public $avatar;
+  public $fb_url;
+  public $twitter_url;
+  public $linkedin_url;
+  public $gplus_url;
   
   public function getAllPoints($user_id = NULL)
   {

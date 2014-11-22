@@ -14,16 +14,16 @@
 
 		<section class="content-md">
 			<section class="profile-pic">
-				<img src="<?=base_url();?>assets/graphics/profile-pic.jpg" width="120px" height="120px" />
+				<img src="<?=base_url() . $user -> avatar;?>" width="120px" height="120px" />
 			</section>
 			<section class="user-info">
 				<ul>
-					<li>Last Login: 21/Nov/14</li>
-					<li>Register Date: 10/Nov/14</li>
+					<li>Last Seen: # <span style="font-weight:bold;"><?=date("D, d M Y",strtotime($user->last_login));?></span></li>
+					<li>Member Since: <span style="font-weight:bold;"><?=date("D, d M Y",strtotime($user->register_date));?></span></li>
 				</ul>
-				<h1><?=$user -> first_name . " " . $user->last_name;?><small id="user-type">Admin</small></h1>
-				<h5>Rawalpindi, Pakistan</h5>
-				<p>I am a Software Engineering graduate student with love for Web Development. I love to play cricket and I am a fitness freak.</p>
+				<h1><?=$user -> first_name . " " . $user->last_name;?><small id="user-type"><?=$user -> type;?></small></h1>
+				<h5><?=$user -> city;?>, <?=$user -> country;?></h5>
+				<p><?=$user -> intro;?></p>
 			</section>
 		</section>
 		
@@ -94,13 +94,13 @@
 				</section>
 				<section class="col2">
 					<ul class="profile">
-						<li>Abdul</li>
-						<li>Rehman</li>
-						<li>ar.malik@vitorials.com</li>
-						<li><a href="www.facebook.com/">www.facebook.com/</a></li>
-						<li><a href="www.twitter.com/">www.twitter.com/</a></li>
-						<li><a href="www.linkedin.com/">www.linkedin.com/</a></li>
-						<li><a href="www.gmail.com/">www.gmail.com/</a></li>
+						<li><?=$user -> first_name;?></li>
+						<li><?=$user -> last_name;?></li>
+						<li><?=$user -> email;?></li>
+						<li><a href="<?=$user -> fb_url;?>"><?=$user -> fb_url;?></a></li>
+						<li><a href="<?=$user -> twitter_url;?>"><?=$user -> twitter_url;?></a></li>
+						<li><a href="<?=$user -> linkedin_url;?>"><?=$user -> linkedin_url;?></a></li>
+						<li><a href="<?=$user -> gplus_url;?>"><?=$user -> gplus_url;?></a></li>
 					</ul>
 				</section>
 			</section>

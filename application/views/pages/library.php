@@ -23,9 +23,7 @@
 			<h4>How to use our Course Library?</h4>
 			<p>Our library is best for exploring content in a self-guided manner. Want us to guide you through learning new skills. Try out <a href="<?=base_url();?>index.php/tracks">Tracks</a>.</p>
 		</section>
-		<section id="upcoming-courses">
-			<a class="default" href="#">Upcoming Courses</a>
-		</section>
+	
 		<section class="clear"></section>
 		<section class="line-border"></section>
 		<nav class="default">

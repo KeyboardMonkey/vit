@@ -133,7 +133,7 @@
                                 ?>/<?=count($course -> getLectures());?></h5>
 				<h4 class="level"><?=$course -> difficulty_level;?></h4>
 				<section class="clear"></section>
-				<h4 class="course-name"><?=$course -> tiny_intro;?></h4>
+				<h4 class="course-name"><a href="<?=base_url();?>index.php/courses/view/<?=$course -> course_id;?>"><?=$course -> full_name;?></a></h4>
 				<section class="clear"></section>
 				<p class="points"><?=$course -> points;?> Points</p>
 				<h4 class="rating">Rating: <?=$course -> getOverAllRating();?></h4>

@@ -532,6 +532,7 @@ ul.suggest-me-track { margin:20px auto 0; padding:0; width:18%; }
 .course-col-completed { margin:20px 0; padding:25px 0; float:left; border-top:2px solid #2ABB9B; width:350px; height:180px; background:#ECF0F1; opacity:1; }
     .course-col h4.level { margin:10px; padding:0; float:left; font-size:14px; }
     .course-col h4.course-name { margin:10px; font-size:18px; float:left; color:#2ABB9B; }
+    .course-col .course-name a  {color:#2ABB9B; }
     .course-col p.points { margin:10px; padding:0 10px; font-size:14px; float:left; background:#ffffff; display:inline-block; }
     .course-col h4.rating { margin:10px; padding:0; float:right; font-size:14px; }
     .course-col img { margin:15px 125px 30px; }
