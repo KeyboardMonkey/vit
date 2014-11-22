@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4
+-- version 4.0.4.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 20, 2014 at 10:47 AM
--- Server version: 5.6.12-log
--- PHP Version: 5.4.12
+-- Generation Time: Nov 22, 2014 at 08:57 AM
+-- Server version: 5.6.11
+-- PHP Version: 5.5.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -53,14 +53,14 @@ CREATE TABLE IF NOT EXISTS `courses` (
   `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by` int(11) NOT NULL,
   PRIMARY KEY (`course_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=93 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=87 ;
 
 --
 -- Dumping data for table `courses`
 --
 
 INSERT INTO `courses` (`course_id`, `full_name`, `tiny_intro`, `course_thumbnail`, `category`, `difficulty_level`, `status`, `description`, `points`, `developed_by`, `learning_outcome`, `target_audience`, `section_title`, `video_title`, `video_file`, `srt`, `full_course_files_zip`, `additional_file_title`, `additional_file`, `is_new`, `created_date`, `updated_date`, `created_by`) VALUES
-(1, 'Build an Interactive Website', 'Build an Interactive Website', NULL, '6', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 100, 'Lynda', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
+(1, 'Build an Interactive Website', 'Build an Interactive Website', NULL, '6', 'Intermediate', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 100, 'Lynda', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
 (2, 'Introduction to Programming', 'Introduction to Programming', NULL, '6', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 20, 'Tree House', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
 (3, 'How to Write a Business Plan', 'How to Write a Business Plan', NULL, '12', 'Beginner', 'yes', 'hitestLorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 30, 'New Boston', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
 (4, 'PHP & Stripe API', 'PHP & Stripe API', NULL, '2', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 200, 'Lynda', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
@@ -136,10 +136,17 @@ INSERT INTO `courses` (`course_id`, `full_name`, `tiny_intro`, `course_thumbnail
 (73, 'J2ME basics ', 'J2ME basics ', NULL, '4', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor tellus lectus, nec tempus est condimentum sit amet. Duis fermentum pulvinar eros, vel sagittis urna sollicitudin vel. Fusce sed metus eleifend nibh tincidunt aliquet non eget lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis blandit sollicitudin pellentesque. Pellentesque dapibus sapien vitae arcu dictum efficitur. Ut ac tellus hendrerit diam pharetra gravida. Fusce vitae nisl a sem placerat pharetra eget ac justo. Duis vitae urna varius, accumsan leo vitae, scelerisque nibh. Etiam rutrum convallis ultrices.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis magna sit amet ligula accumsan feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce vestibulum nibh in dui pellentesque placerat vitae a ex. Quisque id vehicula urna, quis elementum dui. Etiam mi lacus, aliquet ut bibendum ac, lacinia in nisl. Donec ut ante lectus. Sed venenatis elit eu risus pellentesque semper. Mauris convallis convallis nisl, at sagittis lorem aliquam ut. Pellentesque quis mi eu dolor venenatis fringilla. In ut pulvinar ante. Sed hendrerit, diam eget vestibulum aliquet, elit sem cursus libero, vitae facilisis lectus sapien tempor sem. Suspendisse suscipit pretium risus, at pharetra mi facilisis a.\r\n\r\nAliquam sed lorem nec ligula tempus faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque felis libero, euismod vitae consectetur eget, viverra eu purus. Quisque nec elit sit amet ipsum rhoncus ultricies sed sit amet lacus. Fusce vestibulum nunc sapien, sed congue orci tristique quis. Nam at feugiat libero. Vestibulum ante orci, bibendum laoreet aliquet sed, placerat sed velit. Fusce sagittis sagittis tellus ac congue. Phasellus eget maximus ex. In scelerisque odio tincidunt convallis dictum. Praesent ultrices luctus ex, quis pretium nisl pellentesque sed.\r\n\r\nAliquam erat volutpat. Nullam auctor sagittis scelerisque. Nullam ligula elit, rhoncus quis suscipit nec, tincidunt sed lacus. In finibus egestas rutrum. Duis et odio interdum, ultrices magna sed, consequat mauris. Fusce condimentum nibh vitae nulla vulputate vulputate. Sed sed orci lacinia, semper purus vel, pellentesque lorem. Integer porta, odio in ornare ultricies, velit velit sollicitudin magna, quis malesuada nibh ex in erat. Pellentesque blandit nibh neque, non lobortis massa volutpat at. Sed auctor, magna et scelerisque interdum, risus lorem ornare ex, eget suscipit urna felis et nisl. Ut in arcu ultricies, imperdiet lorem id, euismod risus. Mauris eu nisi mauris. Maecenas ac pretium lorem. Suspendisse at augue sit amet est lacinia viverra at vel metus.', 100, NULL, NULL, NULL, 'section 1', 'video 1', '0', '0', '0', 'file 1', '0', NULL, '2014-11-16 10:13:34', '2014-11-16 10:13:34', 0),
 (74, 'Graphics in C++', 'Graphics in C++', NULL, '9', 'Intermediate', 'yes', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor tellus lectus, nec tempus est condimentum sit amet. Duis fermentum pulvinar eros, vel sagittis urna sollicitudin vel. Fusce sed metus eleifend nibh tincidunt aliquet non eget lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis blandit sollicitudin pellentesque. Pellentesque dapibus sapien vitae arcu dictum efficitur. Ut ac tellus hendrerit diam pharetra gravida. Fusce vitae nisl a sem placerat pharetra eget ac justo. Duis vitae urna varius, accumsan leo vitae, scelerisque nibh. Etiam rutrum convallis ultrices.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis magna sit amet ligula accumsan feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce vestibulum nibh in dui pellentesque placerat vitae a ex. Quisque id vehicula urna, quis elementum dui. Etiam mi lacus, aliquet ut bibendum ac, lacinia in nisl. Donec ut ante lectus. Sed venenatis elit eu risus pellentesque semper. Mauris convallis convallis nisl, at sagittis lorem aliquam ut. Pellentesque quis mi eu dolor venenatis fringilla. In ut pulvinar ante. Sed hendrerit, diam eget vestibulum aliquet, elit sem cursus libero, vitae facilisis lectus sapien tempor sem. Suspendisse suscipit pretium risus, at pharetra mi facilisis a.\r\n\r\nAliquam sed lorem nec ligula tempus faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque felis libero, euismod vitae consectetur eget, viverra eu purus. Quisque nec elit sit amet ipsum rhoncus ultricies sed sit amet lacus. Fusce vestibulum nunc sapien, sed congue orci tristique quis. Nam at feugiat libero. Vestibulum ante orci, bibendum laoreet aliquet sed, placerat sed velit. Fusce sagittis sagittis tellus ac congue. Phasellus eget maximus ex. In scelerisque odio tincidunt convallis dictum. Praesent ultrices luctus ex, quis pretium nisl pellentesque sed.\r\n\r\nAliquam erat volutpat. Nullam auctor sagittis scelerisque. Nullam ligula elit, rhoncus quis suscipit nec, tincidunt sed lacus. In finibus egestas rutrum. Duis et odio interdum, ultrices magna sed, consequat mauris. Fusce condimentum nibh vitae nulla vulputate vulputate. Sed sed orci lacinia, semper purus vel, pellentesque lorem. Integer porta, odio in ornare ultricies, velit velit sollicitudin magna, quis malesuada nibh ex in erat. Pellentesque blandit nibh neque, non lobortis massa volutpat at. Sed auctor, magna et scelerisque interdum, risus lorem ornare ex, eget suscipit urna felis et nisl. Ut in arcu ultricies, imperdiet lorem id, euismod risus. Mauris eu nisi mauris. Maecenas ac pretium lorem. Suspendisse at augue sit amet est lacinia viverra at vel metus.', 100, NULL, NULL, NULL, 'section 1', 'video 1', '0', '0', '0', 'file 1', '0', NULL, '2014-11-16 10:16:05', '2014-11-16 10:16:05', 0),
 (75, 'Developing Services in android', 'Developing Services in android', NULL, '5', 'Intermediate', 'yes', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin auctor tellus lectus, nec tempus est condimentum sit amet. Duis fermentum pulvinar eros, vel sagittis urna sollicitudin vel. Fusce sed metus eleifend nibh tincidunt aliquet non eget lacus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis blandit sollicitudin pellentesque. Pellentesque dapibus sapien vitae arcu dictum efficitur. Ut ac tellus hendrerit diam pharetra gravida. Fusce vitae nisl a sem placerat pharetra eget ac justo. Duis vitae urna varius, accumsan leo vitae, scelerisque nibh. Etiam rutrum convallis ultrices.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Integer iaculis magna sit amet ligula accumsan feugiat. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce vestibulum nibh in dui pellentesque placerat vitae a ex. Quisque id vehicula urna, quis elementum dui. Etiam mi lacus, aliquet ut bibendum ac, lacinia in nisl. Donec ut ante lectus. Sed venenatis elit eu risus pellentesque semper. Mauris convallis convallis nisl, at sagittis lorem aliquam ut. Pellentesque quis mi eu dolor venenatis fringilla. In ut pulvinar ante. Sed hendrerit, diam eget vestibulum aliquet, elit sem cursus libero, vitae facilisis lectus sapien tempor sem. Suspendisse suscipit pretium risus, at pharetra mi facilisis a.\r\n\r\nAliquam sed lorem nec ligula tempus faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque felis libero, euismod vitae consectetur eget, viverra eu purus. Quisque nec elit sit amet ipsum rhoncus ultricies sed sit amet lacus. Fusce vestibulum nunc sapien, sed congue orci tristique quis. Nam at feugiat libero. Vestibulum ante orci, bibendum laoreet aliquet sed, placerat sed velit. Fusce sagittis sagittis tellus ac congue. Phasellus eget maximus ex. In scelerisque odio tincidunt convallis dictum. Praesent ultrices luctus ex, quis pretium nisl pellentesque sed.\r\n\r\nAliquam erat volutpat. Nullam auctor sagittis scelerisque. Nullam ligula elit, rhoncus quis suscipit nec, tincidunt sed lacus. In finibus egestas rutrum. Duis et odio interdum, ultrices magna sed, consequat mauris. Fusce condimentum nibh vitae nulla vulputate vulputate. Sed sed orci lacinia, semper purus vel, pellentesque lorem. Integer porta, odio in ornare ultricies, velit velit sollicitudin magna, quis malesuada nibh ex in erat. Pellentesque blandit nibh neque, non lobortis massa volutpat at. Sed auctor, magna et scelerisque interdum, risus lorem ornare ex, eget suscipit urna felis et nisl. Ut in arcu ultricies, imperdiet lorem id, euismod risus. Mauris eu nisi mauris. Maecenas ac pretium lorem. Suspendisse at augue sit amet est lacinia viverra at vel metus.', 100, NULL, NULL, NULL, 'section 1', 'video 1', '0', '0', '0', 'file 1', '0', NULL, '2014-11-16 10:18:33', '2014-11-16 10:18:33', 0),
-(89, 'Introduction to Database Systems', 'Introduction to Database Systems', NULL, '1', 'Beginner', 'no', 'Introduction to Database Systems', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 09:31:13', '2014-11-20 09:31:13', 1),
-(90, 'Introduction to Database Systems', 'Introduction to Database Systems', NULL, '1', 'Beginner', 'no', 'Introduction to Database Systems', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 09:46:51', '2014-11-20 09:46:51', 1),
-(91, 'Introduction to Database Systems', 'Introduction to Database Systems', NULL, '1', 'Beginner', 'no', 'Introduction to Database Systems', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 09:56:20', '2014-11-20 09:56:20', 1),
-(92, 'Introduction to Database Systems', 'Introduction to Database Systems', NULL, '1', 'Intermediate', 'no', 'Introduction to Database Systems', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 09:57:34', '2014-11-20 09:57:34', 1);
+(76, 'NEW COURSE ABC', 'this is a good course', NULL, '7', 'Beginner', 'no', 'this is a good coursethis is a good coursethis is a good coursethis is a good coursethis is a good coursethis is a good coursethis is a good coursethis is a good coursethis is a good coursethis is a good coursethis is a good coursethis is a good course', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 10:50:58', '2014-11-20 10:50:58', 1),
+(77, 'XYZ', 'kajflsdalfkjsadkfjsdaklfjsdfjlksdajf', NULL, '9', 'Advanced', 'no', 'lkadsjflsdklfjsklfjskldafjlkajdkfjlksadjflsdajfl', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 18:18:16', '2014-11-20 18:18:16', 1),
+(78, 'Best Course XYZ', 'Best Course XYZ', NULL, '1', 'Beginner', 'no', 'Best Course XYZBest Course XYZBest Course XYZ', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 18:25:43', '2014-11-20 18:25:43', 1),
+(79, 'Best Course XYZBest Course XYZ', 'Best Course XYZBest Course XYZ', NULL, '4', 'Advanced', 'no', 'Best Course XYZBest Course XYZ', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 18:26:55', '2014-11-20 18:26:55', 1),
+(80, 'dgsgaga', 'dgsgaga', NULL, '5', 'Advanced', 'no', 'dgsgagadgsgagadgsgagadgsgaga', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 18:29:06', '2014-11-20 18:29:06', 1),
+(81, 'Best Course XYZ', 'Best Course XYZ', NULL, '1', 'Advanced', 'no', 'Best Course XYZBest Course XYZ', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 18:32:43', '2014-11-20 18:32:43', 1),
+(82, '_data_data_data_data_data', '_data_data_data', NULL, '1', 'Beginner', 'no', '_data_data_data_data', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 18:34:48', '2014-11-20 18:34:48', 1),
+(83, 'Best Course XYZ', 'Best Course XYZ', NULL, '5', 'Advanced', 'no', 'Best Course XYZBest Course XYZBest Course XYZ', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 18:36:04', '2014-11-20 18:36:04', 1),
+(84, 'datadatadatadatadata', 'data', NULL, '1', 'Beginner', 'no', 'datadatadatadata', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 18:39:03', '2014-11-20 18:39:03', 1),
+(85, 'data', 'data', NULL, '1', 'Advanced', 'no', 'datadatadata', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 18:40:37', '2014-11-20 18:40:37', 1),
+(86, 'data', 'datadatadata', NULL, '1', 'Advanced', 'no', 'datadatadata', 100, NULL, NULL, NULL, 'n/a', '0', '0', '0', '0', '0', '0', NULL, '2014-11-20 18:41:21', '2014-11-20 18:41:21', 1);
 
 -- --------------------------------------------------------
 
@@ -169,7 +176,7 @@ INSERT INTO `course_category` (`id`, `category`, `color_tag`) VALUES
 (8, 'CSS', 'css'),
 (9, 'C++', 'cpp'),
 (10, 'WordPress', 'wordpress'),
-(11, 'Development Tools', 'd-tools'),
+(11, 'Dev. Tools', 'd-tools'),
 (12, 'Business', 'business'),
 (13, 'Design', 'design'),
 (14, 'Other', 'other');
@@ -189,7 +196,7 @@ CREATE TABLE IF NOT EXISTS `course_enrollment` (
   `progress` int(11) NOT NULL,
   PRIMARY KEY (`enrol_id`),
   KEY `enrol_time` (`enrol_time`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
 
 --
 -- Dumping data for table `course_enrollment`
@@ -197,7 +204,6 @@ CREATE TABLE IF NOT EXISTS `course_enrollment` (
 
 INSERT INTO `course_enrollment` (`enrol_id`, `course_id`, `user_id`, `enrol_time`, `status`, `progress`) VALUES
 (3, 2, 6, '2014-11-14 19:11:50', 'in-progress', 0),
-(4, 4, 6, '2014-11-14 20:45:13', 'in-progress', 0),
 (5, 2, 2, '2014-11-18 14:18:52', 'in-progress', 0),
 (6, 18, 1, '2014-11-16 05:20:32', 'in-progress', 0),
 (10, 1, 1, '2014-11-16 06:38:35', 'in-progress', 0),
@@ -206,7 +212,12 @@ INSERT INTO `course_enrollment` (`enrol_id`, `course_id`, `user_id`, `enrol_time
 (13, 5, 2, '2014-11-18 14:20:47', 'in-progress', 0),
 (14, 3, 1, '2014-11-17 15:31:47', 'in-progress', 0),
 (15, 1, 6, '2014-11-18 14:23:50', 'in-progress', 0),
-(16, 8, 1, '2014-11-20 07:59:22', 'in-progress', 0);
+(18, 2, 73, '2014-11-20 09:08:15', 'in-progress', 0),
+(19, 1, 75, '2014-11-20 18:02:49', 'in-progress', 0),
+(20, 1, 77, '2014-11-21 10:04:38', 'in-progress', 0),
+(21, 2, 77, '2014-11-21 10:12:34', 'in-progress', 0),
+(22, 3, 77, '2014-11-21 10:12:34', 'in-progress', 0),
+(23, 3, 6, '2014-11-22 07:49:48', 'in-progress', 0);
 
 -- --------------------------------------------------------
 
@@ -320,7 +331,7 @@ CREATE TABLE IF NOT EXISTS `lectures` (
   `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `is_completed` enum('yes','no') DEFAULT NULL,
   PRIMARY KEY (`lect_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=46 ;
 
 --
 -- Dumping data for table `lectures`
@@ -352,8 +363,25 @@ INSERT INTO `lectures` (`lect_id`, `course_id`, `vid_title`, `vid_path`, `srt_pa
 (24, 3, 'Adding a Contact Form', 'upload/ecbeb817c1b611efaf4d34d17926ab88.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-13 10:25:56', '2014-11-13 10:25:56', NULL),
 (25, 4, 'Adding a Contact Form', 'upload/ecbeb817c1b611efaf4d34d17926ab88.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-13 10:25:56', '2014-11-13 10:25:56', NULL),
 (26, 1, 'Adding a Contact Form', 'upload/ecbeb817c1b611efaf4d34d17926ab88.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-13 10:25:56', '2014-11-13 10:25:56', NULL),
-(27, 89, 'Introduction to Database Systems', 'files/a81ba44236087c160b2fc73807fb6e6b.jpg', NULL, NULL, NULL, NULL, NULL, '2014-11-20 09:38:17', '2014-11-20 09:38:17', NULL),
-(28, 89, 'Introduction to Database Systems', 'files/25992088331b08364264c674e53af6e0.jpg', NULL, NULL, NULL, NULL, NULL, '2014-11-20 09:39:07', '2014-11-20 09:39:07', NULL);
+(27, 76, 'Vid:1', 'files/eb7766916822817878e4c993f5c538d0.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 10:51:52', '2014-11-20 10:51:52', NULL),
+(28, 77, 'sdflksdfjfds', 'files/80717a3e45d6312f8da69f7b23660ae8.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:18:51', '2014-11-20 18:18:51', NULL),
+(29, 78, 'Best Course XYZ', 'upload/d28e91a79ca5a4d2dcba2be7135bfcbf.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:25:53', '2014-11-20 18:25:53', NULL),
+(30, 79, 'Best Course XYZ', 'upload/963d824103c81e16ec9858a508ff9b4d.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:27:00', '2014-11-20 18:27:00', NULL),
+(31, 80, 'dgsgaga', 'upload/71ccdefd7f7e54a1a8930fbb3b45f45a.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:29:14', '2014-11-20 18:29:14', NULL),
+(32, 80, 'dgsgaga', 'upload/21f313d0b96ea1a47f964b5977b0747a.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:29:34', '2014-11-20 18:29:34', NULL),
+(33, 80, 'dgsgaga', 'upload/393f6fdc85e289b8251007237c916b10.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:29:41', '2014-11-20 18:29:41', NULL),
+(34, 80, 'dgsgaga', 'upload/486c0616a4e33837c664c8dae7501ca7.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:31:05', '2014-11-20 18:31:05', NULL),
+(35, 81, 'Best Course XYZ', 'upload/b6f2c273effe6a06ed6cffa4348c217d.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:32:51', '2014-11-20 18:32:51', NULL),
+(36, 82, '_data_data_data', 'upload/99105f949ee2fe6de2783688da40678a.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:34:59', '2014-11-20 18:34:59', NULL),
+(37, 83, 'Best Course XYZ', 'upload/9c2796ad865ef4b2fde11f03a3d100b8.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:36:09', '2014-11-20 18:36:09', NULL),
+(38, 83, 'Best Course XYZ', 'upload/fe4d0c5a40535b6e96ae7c14979798a4.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:36:34', '2014-11-20 18:36:34', NULL),
+(39, 83, 'Best Course XYZ', 'upload/a1902d363b35db695d385951597a7c0d.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:36:53', '2014-11-20 18:36:53', NULL),
+(40, 83, 'Best Course XYZ', 'upload/51d361c4997332994a8ba2dde82eee56.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:37:35', '2014-11-20 18:37:35', NULL),
+(41, 84, 'datadatadata', 'upload/d19242977b8665f13bb39afaa6a8923f.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:39:07', '2014-11-20 18:39:07', NULL),
+(42, 85, 'datadata', 'upload/808e2a4816f45c83ff470badba925afa.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:40:42', '2014-11-20 18:40:42', NULL),
+(43, 86, 'datadata', 'upload/386e2bf7d54a21d74d529c6a5a62df35.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:41:25', '2014-11-20 18:41:25', NULL),
+(44, 86, 'xtagwe', 'upload/26e972ae7ab3857fd3dc3998c96d1057.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:41:40', '2014-11-20 18:41:40', NULL),
+(45, 86, 'asdfafdafdsfa', 'upload/2d66c37820603af17e8f200e682583e5.mp4', NULL, NULL, NULL, NULL, NULL, '2014-11-20 18:41:55', '2014-11-20 18:41:55', NULL);
 
 -- --------------------------------------------------------
 
@@ -406,7 +434,7 @@ CREATE TABLE IF NOT EXISTS `quiz_answers` (
   `submittion_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `question_id` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=26 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=38 ;
 
 --
 -- Dumping data for table `quiz_answers`
@@ -423,7 +451,19 @@ INSERT INTO `quiz_answers` (`id`, `quiz_id`, `user_id`, `answer`, `submittion_da
 (22, 3, 1, 'option_1', '2014-11-16 18:50:40', 3),
 (23, 3, 1, 'option_1', '2014-11-16 18:50:40', 4),
 (24, 3, 1, 'option_1', '2014-11-16 18:50:40', 6),
-(25, 5, 2, 'option_1', '2014-11-18 14:22:06', 5);
+(25, 5, 2, 'option_1', '2014-11-18 14:22:06', 5),
+(26, 5, 6, 'option_1', '2014-11-20 08:53:49', 5),
+(27, 5, 6, 'option_3', '2014-11-20 08:53:49', 23),
+(28, 3, 77, 'option_3', '2014-11-21 10:10:26', 6),
+(29, 3, 77, 'option_2', '2014-11-21 10:10:26', 8),
+(30, 3, 77, 'option_1', '2014-11-21 10:10:26', 10),
+(31, 3, 77, 'option_1', '2014-11-21 10:10:26', 11),
+(32, 3, 77, 'option_2', '2014-11-21 10:10:27', 15),
+(33, 3, 77, 'option_2', '2014-11-21 10:10:27', 25),
+(34, 3, 77, 'option_2', '2014-11-21 10:10:27', 27),
+(35, 3, 77, 'option_2', '2014-11-21 10:10:27', 28),
+(36, 3, 77, 'option_2', '2014-11-21 10:10:27', 2),
+(37, 3, 77, 'option_2', '2014-11-21 10:10:27', 3);
 
 -- --------------------------------------------------------
 
@@ -507,9 +547,8 @@ CREATE TABLE IF NOT EXISTS `tracks` (
 --
 
 INSERT INTO `tracks` (`track_id`, `track_title`, `tiny_intro`, `track_description`, `status`, `track_points`, `track_progress`, `difficulty_level`, `is_new`, `additional_file_title`, `additional_file_path`, `created_date`, `updated_date`, `created_by`) VALUES
-(1, 'asdfadfadsasd', 'fasdfasdfasdf', 'adfadfassadfsaf', 'yes', 100, 0, 'Beginner', NULL, NULL, NULL, '2014-11-15 17:15:52', '2014-11-15 17:15:52', 1),
+(1, 'Learn Basic Web Development', 'Easy learning starting from basic and leading to advanced topics.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Beginner', NULL, 'Additional File ABC DEF ', NULL, '2014-11-15 17:15:52', '2014-11-15 17:15:52', 1),
 (2, 'Learn Web Design', 'Learn HTML and CSS, the building blocks of websites', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Beginner', '', 'Addt. File # 1', '0', '2014-11-15 17:34:34', '2014-11-15 17:34:34', 1),
-(3, 'Learn Front-end Web Development', 'Maecenas at leo eget nisl porta viverra.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Intermediate', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:36:50', '2014-11-15 17:36:50', 1),
 (4, 'Learn PHP Development', 'Maecenas at leo eget nisl porta viverra.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Advanced', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:37:18', '2014-11-15 17:37:18', 1),
 (5, 'Learn Android Development', 'Maecenas at leo eget nisl porta viverra.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Intermediate', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:38:13', '2014-11-15 17:38:13', 1),
 (6, 'Learn Wordpress Development', 'Maecenas at leo eget nisl porta viverra.', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Advanced', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:38:33', '2014-11-15 17:38:33', 1),
@@ -532,29 +571,15 @@ CREATE TABLE IF NOT EXISTS `tracks_enrollment` (
   `status` enum('in-progress','cancelled','completed') NOT NULL,
   `progress` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`track_enrol_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
 
 --
 -- Dumping data for table `tracks_enrollment`
 --
 
 INSERT INTO `tracks_enrollment` (`track_enrol_id`, `track_id`, `user_id`, `track_enrol_time`, `status`, `progress`) VALUES
-(1, 1, 1, '2014-11-17 15:36:05', 'in-progress', 0),
-(2, 2, 1, '2014-11-17 17:29:19', 'in-progress', 0),
-(3, 1, 1, '2014-11-17 17:36:42', 'in-progress', 0),
-(4, 1, 1, '2014-11-17 17:37:09', 'in-progress', 0),
-(5, 1, 1, '2014-11-17 17:37:45', 'in-progress', 0),
-(6, 1, 1, '2014-11-17 17:38:08', 'in-progress', 0),
-(7, 1, 1, '2014-11-17 17:38:15', 'in-progress', 0),
-(8, 1, 1, '2014-11-17 17:39:13', 'in-progress', 0),
-(9, 1, 1, '2014-11-17 17:39:32', 'in-progress', 0),
-(10, 1, 1, '2014-11-17 17:39:56', 'in-progress', 0),
-(11, 1, 1, '2014-11-17 17:40:20', 'in-progress', 0),
-(12, 1, 1, '2014-11-17 17:41:12', 'in-progress', 0),
-(13, 1, 1, '2014-11-17 17:45:16', 'in-progress', 0),
-(14, 1, 1, '2014-11-17 17:46:31', 'in-progress', 0),
-(15, 1, 1, '2014-11-17 18:19:13', 'in-progress', 0),
-(16, 1, 1, '2014-11-17 18:19:23', 'in-progress', 0);
+(39, 2, 6, '2014-11-22 07:35:09', 'in-progress', 0),
+(40, 1, 6, '2014-11-22 07:49:48', 'in-progress', 0);
 
 -- --------------------------------------------------------
 
@@ -615,62 +640,75 @@ CREATE TABLE IF NOT EXISTS `users` (
   `register_date` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `username` varchar(255) NOT NULL,
   `logged_in` int(1) NOT NULL DEFAULT '0' COMMENT '0 - No, 1 - Yes',
+  `first_name` varchar(33) NOT NULL,
+  `last_name` varchar(33) NOT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=69 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=80 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `email`, `password`, `type`, `active`, `last_login`, `hash`, `register_date`, `username`, `logged_in`) VALUES
-(1, 'admin@vitorials.net', 'admin', 'Admin', 'Yes', '2014-09-16 15:12:37', '', '0000-00-00 00:00:00', 'admin', 0),
-(3, 'teacher@vitorials.net', 'teacher', 'Teacher', 'No', NULL, '53a7aa0fc86f7a9b176180ce8aed59f2ce736b5696c106ae2b460539bbb4dec0', '0000-00-00 00:00:00', 'teacher', 0),
-(4, 'student@vitorials.net', 'student', 'User', 'Yes', '2014-09-17 19:54:16', '5e4427cdc2aad36871a458858172692d8b903743c511c0c71fbb2bd31ade5267', '0000-00-00 00:00:00', 'student', 1),
-(6, 'ishaqzafar@gmail.com', 'ishaq.zafar', 'User', 'Yes', '2014-09-18 09:43:30', '8ad8c472ba7bdced3d871d3f4b09d97824c6e4f6c9233952c6f9d3ad873a224e', '0000-00-00 00:00:00', 'ishaq.zafar', 1),
-(7, 'shahid.afridi@vitorials.net', 'shahid.afridi', 'User', 'Yes', '2014-09-21 08:20:40', '6e1bfbe1a96758036789bbac39bf9a5aa0d431d07b878aef735844c83d834929', '0000-00-00 00:00:00', 'shahid.afridi', 1),
-(11, 'ar.malik@vitorials.net', 'arm321', 'User', 'No', NULL, '685ad82db88a9561b3d373a792a6aa6a2a7c0bc4094ff032f509244c5dd523ec2e2fbe596ce178594ac0363c42a8a4cd88b6c9ac337107a9e07b3e316b8e91e0', '2014-09-22 16:18:45', 'ar.malik', 0),
-(12, 'shahzeb.imtiaz@vitorials.net', 'shazi321', 'User', 'No', NULL, '5d6c48cd6d651753324ff8441b4718344ffd7f7559e2a92d330b99b88926dff2f03f9d4c04fd3565db4139309ee885e7a0c9b1ace912a320024e701f54a23108', '2014-09-22 16:40:32', 'shahzeb.imtiaz', 0),
-(13, 'waleed.satti@vitorials.net', 'waleed.satti', 'User', 'No', NULL, '2d108fc9b8592da3f9581377f25ddc04e1934345aedc5dfc039ea33d57b455ff567207d1bf1d733f2354039cbbfb048b1ac2b3cfc68389e59a6b67cda72d5b22', '2014-09-22 16:41:38', 'waleed.satti', 0),
-(16, 'imran.khan@vitorials.net', 'imran.khan', 'User', 'No', NULL, '', '2014-10-26 05:43:29', 'Imran Khan', 0),
-(17, 'zeeshan.bin.iqbal@vitorials.net', 'zeeshan', 'User', 'No', NULL, '', '2014-10-26 05:45:00', 'Zeeshan Iqbal', 0),
-(18, 'zia@vitorials.net', 'zia123', 'User', 'No', NULL, '', '2014-10-26 05:45:32', 'Zia Ur Rehman', 0),
-(19, 'moez335@vitorials.net', 'moez123', 'User', 'No', NULL, '', '2014-10-26 05:46:27', 'Moez Isar', 0),
-(20, 'nasrullah.inayat.chudhary.butt@vitorials.net', 'biker_boy91', 'User', 'No', NULL, '', '2014-10-26 05:47:14', 'Nasrullah Inayat', 0),
-(21, 'umer@hotmail.com', 'umer123', 'User', 'No', NULL, '', '2014-10-26 05:47:50', 'Muhammad Umer', 0),
-(22, 'abdullah@yahoo.com', 'abdullah@yahoo.com', 'User', 'No', NULL, '', '2014-10-26 05:48:28', 'Abdullah Abbasi', 0),
-(23, 'ahsan.kayani@live.com', 'Ahsan', 'User', 'No', NULL, '', '2014-10-26 05:48:45', 'Ahsan Naseem', 0),
-(24, 'sabahat@yahoo.com', 'sabahat', 'User', 'No', NULL, '', '2014-10-26 05:50:36', 'Sabahat Afzal', 0),
-(25, 'bilu@microsoft.com', 'bilu-bhai', 'User', 'No', NULL, '', '2014-10-26 05:51:13', 'Bilal Sipra', 0),
-(26, 'behzad@gmail.com', 'behzad', 'User', 'No', NULL, '', '2014-10-26 05:51:50', 'Behzad Rajgan', 0),
-(27, 'thegreatkhali@wwe.com', 'wwe123', 'User', 'No', NULL, '', '2014-10-26 05:52:15', 'Waqas Khalli', 0),
-(28, 'xaibi@facebook.com', 'zohaib', 'User', 'No', NULL, '', '2014-10-26 05:52:37', 'Zohaib Abbas', 0),
-(29, 'ali.ahmad@riphah.edu.pk', 'ali.riphah', 'User', 'No', NULL, '', '2014-10-26 05:53:05', 'Ali Ahmad', 0),
-(30, 'saqi@yahoo.com', 'Saqi1', 'User', 'No', NULL, '', '2014-10-26 05:53:23', 'Saqlain Mushtaq', 0),
-(31, 'altaf.bhai@mqm.com', 'altaf', 'User', 'No', NULL, '', '2014-10-26 05:54:22', 'Kashir Altaf', 0),
-(32, 'khan-is-great@gmail.com', 'khanjee', 'User', 'No', NULL, '', '2014-10-26 05:54:45', 'Bilal Khan', 0),
-(33, 'wasi.wasi@yaho.com', 'wasii', 'User', 'No', NULL, '', '2014-10-26 05:55:04', 'Wasif Wasif', 0),
-(34, 'max555@gmail.com', 'max555', 'User', 'No', NULL, '', '2014-10-26 05:55:27', 'Shaun Max', 0),
-(35, 'paul.alen@as.us', 'american', 'User', 'No', NULL, '', '2014-10-26 05:55:55', 'Paul Alen', 0),
-(36, 'chris@hollywood.com', 'Batman', 'User', 'No', NULL, '', '2014-10-26 05:56:14', 'Christian Bale', 0),
-(37, 'eddy@x.com', 'american.history', 'User', 'No', NULL, '', '2014-10-26 05:56:44', 'Edward Norton', 0),
-(38, 'turing@computing.com', 'father', 'User', 'No', NULL, '', '2014-10-26 05:57:38', 'Alan Turing', 0),
-(39, 'maryam_ilyas@yahoo.com', 'yahoo.', 'User', 'No', NULL, '', '2014-10-26 05:58:10', 'Maryam Ilyas', 0),
-(40, 'freeman@morganfoundation.org', 'oldblackguy', 'User', 'No', NULL, '', '2014-10-26 05:59:33', 'Morgan Freeman', 0),
-(41, 'ali.akbar@gmail.com', 'ali333', 'User', 'No', NULL, '', '2014-10-26 06:00:37', 'Ali Akbar', 0),
-(42, 'freedomfighter@yahoo.com', 'freekashmir', 'User', 'No', NULL, '', '2014-10-26 06:01:13', 'Ali Shughal', 0),
-(43, 'robert@hollywood.com', 'roberto', 'User', 'No', NULL, '', '2014-10-26 06:01:59', 'Robert Downey Jr.', 0),
-(44, 'saud.khan@riu.edu.pk', 'saud.khan', 'User', 'No', NULL, '', '2014-10-28 10:15:09', 'Saud Khan', 0),
-(55, 'admins@vitorials.net', 'admins@vitorials.net', 'User', 'No', NULL, '', '2014-11-05 17:18:53', 'AToZ Bukhari', 0),
-(59, 'jimmy@yahoo.com', '''success'' => $success', 'User', 'No', NULL, '', '2014-11-07 14:41:38', 'jimmy anderson', 0),
-(60, 'mush@army.com', '$this->load->view(''templa tes/header'');         $this->load->view(''wizards/pref-set'');         $this->load->view(''templates/footer'');', 'User', 'No', NULL, '', '2014-11-07 14:43:33', 'Gen Mushi', 0),
-(61, 'mir.shakil@geo.tv', 'mir.shakil@geo.tv', 'User', 'No', NULL, '', '2014-11-07 14:45:40', 'Mir Shakil', 0),
-(62, 'abdul@yahoo.com', 'abdul@sdfj', 'User', 'No', NULL, '', '2014-11-08 10:44:46', 'abdul qadir', 0),
-(63, 'abdul.qadir@yahoo.com', 'abdul@sdfj', 'User', 'No', NULL, '', '2014-11-08 10:44:58', 'abdul qadir', 0),
-(64, 'afridi@sixer.com', 'afridi@sixer.com', 'User', 'No', NULL, '', '2014-11-10 09:14:26', 'Shahid Afridi', 0),
-(65, 'inzi@captain.com', 'inzi@captain.com', 'User', 'No', NULL, '', '2014-11-10 09:16:55', 'Inzi Bhai', 0),
-(66, 'satti@yahoo.com', 'satti@yahoo.com', 'User', 'No', NULL, '', '2014-11-13 06:24:22', 'Waleed Ahmad', 0),
-(67, 'ahmad@yahoo.com', 'ahmad@yahoo.com', 'User', 'No', NULL, '', '2014-11-14 07:23:44', 'Ahmad Mukhtar', 0),
-(68, 'shaun@yahoo.com', 'shaun@yahoo.com', 'User', 'No', NULL, '', '2014-11-14 10:37:48', 'Shaun Tait', 0);
+INSERT INTO `users` (`user_id`, `email`, `password`, `type`, `active`, `last_login`, `hash`, `register_date`, `username`, `logged_in`, `first_name`, `last_name`) VALUES
+(1, 'admin@vitorials.net', 'admin', 'Admin', 'Yes', '2014-09-16 15:12:37', '', '2014-09-22 16:18:45', 'admin', 0, 'Admin', 'Kapoor'),
+(3, 'teacher@vitorials.net', 'teacher', 'Teacher', 'No', NULL, '53a7aa0fc86f7a9b176180ce8aed59f2ce736b5696c106ae2b460539bbb4dec0', '2014-09-22 16:18:45', 'teacher', 0, 'Test', 'Teacher'),
+(4, 'student@vitorials.net', 'student', 'User', 'Yes', '2014-09-17 19:54:16', '5e4427cdc2aad36871a458858172692d8b903743c511c0c71fbb2bd31ade5267', '2014-09-22 16:18:45', 'student', 1, 'Test', 'Student'),
+(6, 'ishaqzafar@gmail.com', 'ishaq.zafar', 'User', 'Yes', '2014-09-18 09:43:30', '8ad8c472ba7bdced3d871d3f4b09d97824c6e4f6c9233952c6f9d3ad873a224e', '2014-09-22 16:18:45', 'ishaq.zafar', 1, 'Ishaq', 'Zafar'),
+(7, 'shahid.afridi@vitorials.net', 'shahid.afridi', 'User', 'Yes', '2014-09-21 08:20:40', '6e1bfbe1a96758036789bbac39bf9a5aa0d431d07b878aef735844c83d834929', '2014-09-22 16:18:45', 'shahid.afridi', 1, 'Shahid', 'Afridi'),
+(11, 'ar.malik@vitorials.net', 'arm321', 'User', 'No', NULL, '685ad82db88a9561b3d373a792a6aa6a2a7c0bc4094ff032f509244c5dd523ec2e2fbe596ce178594ac0363c42a8a4cd88b6c9ac337107a9e07b3e316b8e91e0', '2014-09-22 16:18:45', 'abdul-rehman', 0, 'Abdul', 'Rehman'),
+(12, 'shahzeb.imtiaz@vitorials.net', 'shazi321', 'User', 'No', NULL, '5d6c48cd6d651753324ff8441b4718344ffd7f7559e2a92d330b99b88926dff2f03f9d4c04fd3565db4139309ee885e7a0c9b1ace912a320024e701f54a23108', '2014-09-22 16:40:32', 'shahzeb.imtiaz', 0, 'Shahzeb', 'Imtiaz'),
+(13, 'waleed.satti@vitorials.net', 'waleed.satti', 'User', 'No', NULL, '2d108fc9b8592da3f9581377f25ddc04e1934345aedc5dfc039ea33d57b455ff567207d1bf1d733f2354039cbbfb048b1ac2b3cfc68389e59a6b67cda72d5b22', '2014-09-22 16:41:38', 'waleed.satti', 0, 'Waleed', 'Satti'),
+(16, 'imran.khan@vitorials.net', 'imran.khan', 'User', 'No', NULL, '', '2014-10-26 05:43:29', 'Imran Khan', 0, 'Imran', 'Khan'),
+(17, 'zeeshan.bin.iqbal@vitorials.net', 'zeeshan', 'User', 'No', NULL, '', '2014-10-26 05:45:00', 'Zeeshan Iqbal', 0, 'Zeeshan', 'Bin Iqbal'),
+(18, 'zia@vitorials.net', 'zia123', 'User', 'No', NULL, '', '2014-10-26 05:45:32', 'Zia Ur Rehman', 0, 'Zia', 'Ur Rehman'),
+(19, 'moez335@vitorials.net', 'moez123', 'User', 'No', NULL, '', '2014-10-26 05:46:27', 'Moez Isar', 0, 'Moez', 'Isar'),
+(20, 'nasrullah.inayat.chudhary.butt@vitorials.net', 'biker_boy91', 'User', 'No', NULL, '', '2014-10-26 05:47:14', 'Nasrullah Inayat', 0, 'Nasrullah', 'Inayat'),
+(21, 'umer@hotmail.com', 'umer123', 'User', 'No', NULL, '', '2014-10-26 05:47:50', 'Muhammad Umer', 0, 'Muhammad', 'Umer'),
+(22, 'abdullah@yahoo.com', 'abdullah@yahoo.com', 'User', 'No', NULL, '', '2014-10-26 05:48:28', 'Abdullah Abbasi', 0, 'Abdullah', 'Abbasi'),
+(23, 'ahsan.kayani@live.com', 'Ahsan', 'User', 'No', NULL, '', '2014-10-26 05:48:45', 'Ahsan Naseem', 0, 'Ahsan', 'Naseem'),
+(24, 'sabahat@yahoo.com', 'sabahat', 'User', 'No', NULL, '', '2014-10-26 05:50:36', 'Sabahat Afzal', 0, 'Sabahat', 'Afzal'),
+(25, 'bilu@microsoft.com', 'bilu-bhai', 'User', 'No', NULL, '', '2014-10-26 05:51:13', 'Bilal Sipra', 0, 'Bilal', 'Sipra'),
+(26, 'behzad@gmail.com', 'behzad', 'User', 'No', NULL, '', '2014-10-26 05:51:50', 'Behzad Rajgan', 0, 'Behzad', 'Rajgan'),
+(27, 'thegreatkhali@wwe.com', 'wwe123', 'User', 'No', NULL, '', '2014-10-26 05:52:15', 'Waqas Khalli', 0, 'Waqas', 'Khalli'),
+(28, 'xaibi@facebook.com', 'zohaib', 'User', 'No', NULL, '', '2014-10-26 05:52:37', 'Zohaib Abbas', 0, 'Zohaib', 'Abbas'),
+(29, 'ali.ahmad@riphah.edu.pk', 'ali.riphah', 'User', 'No', NULL, '', '2014-10-26 05:53:05', 'Ali Ahmad', 0, 'Ali', 'Ahmad'),
+(30, 'saqi@yahoo.com', 'Saqi1', 'User', 'No', NULL, '', '2014-10-26 05:53:23', 'Saqlain Mushtaq', 0, 'Saqlain', 'Mushtaq'),
+(31, 'altaf.bhai@mqm.com', 'altaf', 'User', 'No', NULL, '', '2014-10-26 05:54:22', 'Kashir Altaf', 0, 'Kashir', 'Altaf'),
+(32, 'khan-is-great@gmail.com', 'khanjee', 'User', 'No', NULL, '', '2014-10-26 05:54:45', 'Bilal Khan', 0, 'Bilal', 'Khan'),
+(33, 'wasi.wasi@yaho.com', 'wasii', 'User', 'No', NULL, '', '2014-10-26 05:55:04', 'Wasif Wasif', 0, 'Wasif', 'Wasif'),
+(34, 'max555@gmail.com', 'max555', 'User', 'No', NULL, '', '2014-10-26 05:55:27', 'Shaun Max', 0, 'Shaun', 'Max'),
+(35, 'paul.alen@as.us', 'american', 'User', 'No', NULL, '', '2014-10-26 05:55:55', 'Paul Alen', 0, 'Paul', 'Alen'),
+(36, 'chris@hollywood.com', 'Batman', 'User', 'No', NULL, '', '2014-10-26 05:56:14', 'Christian Bale', 0, 'Christian', 'Bale'),
+(37, 'eddy@x.com', 'american.history', 'User', 'No', NULL, '', '2014-10-26 05:56:44', 'Edward Norton', 0, 'Edward', 'Norton'),
+(38, 'turing@computing.com', 'father', 'User', 'No', NULL, '', '2014-10-26 05:57:38', 'alan-turing', 0, 'Alan', 'Turing'),
+(39, 'maryam_ilyas@yahoo.com', 'yahoo.', 'User', 'No', NULL, '', '2014-10-26 05:58:10', 'maryam.ilyas', 0, 'Maryam', 'Ilyas'),
+(40, 'freeman@morganfoundation.org', 'oldblackguy', 'User', 'No', NULL, '', '2014-10-26 05:59:33', 'morgan-freeman', 0, 'Morgan', 'Freeman'),
+(41, 'ali.akbar@gmail.com', 'ali333', 'User', 'No', NULL, '', '2014-10-26 06:00:37', 'ali-akbar', 0, 'Ali', 'Akbar'),
+(42, 'freedomfighter@yahoo.com', 'freekashmir', 'User', 'No', NULL, '', '2014-10-26 06:01:13', 'ali-shughal', 0, 'Ali', 'Shughal'),
+(43, 'robert@hollywood.com', 'roberto', 'User', 'No', NULL, '', '2014-10-26 06:01:59', 'robert-downey', 0, 'Robert', 'Downey Jr.'),
+(44, 'saud.khan@riu.edu.pk', 'saud.khan', 'User', 'No', NULL, '', '2014-10-28 10:15:09', 'saud-khan', 0, 'Saud', 'Khan'),
+(55, 'admins@vitorials.net', 'admins@vitorials.net', 'User', 'No', NULL, '', '2014-11-05 17:18:53', 'admins', 0, 'Admin', 'Saab'),
+(59, 'jimmy@yahoo.com', '''success'' => $success', 'User', 'No', NULL, '', '2014-11-07 14:41:38', 'jimmy-anderson', 0, 'Jimmy', 'Anderson'),
+(60, 'mush@army.com', 'army123', 'User', 'No', NULL, '', '2014-11-07 14:43:33', 'gen-mushi', 0, 'General', 'Musharraf'),
+(61, 'mir.shakil@geo.tv', 'mir.shakil@geo.tv', 'User', 'No', NULL, '', '2014-11-07 14:45:40', 'mir-shakil', 0, 'Mir', 'Shakil'),
+(62, 'abdul@yahoo.com', 'abdul@sdfj', 'User', 'No', NULL, '', '2014-11-08 10:44:46', 'abdul-qadir', 0, 'Qadir', 'Baloch'),
+(63, 'abdul.qadir@yahoo.com', 'abdul@sdfj', 'User', 'No', NULL, '', '2014-11-08 10:44:58', 'abdul-qadir', 0, 'Abdul', 'Qadir'),
+(64, 'afridi@sixer.com', 'afridi@sixer.com', 'User', 'No', NULL, '', '2014-11-10 09:14:26', 'shahid-afridi', 0, 'Shahid', 'Afridi'),
+(65, 'inzi@captain.com', 'inzi@captain.com', 'User', 'No', NULL, '', '2014-11-10 09:16:55', 'inzi-bhai', 0, 'Inzi', 'Bhai'),
+(66, 'satti@yahoo.com', 'satti@yahoo.com', 'User', 'No', NULL, '', '2014-11-13 06:24:22', 'waleed-ahmad', 0, 'Waleed', 'Ahmad'),
+(67, 'ahmad@yahoo.com', 'ahmad@yahoo.com', 'User', 'No', NULL, '', '2014-11-14 07:23:44', 'ahmad-mukhtar', 0, 'Ahmad', 'Mukhtar'),
+(68, 'shaun@yahoo.com', 'shaun@yahoo.com', 'User', 'No', NULL, '', '2014-11-14 10:37:48', 'shaun-tait', 0, 'Shaun', 'Tait'),
+(69, 'tom@cat.com', 'tom@cat.com', 'User', 'No', NULL, '', '2014-11-20 00:46:42', 'tom-cat', 0, 'Tom', 'Cat'),
+(70, 'batman@bane.com', 'batman', 'User', 'No', NULL, '', '2014-11-20 00:52:33', 'bat.man', 0, 'Bat', 'Man'),
+(71, 'allahrakha@gmail.com', 'haqhoo', 'User', 'Yes', NULL, '', '2014-11-20 01:21:12', 'allah-rakha', 0, 'Allah', 'Rakha'),
+(72, 'moon@yahoo.com', 'moon123', 'User', 'Yes', NULL, '', '2014-11-20 01:26:35', 'moon-bhai', 0, 'Moon', 'Bhai'),
+(73, 'noor@yahoo.com', 'noornoor', 'User', 'Yes', NULL, '', '2014-11-20 01:45:50', 'noor-shah', 0, 'Noor', 'Shah'),
+(74, 'nazir@khosa.com', 'khosa123', 'User', 'Yes', NULL, '', '2014-11-20 16:59:04', 'nazir-khosa', 0, 'Nazir', 'Khosa'),
+(75, 'allah.ditta@yahoo.com', 'ditta1', 'User', 'Yes', NULL, '', '2014-11-20 18:00:09', 'allah-ditta', 0, 'Allah', 'Ditta'),
+(76, 'waleed@yahoo.com', 'waleed123', 'User', 'Yes', NULL, '', '2014-11-21 09:50:43', 'waleed-inaam', 0, 'Waleed', 'Inaam'),
+(77, 'waleed@gmail.com', 'waleed123', 'User', 'Yes', NULL, '', '2014-11-21 09:56:44', 'waleed-satti', 0, 'Waleed', 'Satti'),
+(78, 'shah@jee.com', 'shahjee', 'User', 'Yes', NULL, '', '2014-11-22 00:27:53', 'shah-jee', 0, 'shah', 'jee'),
+(79, 'azeem@yahoo.com', 'azeem', 'User', 'Yes', NULL, '', '2014-11-22 00:29:21', 'mian-azeem', 0, 'mian', 'azeem');
 
 -- --------------------------------------------------------
 
@@ -684,7 +722,7 @@ CREATE TABLE IF NOT EXISTS `user_interest_categories` (
   `cat_id` int(10) NOT NULL,
   `interest_level` int(2) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=206 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=234 ;
 
 --
 -- Dumping data for table `user_interest_categories`
@@ -803,20 +841,48 @@ INSERT INTO `user_interest_categories` (`id`, `user_id`, `cat_id`, `interest_lev
 (189, 68, 12, 2),
 (190, 68, 13, 2),
 (191, 68, 14, 0),
-(192, 6, 1, 0),
-(193, 6, 2, 2),
-(194, 6, 3, 0),
-(195, 6, 4, 0),
-(196, 6, 5, 0),
-(197, 6, 6, 0),
-(198, 6, 7, 0),
-(199, 6, 8, 0),
-(200, 6, 9, 0),
-(201, 6, 10, 2),
-(202, 6, 11, 2),
-(203, 6, 12, 2),
-(204, 6, 13, 0),
-(205, 6, 14, 0);
+(192, 6, 1, 1),
+(193, 6, 2, 1),
+(194, 6, 3, 1),
+(195, 6, 4, 1),
+(196, 6, 5, 1),
+(197, 6, 6, 1),
+(198, 6, 7, 1),
+(199, 6, 8, 1),
+(200, 6, 9, 1),
+(201, 6, 10, 1),
+(202, 6, 11, 1),
+(203, 6, 12, 1),
+(204, 6, 13, 1),
+(205, 6, 14, 1),
+(206, 75, 1, 2),
+(207, 75, 2, 2),
+(208, 75, 3, 0),
+(209, 75, 4, 0),
+(210, 75, 5, 0),
+(211, 75, 6, 0),
+(212, 75, 7, 0),
+(213, 75, 8, 0),
+(214, 75, 9, 0),
+(215, 75, 10, 0),
+(216, 75, 11, 0),
+(217, 75, 12, 0),
+(218, 75, 13, 0),
+(219, 75, 14, 0),
+(220, 77, 1, 2),
+(221, 77, 2, 2),
+(222, 77, 3, 2),
+(223, 77, 4, 0),
+(224, 77, 5, 0),
+(225, 77, 6, 0),
+(226, 77, 7, 0),
+(227, 77, 8, 0),
+(228, 77, 9, 0),
+(229, 77, 10, 0),
+(230, 77, 11, 0),
+(231, 77, 12, 0),
+(232, 77, 13, 0),
+(233, 77, 14, 0);
 
 -- --------------------------------------------------------
 
@@ -830,7 +896,7 @@ CREATE TABLE IF NOT EXISTS `user_lecture_progress` (
   `user_id` int(10) NOT NULL,
   `progress` int(3) NOT NULL,
   PRIMARY KEY (`progress_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=71 ;
 
 --
 -- Dumping data for table `user_lecture_progress`
@@ -863,7 +929,36 @@ INSERT INTO `user_lecture_progress` (`progress_id`, `lecture_id`, `user_id`, `pr
 (37, 4, 6, 100),
 (38, 6, 6, 100),
 (39, 26, 6, 100),
-(41, 5, 6, 100);
+(41, 5, 6, 100),
+(42, 15, 6, 0),
+(43, 16, 6, 0),
+(44, 7, 6, 100),
+(45, 8, 6, 100),
+(46, 9, 6, 100),
+(47, 11, 6, 100),
+(48, 7, 73, 100),
+(49, 8, 73, 100),
+(50, 9, 73, 100),
+(51, 10, 73, 100),
+(52, 23, 73, 100),
+(53, 10, 6, 100),
+(54, 23, 6, 100),
+(55, 2, 75, 100),
+(56, 3, 75, 100),
+(57, 4, 75, 100),
+(58, 5, 75, 100),
+(59, 6, 75, 100),
+(60, 26, 75, 0),
+(61, 12, 6, 100),
+(62, 13, 6, 100),
+(63, 14, 6, 100),
+(64, 24, 6, 100),
+(65, 2, 77, 100),
+(66, 3, 77, 100),
+(67, 4, 77, 100),
+(68, 5, 77, 100),
+(69, 6, 77, 100),
+(70, 26, 77, 0);
 
 -- --------------------------------------------------------
 
