@@ -94,7 +94,6 @@ a.default:active { background-color:#249f84; -webkit-box-shadow:0 5px #187f68; -
 #login-panel form#login .login-wrap #social button#twitter:hover { background:#54a3d1; }
 #login-panel form#login .login-wrap .registration a { margin:15px auto; display:block; text-align:center; color:#2ABB9B; font-size:16px; font-weight:bold; }
 #login-panel form#login .login-wrap .registration a:hover { text-decoration:underline; }
-
 /*-----------------------------------------------------------Pref-Wizard-----------------------------------------------------------*/
 .content-pref-wizard { margin:20px auto; padding:10px 0 70px; width:960px; background:#ffffff; }
 .content-pref-wizard h2 { padding:20px; text-align:center; color:#2ABB9B; }
@@ -177,16 +176,28 @@ input#login-checkbox { margin-left:5px; position:absolute; }
 }
 #main-welcome h1 { padding-bottom:20px; font-size:36px; }
 #main-welcome p { font-size:18px; line-height:40px; }
-#signup { margin:-30% 5%; padding:20px 0; background:#FFFFFF; width:400px; float:right; }
+#signup { margin:-30% 5%; position:relative; padding:20px 0; width:400px; float:right; }
 #signup h2 { padding-bottom:20px; font-size:30px; text-align:center; border-bottom:1px solid #ECF0F1; }
 #signup h2 small { font-size:16px; }
 #signup form { margin:0 auto; text-align:center; padding:20px 0; }
 #signup form label { font-size:16px; font-weight:bold; }
-#signup form input[type=text], #signup form input[type=password] { margin:5px 0; padding:10px; color:#58585a; font-size:14px; border:1px solid #ECF0F1; width:300px; transition:all 0.5s ease-out; }
-#signup form input[type=text].name { width:137px;}
+#signup form input[type=text], #signup form input[type=password] { background:transparent; margin:5px 0; padding:10px; color:#58585a; font-size:14px; border:1px solid #2ABB9B; width:300px; transition:all 0.5s ease-out; }
+#signup form input[type=text].name { width:137px; }
 #signup form input[type=text]:focus, #signup form input[type=password]:focus { box-shadow:0px 1px 1px #58585a; }
 #signup form input[type=submit] { margin:5px 40px; padding:10px 0; float:left; font-size:14px; width:30%; font-weight:bold; background:#2ABB9B; border:1px solid #2ABB9B; color:#FFFFFF; transition:all 0.5s ease-out; position:relative; cursor:pointer; }
 #signup form input[type=submit]:hover { box-shadow:0px 2px 0px #58585a; }
+
+
+.strength_meter { width:300px; }
+.button_strength { text-decoration:none; color:#; font-size:14px; }
+.strength_meter div { margin-top:-43px; margin-left:40px; height:40px; text-align:right; color:#000; line-height:40px;
+    -webkit-transition:all .3s ease-in-out; -moz-transition:all .3s ease-in-out; -o-transition:all .3s ease-in-out; -ms-transition:all .3s ease-in-out; transition:all .3s ease-in-out; }
+.strength_meter div p { padding-top:30px; padding-left:200px; position:absolute; color:#27ae60; font-size:12px; }
+.veryweak{ background-color:#FFA0A0; border-color:#F04040!important; width:25%!important; }
+.weak{ background-color:#FFB78C; border-color:#FF853C!important; width:50%!important; }
+.medium{ background-color:#FFEC8B; border-color:#FC0!important; width:75%!important; }
+.strong{ background-color:#C3FF88; border-color:#8DFF1C!important; width:100%!important; }
+
 /*-----------------------------------------------------------End Index-----------------------------------------------------------*/
 /*-----------------------------------------------------------Welcome-----------------------------------------------------------*/
 #welcome {
