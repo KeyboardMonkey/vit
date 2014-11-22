@@ -103,7 +103,12 @@ class course extends MY_Model{
     {
         if($user_id==NULL)
           $user_id=$this -> session -> userdata('user_id');
-        $enrollment = $this -> course_enrollment -> getWithCondition(array('user_id' => $user_id, 'course_id' => $this -> course_id));
+        #echo $user_id; die();
+        $enrollment = $this -> course_enrollment -> getWithCondition(
+            array('user_id' => $user_id
+            , 'course_id' => $this -> course_id)
+        );
+
         if(count($enrollment) > 0 ) return TRUE;
         else return FALSE;
         
@@ -488,13 +493,16 @@ class course extends MY_Model{
           
             $student = new user();
             $student -> load($enrolment -> user_id);
+            if(!isset($student -> user_id)) continue;
             $marks = $this ->getEarnedPoints($student->user_id);
             $points[$student -> user_id] = $marks;
-            
+            array_push($students, $student);
         }
+        //print_r($students);
          arsort($points);
           $returnusers = array();
       $i = 0;
+        //print_r($points);die();
       foreach ($points as $user_id => $user_points)
       {
           $user = new user();

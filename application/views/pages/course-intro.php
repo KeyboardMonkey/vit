@@ -41,7 +41,9 @@ $enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
 				}
 				?>
 			</li>
-			<?php 
+
+			<?php
+
 			echo '<li>
 					<span id="enrolled-students">
 						<img src="'.base_url().'assets/graphics/enrolled-students.png" width="25px" height="18px" />
@@ -74,7 +76,7 @@ $enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
 				echo '</div>';
 			}
 		}
-		else 	
+		else
 		{ 
 			echo "<form class=\"enroll-me\" action=\"".base_url()."index.php/courses/enrollme/".$course -> course_id."\">";
 			echo "<input type=\"submit\" name=\"submit\" value=\"Enroll Me!\" /></form>";
@@ -127,7 +129,7 @@ $enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
 									?>
 									<h5> Please Submit Summary Here! </h5>
 									<form action='<?=base_url("index.php/courses/submit_review/{$course->course_id}");?>' method='post'>
-										<label>Course Summary</lable>
+										<label>Course Summary</label>
 											<textarea width='500px' height='500px' name='review'>
 
 											</textarea>
@@ -197,7 +199,7 @@ console.log($(this).text());
 
 <?php
 $topStudents = $course -> getTopStudents();
-// print_r($topStudents);
+//print_r($topStudents);
 if(count($topStudents)>1)
 {
 //print_r($topStudents);	?>

@@ -34,7 +34,26 @@ class track extends MY_Model{
         if($count == 0) $count = 1;
         return (int) ($score / $count);
     }
-
+    public function  getPoints()
+    {
+        $points = 0;
+        $courses = $this -> getCourses();
+        foreach($courses as $course)
+        {
+            $points += $course -> points;
+        }
+        return $points;
+    }
+    public function  getPointsEarned()
+    {
+        $points = 0;
+        $courses = $this -> getCourses();
+        foreach($courses as $course)
+        {
+            $points += $course -> getEarnedPoints();
+        }
+        return $points;
+    }
       public function numberOfRatings()
     {
         $ratings  = $this -> track_rating -> getWithCondition(array('track_id' => $this -> track_id));

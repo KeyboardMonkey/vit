@@ -184,35 +184,49 @@ class Tracks extends MY_Controller
                     }
                     else
                     {
+
                         $myId = $this -> session -> userdata('user_id');
                        //print_r($track);
                         $courses = $track ->getCourses();
+                       // foreach($courses as $course ) echo $course -> toString();
                         //print_r($courses);
+//                        /echo "user enrolled";
+                      //  die();
                         if(count($courses) == 0) 
                         {
                             echo "No course in track";
                             die();
                         }
                         $next_course =new  course();
+                        $found = FALSE;
+                        $start = FALSE;
                         foreach($courses as $course)
                         {
+                            if(!$start) {
+                                $next_course = $course;
+                                $start = TRUE;
+                            }
                             if($course -> getLectureProgress() < 100)
                             {
-                                echo "<br /> <br />";
-                                echo $course -> getLectureProgress() . "<br />";
-                                print_r($course);
-                                echo "<br /> <br /> PROGRESS LESS THAN 100";
+                             //   echo "<br /> <br />";
+                             //   echo $course -> getLectureProgress() . "<br />";
+                             //   print_r($course);
+                               // echo "<br /> <br /> PROGRESS LESS THAN 100";
                                
                                 $next_course = $course;
                                 break;
                             }
                             else{
-                                echo "<br /> <br />";
-                               // print_r($course);
-                                echo "<br /> <br /> PROGRESS  100";
+                              //  echo "<br /> <br />";
+                              //  print_r($course);
+                              //  echo "<br /> <br /> PROGRESS  100";
                             }
                         }
-                        redirect('/courses/course_playback/' . $next_course->course_id);
+
+                        $url = '/courses/course_playback/' . $next_course->course_id;
+                        //echo ">>> {$url}";
+                      //  die();
+                        redirect($url);
                         
                     }
                     

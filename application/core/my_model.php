@@ -8,7 +8,15 @@ private function insert(){
 	$this -> {$this::DB_TABLE_PK} = $this -> db -> insert_id();
 
 }
-
+public function toString()
+{
+    $string = "";
+    foreach($this as $key => $value)
+    {
+        $string .= "<br /> {$key} => {$value} <br />";
+    }
+    return $string;
+}
 private function update(){
 	//echo  $this::DB_TABLE . ' | ' .  $this::DB_TABLE_PK . '<br />';
 	//echo $this::DB_TABLE . '[' . $this::DB_TABLE_PK . '] = ' . $this -> {$this::DB_TABLE_PK} . '<br />';

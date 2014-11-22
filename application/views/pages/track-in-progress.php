@@ -41,7 +41,18 @@
 			<section class="clear"></section>
 			<h5><?=$track -> tiny_intro;?></h5>
 			<section class="clear"></section>
-			<h4>Total Points: <?=$track -> track_points;?></h4>
+            <h4>Total Points: <?=$track -> getPoints();?>
+                <?php
+
+                $points = $track -> getPoints();
+
+                if($track ->isUserEnrolled())
+                {
+                    echo " / Earned " . $track -> getPointsEarned();
+
+                }
+                ?>
+            </h4>
 		</section>
 
 		<section id="course-progress-right">
