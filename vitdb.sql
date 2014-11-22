@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 22, 2014 at 08:57 AM
+-- Generation Time: Nov 22, 2014 at 05:17 PM
 -- Server version: 5.6.11
 -- PHP Version: 5.5.3
 
@@ -196,7 +196,7 @@ CREATE TABLE IF NOT EXISTS `course_enrollment` (
   `progress` int(11) NOT NULL,
   PRIMARY KEY (`enrol_id`),
   KEY `enrol_time` (`enrol_time`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=24 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
 
 --
 -- Dumping data for table `course_enrollment`
@@ -217,7 +217,13 @@ INSERT INTO `course_enrollment` (`enrol_id`, `course_id`, `user_id`, `enrol_time
 (20, 1, 77, '2014-11-21 10:04:38', 'in-progress', 0),
 (21, 2, 77, '2014-11-21 10:12:34', 'in-progress', 0),
 (22, 3, 77, '2014-11-21 10:12:34', 'in-progress', 0),
-(23, 3, 6, '2014-11-22 07:49:48', 'in-progress', 0);
+(23, 3, 6, '2014-11-22 07:49:48', 'in-progress', 0),
+(24, 1, 80, '2014-11-22 08:14:33', 'in-progress', 0),
+(25, 2, 80, '2014-11-22 08:14:34', 'in-progress', 0),
+(26, 3, 80, '2014-11-22 08:14:34', 'in-progress', 0),
+(27, 6, 6, '2014-11-22 11:48:02', 'in-progress', 0),
+(28, 8, 6, '2014-11-22 11:50:11', 'in-progress', 0),
+(29, 9, 6, '2014-11-22 11:51:16', 'in-progress', 0);
 
 -- --------------------------------------------------------
 
@@ -571,7 +577,7 @@ CREATE TABLE IF NOT EXISTS `tracks_enrollment` (
   `status` enum('in-progress','cancelled','completed') NOT NULL,
   `progress` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`track_enrol_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=41 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=44 ;
 
 --
 -- Dumping data for table `tracks_enrollment`
@@ -579,7 +585,10 @@ CREATE TABLE IF NOT EXISTS `tracks_enrollment` (
 
 INSERT INTO `tracks_enrollment` (`track_enrol_id`, `track_id`, `user_id`, `track_enrol_time`, `status`, `progress`) VALUES
 (39, 2, 6, '2014-11-22 07:35:09', 'in-progress', 0),
-(40, 1, 6, '2014-11-22 07:49:48', 'in-progress', 0);
+(40, 1, 6, '2014-11-22 07:49:48', 'in-progress', 0),
+(41, 5, 80, '2014-11-22 08:14:15', 'in-progress', 0),
+(42, 1, 80, '2014-11-22 08:14:33', 'in-progress', 0),
+(43, 4, 6, '2014-11-22 11:36:28', 'in-progress', 0);
 
 -- --------------------------------------------------------
 
@@ -631,9 +640,10 @@ CREATE TABLE IF NOT EXISTS `track_rating` (
 
 CREATE TABLE IF NOT EXISTS `users` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
+  `avatar` varchar(255) DEFAULT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `type` varchar(15) NOT NULL DEFAULT 'User',
+  `type` enum('ADMIN','TEACHER','USER') NOT NULL DEFAULT 'USER',
   `active` enum('Yes','No') NOT NULL DEFAULT 'No',
   `last_login` timestamp NULL DEFAULT NULL,
   `hash` varchar(255) NOT NULL,
@@ -642,73 +652,83 @@ CREATE TABLE IF NOT EXISTS `users` (
   `logged_in` int(1) NOT NULL DEFAULT '0' COMMENT '0 - No, 1 - Yes',
   `first_name` varchar(33) NOT NULL,
   `last_name` varchar(33) NOT NULL,
+  `city` varchar(33) DEFAULT NULL,
+  `country` varchar(33) DEFAULT NULL,
+  `intro` text,
+  `fb_url` varchar(255) DEFAULT NULL,
+  `twitter_url` varchar(255) DEFAULT NULL,
+  `linkedin_url` varchar(255) DEFAULT NULL,
+  `gplus_url` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=80 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=83 ;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`user_id`, `email`, `password`, `type`, `active`, `last_login`, `hash`, `register_date`, `username`, `logged_in`, `first_name`, `last_name`) VALUES
-(1, 'admin@vitorials.net', 'admin', 'Admin', 'Yes', '2014-09-16 15:12:37', '', '2014-09-22 16:18:45', 'admin', 0, 'Admin', 'Kapoor'),
-(3, 'teacher@vitorials.net', 'teacher', 'Teacher', 'No', NULL, '53a7aa0fc86f7a9b176180ce8aed59f2ce736b5696c106ae2b460539bbb4dec0', '2014-09-22 16:18:45', 'teacher', 0, 'Test', 'Teacher'),
-(4, 'student@vitorials.net', 'student', 'User', 'Yes', '2014-09-17 19:54:16', '5e4427cdc2aad36871a458858172692d8b903743c511c0c71fbb2bd31ade5267', '2014-09-22 16:18:45', 'student', 1, 'Test', 'Student'),
-(6, 'ishaqzafar@gmail.com', 'ishaq.zafar', 'User', 'Yes', '2014-09-18 09:43:30', '8ad8c472ba7bdced3d871d3f4b09d97824c6e4f6c9233952c6f9d3ad873a224e', '2014-09-22 16:18:45', 'ishaq.zafar', 1, 'Ishaq', 'Zafar'),
-(7, 'shahid.afridi@vitorials.net', 'shahid.afridi', 'User', 'Yes', '2014-09-21 08:20:40', '6e1bfbe1a96758036789bbac39bf9a5aa0d431d07b878aef735844c83d834929', '2014-09-22 16:18:45', 'shahid.afridi', 1, 'Shahid', 'Afridi'),
-(11, 'ar.malik@vitorials.net', 'arm321', 'User', 'No', NULL, '685ad82db88a9561b3d373a792a6aa6a2a7c0bc4094ff032f509244c5dd523ec2e2fbe596ce178594ac0363c42a8a4cd88b6c9ac337107a9e07b3e316b8e91e0', '2014-09-22 16:18:45', 'abdul-rehman', 0, 'Abdul', 'Rehman'),
-(12, 'shahzeb.imtiaz@vitorials.net', 'shazi321', 'User', 'No', NULL, '5d6c48cd6d651753324ff8441b4718344ffd7f7559e2a92d330b99b88926dff2f03f9d4c04fd3565db4139309ee885e7a0c9b1ace912a320024e701f54a23108', '2014-09-22 16:40:32', 'shahzeb.imtiaz', 0, 'Shahzeb', 'Imtiaz'),
-(13, 'waleed.satti@vitorials.net', 'waleed.satti', 'User', 'No', NULL, '2d108fc9b8592da3f9581377f25ddc04e1934345aedc5dfc039ea33d57b455ff567207d1bf1d733f2354039cbbfb048b1ac2b3cfc68389e59a6b67cda72d5b22', '2014-09-22 16:41:38', 'waleed.satti', 0, 'Waleed', 'Satti'),
-(16, 'imran.khan@vitorials.net', 'imran.khan', 'User', 'No', NULL, '', '2014-10-26 05:43:29', 'Imran Khan', 0, 'Imran', 'Khan'),
-(17, 'zeeshan.bin.iqbal@vitorials.net', 'zeeshan', 'User', 'No', NULL, '', '2014-10-26 05:45:00', 'Zeeshan Iqbal', 0, 'Zeeshan', 'Bin Iqbal'),
-(18, 'zia@vitorials.net', 'zia123', 'User', 'No', NULL, '', '2014-10-26 05:45:32', 'Zia Ur Rehman', 0, 'Zia', 'Ur Rehman'),
-(19, 'moez335@vitorials.net', 'moez123', 'User', 'No', NULL, '', '2014-10-26 05:46:27', 'Moez Isar', 0, 'Moez', 'Isar'),
-(20, 'nasrullah.inayat.chudhary.butt@vitorials.net', 'biker_boy91', 'User', 'No', NULL, '', '2014-10-26 05:47:14', 'Nasrullah Inayat', 0, 'Nasrullah', 'Inayat'),
-(21, 'umer@hotmail.com', 'umer123', 'User', 'No', NULL, '', '2014-10-26 05:47:50', 'Muhammad Umer', 0, 'Muhammad', 'Umer'),
-(22, 'abdullah@yahoo.com', 'abdullah@yahoo.com', 'User', 'No', NULL, '', '2014-10-26 05:48:28', 'Abdullah Abbasi', 0, 'Abdullah', 'Abbasi'),
-(23, 'ahsan.kayani@live.com', 'Ahsan', 'User', 'No', NULL, '', '2014-10-26 05:48:45', 'Ahsan Naseem', 0, 'Ahsan', 'Naseem'),
-(24, 'sabahat@yahoo.com', 'sabahat', 'User', 'No', NULL, '', '2014-10-26 05:50:36', 'Sabahat Afzal', 0, 'Sabahat', 'Afzal'),
-(25, 'bilu@microsoft.com', 'bilu-bhai', 'User', 'No', NULL, '', '2014-10-26 05:51:13', 'Bilal Sipra', 0, 'Bilal', 'Sipra'),
-(26, 'behzad@gmail.com', 'behzad', 'User', 'No', NULL, '', '2014-10-26 05:51:50', 'Behzad Rajgan', 0, 'Behzad', 'Rajgan'),
-(27, 'thegreatkhali@wwe.com', 'wwe123', 'User', 'No', NULL, '', '2014-10-26 05:52:15', 'Waqas Khalli', 0, 'Waqas', 'Khalli'),
-(28, 'xaibi@facebook.com', 'zohaib', 'User', 'No', NULL, '', '2014-10-26 05:52:37', 'Zohaib Abbas', 0, 'Zohaib', 'Abbas'),
-(29, 'ali.ahmad@riphah.edu.pk', 'ali.riphah', 'User', 'No', NULL, '', '2014-10-26 05:53:05', 'Ali Ahmad', 0, 'Ali', 'Ahmad'),
-(30, 'saqi@yahoo.com', 'Saqi1', 'User', 'No', NULL, '', '2014-10-26 05:53:23', 'Saqlain Mushtaq', 0, 'Saqlain', 'Mushtaq'),
-(31, 'altaf.bhai@mqm.com', 'altaf', 'User', 'No', NULL, '', '2014-10-26 05:54:22', 'Kashir Altaf', 0, 'Kashir', 'Altaf'),
-(32, 'khan-is-great@gmail.com', 'khanjee', 'User', 'No', NULL, '', '2014-10-26 05:54:45', 'Bilal Khan', 0, 'Bilal', 'Khan'),
-(33, 'wasi.wasi@yaho.com', 'wasii', 'User', 'No', NULL, '', '2014-10-26 05:55:04', 'Wasif Wasif', 0, 'Wasif', 'Wasif'),
-(34, 'max555@gmail.com', 'max555', 'User', 'No', NULL, '', '2014-10-26 05:55:27', 'Shaun Max', 0, 'Shaun', 'Max'),
-(35, 'paul.alen@as.us', 'american', 'User', 'No', NULL, '', '2014-10-26 05:55:55', 'Paul Alen', 0, 'Paul', 'Alen'),
-(36, 'chris@hollywood.com', 'Batman', 'User', 'No', NULL, '', '2014-10-26 05:56:14', 'Christian Bale', 0, 'Christian', 'Bale'),
-(37, 'eddy@x.com', 'american.history', 'User', 'No', NULL, '', '2014-10-26 05:56:44', 'Edward Norton', 0, 'Edward', 'Norton'),
-(38, 'turing@computing.com', 'father', 'User', 'No', NULL, '', '2014-10-26 05:57:38', 'alan-turing', 0, 'Alan', 'Turing'),
-(39, 'maryam_ilyas@yahoo.com', 'yahoo.', 'User', 'No', NULL, '', '2014-10-26 05:58:10', 'maryam.ilyas', 0, 'Maryam', 'Ilyas'),
-(40, 'freeman@morganfoundation.org', 'oldblackguy', 'User', 'No', NULL, '', '2014-10-26 05:59:33', 'morgan-freeman', 0, 'Morgan', 'Freeman'),
-(41, 'ali.akbar@gmail.com', 'ali333', 'User', 'No', NULL, '', '2014-10-26 06:00:37', 'ali-akbar', 0, 'Ali', 'Akbar'),
-(42, 'freedomfighter@yahoo.com', 'freekashmir', 'User', 'No', NULL, '', '2014-10-26 06:01:13', 'ali-shughal', 0, 'Ali', 'Shughal'),
-(43, 'robert@hollywood.com', 'roberto', 'User', 'No', NULL, '', '2014-10-26 06:01:59', 'robert-downey', 0, 'Robert', 'Downey Jr.'),
-(44, 'saud.khan@riu.edu.pk', 'saud.khan', 'User', 'No', NULL, '', '2014-10-28 10:15:09', 'saud-khan', 0, 'Saud', 'Khan'),
-(55, 'admins@vitorials.net', 'admins@vitorials.net', 'User', 'No', NULL, '', '2014-11-05 17:18:53', 'admins', 0, 'Admin', 'Saab'),
-(59, 'jimmy@yahoo.com', '''success'' => $success', 'User', 'No', NULL, '', '2014-11-07 14:41:38', 'jimmy-anderson', 0, 'Jimmy', 'Anderson'),
-(60, 'mush@army.com', 'army123', 'User', 'No', NULL, '', '2014-11-07 14:43:33', 'gen-mushi', 0, 'General', 'Musharraf'),
-(61, 'mir.shakil@geo.tv', 'mir.shakil@geo.tv', 'User', 'No', NULL, '', '2014-11-07 14:45:40', 'mir-shakil', 0, 'Mir', 'Shakil'),
-(62, 'abdul@yahoo.com', 'abdul@sdfj', 'User', 'No', NULL, '', '2014-11-08 10:44:46', 'abdul-qadir', 0, 'Qadir', 'Baloch'),
-(63, 'abdul.qadir@yahoo.com', 'abdul@sdfj', 'User', 'No', NULL, '', '2014-11-08 10:44:58', 'abdul-qadir', 0, 'Abdul', 'Qadir'),
-(64, 'afridi@sixer.com', 'afridi@sixer.com', 'User', 'No', NULL, '', '2014-11-10 09:14:26', 'shahid-afridi', 0, 'Shahid', 'Afridi'),
-(65, 'inzi@captain.com', 'inzi@captain.com', 'User', 'No', NULL, '', '2014-11-10 09:16:55', 'inzi-bhai', 0, 'Inzi', 'Bhai'),
-(66, 'satti@yahoo.com', 'satti@yahoo.com', 'User', 'No', NULL, '', '2014-11-13 06:24:22', 'waleed-ahmad', 0, 'Waleed', 'Ahmad'),
-(67, 'ahmad@yahoo.com', 'ahmad@yahoo.com', 'User', 'No', NULL, '', '2014-11-14 07:23:44', 'ahmad-mukhtar', 0, 'Ahmad', 'Mukhtar'),
-(68, 'shaun@yahoo.com', 'shaun@yahoo.com', 'User', 'No', NULL, '', '2014-11-14 10:37:48', 'shaun-tait', 0, 'Shaun', 'Tait'),
-(69, 'tom@cat.com', 'tom@cat.com', 'User', 'No', NULL, '', '2014-11-20 00:46:42', 'tom-cat', 0, 'Tom', 'Cat'),
-(70, 'batman@bane.com', 'batman', 'User', 'No', NULL, '', '2014-11-20 00:52:33', 'bat.man', 0, 'Bat', 'Man'),
-(71, 'allahrakha@gmail.com', 'haqhoo', 'User', 'Yes', NULL, '', '2014-11-20 01:21:12', 'allah-rakha', 0, 'Allah', 'Rakha'),
-(72, 'moon@yahoo.com', 'moon123', 'User', 'Yes', NULL, '', '2014-11-20 01:26:35', 'moon-bhai', 0, 'Moon', 'Bhai'),
-(73, 'noor@yahoo.com', 'noornoor', 'User', 'Yes', NULL, '', '2014-11-20 01:45:50', 'noor-shah', 0, 'Noor', 'Shah'),
-(74, 'nazir@khosa.com', 'khosa123', 'User', 'Yes', NULL, '', '2014-11-20 16:59:04', 'nazir-khosa', 0, 'Nazir', 'Khosa'),
-(75, 'allah.ditta@yahoo.com', 'ditta1', 'User', 'Yes', NULL, '', '2014-11-20 18:00:09', 'allah-ditta', 0, 'Allah', 'Ditta'),
-(76, 'waleed@yahoo.com', 'waleed123', 'User', 'Yes', NULL, '', '2014-11-21 09:50:43', 'waleed-inaam', 0, 'Waleed', 'Inaam'),
-(77, 'waleed@gmail.com', 'waleed123', 'User', 'Yes', NULL, '', '2014-11-21 09:56:44', 'waleed-satti', 0, 'Waleed', 'Satti'),
-(78, 'shah@jee.com', 'shahjee', 'User', 'Yes', NULL, '', '2014-11-22 00:27:53', 'shah-jee', 0, 'shah', 'jee'),
-(79, 'azeem@yahoo.com', 'azeem', 'User', 'Yes', NULL, '', '2014-11-22 00:29:21', 'mian-azeem', 0, 'mian', 'azeem');
+INSERT INTO `users` (`user_id`, `avatar`, `email`, `password`, `type`, `active`, `last_login`, `hash`, `register_date`, `username`, `logged_in`, `first_name`, `last_name`, `city`, `country`, `intro`, `fb_url`, `twitter_url`, `linkedin_url`, `gplus_url`) VALUES
+(1, '', 'admin@vitorials.net', 'admin', 'ADMIN', 'Yes', '2014-09-16 15:12:37', '', '2014-09-22 16:18:45', 'admin', 0, 'Admin', 'Kapoor', '', '', '', '', '', '', ''),
+(3, '', 'teacher@vitorials.net', 'teacher', 'TEACHER', 'No', NULL, '53a7aa0fc86f7a9b176180ce8aed59f2ce736b5696c106ae2b460539bbb4dec0', '2014-09-22 16:18:45', 'teacher', 0, 'Test', 'Teacher', '', '', '', '', '', '', ''),
+(4, '', 'student@vitorials.net', 'student', 'USER', 'Yes', '2014-09-17 19:54:16', '5e4427cdc2aad36871a458858172692d8b903743c511c0c71fbb2bd31ade5267', '2014-09-22 16:18:45', 'student', 1, 'Test', 'Student', '', '', '', '', '', '', ''),
+(6, 'files/profile-pic.jpg', 'ishaqzafar@gmail.com', 'ishaq.zafar', 'ADMIN', 'Yes', '2014-09-18 09:43:30', '8ad8c472ba7bdced3d871d3f4b09d97824c6e4f6c9233952c6f9d3ad873a224e', '2014-09-22 16:18:45', 'ishaq.zafar', 1, 'Ishaq', 'Zafar', 'Pakpattan', 'Pakistan', 'Just another procrastinator.', 'facebook.com/bukhari.jar', 'twitter.com/bukhari_007', 'linkedin.com/profile/view?id=53290919', 'google.com/+IshaqBukhari'),
+(7, '', 'shahid.afridi@vitorials.net', 'shahid.afridi', 'USER', 'Yes', '2014-09-21 08:20:40', '6e1bfbe1a96758036789bbac39bf9a5aa0d431d07b878aef735844c83d834929', '2014-09-22 16:18:45', 'shahid.afridi', 1, 'Shahid', 'Afridi', '', '', '', '', '', '', ''),
+(11, 'files/profile-pic.jpg', 'ar.malik@vitorials.net', 'arm321', 'USER', 'Yes', NULL, '685ad82db88a9561b3d373a792a6aa6a2a7c0bc4094ff032f509244c5dd523ec2e2fbe596ce178594ac0363c42a8a4cd88b6c9ac337107a9e07b3e316b8e91e0', '2014-09-22 16:18:45', 'abdul-rehman', 0, 'Abdul', 'Rehman', 'Rawalpindi', 'Pakistan', 'I am a Software Engineering graduate student with love for Web Development. I love to play cricket and I am a fitness freak.', '', '', '', ''),
+(12, '', 'shahzeb.imtiaz@vitorials.net', 'shazi321', 'USER', 'No', NULL, '5d6c48cd6d651753324ff8441b4718344ffd7f7559e2a92d330b99b88926dff2f03f9d4c04fd3565db4139309ee885e7a0c9b1ace912a320024e701f54a23108', '2014-09-22 16:40:32', 'shahzeb.imtiaz', 0, 'Shahzeb', 'Imtiaz', '', '', '', '', '', '', ''),
+(13, '', 'waleed.satti@vitorials.net', 'waleed.satti', 'USER', 'No', NULL, '2d108fc9b8592da3f9581377f25ddc04e1934345aedc5dfc039ea33d57b455ff567207d1bf1d733f2354039cbbfb048b1ac2b3cfc68389e59a6b67cda72d5b22', '2014-09-22 16:41:38', 'waleed.satti', 0, 'Waleed', 'Satti', '', '', '', '', '', '', ''),
+(16, '', 'imran.khan@vitorials.net', 'imran.khan', 'USER', 'No', NULL, '', '2014-10-26 05:43:29', 'Imran Khan', 0, 'Imran', 'Khan', '', '', '', '', '', '', ''),
+(17, '', 'zeeshan.bin.iqbal@vitorials.net', 'zeeshan', 'USER', 'No', NULL, '', '2014-10-26 05:45:00', 'Zeeshan Iqbal', 0, 'Zeeshan', 'Bin Iqbal', '', '', '', '', '', '', ''),
+(18, '', 'zia@vitorials.net', 'zia123', 'USER', 'No', NULL, '', '2014-10-26 05:45:32', 'Zia Ur Rehman', 0, 'Zia', 'Ur Rehman', '', '', '', '', '', '', ''),
+(19, '', 'moez335@vitorials.net', 'moez123', 'USER', 'No', NULL, '', '2014-10-26 05:46:27', 'Moez Isar', 0, 'Moez', 'Isar', '', '', '', '', '', '', ''),
+(20, '', 'nasrullah.inayat.chudhary.butt@vitorials.net', 'biker_boy91', 'USER', 'No', NULL, '', '2014-10-26 05:47:14', 'Nasrullah Inayat', 0, 'Nasrullah', 'Inayat', '', '', '', '', '', '', ''),
+(21, '', 'umer@hotmail.com', 'umer123', 'USER', 'No', NULL, '', '2014-10-26 05:47:50', 'Muhammad Umer', 0, 'Muhammad', 'Umer', '', '', '', '', '', '', ''),
+(22, '', 'abdullah@yahoo.com', 'abdullah@yahoo.com', 'USER', 'No', NULL, '', '2014-10-26 05:48:28', 'Abdullah Abbasi', 0, 'Abdullah', 'Abbasi', '', '', '', '', '', '', ''),
+(23, '', 'ahsan.kayani@live.com', 'Ahsan', 'USER', 'No', NULL, '', '2014-10-26 05:48:45', 'Ahsan Naseem', 0, 'Ahsan', 'Naseem', '', '', '', '', '', '', ''),
+(24, '', 'sabahat@yahoo.com', 'sabahat', 'USER', 'No', NULL, '', '2014-10-26 05:50:36', 'Sabahat Afzal', 0, 'Sabahat', 'Afzal', '', '', '', '', '', '', ''),
+(25, '', 'bilu@microsoft.com', 'bilu-bhai', 'USER', 'No', NULL, '', '2014-10-26 05:51:13', 'Bilal Sipra', 0, 'Bilal', 'Sipra', '', '', '', '', '', '', ''),
+(26, '', 'behzad@gmail.com', 'behzad', 'USER', 'No', NULL, '', '2014-10-26 05:51:50', 'Behzad Rajgan', 0, 'Behzad', 'Rajgan', '', '', '', '', '', '', ''),
+(27, '', 'thegreatkhali@wwe.com', 'wwe123', 'USER', 'No', NULL, '', '2014-10-26 05:52:15', 'Waqas Khalli', 0, 'Waqas', 'Khalli', '', '', '', '', '', '', ''),
+(28, '', 'xaibi@facebook.com', 'zohaib', 'USER', 'No', NULL, '', '2014-10-26 05:52:37', 'Zohaib Abbas', 0, 'Zohaib', 'Abbas', '', '', '', '', '', '', ''),
+(29, '', 'ali.ahmad@riphah.edu.pk', 'ali.riphah', 'USER', 'No', NULL, '', '2014-10-26 05:53:05', 'Ali Ahmad', 0, 'Ali', 'Ahmad', '', '', '', '', '', '', ''),
+(30, '', 'saqi@yahoo.com', 'Saqi1', 'USER', 'No', NULL, '', '2014-10-26 05:53:23', 'Saqlain Mushtaq', 0, 'Saqlain', 'Mushtaq', '', '', '', '', '', '', ''),
+(31, '', 'altaf.bhai@mqm.com', 'altaf', 'USER', 'No', NULL, '', '2014-10-26 05:54:22', 'Kashir Altaf', 0, 'Kashir', 'Altaf', '', '', '', '', '', '', ''),
+(32, '', 'khan-is-great@gmail.com', 'khanjee', 'USER', 'No', NULL, '', '2014-10-26 05:54:45', 'Bilal Khan', 0, 'Bilal', 'Khan', '', '', '', '', '', '', ''),
+(33, '', 'wasi.wasi@yaho.com', 'wasii', 'USER', 'No', NULL, '', '2014-10-26 05:55:04', 'Wasif Wasif', 0, 'Wasif', 'Wasif', '', '', '', '', '', '', ''),
+(34, '', 'max555@gmail.com', 'max555', 'USER', 'No', NULL, '', '2014-10-26 05:55:27', 'Shaun Max', 0, 'Shaun', 'Max', '', '', '', '', '', '', ''),
+(35, '', 'paul.alen@as.us', 'american', 'USER', 'No', NULL, '', '2014-10-26 05:55:55', 'Paul Alen', 0, 'Paul', 'Alen', '', '', '', '', '', '', ''),
+(36, '', 'chris@hollywood.com', 'Batman', 'USER', 'No', NULL, '', '2014-10-26 05:56:14', 'Christian Bale', 0, 'Christian', 'Bale', '', '', '', '', '', '', ''),
+(37, '', 'eddy@x.com', 'american.history', 'USER', 'No', NULL, '', '2014-10-26 05:56:44', 'Edward Norton', 0, 'Edward', 'Norton', '', '', '', '', '', '', ''),
+(38, '', 'turing@computing.com', 'father', 'USER', 'No', NULL, '', '2014-10-26 05:57:38', 'alan-turing', 0, 'Alan', 'Turing', '', '', '', '', '', '', ''),
+(39, '', 'maryam_ilyas@yahoo.com', 'yahoo.', 'USER', 'No', NULL, '', '2014-10-26 05:58:10', 'maryam.ilyas', 0, 'Maryam', 'Ilyas', '', '', '', '', '', '', ''),
+(40, '', 'freeman@morganfoundation.org', 'oldblackguy', 'USER', 'No', NULL, '', '2014-10-26 05:59:33', 'morgan-freeman', 0, 'Morgan', 'Freeman', '', '', '', '', '', '', ''),
+(41, '', 'ali.akbar@gmail.com', 'ali333', 'USER', 'No', NULL, '', '2014-10-26 06:00:37', 'ali-akbar', 0, 'Ali', 'Akbar', '', '', '', '', '', '', ''),
+(42, '', 'freedomfighter@yahoo.com', 'freekashmir', 'USER', 'No', NULL, '', '2014-10-26 06:01:13', 'ali-shughal', 0, 'Ali', 'Shughal', '', '', '', '', '', '', ''),
+(43, '', 'robert@hollywood.com', 'roberto', 'USER', 'No', NULL, '', '2014-10-26 06:01:59', 'robert-downey', 0, 'Robert', 'Downey Jr.', '', '', '', '', '', '', ''),
+(44, '', 'saud.khan@riu.edu.pk', 'saud.khan', 'USER', 'No', NULL, '', '2014-10-28 10:15:09', 'saud-khan', 0, 'Saud', 'Khan', '', '', '', '', '', '', ''),
+(55, '', 'admins@vitorials.net', 'admins@vitorials.net', 'USER', 'No', NULL, '', '2014-11-05 17:18:53', 'admins', 0, 'Admin', 'Saab', '', '', '', '', '', '', ''),
+(59, '', 'jimmy@yahoo.com', '''success'' => $success', 'USER', 'No', NULL, '', '2014-11-07 14:41:38', 'jimmy-anderson', 0, 'Jimmy', 'Anderson', '', '', '', '', '', '', ''),
+(60, '', 'mush@army.com', 'army123', 'USER', 'No', NULL, '', '2014-11-07 14:43:33', 'gen-mushi', 0, 'General', 'Musharraf', '', '', '', '', '', '', ''),
+(61, '', 'mir.shakil@geo.tv', 'mir.shakil@geo.tv', 'USER', 'No', NULL, '', '2014-11-07 14:45:40', 'mir-shakil', 0, 'Mir', 'Shakil', '', '', '', '', '', '', ''),
+(62, '', 'abdul@yahoo.com', 'abdul@sdfj', 'USER', 'No', NULL, '', '2014-11-08 10:44:46', 'abdul-qadir', 0, 'Qadir', 'Baloch', '', '', '', '', '', '', ''),
+(63, '', 'abdul.qadir@yahoo.com', 'abdul@sdfj', 'USER', 'No', NULL, '', '2014-11-08 10:44:58', 'abdul-qadir', 0, 'Abdul', 'Qadir', '', '', '', '', '', '', ''),
+(64, '', 'afridi@sixer.com', 'afridi@sixer.com', 'USER', 'No', NULL, '', '2014-11-10 09:14:26', 'shahid-afridi', 0, 'Shahid', 'Afridi', '', '', '', '', '', '', ''),
+(65, '', 'inzi@captain.com', 'inzi@captain.com', 'USER', 'No', NULL, '', '2014-11-10 09:16:55', 'inzi-bhai', 0, 'Inzi', 'Bhai', '', '', '', '', '', '', ''),
+(66, '', 'satti@yahoo.com', 'satti@yahoo.com', 'USER', 'No', NULL, '', '2014-11-13 06:24:22', 'waleed-ahmad', 0, 'Waleed', 'Ahmad', '', '', '', '', '', '', ''),
+(67, '', 'ahmad@yahoo.com', 'ahmad@yahoo.com', 'USER', 'No', NULL, '', '2014-11-14 07:23:44', 'ahmad-mukhtar', 0, 'Ahmad', 'Mukhtar', '', '', '', '', '', '', ''),
+(68, '', 'shaun@yahoo.com', 'shaun@yahoo.com', 'USER', 'No', NULL, '', '2014-11-14 10:37:48', 'shaun-tait', 0, 'Shaun', 'Tait', '', '', '', '', '', '', ''),
+(69, '', 'tom@cat.com', 'tom@cat.com', 'USER', 'No', NULL, '', '2014-11-20 00:46:42', 'tom-cat', 0, 'Tom', 'Cat', '', '', '', '', '', '', ''),
+(70, '', 'batman@bane.com', 'batman', 'USER', 'No', NULL, '', '2014-11-20 00:52:33', 'bat.man', 0, 'Bat', 'Man', '', '', '', '', '', '', ''),
+(71, '', 'allahrakha@gmail.com', 'haqhoo', 'USER', 'Yes', NULL, '', '2014-11-20 01:21:12', 'allah-rakha', 0, 'Allah', 'Rakha', '', '', '', '', '', '', ''),
+(72, '', 'moon@yahoo.com', 'moon123', 'USER', 'Yes', NULL, '', '2014-11-20 01:26:35', 'moon-bhai', 0, 'Moon', 'Bhai', '', '', '', '', '', '', ''),
+(73, '', 'noor@yahoo.com', 'noornoor', 'USER', 'Yes', NULL, '', '2014-11-20 01:45:50', 'noor-shah', 0, 'Noor', 'Shah', '', '', '', '', '', '', ''),
+(74, '', 'nazir@khosa.com', 'khosa123', 'USER', 'Yes', NULL, '', '2014-11-20 16:59:04', 'nazir-khosa', 0, 'Nazir', 'Khosa', '', '', '', '', '', '', ''),
+(75, '', 'allah.ditta@yahoo.com', 'ditta1', 'USER', 'Yes', NULL, '', '2014-11-20 18:00:09', 'allah-ditta', 0, 'Allah', 'Ditta', '', '', '', '', '', '', ''),
+(76, '', 'waleed@yahoo.com', 'waleed123', 'USER', 'Yes', NULL, '', '2014-11-21 09:50:43', 'waleed-inaam', 0, 'Waleed', 'Inaam', '', '', '', '', '', '', ''),
+(77, '', 'waleed@gmail.com', 'waleed123', 'USER', 'Yes', NULL, '', '2014-11-21 09:56:44', 'waleed-satti', 0, 'Waleed', 'Satti', '', '', '', '', '', '', ''),
+(78, '', 'shah@jee.com', 'shahjee', 'USER', 'Yes', NULL, '', '2014-11-22 00:27:53', 'shah-jee', 0, 'shah', 'jee', '', '', '', '', '', '', ''),
+(79, '', 'azeem@yahoo.com', 'azeem', 'USER', 'Yes', NULL, '', '2014-11-22 00:29:21', 'mian-azeem', 0, 'mian', 'azeem', '', '', '', '', '', '', ''),
+(80, '', 'wattu@yahoo.com', 'wattu', 'USER', 'Yes', NULL, '', '2014-11-22 08:13:42', 'wattu-sb', 0, 'Wattu', 'Sb', '', '', '', '', '', '', ''),
+(81, '', 'nazir@yahoo.com', 'nazir@yahoo.com', 'USER', 'Yes', NULL, '', '2014-11-22 13:42:30', 'nazir-ahmad', 0, 'Nazir', 'Ahmad', '', '', '', '', '', '', ''),
+(82, NULL, 'naeem@khan.com', 'naeem@khan.com', 'USER', 'Yes', NULL, '5d6c48cd6d651753324ff8441b4718344ffd7f7559e2a92d330b99b88926dff2f03f9d4c04fd3565db4139309ee885e7a0c9b1ace912a320024e701f54a23108', '2014-11-22 15:50:39', 'naeem-khan', 0, 'Naeem', 'Khan', NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -722,7 +742,7 @@ CREATE TABLE IF NOT EXISTS `user_interest_categories` (
   `cat_id` int(10) NOT NULL,
   `interest_level` int(2) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=234 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=248 ;
 
 --
 -- Dumping data for table `user_interest_categories`
@@ -882,7 +902,21 @@ INSERT INTO `user_interest_categories` (`id`, `user_id`, `cat_id`, `interest_lev
 (230, 77, 11, 0),
 (231, 77, 12, 0),
 (232, 77, 13, 0),
-(233, 77, 14, 0);
+(233, 77, 14, 0),
+(234, 80, 1, 0),
+(235, 80, 2, 0),
+(236, 80, 3, 0),
+(237, 80, 4, 0),
+(238, 80, 5, 0),
+(239, 80, 6, 0),
+(240, 80, 7, 0),
+(241, 80, 8, 0),
+(242, 80, 9, 0),
+(243, 80, 10, 0),
+(244, 80, 11, 0),
+(245, 80, 12, 0),
+(246, 80, 13, 0),
+(247, 80, 14, 0);
 
 -- --------------------------------------------------------
 
@@ -896,7 +930,7 @@ CREATE TABLE IF NOT EXISTS `user_lecture_progress` (
   `user_id` int(10) NOT NULL,
   `progress` int(3) NOT NULL,
   PRIMARY KEY (`progress_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=71 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=72 ;
 
 --
 -- Dumping data for table `user_lecture_progress`
@@ -958,7 +992,8 @@ INSERT INTO `user_lecture_progress` (`progress_id`, `lecture_id`, `user_id`, `pr
 (67, 4, 77, 100),
 (68, 5, 77, 100),
 (69, 6, 77, 100),
-(70, 26, 77, 0);
+(70, 26, 77, 0),
+(71, 2, 80, 0);
 
 -- --------------------------------------------------------
 
