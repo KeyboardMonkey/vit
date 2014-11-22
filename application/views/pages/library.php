@@ -31,6 +31,7 @@
 			<a href="">Top Rated</a>
 			<a href="">Alphabetical</a>
 			<a href="">Difficulty</a>
+			<a href="<?=base_url();?>index.php/upcoming">Upcoming Courses</a>
 		</nav>
 	</section>
 
