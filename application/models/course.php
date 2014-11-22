@@ -482,7 +482,35 @@ class course extends MY_Model{
         $enrolments = $enrolments ->getWithCondition(array('course_id' => $this -> course_id));
         $students = array();
         $i = 0;
-        foreach($enrolments as $enrolment)
+        //print_r($enrolments);
+        $points = array();
+        foreach ($enrolments as $enrolment) {
+          
+            $student = new user();
+            $student -> load($enrolment -> user_id);
+            $marks = $this ->getEarnedPoints($student->user_id);
+            $points[$student -> user_id] = $marks;
+            
+        }
+         arsort($points);
+          $returnusers = array();
+      $i = 0;
+      foreach ($points as $user_id => $user_points)
+      {
+          $user = new user();
+          $user -> load($user_id);
+          array_push($returnusers , $user);
+          if($i >= $limit)
+          {
+              break;
+          }
+          $i ++;
+      }
+//      asort($points);
+      //print_r($returnusers);
+      return $returnusers ;
+
+        /*foreach($enrolments as $enrolment)
         {
             $student = new user();
             $student -> load($enrolment -> user_id);
@@ -503,11 +531,12 @@ class course extends MY_Model{
                 $students[0] = array($student, $marks);
                 
             }
-        }
+        }*/
         $return = array();
         foreach($students as $student)
         {
             array_push($return, $student);
+
         }
         return $return;
     }

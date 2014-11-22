@@ -20,7 +20,7 @@
         .progress-bar-control-form table { width: 50%; float: left; }
         .right-sidebar { width: 30%; float: left; }
         .pro-bar { text-align: center; }
-        .pro-bar-percentage { color: #FFFFFF; line-height: 15px; display: none; cursor: default; }
+        .pro-bar-percentage { color: #FFFFFF; line-height: 15px; display: none; cursor: crosshair; }
         .pro-bar-percentage.visible { display: block; }
     </style>
 
@@ -87,7 +87,7 @@
 		</section>
 	</section>
 	
-	<section class="content-md">
+	
 	<?php
 	$myTracks = new tracks_enrollment();
 	$myTracks = $myTracks -> getMyEnrolledTracks($this -> session -> userdata('user_id'));
@@ -96,27 +96,28 @@
 	foreach ($myTracks as $myTrack) {
 		//print_r($myTrack);
 	?>
-
+	<section class="content-md">
 		<section class="track-progress">
-			<h2><?=$myTrack->track_title;?></h2>
+			<h2><a href="<?=base_url();?>index.php/tracks/explore/<?=$myTrack->track_id;?>"><?=$myTrack->track_title;?></a></h2>
 			<section class="progress-bar">
-			<!--
-			<?=$progress = number_format($myTrack->getProgress());?>%
-			-->
+			
+			<?php $progress = number_format($myTrack->getProgress());?>
+			
 			<!-- Course Progress -->
 				<div class="pro-bar-container color-nephriti bm-remove" style="margin:0px !important;">
-		            <div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=$myTrack->getProgress();?>" data-pro-bar-delay="500">
-			            <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$myTrack->getProgress();?>%</span>
+		            <div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=$progress;?>" data-pro-bar-delay="500">
+			            <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$progress?> %</span>
 			            <div class="pro-bar-candy candy-ltr"></div>
 			       	</div>
 	        	</div>
 			</section>
 			<a class="resume-track" href="<?=base_url();?>index.php/tracks/resume/<?=$myTrack->track_id;?>">Resume Track</a>
 		</section>
+	</section>
 	<?php
 	}
 	?>
-	</section>
+	
 
 	<?php 
 		$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
@@ -148,7 +149,7 @@
 				<!-- Course Progress -->
 				<div class="pro-bar-container color-nephriti bm-remove" style="margin-top:10px !important;">
 		            <div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=$myCourse -> getCourseProgressPercent();?>" data-pro-bar-delay="500">
-			            <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$myCourse -> getCourseProgressPercent();?>%</span>
+			            <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$myCourse -> getCourseProgressPercent();?> %</span>
 			            <div class="pro-bar-candy candy-ltr"></div>
 			       	</div>
 	        	</div>

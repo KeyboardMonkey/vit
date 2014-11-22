@@ -16,7 +16,7 @@
 				<section class="course-info">
 					<h5>Intermediate</h5>
 					<p class="points">Points: <?=$track -> track_points;?></p>
-					<h2 class="course-name"><?=$track -> track_title;?></h2>
+					<h2 class="course-name"><a href="<?=base_url();?>index.php/tracks/explore/<?=$track->track_id;?>"><?=$track -> track_title;?></a></h2>
 					<h5 class="tiny-intro"><?=$track->tiny_intro;?></h5>
 					<p class="desc"><?=$track->track_description;?></p>
 	<!-- 				<section class="rating"><p>Rating: <?=$track->getOverAllRating();?> (<?=$track->numberOfRatings();?>)</p></section> -->

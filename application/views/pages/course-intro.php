@@ -79,7 +79,7 @@ $enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
 				<nav>
 					<ul>
 						<li><a href="#section-underline-1" class="icon icon-home"><span>Overview</span></a></li>
-						<li><a href="#section-underline-2" class="icon icon-gift"><span>Reviews</span></a></li>
+						<li><a href="#section-underline-2" class="icon icon-gift"><span>Course Summary</span></a></li>
 						<li><a href="#section-underline-3" class="icon icon-upload"><span>Content</span></a></li>
 					</ul>
 				</nav>
@@ -107,16 +107,16 @@ $enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
 									$review = $review -> getWithConditionLimit1(array('course_id' => $course -> course_id, 'user_id' => $this -> session -> userdata('user_id')));
 									?>
 
-									<h3> My Review </h3>
+									<h3> My Summary </h3>
 									<br />
 									<p> <?=$review->review;?></p>
 									<?php
 								}
 								else{
 									?>
-									<h5> Please submit review </h5>
+									<h5> Please Submit Summary Here! </h5>
 									<form action='<?=base_url("index.php/courses/submit_review/{$course->course_id}");?>' method='post'>
-										<label>Review</lable>
+										<label>Course Summary</lable>
 											<textarea width='500px' height='500px' name='review'>
 
 											</textarea>
@@ -134,7 +134,7 @@ $enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
 							else{
 								?>
 
-								<h5> Please Enroll to submit review </h5>
+								<h5> Please enroll into the course first. </h5>
 
 								<?php 
 							}
@@ -187,35 +187,35 @@ console.log($(this).text());
 <?php
 $topStudents = $course -> getTopStudents();
 // print_r($topStudents);
-if(count($topStudents)>0)
+if(count($topStudents)>1)
 {
-	?>
+//print_r($topStudents);	?>
 	<section class="content-lg">
 		<section class="top-students">
 			<h3>Top  Students In This Course</h3>
 			<section id="trophies">
 
-				<section class="first-trophy">
-					<section class="content">
-						<img src="http://localhost/vit/assets/graphics/trophy1.svg" width="100px" height="111px">
-						<section id="block-a"></section>
-						<section id="block-b"></section>
-						<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[0][0]->user_id);?> Points</p></section>
-						<section id="block-d"><a href=""><?=$topStudents[0][0]->username;?></a></section>
-					</section>
-				</section>
-
-				<?php if(count($topStudents) > 1)
-				{
-					?>
 					<section class="second-trophy">
 						<section class="content">
-							<img src="http://localhost/vit/assets/graphics/trophy2.svg" width="100px" height="111px">
+							<img src="<?=base_url();?>assets/graphics/trophy2.svg" width="100px" height="111px">
 							<section id="block-b"></section>
-							<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[1][1]->user_id);?> Points</p></section>
-							<section id="block-d"><a href=""><?=$topStudents[1][1]->username;?></a></section>
+							<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[1]->user_id);?> Points</p></section>
+							<section id="block-d"><a href="<?=base_url('index.php/profile/index/' . $topStudents[1] -> user_id) ;?>"><?=$topStudents[1]->first_name." ".$topStudents[1]->last_name;?></a></section>
 						</section>
 					</section>
+
+				<?php if(count($topStudents) > 0)
+				{
+					?>
+				<section class="first-trophy">
+					<section class="content">
+						<img src="<?=base_url();?>assets/graphics/trophy1.svg" width="100px" height="111px">
+						<section id="block-a"></section>
+						<section id="block-b"></section>
+						<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[0]->user_id);?> Points</p></section>
+						<section id="block-d"><a href="<?=base_url('index.php/profile/index/' . $topStudents[0] -> user_id) ;?>"><?=$topStudents[0]->first_name." ".$topStudents[0]->last_name;?></a></section>
+					</section>
+				</section>
 
 					<?php
 				}
@@ -225,13 +225,17 @@ if(count($topStudents)>0)
 
 					<section class="third-trophy">
 						<section class="content">
-							<img src="http://localhost/vit/assets/graphics/trophy3.svg" width="100px" height="111px">
-							<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[2][2]->user_id);?> Points</p></section>
-							<section id="block-d"><a href=""><?=$topStudents[2][2]->username;?></a></section>
+							<img src="<?=base_url();?>assets/graphics/trophy3.svg" width="100px" height="111px">
+							<section id="block-c"><p><?=$course -> getEarnedPoints($topStudents[2]->user_id);?> Points</p></section>
+							<section id="block-d"><a href="<?=base_url('index.php/profile/index/' . $topStudents[2] -> user_id) ;?>"><?=$topStudents[2]->first_name." ".$topStudents[2]->last_name;?></a></section>
 						</section>
 					</section>
 
 				</section>
 			</section>
 		</section>
+
 		<?php }} ?>
+		</section>
+		</section>
+		</section>

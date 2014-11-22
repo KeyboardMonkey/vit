@@ -273,6 +273,7 @@ nav.side-navs ul li a.active-notifications, aside nav ul li a.active-notificatio
 /*-----------------------------------------------------------Home-----------------------------------------------------------*/
 .track-progress{ padding:20px; }
 .track-progress .progress-bar { margin:20px 0; width:80%; }
+.track-progress a { color: #2ABB9B; }
 a.resume-track { margin:0 10px; padding:5px 0; width:150px; font-size:14px; text-align:center; display:block; color:#FFFFFF; background-color:#2ABB9B; border:none; transition:all 0.5s ease-out;
     -webkit-border-radius:5px; -moz-border-radius:5px; border-radius:5px; -webkit-box-shadow:0 5px #187f68; -moz-box-shadow:0 5px #187f68; box-shadow:0 5px #187f68; }
 a.resume-track:hover { background-color:#249f84; }
@@ -482,7 +483,7 @@ nav.default a:hover { color:#2ABB9B; background:#ECF0F1; border-top:2px solid #2
 
 
 /*-----------------------------------------------------------End Library-----------------------------------------------------------*/
-/*-----------------------------------------------------------Learning Paths-----------------------------------------------------------*/
+/*-----------------------------------------------------------Learning Tracks-----------------------------------------------------------*/
 ul.suggest-me-track { margin:20px auto 0; padding:0; width:18%; }
     ul.suggest-me-track li { margin:2px auto; padding:0; list-style:none; background:#2ABB9B; opacity:0.7; }
     ul.suggest-me-track li:hover { opacity:1; }
@@ -495,6 +496,7 @@ ul.suggest-me-track { margin:20px auto 0; padding:0; width:18%; }
 #tracks .course-info h5 { margin:0; padding:0; padding:10px 20px; }
 #tracks .course-info p.points { margin:-30px 20px; float:right; background:#ECF0F1; }
 #tracks .course-info h2.course-name { padding:0 20px 0; color:#2ABB9B; }
+#tracks .course-info a {color:#2ABB9B; }
 #tracks .course-info h5.tiny-intro { padding:10px 20px; opacity:1; }
 #tracks .course-info p.desc { padding:10px 20px; height:65px; line-height:1.5; overflow:hidden; font-size:13px; }
 #tracks .buttons { margin:10px 20px; float:right; }

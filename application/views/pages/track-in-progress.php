@@ -4,6 +4,36 @@
     $courses = $track ->getCourses();
    // print_r($courses);        
 ?>
+
+<!-- ProBar stuff start -->
+    <link href="<?=base_url();?>assets/styles/pro-bars.min.css" rel="stylesheet" type="text/css" media="all"/>
+
+    <style>
+        .main-content { width: 65%; margin-right: 3%; float: left; }
+        .progress-bar-control-form { width: 100%; float: left; }
+        .progress-bar-control-form table { width: 50%; float: left; }
+        .right-sidebar { width: 30%; float: left; }
+        .pro-bar { text-align: center; }
+        .pro-bar-percentage { color: #FFFFFF; line-height: 15px; display: none; cursor: crosshair; }
+        .pro-bar-percentage.visible { display: block; }
+    </style>
+
+	<script>
+	$(document).ready(function(){
+		// to get full course progress
+		// $track -> getProgress()
+
+		// to get videoplayback progress (100% means 60 progress points)
+		//var course_progress = <?=($track -> getProgress() * 60 / 100);?>;
+		var course_progress = <?=$track ->getProgress();?>;
+        jQuery('#large_pro_bar').animate({width: course_progress+ '%'});
+        jQuery('#large_pro_bar_percent').html(course_progress.toFixed(2) + '%');
+
+		});
+	</script>
+
+<!-- ProBar stuff end -->
+
 <section class="container">
 	<section class="content-lg">
 		<section id="course-progress-left">
@@ -24,7 +54,18 @@
 		
 		<section class="clear"></section>
 
-        <section class="progress-bar"><?=$track ->getProgress();?>  </section>
+        <section class="progress-bar">
+
+        <?php $track_progress=number_format($track ->getProgress());?>
+		<!-- Track Progress -->
+			<div class="pro-bar-container color-nephriti bm-remove" style="margin:10px !important; width: 1180px !important;">
+	            <div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=$track_progress;?>" data-pro-bar-delay="500">
+		            <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$track_progress?> %</span>
+		            <div class="pro-bar-candy candy-ltr"></div>
+		       	</div>
+	    	</div>
+
+        </section>
 		<section class="course-progress">
 
 		 <?php
@@ -86,7 +127,15 @@
 				<p class="points"><?=$course -> points;?> Points</p>
 				<h4 class="rating">Rating: <?=$course -> getOverAllRating();?></h4>
 				<section class="clear"></section>
-				<section class="progress-bar-mini"><?=$course -> getCourseProgressPercent();?></section>
+				<section class="progress-bar-mini">
+				<?php $single_course_progress=$course -> getCourseProgressPercent();?>
+					<div class="pro-bar-container color-nephriti bm-remove" style="margin:0px auto !important; width: 90% !important;">
+		          		<div id="small_pro_bar" class="pro-bar color-emerald" data-pro-bar-percent="<?=$single_course_progress;?>" data-pro-bar-delay="500">
+			          	  <span class="pro-bar-percentage" id="small_pro_bar_percent"><?=$single_course_progress?> %</span>
+			            <div class="pro-bar-candy candy-ltr"></div>
+		       		</div>
+	    	</div>
+				</section>
 			</section>
 
 			<section class="clear"></section>
@@ -100,3 +149,29 @@
 </section>
 
 <section class="clear"></section>
+
+   	<!-- More ProBar scripts -->
+<script src="<?=base_url();?>assets/js/jquery.min.js"></script>
+<script src="<?=base_url();?>assets/js/jquery-ui.min.js"></script>
+<script src="<?=base_url();?>assets/js/appear.min.js" type="text/javascript"></script>
+<script src="<?=base_url();?>assets/js/pro-bars.min.js" type="text/javascript"></script>
+
+<script>
+    jQuery(function() {
+
+        jQuery('.pro-bar').hover(function() {
+            jQuery(this).find('.pro-bar-percentage').toggleClass('visible');
+        });
+
+    });
+    function calculateCourseProgress() {
+        var calculated_percentage = (jQuery('#videos_viewed').val() / jQuery('#total_videos').val()) * 100;
+        jQuery('#small_pro_bar').animate({width: calculated_percentage + '%'});
+        jQuery('#small_pro_bar_percent').html(calculated_percentage.toFixed(2) + '%');
+    }
+    function showTrackProgress() {
+        var course_progress = parseFloat(jQuery('#course_progress').val());
+        jQuery('#large_pro_bar').animate({width: course_progress+ '%'});
+        jQuery('#large_pro_bar_percent').html(course_progress.toFixed(2) + '%');
+    }
+</script>
