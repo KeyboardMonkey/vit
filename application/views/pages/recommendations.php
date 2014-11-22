@@ -12,7 +12,8 @@
                 $category = new course_cat();
                 $category -> load($categoryId);
                 if(count($recomendationCategory)==0)
-                {
+                { 
+                    echo '<h4 style="margin:10px;">No course added in this category yet.</h4>';
                 ?>
                 <section class="other">
                 <h3><?=$category->category;?></h3>
@@ -30,18 +31,7 @@
                     $course = new course();
                     $course -> load($recomendedCourse['course_id']);
                  ?>
-                 <!--
-				<section class="course">
-                    <a href="<?=base_url();?>index.php/courses/view/<?=$course->course_id;?>"><img src="<?=base_url();?>assets/graphics/course-thumbnail.png" width="150px" height="94px" alt="thumbnail" /><br /><?=$course->full_name;?></a>
-                    <?php
-                    $courseEnrolments = new course_enrollment();
-                    $courseEnrolments = $courseEnrolments ->getWithCondition(array('course_id' => $course -> course_id));
-                    ?>
-                    <h6>Course Taken by <?=count($courseEnrolments) . ((count($courseEnrolments)==1) ? " User" : " Users");?> </h6>
-                    <p>Points: <?=$recomendedCourse['points'];?></p>
-                </section>
-                -->
-                <section class="course">
+                    <section class="course">
 					<a href="<?=base_url();?>index.php/courses/view/<?=$course->course_id;?>"><?=$course->full_name;?></a>
 					<?php
 					$courseEnrolments = new course_enrollment();

@@ -50,7 +50,7 @@
             ?>
         <section class="<?=$class?>">
 			<section class="color-tag">
-				<a href="<?=base_url();?>index.php/library/index/category/<?=$course->getCategory()->id;?>" class="<?=$course->getCategory()->color_tag;?>"><?=$course->getCategoryTitle();?></a>
+				<a class="<?=$course->getCategory()->color_tag;?>" href="<?=base_url();?>index.php/library/index/category/<?=$course->getCategory()->id;?>"><?=$course->getCategoryTitle();?></a>
 			</section>
 			<section class="course-info">
 				<h5><?=$course->difficulty_level;?></h5>
