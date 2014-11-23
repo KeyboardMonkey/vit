@@ -4,6 +4,66 @@
 		"selected_items":
 		[
 			[
+				"my",
+				"myTrack"
+			],
+			[
+				"cour",
+				"course"
+			],
+			[
+				"retur",
+				"returnusers"
+			],
+			[
+				"pritn",
+				"print_r"
+			],
+			[
+				"enrol",
+				"enrolment"
+			],
+			[
+				"prnt",
+				"print_r"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"user",
+				"user_id"
+			],
+			[
+				"lect",
+				"lecture_progress"
+			],
+			[
+				"course",
+				"courses"
+			],
+			[
+				"usr",
+				"user_id"
+			],
+			[
+				"track",
+				"track_id"
+			],
+			[
+				"last",
+				"last_name"
+			],
+			[
+				"coru",
+				"course_id"
+			],
+			[
 				"for",
 				"foreach	foreach …"
 			],
@@ -30,10 +90,6 @@
 			[
 				"enr",
 				"enrollement"
-			],
-			[
-				"enrol",
-				"enrol_time"
 			],
 			[
 				"en",
@@ -76,16 +132,8 @@
 				"lecture_id"
 			],
 			[
-				"lect",
-				"lecture_id"
-			],
-			[
 				"bae",
 				"base_url"
-			],
-			[
-				"course",
-				"course_id"
 			],
 			[
 				"upda",
@@ -106,10 +154,6 @@
 			[
 				"coun",
 				"county"
-			],
-			[
-				"cour",
-				"course_id"
 			],
 			[
 				"array",
@@ -204,37 +248,18 @@
 	"buffers":
 	[
 		{
-			"contents": "<?php\n        $cats = $this -> course_cat -> get();\n        $total = 0;\n         foreach($cats as $cat)\n         {\n             $total += $cat->getPointsEarnedInCategory();\n         }\n?>\n<section class=\"container\">\n	<section class=\"content-md\">\n		<section class=\"title\">\n			<h2><?=$total;?></h2>\n			<h4>Total Points</h4>\n		</section>\n		<section class=\"line-border\"></section>\n		<section class=\"course-cols\">\n                     <section class=\"col1\">\n				<ul class=\"cols\">\n                    <?php \n                    $col = 1;\n                    \n                    $i = 0;\n                            foreach($cats as $cat)\n                            {\n                                ?>\n                               \n                    <?php\n                                \n                                $courses = $cat -> getCourses();\n                               \n                    ?>\n			\n                                    \n					<li class=\"<?= $cat -> color_tag;?>\"><strong><?=$cat->getPointsEarnedInCategory();?></strong><br/><?=$cat -> category ;?></li>\n					\n                              \n                    <?php\n                            $i ++;\n                            if($i == 4)\n                            {\n                                $i = 0;\n                                $col ++;\n                                echo '</ul></section> <section class=\"col'.$col.'\">\n				<ul class=\"cols\">';\n                                \n                            }\n                            } \n                     ?>\n                                          </ul>\n			</section>\n			\n			<section class=\"clear\"></section>\n		</section>\n		<section class=\"line-border\"></section>\n		<section class=\"info\">\n			<img src=\"<?=base_url();?>assets/graphics/info.png\" width=\"50px\" height=\"50px\" alt=\"info\" />\n			<p>Points are earned whenever you take an important action on Vitorials.\n			<br/><a href=\"\">Learn more</a> about when and how points are earned.</p>\n		</section>\n	</section>\n	\n	<section class=\"content-md\">\n		<section class=\"track-progress\">\n			<h2>WordPress Development</h2>\n			<section class=\"progress-bar\">\n			</section>\n			<a class=\"resume-track\" href=\"<?=base_url();?>index.php/courses/course_playback\">Resume Track</a>\n		</section>\n	</section>\n\n	<?php \n	$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));\n	?>\n	<section class=\"content-md\">\n\n	\n\n\n		<section class=\"not-registered\">\n			<h3>You haven't registered any course yet.<br /><small>If you want to registered any of our courses then visit our <a href=\"#\">Course Library</a></h3></small></h3>\n		</section>\n\n\n		<section class=\"registered\">\n		<?php \n			$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));\n			foreach($myEnrolements as $myEnrolment)\n					{\n			    $myCourse = new course();\n			    $myCourse -> load($myEnrolment->course_id);\n			    $myCourseId = $myCourse -> course_id;\n			?>\n\n			<section class=\"my-courses\">\n				<section class=\"color-tag\">\n					<a href=\"<?=base_url();?>index.php/library/index/category/<?=$myCourse->getCategory()->id;?>\" class=\"<?=$myCourse->getCategory()->color_tag;?>\"><?=$myCourse->getCategoryTitle();?></a>\n				</section>\n				<h5 class=\"level\"><?=$myCourse->difficulty_level;?></h5>\n				<section class=\"clear\"></section>\n				<h4 class=\"course-name\"><a href=\"<?=base_url();?>index.php/courses/course_playback/<?=$myCourseId;?>\"><?=$myCourse->full_name;?></h4></a>\n				<section class=\"clear\"></section>\n				<p class=\"points\"><?=$myCourse->points;?> Points</p>\n				<h4 class=\"rating\">Rating: <?=$myCourse->getOverAllRating();?> (<?=$myCourse->numberOfRatings();?>)</h4>\n				<section class=\"clear\"></section>\n				<section class=\"progress-bar-mini\"></section>\n			<!-- 	<a href=\"<?=base_url();?>index.php/courses/view/<?=$myCourse->course_id;?>\" class=\"learn-now\">Resume</a> -->\n				<button class=\"default\" type=\"button\">Resume Course</button>\n\n\n                                <script>\n                                    $(document).ready(function(){\n                                        $('#resume_track').click(function(){\n                                            window.location = '<?=base_url('index.php/tracks/resume/' . $track -> track_id);?>';\n                                        });\n                                    });\n                                    </script>\n\n			</section>\n\n			<?php\n			}\n			?>\n		</section>\n\n		\n	</section>\n	\n	<section class=\"content-md\">\n		<section class=\"popular-courses\">\n			<h3>Popular Courses</h3>\n			<ul class=\"course-widget\">\n				<li><a href=\"\"><i class=\"fa fa-play-circle\"></i>Programming Fundamentals</a></li>\n				<li><a href=\"\">Introduction to Android</a></li>\n				<li><a href=\"\">Windows Phone Development</a></li>\n			</ul>\n		</section>\n		<section class=\"new-courses\">\n			<h3>New Courses</h3>\n			<ul class=\"course-widget\">\n				<li><a href=\"\">Cloud Computing</a></li>\n				<li><a href=\"\">Windows Store Authorization</a></li>\n				<li><a href=\"\">Introduction to ASP.NET MVC</a></li>\n			</ul>\n		</section>\n		<section class=\"clear\"></section>\n	</section>\n	\n	</section>\n	\n	<section class=\"clear\"></section>",
-			"file": "application/views/pages/home.php",
-			"file_size": 4922,
-			"file_write_time": 130608947940660659,
+			"file": "application/views/pages/quiz.php",
 			"settings":
 			{
-				"buffer_size": 5229,
+				"buffer_size": 2157,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/views/pages/track-in-progress.php",
+			"file": "application/views/pages/profile.php",
 			"settings":
 			{
-				"buffer_size": 4009,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/pages/library.php",
-			"settings":
-			{
-				"buffer_size": 3866,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "assets/styles/main.css",
-			"settings":
-			{
-				"buffer_size": 54981,
+				"buffer_size": 4340,
 				"line_ending": "Windows"
 			}
 		},
@@ -242,15 +267,15 @@
 			"file": "application/models/course.php",
 			"settings":
 			{
-				"buffer_size": 21879,
+				"buffer_size": 23279,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/models/course_rating.php",
+			"file": "application/views/pages/home.php",
 			"settings":
 			{
-				"buffer_size": 658,
+				"buffer_size": 9195,
 				"line_ending": "Windows"
 			}
 		},
@@ -258,7 +283,7 @@
 			"file": "application/models/course_enrollment.php",
 			"settings":
 			{
-				"buffer_size": 668,
+				"buffer_size": 1311,
 				"line_ending": "Windows"
 			}
 		}
@@ -290,24 +315,81 @@
 	},
 	"file_history":
 	[
-		"/A/xampp/htdocs/vit/application/views/pages/track-explore.php",
-		"/A/xampp/htdocs/vit/application/controllers/home.php",
-		"/C/Users/The Unusual Suspect/Downloads/vitdb.sql",
-		"/A/xampp/htdocs/vit/vitdb.sql",
-		"/A/xampp/htdocs/vit/application/views/pages/course-playback.php",
-		"/A/xampp/htdocs/vit/application/config/config.php",
+		"/A/xampp/htdocs/vit/application/models/tracks_enrollment.php",
+		"/A/xampp/htdocs/vit/application/views/widgets/signup-form.php",
+		"/A/xampp/htdocs/vit/application/views/pages/register.php",
 		"/A/xampp/htdocs/vit/application/controllers/tracks.php",
+		"/A/xampp/htdocs/vit/application/models/course.php",
+		"/A/xampp/htdocs/vit/application/views/pages/quiz-result.php",
+		"/A/xampp/htdocs/vit/application/models/user.php",
+		"/A/xampp/htdocs/vit/application/views/pages/library.php",
+		"/A/xampp/htdocs/vit/application/controllers/register.php",
+		"/A/xampp/htdocs/vit/application/views/widgets/widget-login.php",
+		"/A/xampp/htdocs/vit/application/views/pages/course-playback.php",
+		"/A/xampp/htdocs/vit/application/controllers/upload.php",
+		"/A/xampp/htdocs/vit/application/models/track.php",
+		"/A/xampp/htdocs/vit/application/views/pages/track-add.php",
+		"/A/xampp/htdocs/vit/application/views/pages/course-add.php",
+		"/A/xampp/htdocs/vit/assets/styles/main.css",
+		"/A/xampp/htdocs/vit/application/views/pages/course-intro.php",
+		"/A/xampp/htdocs/vit/application/config/config.php",
+		"/A/xampp/htdocs/vit/application/controllers/logout.php",
+		"/A/xampp/htdocs/vit/application/views/pages/logout.php",
+		"/A/xampp/htdocs/vit/application/views/pages/track-explore.php",
+		"/A/xampp/htdocs/vit/application/views/pages/tracks.php",
+		"/A/xampp/htdocs/vit/application/views/pages/quiz-add.php",
+		"/A/xampp/htdocs/vit/application/controllers/quiz.php",
 		"/A/xampp/htdocs/vit/application/views/pages/track-in-progress.php",
+		"/A/xampp/htdocs/vit/application/models/sys_config.php",
+		"/A/xampp/htdocs/vit/application/config/autoload.php",
+		"/A/xampp/htdocs/vit/application/models/config.php",
+		"/A/xampp/htdocs/vit/application/models/quiz_question.php",
+		"/A/xampp/htdocs/vit/application/models/quiz_model.php",
+		"/A/xampp/htdocs/vit/vitdb.sql",
+		"/A/xampp/htdocs/vit/application/views/widgets/signup-form-fazool.php",
+		"/A/xampp/htdocs/vit/application/views/pages/profile.php",
+		"/V/-- UPDATED FILES/ranking-plugin.php",
+		"/A/xampp/htdocs/vit/application/controllers/upcoming.php",
+		"/A/xampp/htdocs/vit/application/views/templates/footer.php",
+		"/A/xampp/htdocs/vit/application/views/pages/home.php",
+		"/A/xampp/htdocs/vit/application/views/widgets/top-three-students.php",
+		"/A/xampp/htdocs/vit/application/controllers/courses.php",
+		"/A/xampp/htdocs/vit/application/views/widgets/category-leaders.php",
+		"/C/Users/The Unusual Suspect/Desktop/vito/category-leaders-latest.php",
+		"/A/xampp/htdocs/vit/application/controllers/home.php",
+		"/A/xampp/htdocs/vit/application/views/templates/header-login.php",
+		"/A/xampp/htdocs/vit/application/controllers/recommendations.php",
+		"/A/xampp/htdocs/vit/application/views/pages/recommendations.php",
+		"/A/xampp/htdocs/vit/application/views/templates/header.php",
+		"/A/xampp/htdocs/vit/application/controllers/login.php",
+		"/A/xampp/htdocs/vit/application/views/templates/header-clean.php",
+		"/A/xampp/htdocs/vit/assets/styles/pro-bars.min.css",
+		"/A/xampp/htdocs/vit/application/models/course_review.php",
+		"/A/xampp/htdocs/vit/application/controllers/profile.php",
+		"/A/xampp/htdocs/vit/application/controllers/library.php",
+		"/A/xampp/htdocs/vit/application/controllers/users.php",
+		"/A/xampp/htdocs/vit/application/views/pages/viewcourse.php",
+		"/A/xampp/htdocs/vit/assets/styles/main-arm ki new wali.css",
+		"/A/xampp/htdocs/vit/application/views/templates/styleNscripts.php",
+		"/A/xampp/htdocs/vit/application/config/doctypes.php",
+		"/A/xampp/htdocs/vit/application/models/course_enrollment.php",
+		"/A/xampp/htdocs/vit/application/views/pages/leaderboard.php",
+		"/A/xampp/htdocs/vit/application/views/pages/no-user.php",
+		"/A/xampp/htdocs/vit/application/controllers/leaderboard.php",
+		"/A/xampp/htdocs/vit/application/core/my_model.php",
+		"/A/xampp/htdocs/vit/application/models/course_cat.php",
+		"/A/xampp/htdocs/vit/application/controllers/PageDoesNotExist.php",
+		"/A/xampp/htdocs/vit/application/views/pages/quiz.php",
+		"/A/xampp/htdocs/vit/application/models/course_rating.php",
+		"/C/Users/The Unusual Suspect/Downloads/vitdb.sql",
 		"/A/xampp/htdocs/vit/application/views/pages/explore-track.php",
 		"/B/-- FYP/3. Development/HTMLS/New folder/welcome.html",
 		"/A/xampp/htdocs/ssss/loadmore/index.php",
 		"/A/xampp/htdocs/vit/soptair/views/widgets/similar-courses-widget.php",
 		"/A/xampp/htdocs/vit/soptair/views/pages/library.php",
-		"/A/xampp/htdocs/vit/application/config/autoload.php",
 		"/A/xampp/htdocs/vit/soptair/models/course.php",
 		"/A/xampp/htdocs/vit/soptair/views/pages/quiz.php",
 		"/A/xampp/htdocs/vit/soptair/controllers/quiz.php",
-		"/A/xampp/htdocs/vit/application/controllers/quiz.php",
 		"/A/xampp/htdocs/vit/soptair/views/wizards/new-track-wizard.php",
 		"/B/-- FYP/3. Development/HTMLS/New folder/styles/js/try.js",
 		"/A/xampp/htdocs/vit/assets/js/try.js",
@@ -329,7 +411,6 @@
 		"/A/xampp/htdocs/vit/soptair/core/MY_Controller.php",
 		"/C/Users/The Unusual Suspect/Downloads/vitdb (3).sql",
 		"/V/vitdb (6).sql",
-		"/A/xampp/htdocs/vit/assets/styles/main.css",
 		"/A/xampp/htdocs/vit/soptair/models/course_cat.php",
 		"/A/xampp/htdocs/vit/soptair/views/pages/quiz-add.php",
 		"/A/xampp/htdocs/vit/soptair/models/track_content.php",
@@ -361,63 +442,7 @@
 		"/A/xampp/htdocs/vit/soptair/views/templates/header-clean.php",
 		"/A/xampp/htdocs/vit/soptair/views/pages/home.php",
 		"/A/xampp/htdocs/vit/soptair/views/pages/edit-profile.php",
-		"/A/xampp/htdocs/vit/soptair/views/pages/register.php",
-		"/A/xampp/phpMyAdmin/config.inc.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/leaderboard.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/uploadfiles.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/tech_feeds.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/recommendations.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/preference.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/pages.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/notifications.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/home.php",
-		"/A/xampp/htdocs/vit/soptair/models/user.php",
-		"/A/xampp/htdocs/ssss/bars.php",
-		"/A/xampp/htdocs/vit/assets/styles/pro-bars.min.css",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/newCoolStuff/course-playback.html",
-		"/A/xampp/htdocs/vit/soptair/models/lecture.php",
-		"/A/xampp/htdocs/vit/soptair/models/user_lecture_progress.php",
-		"/A/xampp/htdocs/vit/soptair/views/wizards/pref-set.php",
-		"/A/xampp/htdocs/vit/soptair/config/autoload.php",
-		"/A/xampp/htdocs/vit/soptair/models/user_interest_categories.php",
-		"/A/xampp/htdocs/vit/soptair/models/file_model.php",
-		"/A/xampp/htdocs/ssss/undex.php",
-		"/A/xampp/htdocs/vit/soptair/views/wizards/pref-rank.php",
-		"/A/x. DRIVE X/Drive X data/Islamic Lectures/- LOGS/G9 Hostel - Friends/backupsettings-HOST=OurRouter, MyMAC=1.2 Lease.conf",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/newCoolStuff/library.html",
-		"/A/xampp/htdocs/vit/assets/styles/main - Copy.css",
-		"/A/xampp/htdocs/vit/soptair/views/pages/library-navChanged.php",
-		"/A/xampp/htdocs/vit/soptair/views/pages/library-working.php",
-		"/A/xampp/htdocs/vit/soptair/views/pages/course_add.php",
-		"/A/xampp/htdocs/vit/soptair/views/widgets/similar-courses-widget",
-		"/A/xampp/htdocs/vit/soptair/views/pages/viewcourse.php",
-		"/A/xampp/htdocs/vit/soptair/models/quiz_question.php",
-		"/A/xampp/htdocs/vit/soptair/models/quiz_model.php",
-		"/A/xampp/htdocs/vit/soptair/models/quiz.php",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/newCoolStuff/___backup/course-playback.html",
-		"/A/xampp/htdocs/vit/soptair/views/popups/quiz-result-popup.php",
-		"/A/xampp/htdocs/vit/soptair/views/templates/styleNscripts.php",
-		"/A/xampp/htdocs/vit/soptair/views/pages/explore-track.php",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/newCoolStuff/___backup/quiz.html",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/newCoolStuff/paths.php",
-		"/A/xampp/htdocs/vit/soptair/views/pages/track-in-progress.php",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/newCoolStuff/quiz.php",
-		"/A/xampp/htdocs/vit/soptair/models/news_model.php",
-		"/A/xampp/htdocs/vit/soptair/views/welcome_message.php",
-		"/A/xampp/htdocs/vit/soptair/helpers/assets_helper.php",
-		"/A/xampp/htdocs/__versions/- SQLs/vitdb-manuallyMerged.sql",
-		"/A/xampp/htdocs/__versions/- SQLs/vitdb-meriWaliAfterTracks - Copy.sql",
-		"/A/xampp/htdocs/__versions/- SQLs/vitdb-shahWaliAfterPref.sql",
-		"/A/xampp/htdocs/vit/assets/styles/style1.css",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/newCoolStuff/quiz-result.html",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/newCoolStuff/new-track-wizard.php",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/newCoolStuff/new-track-wizard.html",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/newCoolStuff/quiz.html",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/newCoolStuff/paths.html",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/newCoolStuff/track-explore.html",
-		"/C/Users/The Unusual Suspect/Desktop/course-add.php",
-		"/F/course-add.php",
-		"/F/AR/add-track.html"
+		"/A/xampp/htdocs/vit/soptair/views/pages/register.php"
 	],
 	"find":
 	{
@@ -428,6 +453,13 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"A:\\xampp\\htdocs\\vit\\application",
+			"A:\\xampp\\htdocs\\vit\\application\\views\\pages",
+			"A:\\xampp\\htdocs\\vit\\application\\controllers",
+			"A:\\xampp\\htdocs\\vit\\application",
+			"A:\\xampp\\htdocs\\vit\\application\\controllers",
+			"A:\\xampp\\htdocs\\vit\\application",
+			"A:\\xampp\\htdocs\\vit\\application\\controllers",
 			"A:\\xampp\\htdocs\\vit",
 			"A:\\xampp\\htdocs\\vit\\soptair",
 			"A:\\xampp\\htdocs\\vit\\soptair\\views\\wizards",
@@ -446,6 +478,81 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"myCourse",
+			"info.png",
+			"getlec",
+			"else if",
+			"-track",
+			"track",
+			"max_quiz_questions",
+			"config",
+			"print_r",
+			" <",
+			"Login",
+			"course-name",
+			"full_name",
+			"course_title",
+			"entries-data",
+			"loading",
+			"leaderboard",
+			"Leaderboard",
+			"leaderboard",
+			"Leaderboard",
+			"course",
+			"trac",
+			"progress",
+			".course-name",
+			"review",
+			".html",
+			".course",
+			"course",
+			"foreach",
+			"ajaxfileupload.js",
+			"course_progress",
+			"showTrackProgress",
+			"course_progress",
+			"track_progress",
+			"session",
+			"<<<",
+			"<<<<<<",
+			"<<<<<<< HEAD",
+			"isUserEnrolled",
+			"category-leaders",
+			"user_mail",
+			"userdata('logged_in')",
+			"userdata('loggedIn')",
+			"getWithCondition",
+			"top-three-students",
+			"leader",
+			"<?php",
+			"myEnrolements",
+			"mycou",
+			"course",
+			"Course",
+			"course",
+			"Course",
+			"course",
+			"Course",
+			"course",
+			"Course",
+			"course",
+			"Course",
+			"course",
+			"Course",
+			"course",
+			"progress",
+			"script",
+			"myCourse",
+			"progress",
+			"$course",
+			"track_progress",
+			"progress",
+			"course prog",
+			"track_progress",
+			"embed",
+			"track_progress",
+			".poin",
+			"default",
 			"p.points",
 			"Points",
 			"`updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,",
@@ -498,82 +605,7 @@
 			"dsq",
 			"?>\n",
 			"vid_title",
-			"individualLecture",
-			");\n",
-			"/>\n",
-			";?></",
-			"star",
-			"  i-      If User Has less than 50% completed then 0.3 points per star MULTIPLIED BY USER INTEREST\n                        ii-     If User has less than 75% competed then 0.4 points per star MULTIPLIED BY USER INTEREST\n                        iii -   If User has more than 90% completed then 0.5 points per star MULTIPLIED BY USER INTEREST",
-			"\n                   	",
-			"					$",
-			" ->",
-			"();\n",
-			"id",
-			"10",
-			"other",
-			"design",
-			"business",
-			"tools",
-			"wordpress",
-			"6C7A89",
-			"wordpress",
-			"cpp",
-			"67809F",
-			"cpp",
-			"css",
-			"FCDC05",
-			"jquery",
-			"javascript",
-			"android",
-			"java",
-			"F22613",
-			"java",
-			"asp",
-			"C0392B",
-			"asp",
-			"C0392B",
-			"asp",
-			"php",
-			"html",
-			"19B5FE",
-			"html",
-			"\n->",
-			"jquery",
-			"22313F",
-			"jquery",
-			"javascript",
-			"F9BF3B",
-			"javascript",
-			"css",
-			"3498DB",
-			"css",
-			"business",
-			"BE90D4",
-			"business",
-			"cat",
-			"cats",
-			"#913D88",
-			"display",
-			"915E25",
-			"other",
-			"design",
-			"other",
-			"design",
-			"business",
-			"android",
-			"span",
-			"other",
-			"php",
-			"design",
-			">\n",
-			".\"\\\">\";",
-			"The upload path does not appear to be valid",
-			"assets_url()",
-			"newCourse",
-			"new-track-wizard.php",
-			"new-track-wizard",
-			"quiz_id",
-			"}"
+			"individualLecture"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -596,24 +628,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "application/views/pages/home.php",
+					"file": "application/views/pages/quiz.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5229,
+						"buffer_size": 2157,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4018,
-								4018
+								276,
+								276
 							]
 						],
 						"settings":
@@ -622,27 +654,27 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1014.0,
+						"translation.y": 270.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "application/views/pages/track-in-progress.php",
+					"file": "application/views/pages/profile.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4009,
+						"buffer_size": 4340,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1405,
-								1408
+								307,
+								307
 							]
 						],
 						"settings":
@@ -653,88 +685,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 1,
-			"sheets":
-			[
-				{
-					"buffer": 2,
-					"file": "application/views/pages/library.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3866,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2492,
-								2492
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 41.0,
-						"translation.y": 429.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "assets/styles/main.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 54981,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								24055,
-								24055
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 6068.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 2,
 					"file": "application/models/course.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 21879,
+						"buffer_size": 23279,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								772,
-								772
+								19017,
+								19021
 							]
 						],
 						"settings":
@@ -744,57 +712,55 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": -0.0,
-						"translation.y": 195.0,
+						"translation.y": 6657.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "application/models/course_rating.php",
+					"buffer": 3,
+					"file": "application/views/pages/home.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 658,
+						"buffer_size": 9195,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								241,
+								241
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 4,
 					"file": "application/models/course_enrollment.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 668,
+						"buffer_size": 1311,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								383,
+								383
 							]
 						],
 						"settings":
@@ -807,7 +773,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -815,7 +781,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 21.0
+		"height": 23.0
 	},
 	"input":
 	{
@@ -830,18 +796,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.488399987259,
 			1.0
 		],
 		"rows":
@@ -858,7 +817,7 @@
 	"project": "vit.sublime-project",
 	"replace":
 	{
-		"height": 38.0
+		"height": 42.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -896,7 +855,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 50.0,
+	"side_bar_width": 210.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

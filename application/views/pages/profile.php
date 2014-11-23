@@ -18,7 +18,7 @@
 			</section>
 			<section class="user-info">
 				<ul>
-					<li>Last Seen: # <span style="font-weight:bold;"><?=date("D, d M Y",strtotime($user->last_login));?></span></li>
+					<li>Last Seen: <span style="font-weight:bold;"><?=date("D, d M Y",strtotime($user->last_login));?></span></li>
 					<li>Member Since: <span style="font-weight:bold;"><?=date("D, d M Y",strtotime($user->register_date));?></span></li>
 				</ul>
 				<h1><?=$user -> first_name . " " . $user->last_name;?><small id="user-type"><?=$user -> type;?></small></h1>
@@ -74,7 +74,54 @@
 			<br/><a href="">Learn more</a> about when and how points are earned.</p>
 		</section>
 	</section>
+		<?php 
+		$myCourse = new course();
+		$myEnrolments = new course_enrollment();
+
+		$yolo=$myEnrolments -> getMyEnrolledCoursesList($user_id);
+		$molo=$myEnrolments -> getMyEnrolledCourses($user_id);
+			//print_r($yolo) ;
+			//print_r($molo) ;
+
+		if ($molo > 0) {
+			# code...
 		
+		?>
+		<section class="content-md">
+			<section class="title">
+				<h3>Completed Courses</h3>
+			</section>
+			<section class="line-border"></section>
+			<!-- <h3>Past Courses</h3> -->
+			<section class="popular-courses">
+			<?php 
+				foreach ($yolo as $myEnrolledCourse) 
+				{
+					$myCourse -> load($myEnrolledCourse->course_id);
+			    	$myCourseId = $myCourse -> course_id;
+?>
+			    	  <?php 
+			    	  
+           if($myCourse->getCourseProgressPercent($user_id)==100)
+           	{
+           		
+						
+			?>
+			<ul style="margin: 0px 0px 3px 0px !important; padding: 0px 38px !important;" class="course-widget" style="padding: 0px 33px !important;">
+				<li style="padding:10px 10px 0px 0px !important;"><a style="color:#2ABB9B !important;" href="<?=base_url();?>index.php/courses/view/<?=$myCourseId;?>"><?=$myCourse->full_name;?></a></li>
+				<span style="margin: 0px 3px 3px 0px; font-size:14px;">Points Scored: <?=$myCourse -> getEarnedPoints();?></span> 
+			</ul>
+			<?php
+				}
+			}
+		}//end molo
+			 ?>
+			</section>
+			</section>
+			<section class="clear"></section>
+			
+		
+
 		<section class="content-md">
 			<section class="title">
 				<h3>Information</h3>

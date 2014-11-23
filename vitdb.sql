@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 23, 2014 at 05:10 PM
+-- Generation Time: Nov 23, 2014 at 05:55 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -306,7 +306,7 @@ INSERT INTO `course_review` (`id`, `course_id`, `user_id`, `review`, `submittion
 (12, 3, 1, '                                           agvaaaaaaaaaaaaaaaaa       \r\n                                                  ', '2014-11-23 16:53:28', 1, 50),
 (13, 5, 2, '                                           agvaaaaaaaaaaaaaaaaa       \r\n                                                  ', '2014-11-17 20:19:04', 1, 30),
 (14, 1, 6, '                                                  Build an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive Website\r\n                                                  ', '2014-11-18 14:30:26', 1, 40),
-(15, 1, 1, '\r\n    ewagewagaw waeg waeg wea gawe aw agwseg wagwagwgwag                 ', '2014-11-22 20:10:31', 1, 50);
+(15, 1, 1, '\r\n		ewagewagaw waeg waeg wea gawe aw agwseg wagwagwgwag									', '2014-11-22 20:10:31', 1, 50);
 
 -- --------------------------------------------------------
 
@@ -981,19 +981,19 @@ CREATE TABLE IF NOT EXISTS `user_interest_categories` (
 
 INSERT INTO `user_interest_categories` (`id`, `user_id`, `cat_id`, `interest_level`) VALUES
 (80, 1, 1, 2),
-(81, 1, 2, 0),
+(81, 1, 2, 2),
 (82, 1, 3, 2),
 (83, 1, 4, 2),
 (84, 1, 5, 2),
-(85, 1, 6, 2),
-(86, 1, 7, 2),
-(87, 1, 8, 2),
-(88, 1, 9, 2),
-(89, 1, 10, 2),
-(90, 1, 11, 2),
-(91, 1, 12, 2),
-(92, 1, 13, 2),
-(93, 1, 14, 2),
+(85, 1, 6, 0),
+(86, 1, 7, 0),
+(87, 1, 8, 0),
+(88, 1, 9, 0),
+(89, 1, 10, 0),
+(90, 1, 11, 0),
+(91, 1, 12, 0),
+(92, 1, 13, 0),
+(93, 1, 14, 0),
 (94, 64, 1, 0),
 (95, 64, 2, 2),
 (96, 64, 3, 0),
@@ -1161,7 +1161,7 @@ CREATE TABLE IF NOT EXISTS `user_interest_level` (
   `cat_id` int(10) NOT NULL,
   `level` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=109 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=148 ;
 
 --
 -- Dumping data for table `user_interest_level`
@@ -1174,7 +1174,12 @@ INSERT INTO `user_interest_level` (`id`, `user_id`, `cat_id`, `level`) VALUES
 (105, 80, 6, 7),
 (106, 80, 7, 7),
 (107, 80, 8, 7),
-(108, 80, 10, 7);
+(108, 80, 10, 7),
+(143, 1, 1, 4),
+(144, 1, 2, 2),
+(145, 1, 3, 5),
+(146, 1, 4, 1),
+(147, 1, 5, 3);
 
 -- --------------------------------------------------------
 

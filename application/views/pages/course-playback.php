@@ -35,7 +35,16 @@
 				<?php
 					if( $course -> getCourseProgressPercent() == 60)
 					{
-						echo '<h6>You\'ve Finished all lectures. Write Summary and Quiz to finish this course.</h6>';
+						echo '<h6>You\'ve Finished all lectures. Take quiz to proceed further.</h6>';
+						//echo 'You\'ve Finished all lectures. Feel free to watch lectures again.';
+					}// else echo $course -> getCourseProgressPercent();
+					elseif( $course -> getCourseProgressPercent() >= 60 && $course -> getCourseProgressPercent() <= 80)
+					{
+						echo '<h6>You\'ve Finished all lectures. Write summary to finish this course.</h6>';	
+					}
+					else
+					{
+						echo '<h6>You\'ve Finished all lectures. Feel free to watch lectures again.</h6>';
 						//echo 'You\'ve Finished all lectures. Feel free to watch lectures again.';
 					}// else echo $course -> getCourseProgressPercent();
 				?>

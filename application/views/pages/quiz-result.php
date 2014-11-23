@@ -37,7 +37,7 @@ $quiz = $quiz ->getWithConditionLimit1(array('course_id' => $course_id));
 					<label>Total Questions:</label>
 				</section>
 				<section class="col-right">
-					<label><strong><?=$this -> config -> item('max_quiz_questions');?></strong></label>
+					<label><strong><?=$this -> sys_config -> get_value( 'max_quiz_questions');?></strong></label>
 				</section>
 			</p>
 			<section class="clear"></section>

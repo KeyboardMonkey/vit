@@ -14,8 +14,8 @@ class Quiz extends MY_Controller
 			$course = new course();
 			$course -> load($course_id);
 
-				/*print_r($course);
-				die();*/
+			/*print_r($course);
+			die();*/
 
 			if(!isset($course -> course_id))
 			{
@@ -98,7 +98,7 @@ $quiz_id= NULL;
 		
         $quiz_question -> quiz_id = $quiz -> quiz_id;
      //   if($this->form_validation->run()){
-        	print_r($_POST);
+        //	print_r($_POST);
        // }
 
 		$quiz_question -> save();

@@ -341,17 +341,18 @@ class course extends MY_Model{
     {
         $finishedLectures = $this -> getFinishedLecture();
         $totalLectures = $this -> getLectures();
+        //print_r($totalLectures); 
         $count = count($totalLectures);
         
         if($count == 0) $count = 1;
         return (count($finishedLectures) / $count ) * 100;
 
     }
-    public function getCourseProgressPercent()
+    public function getCourseProgressPercent($user_id=NULL)
     {
-        $lecture = $this -> getLectureProgress() * 60 / 100;
-        if($this -> quizTaken()) $lecture += 20;
-        if($this -> reviewedByUser()) $lecture += 20;
+        $lecture = $this -> getLectureProgress($user_id) * 60 / 100;
+        if($this -> quizTaken($user_id)) $lecture += 20;
+        if($this -> reviewedByUser($user_id)) $lecture += 20;
         return $lecture;
     }
     public function reviewedByUser($user_id = NULL)
@@ -440,7 +441,7 @@ class course extends MY_Model{
          if($user_id == NULL)
         $user_id = $this -> session -> userdata('user_id');
         $totalPoints = $this -> points;
-        $totalQuestions = $this -> config -> item('max_quiz_questions');
+        $totalQuestions = $this -> sys_config -> get_value( 'max_quiz_questions');
        // echo "TOTAL{$totalQuestions}<br/>";
         $correctQuestions = $this ->getCorrectAnswers($user_id);
       //  echo "Correct{$correctQuestions}<br/>";

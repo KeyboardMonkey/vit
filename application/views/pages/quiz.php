@@ -22,7 +22,7 @@
 
 	<section class="content-md">
 		<section id="quiz">
-		        <h2>Please Submit Quiz Carefully! Re-submittion is PROHIBITED!</h2>
+		        <h2>Please Submit Quiz Carefully! No re-submittion allowed!</h2>
 		        <section class="clear"></section>
 		        <br />            <br />
 		        <br />

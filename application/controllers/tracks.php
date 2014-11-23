@@ -206,26 +206,27 @@ class Tracks extends MY_Controller
                                 $next_course = $course;
                                 $start = TRUE;
                             }
-                            if($course -> getLectureProgress() < 100)
+                            if($course -> getCourseProgressPercent() < 100)
                             {
                              //   echo "<br /> <br />";
-                             //   echo $course -> getLectureProgress() . "<br />";
-                             //   print_r($course);
-                               // echo "<br /> <br /> PROGRESS LESS THAN 100";
+                            //    echo $course -> getCourseProgressPercent() . "<br />";
+                             //   var_dump($course);
+                            //    echo "<br /> <br /> PROGRESS LESS THAN 100";
                                
                                 $next_course = $course;
                                 break;
                             }
                             else{
                               //  echo "<br /> <br />";
-                              //  print_r($course);
+                              //  var_dump($course);
                               //  echo "<br /> <br /> PROGRESS  100";
                             }
                         }
 
                         $url = '/courses/course_playback/' . $next_course->course_id;
-                        //echo ">>> {$url}";
+                     //   echo ">>> {$url}";
                       //  die();
+
                         redirect($url);
                         
                     }
