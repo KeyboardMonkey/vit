@@ -65,15 +65,54 @@ $enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
 		{
 			if($course -> isRatedByUser())
 			{
-				echo '<div class="ratingButton">';
-				echo   "My Rating: " . $course -> getRatingByUser();
+				echo '<div class="ratingButton"  data-average="' . $course -> getRatingByUser() .'">';
+			//	echo   "My Rating: " . $course -> getRatingByUser();
 				echo '</div>';
+                ?>
+                <script>
+                    $(document).ready(function(){
+                        $(".ratingButton").jRating({
+                            step: true,
+                            length: 5,
+                            rateMax: 5,
+                            canRateAgain: true,
+                            sendRequest: false,
+                            isDisabled: true,
+                            onSuccess: function(element, rate){
+                                //alert('rating ok');
+                            },
+                            onError: function(){
+                                //alert('error');
+                            }
+                        });
+                    });
+                </script>
+        <?php
 			}
 			else
 			{
-				echo '<div class="ratingButton">';
-				echo '<a href="' . base_url() . 'index.php/courses/ratecourse/' . $course -> course_id . '/5"> Rate 5 Stars! </a>';
+				echo '<div class="ratingButton" data-average="0">';
+				//echo '<a href="' . base_url() . 'index.php/courses/ratecourse/' . $course -> course_id . '/5"> Rate 5 Stars! </a>';
 				echo '</div>';
+                ?>
+                <script>
+                    $(document).ready(function(){
+                            $(".ratingButton").jRating({
+                            step: true,
+                            length: 5,
+                            rateMax: 5,
+                            canRateAgain: true,
+                            phpPath: '<?=base_url('index.php/courses/ratecourse/' . $course -> course_id);?>',
+                            onSuccess: function(element, rate){
+                                //alert('rating ok');
+                            },
+                            onError: function(){
+                                //alert('error');
+                            }
+                        });
+                    });
+                </script>
+            <?php
 			}
 		}
 		else
@@ -82,6 +121,7 @@ $enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
 			echo "<input type=\"submit\" name=\"submit\" value=\"Enroll Me!\" /></form>";
 		}
 		?>
+
 		<p class="course-desc"><?=$course->tiny_intro;?></p>
 		<section class="clear"></section>
 	</section>
@@ -252,3 +292,4 @@ if(count($topStudents)>1)
 		</section>
 		</section>
 		</section>
+

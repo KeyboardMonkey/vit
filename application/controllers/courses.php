@@ -57,19 +57,38 @@ class Courses extends MY_Controller
         redirect('courses/view/'.$course_id);
     }
 
-    public function ratecourse($course_id, $rating)
+    public function ratecourse($course_id=NULL)
     {
-        $course = new course();
-        $course -> load($course_id);
-        if(isset($course->course_id))
+        $aResponse['error'] = false;
+        $aResponse['message'] = '';
+        $aResponse['server'] = '';
+        if($course_id == NULL)
         {
-            $course_rating = new course_rating();
-            $course_rating -> rating = $rating;
-            $course_rating -> course_id = $course_id;
-            $course_rating -> user_id = $this -> session -> userdata('user_id');
-            $course_rating -> save();
+            $aResponse['error'] = true;
+            $aResponse['message'] = 'No Course Specified';
+        }else{
+            $rating = $this -> input -> post('rate');
+            $course = new course();
+            $course -> load($course_id);
+            if(isset($course->course_id))
+            {
+                $course_rating = new course_rating();
+                $course_rating = $course_rating  -> getWithConditionLimit1(array('course_id' => $course_id, 'user_id' => $this -> session -> userdata('user_id')));
+                $course_rating -> rating = $rating;
+                $course_rating -> course_id = $course_id;
+                $course_rating -> user_id = $this -> session -> userdata('user_id');
+                $course_rating -> save();
+                $aResponse['error'] = false;
+                $aResponse['message'] = 'Course' . $course -> full_name . ' was given ' . $rating . ' star rating';
+                $aResponse['message'] .= serialize($course_rating);
+            }else{
+                $aResponse['error'] = true;
+                $aResponse['message'] = 'No such  course';
+            }
         }
-        redirect('courses/view/'. $course_id);
+        echo json_encode($aResponse);
+       // echo "successfully rated course " . $course -> tiny_intro;
+ //       redirect('courses/view/'. $course_id);
     }
     public function add_new_course()
     {

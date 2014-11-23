@@ -117,9 +117,9 @@
                                 ?>
                                 <h6>Course Taken by <?=count($courseEnrolments) . ((count($courseEnrolments)==1) ? " User" : " Users");?> </h6>
                                 <p class="points">Points: <?=$recomendedCourse['points'];?></p>
-                                <section class="rating">
+                               <!--  <section class="rating">
                                     <p>Rating: -----</p>
-                                </section>
+                                </section> -->
                             </section>
                         <?php
                         }?>

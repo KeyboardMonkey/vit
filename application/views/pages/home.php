@@ -95,7 +95,7 @@
 	//die();
 	foreach ($myTracks as $myTrack) {
 		//print_r($myTrack);
-	if(!$myTrack->getProgress()==100)
+	if($myTrack->getProgress()!=100)
 {
 	?>
 	<section class="content-md">
@@ -134,7 +134,7 @@
 	?>
            
            <?php 
-           if(!$myCourse->getCourseProgressPercent()==100)
+           if($myCourse->getCourseProgressPercent()!=100)
            	{
            		?>
 		<section class="registered">
@@ -147,9 +147,23 @@
 				<a href="<?=base_url();?>index.php/courses/view/<?=$myCourseId;?>"><h4 class="course-name"><?=$myCourse->full_name;?></h4></a>
 				<section class="clear"></section>
 				<p class="points"><?=$myCourse->points;?> Points</p>
-				<h4 class="rating">Rating: <?=$myCourse->getOverAllRating();?> (<?=$myCourse->numberOfRatings();?>)</h4>
+                <!-- <h4 class="rating">Rating: <?//=$myCourse->getOverAllRating();?> -->
+                <!--<section class="rating">-->
+                    <section style="margin:2px 10px 0px !important; float:right !important; ">(<?=$myCourse->numberOfRatings();?>)</section>
+                <?php
+            for($i = 0; $i < $myCourse->getOverAllRating();$i++)
+            {
+            ?><section style="float:right !important; margin-right: 0px !important;">
+                                    <img style="margin:0px 0px 0px 0px !important; float:right;" src="<?=base_url('assets/graphics/stars-filled.png');?>" />
+                                    </section>
+                                <?php
+            }
+            ?>
+
+
+
+                <!--</section>-->
 				<section class="clear"></section>
-		
 
 				<!-- Course Progress -->
 				<div class="pro-bar-container color-nephriti bm-remove" style="margin-top:10px !important;">
@@ -229,6 +243,8 @@
             jQuery(this).find('.pro-bar-percentage').toggleClass('visible');
         });
 
+
+
     });
     function calculateCourseProgress() {
         var calculated_percentage = (jQuery('#videos_viewed').val() / jQuery('#total_videos').val()) * 100;
@@ -240,4 +256,10 @@
         jQuery('#large_pro_bar').animate({width: course_progress+ '%'});
         jQuery('#large_pro_bar_percent').html(course_progress.toFixed(2) + '%');
     }
+</script>
+<script type="text/javascript">
+    $(document).ready(function(){
+        console.log('ready');
+        //$('.rating_span').jRating();
+    });
 </script>
