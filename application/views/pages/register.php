@@ -1,4 +1,3 @@
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <section class="container">	
 	<section id="main-welcome">
 		<h1>Welcome to Vitorials</h1>
@@ -35,5 +34,3 @@
 	}
 ?>
 <section class="clear"></section>
-<script type="text/javascript" src="<?=base_url();?>assets/js/password-strength-and-dropdown-js.js"></script>
-<script type="text/javascript" src="<?=base_url();?>assets/js/password-strength-js.js"></script>

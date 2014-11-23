@@ -83,7 +83,7 @@
 		<section class="info">
 			<img src="<?=base_url();?>assets/graphics/info.png" width="50px" height="50px" alt="info" />
 			<p>Points are earned whenever you take an important action on Vitorials.
-			<br/><a href="">Learn more</a> about when and how points are earned.</p>
+			<br/><a href="#">Learn more</a> about when and how points are earned.</p>
 		</section>
 	</section>
 	
@@ -95,6 +95,8 @@
 	//die();
 	foreach ($myTracks as $myTrack) {
 		//print_r($myTrack);
+	if(!$myTrack->getProgress()==100)
+{
 	?>
 	<section class="content-md">
 		<section class="track-progress">
@@ -116,12 +118,11 @@
 	</section>
 	<?php
 	}
+}
 	?>
 	
 
-	<?php 
-		$myEnrolements = $this -> course_enrollment -> getWithCondition(array('user_id' => $this -> session -> userdata('user_id')));
-	?>
+	
 	<section class="content-md">
 	<?php
 		if($this->course_enrollment -> getMyEnrolledCourses ($this -> session -> userdata('user_id'))>0) {	
@@ -132,6 +133,10 @@
 		    $myCourseId = $myCourse -> course_id;
 	?>
            
+           <?php 
+           if(!$myCourse->getCourseProgressPercent()==100)
+           	{
+           		?>
 		<section class="registered">
 			<section class="my-courses">
 				<section class="color-tag">
@@ -162,6 +167,7 @@
 			</section>
 		</section> 
 			<?php
+		}
 			}
 		}
 		else{

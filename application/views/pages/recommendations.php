@@ -37,7 +37,7 @@
                         $cat->load($level->cat_id);
                         //echo "ID: {$level->cat_id} Title: {$cat->category} Level: {$level->level}<br />";
                         $recom = $recommendations[$level -> cat_id];
-                        //print_r($recom);
+                      //  print_r($recom);
                         //echo "<br />";
                     }
                    /* foreach($recommendations as $categoryId => $recomendationCategory)

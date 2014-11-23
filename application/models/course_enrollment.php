@@ -23,9 +23,19 @@
 
         public function getMyEnrolledCourses($user_id=NULL){
             if($user_id==NULL)
-                 $user_id=$this -> session -> userdata('user_id');
+                $user_id=$this -> session -> userdata('user_id');
              $allEnrollments = $this -> course_enrollment -> getWithCondition(array('user_id' => $user_id));
              return count($allEnrollments);
+             //return count($allEnrollments);
+        }
+    
+      public function getMyEnrolledCoursesList($user_id=NULL){
+            if($user_id==NULL)
+                $user_id=$this -> session -> userdata('user_id');
+             $allEnrollments = $this -> course_enrollment -> getWithCondition(array('user_id' => $user_id));
+           //  print_r($allEnrollments);
+             //die();
+             return $allEnrollments;
         }
 
     }

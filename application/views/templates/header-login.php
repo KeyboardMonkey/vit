@@ -7,7 +7,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1"> 
 		<title>Vitorials</title>
 		<link rel="stylesheet" type="text/css" href="<?=base_url();?>assets/styles/main.css" />
-		  <script src="<?= base_url();?>assets/js/jquery-1.4.1.min.js"></script>
+		 
 	</head>
 <body>
 

@@ -2,8 +2,9 @@
 
 class Preference extends MY_Controller 
 {
-		public function rank_preference()
-	{
+        public function rank_preference()
+    {
+
         $userInterests = $this -> user_interest_categories -> getWithCondition(
             array(
                 'user_id' => $this -> session -> userdata('user_id'),
@@ -11,8 +12,10 @@ class Preference extends MY_Controller
 
             )
         );
-        if(count($userInterests) > 5)
+     
+        if(count($userInterests) >= 5)
         {
+            
             $i = 1;
             foreach($userInterests  as $interest)
             {
@@ -36,20 +39,22 @@ class Preference extends MY_Controller
                     $user_interest_level -> cat_id = $interest -> cat_id;
                     $user_interest_level -> level = $countInterest  - $this -> input -> post('input_cat_' . $interest -> cat_id) + 1;
                     $user_interest_level -> save();
+
                    // print_r($user_interest_level);
                 }
+                redirect('recommendations');
 
             }
         }
-		$this->load->view('templates/header');
-		$this->load->view('wizards/pref-rank');
-		$this->load->view('templates/footer');
-		
+        $this->load->view('templates/header');
+        $this->load->view('wizards/pref-rank');
+        $this->load->view('templates/footer');
+        
 
-	}
+    }
 
-	public function set_preference()
-	{
+    public function set_preference()
+    {
             $this -> form_validation -> set_error_delimiters('<div class="alert alert-danger>', '</div>');
             $cats = $this -> course_cat -> get();
             foreach($cats as $cat){
@@ -76,16 +81,16 @@ class Preference extends MY_Controller
                 redirect('preference/rank_preference');
             }
         $this->load->view('templates/header');
-		$this->load->view('wizards/pref-set');
-		$this->load->view('templates/footer');
-	}
+        $this->load->view('wizards/pref-set');
+        $this->load->view('templates/footer');
+    }
 
-	public function index()
-	{
+    public function index()
+    {
 
-		redirect('preference/set_preference');
+        redirect('preference/set_preference');
 
-	}
+    }
 
 
 

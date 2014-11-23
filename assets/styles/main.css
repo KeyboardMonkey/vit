@@ -328,11 +328,11 @@ ol.course-widget li:hover, ol.course-widget li a:hover, ul.course-widget li:hove
 .user-info h1 { padding:10px 0 0; }
 .user-info h5 { padding:5px 0 0; }
 .user-info ul { margin-top:-15px; padding:10px 0 0; float:right; list-style:none; }
-.user-info ul li { margin:5px 0; padding:5px 10px; border-radius:15px; color:#2ABB9B; text-align:center; display:block; font-size:12px; background:#ECF0F1; }
+.user-info ul li { margin:5px 0; padding:5px 10px; border-radius:15px; color:#00A8E7; text-align:center; display:block; font-size:12px; background:#ECF0F1; }
 .user-info ul li:first-child { padding-left:0; }
 .user-info p { padding:25px 0 0; font-size:14px; }
 
-small#user-type { margin-left:5px; padding:4px 5px; color:#2ABB9B; background:#ECF0F1; font-size:12px; border-radius:15px; display:inline-block; text-align:center; }
+small#user-type { margin-left:5px; padding:4px 5px; color:#00A8E7; background:#ECF0F1; font-size:12px; border-radius:15px; display:inline-block; text-align:center; }
 
 .course-cols { padding:20px; }
 .course-cols ul { list-style:none; font-size:14px; }
