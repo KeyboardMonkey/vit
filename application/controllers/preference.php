@@ -2,8 +2,12 @@
 
 class Preference extends MY_Controller 
 {
+
+	
+
         public function rank_preference()
     {
+
 
         $userInterests = $this -> user_interest_categories -> getWithCondition(
             array(
@@ -15,7 +19,7 @@ class Preference extends MY_Controller
      
         if(count($userInterests) >= 5)
         {
-            
+
             $i = 1;
             foreach($userInterests  as $interest)
             {

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 22, 2014 at 08:52 PM
+-- Generation Time: Nov 23, 2014 at 05:55 PM
 -- Server version: 5.6.12-log
 -- PHP Version: 5.4.12
 
@@ -81,12 +81,12 @@ CREATE TABLE IF NOT EXISTS `courses` (
 --
 
 INSERT INTO `courses` (`course_id`, `full_name`, `tiny_intro`, `course_thumbnail`, `category`, `difficulty_level`, `status`, `description`, `points`, `developed_by`, `learning_outcome`, `target_audience`, `section_title`, `video_title`, `video_file`, `srt`, `full_course_files_zip`, `additional_file_title`, `additional_file`, `is_new`, `created_date`, `updated_date`, `created_by`) VALUES
-(1, 'Build an Interactive Website', 'Build an Interactive Website', NULL, '6', 'Intermediate', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 100, 'Lynda', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
-(2, 'Introduction to Programming', 'Introduction to Programming', NULL, '6', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 20, 'Tree House', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
-(3, 'How to Write a Business Plan', 'How to Write a Business Plan', NULL, '12', 'Beginner', 'yes', 'hitestLorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 30, 'New Boston', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
-(4, 'PHP & Stripe API', 'PHP & Stripe API', NULL, '2', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 200, 'Lynda', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
-(5, 'Using PHP with MySQL', 'Using PHP with MySQL', NULL, '2', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 1000, 'Udemy', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
-(6, 'WordPress Admin Settings', 'WordPress Admin Settings', NULL, '10', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 5000, 'Udemy', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
+(1, 'Build an Interactive Website', 'Build an Interactive Website', NULL, '6', 'Intermediate', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 100, 'Lynda', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 3),
+(2, 'Introduction to Programming', 'Introduction to Programming', NULL, '6', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 20, 'Tree House', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 3),
+(3, 'How to Write a Business Plan', 'How to Write a Business Plan', NULL, '12', 'Beginner', 'yes', 'hitestLorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 30, 'New Boston', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 3),
+(4, 'PHP & Stripe API', 'PHP & Stripe API', NULL, '2', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 200, 'Lynda', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 3),
+(5, 'Using PHP with MySQL', 'Using PHP with MySQL', NULL, '2', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 1000, 'Udemy', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 3),
+(6, 'WordPress Admin Settings', 'WordPress Admin Settings', NULL, '10', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 5000, 'Udemy', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 3),
 (7, 'Git Basics', 'Git Basics', NULL, '11', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 500, 'Alison', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
 (8, 'SEO Basics', 'SEO Basics', NULL, '14', 'Beginner', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 55, 'Coursera', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
 (9, 'CSS Foundations', 'CSS Foundations', NULL, '8', 'Intermediate', 'yes', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada. Nunc eu m', 100, 'Udemy', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n\n2. Lorem Ipsum has been the industry''s standard dummy text ever since the 1500s.\n\n\n3. when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n\n4. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.\n', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'yes', '2014-10-26 16:04:50', '2014-10-26 16:04:50', 0),
@@ -217,7 +217,7 @@ CREATE TABLE IF NOT EXISTS `course_enrollment` (
   `progress` int(11) NOT NULL,
   PRIMARY KEY (`enrol_id`),
   KEY `enrol_time` (`enrol_time`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=30 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=34 ;
 
 --
 -- Dumping data for table `course_enrollment`
@@ -244,7 +244,11 @@ INSERT INTO `course_enrollment` (`enrol_id`, `course_id`, `user_id`, `enrol_time
 (26, 3, 80, '2014-11-22 08:14:34', 'in-progress', 0),
 (27, 6, 6, '2014-11-22 11:48:02', 'in-progress', 0),
 (28, 8, 6, '2014-11-22 11:50:11', 'in-progress', 0),
-(29, 9, 6, '2014-11-22 11:51:16', 'in-progress', 0);
+(29, 9, 6, '2014-11-22 11:51:16', 'in-progress', 0),
+(30, 4, 1, '2014-11-23 17:07:30', 'in-progress', 0),
+(31, 5, 1, '2014-11-23 17:07:30', 'in-progress', 0),
+(32, 7, 1, '2014-11-23 17:07:30', 'in-progress', 0),
+(33, 8, 1, '2014-11-23 17:07:30', 'in-progress', 0);
 
 -- --------------------------------------------------------
 
@@ -289,6 +293,8 @@ CREATE TABLE IF NOT EXISTS `course_review` (
   `user_id` int(10) NOT NULL,
   `review` text NOT NULL,
   `submittion_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `marked_by_teacher` int(1) NOT NULL DEFAULT '0',
+  `marks` int(3) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
@@ -296,11 +302,11 @@ CREATE TABLE IF NOT EXISTS `course_review` (
 -- Dumping data for table `course_review`
 --
 
-INSERT INTO `course_review` (`id`, `course_id`, `user_id`, `review`, `submittion_date`) VALUES
-(12, 3, 1, '                                           agvaaaaaaaaaaaaaaaaa       \r\n                                                  ', '2014-11-17 20:19:04'),
-(13, 5, 2, '                                           agvaaaaaaaaaaaaaaaaa       \r\n                                                  ', '2014-11-17 20:19:04'),
-(14, 1, 6, '                                                  Build an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive Website\r\n                                                  ', '2014-11-18 14:30:26'),
-(15, 1, 1, '\r\n		ewagewagaw waeg waeg wea gawe aw agwseg wagwagwgwag									', '2014-11-22 20:10:31');
+INSERT INTO `course_review` (`id`, `course_id`, `user_id`, `review`, `submittion_date`, `marked_by_teacher`, `marks`) VALUES
+(12, 3, 1, '                                           agvaaaaaaaaaaaaaaaaa       \r\n                                                  ', '2014-11-23 16:53:28', 1, 50),
+(13, 5, 2, '                                           agvaaaaaaaaaaaaaaaaa       \r\n                                                  ', '2014-11-17 20:19:04', 1, 30),
+(14, 1, 6, '                                                  Build an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive WebsiteBuild an Interactive Website\r\n                                                  ', '2014-11-18 14:30:26', 1, 40),
+(15, 1, 1, '\r\n		ewagewagaw waeg waeg wea gawe aw agwseg wagwagwgwag									', '2014-11-22 20:10:31', 1, 50);
 
 -- --------------------------------------------------------
 
@@ -555,7 +561,7 @@ CREATE TABLE IF NOT EXISTS `tracks` (
   `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by` int(11) NOT NULL,
   PRIMARY KEY (`track_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=23 ;
 
 --
 -- Dumping data for table `tracks`
@@ -570,7 +576,19 @@ INSERT INTO `tracks` (`track_id`, `track_title`, `tiny_intro`, `track_descriptio
 (7, 'Starting a Business', 'Maecenas at leo eget nisl porta viverra', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Intermediate', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:38:59', '2014-11-15 17:38:59', 1),
 (8, 'Learn Wordpress', 'Maecenas at leo eget nisl porta viverra', '\r\nLorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Beginner', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:39:29', '2014-11-15 17:39:29', 1),
 (9, 'Learn Python', 'Maecenas at leo eget nisl porta viverra', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Advanced', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:42:44', '2014-11-15 17:42:44', 1),
-(10, 'Learn Freelancing', 'Maecenas at leo eget nisl porta viverra', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Intermediate', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:44:43', '2014-11-15 17:44:43', 1);
+(10, 'Learn Freelancing', 'Maecenas at leo eget nisl porta viverra', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas at leo eget nisl porta viverra. Ut laoreet, dui at tempus vestibulum, eros leo egestas neque, id adipiscing odio eros et lectus. Vivamus pretium lorem sit amet nulla. Praesent nec dolor at augue ultrices blandit. Quisque aliquet ultrices mi.Donec ac nibh. Phasellus sed sem sed mauris mattis laoreet. Ut fermentum augue ac pede. Duis vitae augue sed nulla lacinia tempor. Pellentesque non ante in magna tincidunt malesuada.', 'yes', 100, 0, 'Intermediate', '', 'Additional File ABC DEF ', '0', '2014-11-15 17:44:43', '2014-11-15 17:44:43', 1),
+(11, 'asdfasfd', 'sdfasdf', 'adfsdf', 'yes', 100, 0, 'Beginner', '', 'adfsaf', '', '2014-11-23 14:13:21', '2014-11-23 14:13:21', 1),
+(12, 'Some New Track', 'Some New Track', 'Some New TrackSome New TrackSome New Track Desc', 'yes', 100, 0, 'Advanced', '', 'Notes', '', '2014-11-23 14:23:07', '2014-11-23 14:23:07', 1),
+(13, 'Some New Track', 'Some New Track', 'Some New TrackSome New TrackSome New Track Desc', 'yes', 100, 0, 'Advanced', '', 'Notes', '', '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(14, 'Some New Track', 'Some New Track', 'Some New TrackSome New TrackSome New Track', 'yes', 100, 0, 'Beginner', '', 'Some New TrackSome New TrackSome New Track', '', '2014-11-23 14:26:06', '2014-11-23 14:26:06', 1),
+(15, 'Some New Track', 'Some New Track', 'Some New TrackSome New TrackSome New Track', 'yes', 100, 0, 'Beginner', '', 'Some New TrackSome New TrackSome New Track', '', '2014-11-23 14:27:21', '2014-11-23 14:27:21', 1),
+(16, 'Some New Track', 'Some New Track', 'Some New TrackSome New TrackSome New Track', 'yes', 100, 0, 'Beginner', '', 'Some New TrackSome New TrackSome New Track', '', '2014-11-23 14:27:54', '2014-11-23 14:27:54', 1),
+(17, 'Some New TrackSome New TrackSome New Track', 'Some New TrackSome New TrackSome New Track', 'Some New TrackSome New TrackSome New Track', 'yes', 100, 0, 'Beginner', '', 'Some New TrackSome New TrackSome New Track', '', '2014-11-23 14:28:30', '2014-11-23 14:28:30', 1),
+(18, 'Some New TrackSome New TrackSome New Track', 'Some New TrackSome New TrackSome New Track', 'Some New TrackSome New TrackSome New Track', 'yes', 100, 0, 'Beginner', '', 'Some New TrackSome New TrackSome New Track', '', '2014-11-23 14:29:55', '2014-11-23 14:29:55', 1),
+(19, 'ewgegwegweg', 'ewgegwegweg', 'ewgegwegwegewgegwegwegewgegwegweg', 'yes', 100, 0, 'Intermediate', '', 'ewgegwegwegewgegwegweg', '', '2014-11-23 14:30:16', '2014-11-23 14:30:16', 1),
+(20, 'ewgegwegweg', 'ewgegwegweg', 'ewgegwegwegewgegwegwegewgegwegweg', 'yes', 100, 0, 'Intermediate', '', 'ewgegwegwegewgegwegweg', 'upload/685f010b54c11b592919628a9108752b.zip', '2014-11-23 14:31:06', '2014-11-23 14:31:06', 1),
+(21, 'She', 'SheSheSheSheShe', 'SheSheShe', 'yes', 100, 0, 'Advanced', '', 'SheSheSheShe', 'upload/e17fc174f4b61857c5b9a3d89e2056f2.zip', '2014-11-23 14:38:02', '2014-11-23 14:38:02', 1),
+(22, '43y2y24y24y', '2y4y43y3', 'ewgwegewgwgeg', 'yes', 100, 0, 'Beginner', '', 'fewfwefewf', 'upload/843cd34d6b1133dd923e3ffefceee4d0.zip', '2014-11-23 17:05:47', '2014-11-23 17:05:47', 1);
 
 -- --------------------------------------------------------
 
@@ -586,7 +604,7 @@ CREATE TABLE IF NOT EXISTS `tracks_enrollment` (
   `status` enum('in-progress','cancelled','completed') NOT NULL,
   `progress` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`track_enrol_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=44 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=45 ;
 
 --
 -- Dumping data for table `tracks_enrollment`
@@ -597,7 +615,8 @@ INSERT INTO `tracks_enrollment` (`track_enrol_id`, `track_id`, `user_id`, `track
 (40, 1, 6, '2014-11-22 07:49:48', 'in-progress', 0),
 (41, 5, 80, '2014-11-22 08:14:15', 'in-progress', 0),
 (42, 1, 80, '2014-11-22 08:14:33', 'in-progress', 0),
-(43, 4, 6, '2014-11-22 11:36:28', 'in-progress', 0);
+(43, 4, 6, '2014-11-22 11:36:28', 'in-progress', 0),
+(44, 22, 1, '2014-11-23 17:07:30', 'in-progress', 0);
 
 -- --------------------------------------------------------
 
@@ -614,7 +633,7 @@ CREATE TABLE IF NOT EXISTS `track_content` (
   `updated_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `created_by` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=233 ;
 
 --
 -- Dumping data for table `track_content`
@@ -625,7 +644,212 @@ INSERT INTO `track_content` (`id`, `track_id`, `course_id`, `course_index`, `cre
 (2, 1, 2, 2, '2014-11-17 14:41:29', '2014-11-17 14:41:29', 0),
 (3, 1, 3, 3, '2014-11-17 14:41:29', '2014-11-17 14:41:29', 0),
 (4, 2, 2, 2, '2014-11-17 14:41:29', '2014-11-17 14:41:29', 0),
-(5, 3, 2, 2, '2014-11-17 14:41:29', '2014-11-17 14:41:29', 0);
+(5, 3, 2, 2, '2014-11-17 14:41:29', '2014-11-17 14:41:29', 0),
+(6, 11, 1, 1, '2014-11-23 14:13:21', '2014-11-23 14:13:21', 1),
+(7, 11, 2, 2, '2014-11-23 14:13:21', '2014-11-23 14:13:21', 1),
+(8, 11, 3, 3, '2014-11-23 14:13:21', '2014-11-23 14:13:21', 1),
+(9, 11, 5, 4, '2014-11-23 14:13:21', '2014-11-23 14:13:21', 1),
+(10, 11, 9, 5, '2014-11-23 14:13:21', '2014-11-23 14:13:21', 1),
+(31, 12, 21, 21, '2014-11-23 14:23:08', '2014-11-23 14:23:08', 1),
+(32, 12, 22, 22, '2014-11-23 14:23:08', '2014-11-23 14:23:08', 1),
+(33, 12, 23, 23, '2014-11-23 14:23:08', '2014-11-23 14:23:08', 1),
+(34, 12, 24, 24, '2014-11-23 14:23:08', '2014-11-23 14:23:08', 1),
+(35, 12, 25, 25, '2014-11-23 14:23:08', '2014-11-23 14:23:08', 1),
+(36, 12, 26, 26, '2014-11-23 14:23:08', '2014-11-23 14:23:08', 1),
+(37, 12, 27, 27, '2014-11-23 14:23:08', '2014-11-23 14:23:08', 1),
+(38, 12, 28, 28, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(39, 12, 29, 29, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(40, 12, 30, 30, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(41, 12, 31, 31, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(42, 12, 32, 32, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(43, 12, 33, 33, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(44, 12, 34, 34, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(45, 12, 35, 35, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(46, 12, 36, 36, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(47, 12, 37, 37, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(48, 12, 38, 38, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(49, 12, 39, 39, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(50, 12, 40, 40, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(51, 12, 41, 41, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(52, 12, 42, 42, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(53, 12, 43, 43, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(54, 12, 44, 44, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(55, 12, 45, 45, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(56, 12, 46, 46, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(57, 12, 47, 47, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(58, 12, 48, 48, '2014-11-23 14:23:09', '2014-11-23 14:23:09', 1),
+(59, 12, 49, 49, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(60, 12, 50, 50, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(61, 12, 51, 51, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(62, 12, 52, 52, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(63, 12, 53, 53, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(64, 12, 54, 54, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(65, 12, 55, 55, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(66, 12, 56, 56, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(67, 12, 57, 57, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(68, 12, 58, 58, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(69, 12, 59, 59, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(70, 12, 60, 60, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(71, 12, 61, 61, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(72, 12, 62, 62, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(73, 12, 63, 63, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(74, 12, 64, 64, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(75, 12, 65, 65, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(76, 12, 66, 66, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(77, 12, 67, 67, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(78, 12, 68, 68, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(79, 12, 69, 69, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(80, 12, 70, 70, '2014-11-23 14:23:10', '2014-11-23 14:23:10', 1),
+(81, 12, 71, 71, '2014-11-23 14:23:11', '2014-11-23 14:23:11', 1),
+(82, 12, 72, 72, '2014-11-23 14:23:11', '2014-11-23 14:23:11', 1),
+(83, 12, 73, 73, '2014-11-23 14:23:11', '2014-11-23 14:23:11', 1),
+(84, 12, 74, 74, '2014-11-23 14:23:11', '2014-11-23 14:23:11', 1),
+(85, 12, 75, 75, '2014-11-23 14:23:11', '2014-11-23 14:23:11', 1),
+(86, 12, 76, 76, '2014-11-23 14:23:11', '2014-11-23 14:23:11', 1),
+(87, 12, 77, 77, '2014-11-23 14:23:11', '2014-11-23 14:23:11', 1),
+(88, 12, 78, 78, '2014-11-23 14:23:11', '2014-11-23 14:23:11', 1),
+(89, 12, 79, 79, '2014-11-23 14:23:11', '2014-11-23 14:23:11', 1),
+(90, 12, 80, 80, '2014-11-23 14:23:11', '2014-11-23 14:23:11', 1),
+(91, 12, 81, 81, '2014-11-23 14:23:11', '2014-11-23 14:23:11', 1),
+(92, 12, 82, 82, '2014-11-23 14:23:12', '2014-11-23 14:23:12', 1),
+(93, 12, 83, 83, '2014-11-23 14:23:12', '2014-11-23 14:23:12', 1),
+(94, 12, 84, 84, '2014-11-23 14:23:12', '2014-11-23 14:23:12', 1),
+(95, 12, 85, 85, '2014-11-23 14:23:12', '2014-11-23 14:23:12', 1),
+(96, 12, 86, 86, '2014-11-23 14:23:12', '2014-11-23 14:23:12', 1),
+(97, 13, 1, 1, '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(98, 13, 2, 2, '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(99, 13, 3, 3, '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(100, 13, 4, 4, '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(101, 13, 5, 5, '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(102, 13, 6, 6, '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(103, 13, 7, 7, '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(104, 13, 8, 8, '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(105, 13, 9, 9, '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(106, 13, 10, 10, '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(107, 13, 11, 11, '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(108, 13, 12, 12, '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(109, 13, 13, 13, '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(110, 13, 14, 14, '2014-11-23 14:24:12', '2014-11-23 14:24:12', 1),
+(111, 13, 15, 15, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(112, 13, 16, 16, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(113, 13, 17, 17, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(114, 13, 18, 18, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(115, 13, 19, 19, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(116, 13, 20, 20, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(117, 13, 21, 21, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(118, 13, 22, 22, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(119, 13, 23, 23, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(120, 13, 24, 24, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(121, 13, 25, 25, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(122, 13, 26, 26, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(123, 13, 27, 27, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(124, 13, 28, 28, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(125, 13, 29, 29, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(126, 13, 30, 30, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(127, 13, 31, 31, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(128, 13, 32, 32, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(129, 13, 33, 33, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(130, 13, 34, 34, '2014-11-23 14:24:13', '2014-11-23 14:24:13', 1),
+(131, 13, 35, 35, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(132, 13, 36, 36, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(133, 13, 37, 37, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(134, 13, 38, 38, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(135, 13, 39, 39, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(136, 13, 40, 40, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(137, 13, 41, 41, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(138, 13, 42, 42, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(139, 13, 43, 43, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(140, 13, 44, 44, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(141, 13, 45, 45, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(142, 13, 46, 46, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(143, 13, 47, 47, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(144, 13, 48, 48, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(145, 13, 49, 49, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(146, 13, 50, 50, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(147, 13, 51, 51, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(148, 13, 52, 52, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(149, 13, 53, 53, '2014-11-23 14:24:14', '2014-11-23 14:24:14', 1),
+(150, 13, 54, 54, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(151, 13, 55, 55, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(152, 13, 56, 56, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(153, 13, 57, 57, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(154, 13, 58, 58, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(155, 13, 59, 59, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(156, 13, 60, 60, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(157, 13, 61, 61, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(158, 13, 62, 62, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(159, 13, 63, 63, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(160, 13, 64, 64, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(161, 13, 65, 65, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(162, 13, 66, 66, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(163, 13, 67, 67, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(164, 13, 68, 68, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(165, 13, 69, 69, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(166, 13, 70, 70, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(167, 13, 71, 71, '2014-11-23 14:24:15', '2014-11-23 14:24:15', 1),
+(168, 13, 72, 72, '2014-11-23 14:24:16', '2014-11-23 14:24:16', 1),
+(169, 13, 73, 73, '2014-11-23 14:24:16', '2014-11-23 14:24:16', 1),
+(170, 13, 74, 74, '2014-11-23 14:24:16', '2014-11-23 14:24:16', 1),
+(171, 13, 75, 75, '2014-11-23 14:24:16', '2014-11-23 14:24:16', 1),
+(172, 13, 76, 76, '2014-11-23 14:24:16', '2014-11-23 14:24:16', 1),
+(173, 13, 77, 77, '2014-11-23 14:24:16', '2014-11-23 14:24:16', 1),
+(174, 13, 78, 78, '2014-11-23 14:24:16', '2014-11-23 14:24:16', 1),
+(175, 13, 79, 79, '2014-11-23 14:24:16', '2014-11-23 14:24:16', 1),
+(176, 13, 80, 80, '2014-11-23 14:24:16', '2014-11-23 14:24:16', 1),
+(177, 13, 81, 81, '2014-11-23 14:24:16', '2014-11-23 14:24:16', 1),
+(178, 13, 82, 82, '2014-11-23 14:24:16', '2014-11-23 14:24:16', 1),
+(179, 13, 83, 83, '2014-11-23 14:24:16', '2014-11-23 14:24:16', 1),
+(180, 13, 84, 84, '2014-11-23 14:24:16', '2014-11-23 14:24:16', 1),
+(183, 14, 1, 1, '2014-11-23 14:26:06', '2014-11-23 14:26:06', 1),
+(184, 14, 2, 2, '2014-11-23 14:26:06', '2014-11-23 14:26:06', 1),
+(185, 14, 3, 3, '2014-11-23 14:26:06', '2014-11-23 14:26:06', 1),
+(186, 14, 4, 4, '2014-11-23 14:26:06', '2014-11-23 14:26:06', 1),
+(187, 14, 5, 5, '2014-11-23 14:26:06', '2014-11-23 14:26:06', 1),
+(188, 14, 6, 6, '2014-11-23 14:26:06', '2014-11-23 14:26:06', 1),
+(189, 15, 1, 1, '2014-11-23 14:27:22', '2014-11-23 14:27:22', 1),
+(190, 15, 2, 2, '2014-11-23 14:27:22', '2014-11-23 14:27:22', 1),
+(191, 15, 3, 3, '2014-11-23 14:27:22', '2014-11-23 14:27:22', 1),
+(192, 15, 4, 4, '2014-11-23 14:27:22', '2014-11-23 14:27:22', 1),
+(193, 15, 5, 5, '2014-11-23 14:27:22', '2014-11-23 14:27:22', 1),
+(194, 15, 6, 6, '2014-11-23 14:27:22', '2014-11-23 14:27:22', 1),
+(195, 16, 1, 1, '2014-11-23 14:27:54', '2014-11-23 14:27:54', 1),
+(196, 16, 2, 2, '2014-11-23 14:27:54', '2014-11-23 14:27:54', 1),
+(197, 16, 3, 3, '2014-11-23 14:27:55', '2014-11-23 14:27:55', 1),
+(198, 16, 4, 4, '2014-11-23 14:27:55', '2014-11-23 14:27:55', 1),
+(199, 16, 5, 5, '2014-11-23 14:27:55', '2014-11-23 14:27:55', 1),
+(200, 16, 6, 6, '2014-11-23 14:27:55', '2014-11-23 14:27:55', 1),
+(201, 17, 1, 1, '2014-11-23 14:28:30', '2014-11-23 14:28:30', 1),
+(202, 17, 2, 2, '2014-11-23 14:28:30', '2014-11-23 14:28:30', 1),
+(203, 17, 3, 3, '2014-11-23 14:28:30', '2014-11-23 14:28:30', 1),
+(204, 17, 4, 4, '2014-11-23 14:28:30', '2014-11-23 14:28:30', 1),
+(205, 17, 5, 5, '2014-11-23 14:28:30', '2014-11-23 14:28:30', 1),
+(206, 17, 6, 6, '2014-11-23 14:28:30', '2014-11-23 14:28:30', 1),
+(207, 17, 7, 7, '2014-11-23 14:28:30', '2014-11-23 14:28:30', 1),
+(208, 18, 1, 1, '2014-11-23 14:29:55', '2014-11-23 14:29:55', 1),
+(209, 18, 2, 2, '2014-11-23 14:29:55', '2014-11-23 14:29:55', 1),
+(210, 18, 3, 3, '2014-11-23 14:29:55', '2014-11-23 14:29:55', 1),
+(211, 18, 4, 4, '2014-11-23 14:29:55', '2014-11-23 14:29:55', 1),
+(212, 18, 5, 5, '2014-11-23 14:29:55', '2014-11-23 14:29:55', 1),
+(213, 18, 6, 6, '2014-11-23 14:29:55', '2014-11-23 14:29:55', 1),
+(214, 18, 7, 7, '2014-11-23 14:29:55', '2014-11-23 14:29:55', 1),
+(215, 19, 1, 1, '2014-11-23 14:30:16', '2014-11-23 14:30:16', 1),
+(216, 19, 2, 2, '2014-11-23 14:30:16', '2014-11-23 14:30:16', 1),
+(217, 19, 3, 3, '2014-11-23 14:30:17', '2014-11-23 14:30:17', 1),
+(218, 19, 4, 4, '2014-11-23 14:30:17', '2014-11-23 14:30:17', 1),
+(219, 20, 1, 1, '2014-11-23 14:31:06', '2014-11-23 14:31:06', 1),
+(220, 20, 2, 2, '2014-11-23 14:31:06', '2014-11-23 14:31:06', 1),
+(221, 20, 3, 3, '2014-11-23 14:31:06', '2014-11-23 14:31:06', 1),
+(222, 20, 4, 4, '2014-11-23 14:31:06', '2014-11-23 14:31:06', 1),
+(223, 21, 4, 1, '2014-11-23 14:38:02', '2014-11-23 14:38:02', 1),
+(224, 21, 5, 2, '2014-11-23 14:38:02', '2014-11-23 14:38:02', 1),
+(225, 21, 6, 3, '2014-11-23 14:38:02', '2014-11-23 14:38:02', 1),
+(226, 21, 7, 4, '2014-11-23 14:38:02', '2014-11-23 14:38:02', 1),
+(227, 21, 8, 5, '2014-11-23 14:38:02', '2014-11-23 14:38:02', 1),
+(228, 22, 4, 1, '2014-11-23 17:05:47', '2014-11-23 17:05:47', 3),
+(229, 22, 5, 2, '2014-11-23 17:05:47', '2014-11-23 17:05:47', 3),
+(230, 22, 6, 3, '2014-11-23 17:05:47', '2014-11-23 17:05:47', 3),
+(231, 22, 7, 4, '2014-11-23 17:05:47', '2014-11-23 17:05:47', 3),
+(232, 22, 8, 5, '2014-11-23 17:05:47', '2014-11-23 17:05:47', 3);
 
 -- --------------------------------------------------------
 
@@ -682,9 +906,7 @@ INSERT INTO `users` (`user_id`, `avatar`, `email`, `password`, `type`, `active`,
 (6, 'files/profile-pic.jpg', 'ishaqzafar@gmail.com', 'ishaq.zafar', 'ADMIN', 'Yes', '2014-09-18 09:43:30', '8ad8c472ba7bdced3d871d3f4b09d97824c6e4f6c9233952c6f9d3ad873a224e', '2014-09-22 16:18:45', 'ishaq.zafar', 1, 'Ishaq', 'Zafar', 'Pakpattan', 'Pakistan', 'Just another procrastinator.', 'facebook.com/bukhari.jar', 'twitter.com/bukhari_007', 'linkedin.com/profile/view?id=53290919', 'google.com/+IshaqBukhari'),
 (7, '', 'shahid.afridi@vitorials.net', 'shahid.afridi', 'USER', 'Yes', '2014-09-21 08:20:40', '6e1bfbe1a96758036789bbac39bf9a5aa0d431d07b878aef735844c83d834929', '2014-09-22 16:18:45', 'shahid.afridi', 1, 'Shahid', 'Afridi', '', '', '', '', '', '', ''),
 (11, 'files/profile-pic.jpg', 'ar.malik@vitorials.net', 'arm321', 'USER', 'Yes', NULL, '685ad82db88a9561b3d373a792a6aa6a2a7c0bc4094ff032f509244c5dd523ec2e2fbe596ce178594ac0363c42a8a4cd88b6c9ac337107a9e07b3e316b8e91e0', '2014-09-22 16:18:45', 'abdul-rehman', 0, 'Abdul', 'Rehman', 'Rawalpindi', 'Pakistan', 'I am a Software Engineering graduate student with love for Web Development. I love to play cricket and I am a fitness freak.', '', '', '', ''),
-(12, '', 'shahzeb.imtiaz@vitorials.net', 'shazi321', 'USER', 'No', NULL, '5d6c48cd6d651753324ff8441b4718344ffd7f7559e2a92d330b99b88926dff2f03f9d4c04fd3565db4139309ee885e7a0c9b1ace912a320024e701f54a23108', '2014-09-22 16:40:32', 'shahzeb.imtiaz', 0, 'Shahzeb', 'Imtiaz', '', '', '', '', '', '', ''),
 (13, '', 'waleed.satti@vitorials.net', 'waleed.satti', 'USER', 'No', NULL, '2d108fc9b8592da3f9581377f25ddc04e1934345aedc5dfc039ea33d57b455ff567207d1bf1d733f2354039cbbfb048b1ac2b3cfc68389e59a6b67cda72d5b22', '2014-09-22 16:41:38', 'waleed.satti', 0, 'Waleed', 'Satti', '', '', '', '', '', '', ''),
-(16, '', 'imran.khan@vitorials.net', 'imran.khan', 'USER', 'No', NULL, '', '2014-10-26 05:43:29', 'Imran Khan', 0, 'Imran', 'Khan', '', '', '', '', '', '', ''),
 (17, '', 'zeeshan.bin.iqbal@vitorials.net', 'zeeshan', 'USER', 'No', NULL, '', '2014-10-26 05:45:00', 'Zeeshan Iqbal', 0, 'Zeeshan', 'Bin Iqbal', '', '', '', '', '', '', ''),
 (18, '', 'zia@vitorials.net', 'zia123', 'USER', 'No', NULL, '', '2014-10-26 05:45:32', 'Zia Ur Rehman', 0, 'Zia', 'Ur Rehman', '', '', '', '', '', '', ''),
 (19, '', 'moez335@vitorials.net', 'moez123', 'USER', 'No', NULL, '', '2014-10-26 05:46:27', 'Moez Isar', 0, 'Moez', 'Isar', '', '', '', '', '', '', ''),
@@ -759,19 +981,19 @@ CREATE TABLE IF NOT EXISTS `user_interest_categories` (
 
 INSERT INTO `user_interest_categories` (`id`, `user_id`, `cat_id`, `interest_level`) VALUES
 (80, 1, 1, 2),
-(81, 1, 2, 0),
+(81, 1, 2, 2),
 (82, 1, 3, 2),
 (83, 1, 4, 2),
 (84, 1, 5, 2),
-(85, 1, 6, 2),
-(86, 1, 7, 2),
-(87, 1, 8, 2),
-(88, 1, 9, 2),
-(89, 1, 10, 2),
-(90, 1, 11, 2),
-(91, 1, 12, 2),
-(92, 1, 13, 2),
-(93, 1, 14, 2),
+(85, 1, 6, 0),
+(86, 1, 7, 0),
+(87, 1, 8, 0),
+(88, 1, 9, 0),
+(89, 1, 10, 0),
+(90, 1, 11, 0),
+(91, 1, 12, 0),
+(92, 1, 13, 0),
+(93, 1, 14, 0),
 (94, 64, 1, 0),
 (95, 64, 2, 2),
 (96, 64, 3, 0),
@@ -939,7 +1161,7 @@ CREATE TABLE IF NOT EXISTS `user_interest_level` (
   `cat_id` int(10) NOT NULL,
   `level` int(10) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=109 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=148 ;
 
 --
 -- Dumping data for table `user_interest_level`
@@ -952,7 +1174,12 @@ INSERT INTO `user_interest_level` (`id`, `user_id`, `cat_id`, `level`) VALUES
 (105, 80, 6, 7),
 (106, 80, 7, 7),
 (107, 80, 8, 7),
-(108, 80, 10, 7);
+(108, 80, 10, 7),
+(143, 1, 1, 4),
+(144, 1, 2, 2),
+(145, 1, 3, 5),
+(146, 1, 4, 1),
+(147, 1, 5, 3);
 
 -- --------------------------------------------------------
 
@@ -966,7 +1193,7 @@ CREATE TABLE IF NOT EXISTS `user_lecture_progress` (
   `user_id` int(10) NOT NULL,
   `progress` int(3) NOT NULL,
   PRIMARY KEY (`progress_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=72 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=73 ;
 
 --
 -- Dumping data for table `user_lecture_progress`
@@ -1029,7 +1256,8 @@ INSERT INTO `user_lecture_progress` (`progress_id`, `lecture_id`, `user_id`, `pr
 (68, 5, 77, 100),
 (69, 6, 77, 100),
 (70, 26, 77, 0),
-(71, 2, 80, 0);
+(71, 2, 80, 0),
+(72, 15, 1, 0);
 
 -- --------------------------------------------------------
 

@@ -37,7 +37,21 @@
 		<section class="clear"></section>
 		<section id="track-description">
 			<h3>Description</h3>
-			<p><?=$track -> track_description;?></p>
+            <p><?=$track -> track_description;?></p>
+            <?php
+
+            if(strlen($track -> additional_file_path) > 2 && strlen($track -> additional_file_title) > 2)
+            {
+                ?>
+            <h3>Additional Information</h3>
+            <p><a href="<?=base_url($track -> additional_file_path);?>"><?=$track->additional_file_title;?></a></p>
+
+                <?php
+            }
+                  
+            ?>
+
+                        
 		</section>
 		<section class="course-progress">
                     <?php
