@@ -4,6 +4,7 @@ class Preference extends MY_Controller
 {
 		public function rank_preference()
 	{
+
         $userInterests = $this -> user_interest_categories -> getWithCondition(
             array(
                 'user_id' => $this -> session -> userdata('user_id'),
@@ -11,8 +12,10 @@ class Preference extends MY_Controller
 
             )
         );
-        if(count($userInterests) > 5)
+     
+        if(count($userInterests) >= 5)
         {
+        	
             $i = 1;
             foreach($userInterests  as $interest)
             {
@@ -36,8 +39,10 @@ class Preference extends MY_Controller
                     $user_interest_level -> cat_id = $interest -> cat_id;
                     $user_interest_level -> level = $countInterest  - $this -> input -> post('input_cat_' . $interest -> cat_id) + 1;
                     $user_interest_level -> save();
+
                    // print_r($user_interest_level);
                 }
+                redirect('recommendations');
 
             }
         }
