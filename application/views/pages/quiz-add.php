@@ -1,5 +1,8 @@
 <?=$message;?>
 <?=validation_errors();?>
+   <section class="breadcrumb">
+        <h2><a href="<?=base_url();?>index.php/home">HOME</a> / QUIZ / ADD QUIZ</h2>
+    </section>
 <form class="add-course dashboard" method="post">
 
 <?php

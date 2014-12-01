@@ -15,7 +15,7 @@ class Tracks extends MY_Controller
                         redirect('tracks/view/' . $track_id);
                     }
                     $this->load->view('templates/header');
-                    $this->load->view('templates/breadcrumbs');
+//                    $this->load->view('templates/breadcrumbs');
                     $this->load->view('pages/track-explore', array('track_id' => $track_id));
                     $this->load->view('templates/footer');
 
@@ -35,7 +35,7 @@ class Tracks extends MY_Controller
                         redirect('tracks/explore/' . $track_id);
                     }
                     $this->load->view('templates/header');
-                    $this->load->view('templates/breadcrumbs');
+//                    $this->load->view('templates/breadcrumbs');
                     $this->load->view('pages/track-in-progress', array('track_id' => $track_id));
                     $this->load->view('templates/footer');
 
@@ -109,7 +109,7 @@ class Tracks extends MY_Controller
          }
 
 		$this->load->view('templates/header');
-		$this->load->view('templates/breadcrumbs');
+//		$this->load->view('templates/breadcrumbs');
 		$this->load->view('templates/side-navs');
 		$this->load->view('pages/track-add', array('message' => $message));
 		$this->load->view('templates/footer');
@@ -133,7 +133,7 @@ class Tracks extends MY_Controller
 		
 
 		$this->load->view('templates/header');
-		$this->load->view('templates/breadcrumbs');
+//		$this->load->view('templates/breadcrumbs');
 		$this->load->view('pages/tracks');
 		$this->load->view('templates/footer');
 

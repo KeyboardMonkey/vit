@@ -8,7 +8,9 @@
              $total += $cat->getPointsEarnedInCategory($user_id);
          }
 ?>
-
+   <section class="breadcrumb">
+        <h2><a href="<?=base_url();?>index.php/home">HOME</a> / PROFILE </h2>
+    </section>
 	<section class="container">
 	
 

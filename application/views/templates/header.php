@@ -30,7 +30,7 @@
     </section>
     <nav id="header">
         <a onclick="javascript:$('#notifications-list').hide();$('#user-settings-list').toggle();"><img src="<?php echo base_url(); ?>assets/graphics/user.svg" width="33px" height="25px" /></a>
-        <a onclick="javascript:$('#user-settings-list').hide();$('#notifications-list').toggle();" class="no-border"><img src="<?php echo base_url(); ?>assets/graphics/notification.svg" width="25px" height="25px" /><span class="notification-badge">3</span></a>
+        <!-- <a onclick="javascript:$('#user-settings-list').hide();$('#notifications-list').toggle();" class="no-border"><img src="<?php echo base_url(); ?>assets/graphics/notification.svg" width="25px" height="25px" /><span class="notification-badge">3</span></a> -->
     </nav>
     <section id="user-settings-list" style="display:none;">
         <ul>
@@ -39,7 +39,7 @@
             <li><a href="<?php echo base_url();?>index.php/logout">Logout</a></li>
         </ul>
     </section>
-    <section id="notifications-list" style="display: none;">
+<!--     <section id="notifications-list" style="display: none;">
         <h4>Notifications</h4>
         <ul>
             <li>A new notification<br/><span class="notif-time">33 mins</span></li>
@@ -51,5 +51,5 @@
         <section id="see-all-notif">
             <a href="<?php echo base_url();?>index.php/notifications">See all notifications</a>
         </section>
-    </section>
+    </section> -->
 </header>

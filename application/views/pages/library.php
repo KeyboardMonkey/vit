@@ -1,3 +1,7 @@
+ <section class="breadcrumb">
+        <h2><a href="<?=base_url();?>index.php/home">HOME</a> / LIBRARY</h2>
+    </section>
+
 <section class="container">
 	<nav class="side-navs">
 		<ul>
@@ -60,11 +64,19 @@
 				<a href="<?=base_url();?>index.php/courses/view/<?=$course->course_id;?>"><h4 class="course-name"><?=$course->full_name;?></h4></a>
 				<section class="clear"></section>
 				<h5 class="tiny-intro"><?=$course->tiny_intro;?></h5>
-				<p class="points"><?=$course->points;?> Points</p>
+				<p class="points" style="float:left;"><?=$course->points;?> Points</p>
 				<section class="clear"></section>
 			</section>
 			<section class="rating">
-					<p>Rating: <?=$course->getOverAllRating();?> (<?=$course->numberOfRatings();?>)</p>
+					<?php
+            for($i = 0; $i < $course->getOverAllRating();$i++)
+            {
+            ?>
+                                    <img src="<?=base_url('assets/graphics/stars-filled.png');?>" />
+                                    
+                                <?php
+            }
+            ?><section style="margin-top:0px; margin-left:2px; float:right;">(<?=$course->numberOfRatings();?>)</section>
 			</section>
 			<section class="learn-now">
 				<a href="<?=base_url();?>index.php/courses/view/<?=$course->course_id;?>" class="learn-now">Learn Now</a>

@@ -12,6 +12,9 @@ $enrol_date_formatted=date("D, d M Y",strtotime($enrol_date));
 
 </style>
 
+   <section class="breadcrumb">
+        <h2><a href="<?=base_url();?>index.php/home">HOME</a> / <a href="<?=base_url();?>index.php/library">LIBRARY</a> / COURSE INTRODUCTION</h2>
+    </section>
 <section class="container">
 
 	<section class="content-lg">

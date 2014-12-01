@@ -1,13 +1,15 @@
-   <section class="breadcrumb">
-        <h2><a href="<?=base_url();?>index.php/home">HOME</a> / USER NOT FOUND</h2>
+		
+  <section class="breadcrumb">
+        <h2><a href="<?=base_url();?>index.php/home">HOME</a> / <a href="<?=base_url();?>index.php/library">LIBRARY</a> / COMING SOON</h2>
     </section>
 
-<section class="container">
+		<section class="container">
 			<section class="content-md" style="width: 90%!important;">
 				<div style="margin:0px auto; text-align: center;">
-					<h4>No Account Found! </h4>
+					<h4>Feature Coming Soon!</h4>
+					<h4>Please stay tuned.</h4>
 					<br />
-					<h5>Redirecting you in <span class="countdown" style="font-weight:bold; ">5</span> seconds ...</h5>
+					<h5>Redirecting you to Home in <span class="countdown" style="font-weight:bold; ">5</span> seconds ...</h5>
 				</div>
 			</section>
 		</section>

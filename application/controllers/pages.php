@@ -18,7 +18,7 @@ class Pages extends MY_Controller
 	$data['name'] = 'I have no name, okay?';
 
 	$this->load->view('templates/header', $data);
-	$this->load->view('templates/breadcrumbs', $data);
+//	$this->load->view('templates/breadcrumbs', $data);
  	// $this->load->view('templates/side-navs', $data);
 	$this->load->view('pages/'.$page, $data);
 	$this->load->view('templates/footer', $data);

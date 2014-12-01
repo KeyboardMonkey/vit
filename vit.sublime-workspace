@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"te",
+				"text-align"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
 				"my",
 				"myTrack"
 			],
@@ -26,10 +34,6 @@
 			[
 				"prnt",
 				"print_r"
-			],
-			[
-				"pad",
-				"padding-top"
 			],
 			[
 				"margin",
@@ -248,74 +252,10 @@
 	"buffers":
 	[
 		{
-			"file": "application/models/course.php",
+			"file": "application/views/pages/quiz.php",
 			"settings":
 			{
-				"buffer_size": 23316,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/pages/course-intro.php",
-			"settings":
-			{
-				"buffer_size": 8627,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/pages/home.php",
-			"settings":
-			{
-				"buffer_size": 9058,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/pages/recommendations.php",
-			"settings":
-			{
-				"buffer_size": 6360,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/wizards/pref-rank.php",
-			"settings":
-			{
-				"buffer_size": 3464,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/models/course_enrollment.php",
-			"settings":
-			{
-				"buffer_size": 1420,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/wizards/pref-set.php",
-			"settings":
-			{
-				"buffer_size": 3547,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/pages/profile.php",
-			"settings":
-			{
-				"buffer_size": 5174,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/controllers/profile.php",
-			"settings":
-			{
-				"buffer_size": 1534,
+				"buffer_size": 2283,
 				"line_ending": "Windows"
 			}
 		}
@@ -347,36 +287,66 @@
 	},
 	"file_history":
 	[
+		"/A/xampp/htdocs/vit/application/controllers/PageDoesNotExist.php",
+		"/A/xampp/htdocs/vit/application/views/templates/breadcrumbs.php",
+		"/A/xampp/htdocs/vit/application/views/wizards/pref-rank.php",
+		"/A/xampp/htdocs/vit/application/views/pages/upcoming-courses.php",
+		"/A/xampp/htdocs/vit/application/views/pages/course-playback.php",
+		"/A/xampp/htdocs/vit/application/controllers/quiz.php",
+		"/A/xampp/htdocs/__versions/___vit/application/config/config.php",
+		"/A/xampp/htdocs/vit/application/models/course.php",
+		"/A/xampp/htdocs/vit/application/views/pages/course-intro.php",
+		"/A/xampp/htdocs/vit/application/views/pages/coming-soon.php",
+		"/A/xampp/htdocs/vit/application/core/my_model.php",
+		"/A/xampp/htdocs/vit/application/config/config.php",
+		"/A/xampp/htdocs/__dashboard/app/config/config.php",
+		"/A/xampp/htdocs/__vit/application/config/config.php",
+		"/A/xampp/htdocs/vit/application/views/pages/leaderboard.php",
+		"/A/xampp/htdocs/vit/application/views/pages/library.php",
+		"/A/xampp/htdocs/vit/application/views/pages/quiz-result.php",
+		"/A/xampp/htdocs/vit/application/views/pages/profile.php",
+		"/A/xampp/htdocs/vit/application/views/pages/no-user.php",
+		"/A/xampp/htdocs/vit/application/views/wizards/pref-set.php",
+		"/A/xampp/htdocs/vit/application/controllers/upcoming.php",
+		"/A/xampp/htdocs/vit/application/views/pages/quiz-add.php",
+		"/A/xampp/htdocs/vit/application/views/pages/recommendations.php",
+		"/A/xampp/htdocs/vit/application/controllers/recommendations.php",
+		"/A/xampp/htdocs/vit/application/views/pages/tracks.php",
+		"/A/xampp/htdocs/vit/application/controllers/tracks.php",
+		"/A/xampp/htdocs/vit/application/controllers/profile.php",
+		"/A/xampp/htdocs/vit/application/controllers/library.php",
+		"/A/xampp/htdocs/vit/application/controllers/tech_feeds.php",
+		"/A/xampp/htdocs/vit/application/controllers/pages.php",
+		"/A/xampp/htdocs/vit/application/controllers/notifications.php",
+		"/A/xampp/htdocs/vit/application/controllers/leaderboard.php",
+		"/A/xampp/htdocs/vit/application/controllers/home.php",
+		"/A/xampp/htdocs/vit/application/controllers/courses.php",
+		"/A/xampp/htdocs/vit/application/views/pages/home.php",
+		"/A/xampp/htdocs/vit/application/views/templates/header.php",
+		"/A/xampp/htdocs/vit/application/controllers/coming_soon.php",
+		"/A/xampp/htdocs/vit/application/models/course_review.php",
+		"/A/xampp/htdocs/vit/application/views/templates/footer.php",
+		"/A/xampp/htdocs/vit/assets/styles/main.css",
+		"/A/xampp/htdocs/vit/application/views/templates/side-navs.php",
+		"/A/xampp/htdocs/ssss/php/jRating.php",
+		"/A/xampp/htdocs/vit/assets/js/jRating.jquery.js",
+		"/A/xampp/htdocs/vit/application/models/course_enrollment.php",
 		"/A/xampp/htdocs/vit/application/controllers/preference.php",
 		"/A/xampp/htdocs/vit/application/views/pages/quiz.php",
 		"/A/xampp/htdocs/vit/application/views/pages/register.php",
-		"/A/xampp/htdocs/vit/application/controllers/recommendations.php",
-		"/A/xampp/htdocs/vit/application/views/templates/footer.php",
 		"/A/xampp/htdocs/vit/application/controllers/register.php",
-		"/A/xampp/htdocs/vit/application/views/templates/header.php",
 		"/A/xampp/htdocs/vit/application/views/templates/header-login.php",
-		"/A/xampp/htdocs/vit/assets/styles/main.css",
 		"/A/xampp/htdocs/vit/application/models/tracks_enrollment.php",
 		"/A/xampp/htdocs/vit/application/views/widgets/signup-form.php",
-		"/A/xampp/htdocs/vit/application/controllers/tracks.php",
-		"/A/xampp/htdocs/vit/application/models/course.php",
-		"/A/xampp/htdocs/vit/application/views/pages/quiz-result.php",
 		"/A/xampp/htdocs/vit/application/models/user.php",
-		"/A/xampp/htdocs/vit/application/views/pages/library.php",
 		"/A/xampp/htdocs/vit/application/views/widgets/widget-login.php",
-		"/A/xampp/htdocs/vit/application/views/pages/course-playback.php",
 		"/A/xampp/htdocs/vit/application/controllers/upload.php",
 		"/A/xampp/htdocs/vit/application/models/track.php",
 		"/A/xampp/htdocs/vit/application/views/pages/track-add.php",
 		"/A/xampp/htdocs/vit/application/views/pages/course-add.php",
-		"/A/xampp/htdocs/vit/application/views/pages/course-intro.php",
-		"/A/xampp/htdocs/vit/application/config/config.php",
 		"/A/xampp/htdocs/vit/application/controllers/logout.php",
 		"/A/xampp/htdocs/vit/application/views/pages/logout.php",
 		"/A/xampp/htdocs/vit/application/views/pages/track-explore.php",
-		"/A/xampp/htdocs/vit/application/views/pages/tracks.php",
-		"/A/xampp/htdocs/vit/application/views/pages/quiz-add.php",
-		"/A/xampp/htdocs/vit/application/controllers/quiz.php",
 		"/A/xampp/htdocs/vit/application/views/pages/track-in-progress.php",
 		"/A/xampp/htdocs/vit/application/models/sys_config.php",
 		"/A/xampp/htdocs/vit/application/config/autoload.php",
@@ -385,34 +355,19 @@
 		"/A/xampp/htdocs/vit/application/models/quiz_model.php",
 		"/A/xampp/htdocs/vit/vitdb.sql",
 		"/A/xampp/htdocs/vit/application/views/widgets/signup-form-fazool.php",
-		"/A/xampp/htdocs/vit/application/views/pages/profile.php",
 		"/V/-- UPDATED FILES/ranking-plugin.php",
-		"/A/xampp/htdocs/vit/application/controllers/upcoming.php",
-		"/A/xampp/htdocs/vit/application/views/pages/home.php",
 		"/A/xampp/htdocs/vit/application/views/widgets/top-three-students.php",
-		"/A/xampp/htdocs/vit/application/controllers/courses.php",
 		"/A/xampp/htdocs/vit/application/views/widgets/category-leaders.php",
 		"/C/Users/The Unusual Suspect/Desktop/vito/category-leaders-latest.php",
-		"/A/xampp/htdocs/vit/application/controllers/home.php",
-		"/A/xampp/htdocs/vit/application/views/pages/recommendations.php",
 		"/A/xampp/htdocs/vit/application/controllers/login.php",
 		"/A/xampp/htdocs/vit/application/views/templates/header-clean.php",
 		"/A/xampp/htdocs/vit/assets/styles/pro-bars.min.css",
-		"/A/xampp/htdocs/vit/application/models/course_review.php",
-		"/A/xampp/htdocs/vit/application/controllers/profile.php",
-		"/A/xampp/htdocs/vit/application/controllers/library.php",
 		"/A/xampp/htdocs/vit/application/controllers/users.php",
 		"/A/xampp/htdocs/vit/application/views/pages/viewcourse.php",
 		"/A/xampp/htdocs/vit/assets/styles/main-arm ki new wali.css",
 		"/A/xampp/htdocs/vit/application/views/templates/styleNscripts.php",
 		"/A/xampp/htdocs/vit/application/config/doctypes.php",
-		"/A/xampp/htdocs/vit/application/models/course_enrollment.php",
-		"/A/xampp/htdocs/vit/application/views/pages/leaderboard.php",
-		"/A/xampp/htdocs/vit/application/views/pages/no-user.php",
-		"/A/xampp/htdocs/vit/application/controllers/leaderboard.php",
-		"/A/xampp/htdocs/vit/application/core/my_model.php",
 		"/A/xampp/htdocs/vit/application/models/course_cat.php",
-		"/A/xampp/htdocs/vit/application/controllers/PageDoesNotExist.php",
 		"/A/xampp/htdocs/vit/application/models/course_rating.php",
 		"/C/Users/The Unusual Suspect/Downloads/vitdb.sql",
 		"/A/xampp/htdocs/vit/application/views/pages/explore-track.php",
@@ -459,22 +414,7 @@
 		"/A/xampp/htdocs/vit/soptair/controllers/register.php",
 		"/C/Users/The Unusual Suspect/Downloads/lectures.sql",
 		"/A/xampp/htdocs/vit/soptair/libraries/MY_Form_validation.php",
-		"/V/-- UPDATED FILES/vitdb.sql",
-		"/C/Users/The Unusual Suspect/Desktop/My Form Validation Library/MY_Form_validation.php",
-		"/A/xampp/htdocs/vit/soptair/views/pages/logout.php",
-		"/C/Users/The Unusual Suspect/Desktop/vito/FROM ARM/course-intro[updated]/course-intro.html",
-		"/A/xampp/htdocs/vit/soptair/views/pages/recommendations.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/PageDoesNotExist.php",
-		"/A/xampp/htdocs/vit/soptair/views/pages/fourOfour.php",
-		"/A/xampp/htdocs/vit/soptair/config/routes.php",
-		"/A/xampp/htdocs/vit/assets/js/404.js",
-		"/A/xampp/htdocs/vit/soptair/controllers/users.php",
-		"/C/Users/The Unusual Suspect/Desktop/main.css",
-		"/A/xampp/htdocs/vit/soptair/views/pages/404.php",
-		"/A/xampp/htdocs/vit/soptair/views/templates/header.php",
-		"/A/xampp/htdocs/vit/soptair/views/templates/header-clean.php",
-		"/A/xampp/htdocs/vit/soptair/views/pages/home.php",
-		"/A/xampp/htdocs/vit/soptair/views/pages/edit-profile.php"
+		"/V/-- UPDATED FILES/vitdb.sql"
 	],
 	"find":
 	{
@@ -510,6 +450,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"take",
+			"templates/breadcrumbs",
+			"rating",
 			"home",
 			"googleapi",
 			"foreac",
@@ -634,10 +577,7 @@
 			"pro-bar-container",
 			".pro-bar-container",
 			"2ABB9B",
-			".pro-bar-container.color-nephritis",
-			"neph",
-			">\n",
-			"();?>%</"
+			".pro-bar-container.color-nephritis"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -660,54 +600,29 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"sheets":
+			[
+			]
+		},
+		{
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "application/models/course.php",
+					"file": "application/views/pages/quiz.php",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 23316,
+						"buffer_size": 2283,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								10612,
-								10612
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 28.0,
-						"translation.y": 3252.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "application/views/pages/course-intro.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8627,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7186,
-								7189
+								193,
+								193
 							]
 						],
 						"settings":
@@ -716,220 +631,10 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2727.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "application/views/pages/home.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9058,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5036,
-								5036
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1837.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "application/views/pages/recommendations.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6360,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2823,
-								2823
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 45.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "application/views/wizards/pref-rank.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3464,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								881,
-								881
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 158.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "application/models/course_enrollment.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1420,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								291,
-								316
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "application/views/wizards/pref-set.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3547,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								369,
-								369
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
-					"buffer": 7,
-					"file": "application/views/pages/profile.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5174,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3075,
-								3075
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1170.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "application/controllers/profile.php",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1534,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								205,
-								205
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
 					"type": "text"
 				}
 			]
@@ -937,7 +642,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 22.0
 	},
 	"input":
 	{
@@ -963,7 +668,7 @@
 		"cols":
 		[
 			0.0,
-			0.952919020716,
+			0.936467598475,
 			1.0
 		],
 		"rows":
@@ -980,7 +685,7 @@
 	"project": "vit.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 40.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1018,7 +723,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 279.0,
+	"side_bar_width": 237.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -9,6 +9,11 @@
         $number ++;
     }
 ?>
+
+ <section class="breadcrumb">
+        <h2><a href="<?=base_url();?>index.php/home">HOME</a> / LEADERBOARD</h2>
+    </section>
+
 <section class="container">
 
 	<section class="content-md">

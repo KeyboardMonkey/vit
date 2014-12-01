@@ -4,31 +4,31 @@
 		<section class="about">
 			<h3>About Us</h3>
 			<ul>
-				<li><a href="">How It Works</a></li>
-				<li><a href="">Our Team</a></li>
-				<li><a href="">FAQ</a></li>
-				<li><a href="">Testimonials</a></li>
-				<li><a href="">Terms</a></li>
-				<li><a href="">Contact Us</a></li>
+				<li><a href="<?=base_url();?>index.php/coming_soon">How It Works</a></li>
+				<li><a href="<?=base_url();?>index.php/coming_soon">Our Team</a></li>
+				<li><a href="<?=base_url();?>index.php/coming_soon">FAQ</a></li>
+				<li><a href="<?=base_url();?>index.php/coming_soon">Testimonials</a></li>
+				<li><a href="<?=base_url();?>index.php/coming_soon">Terms</a></li>
+				<li><a href="<?=base_url();?>index.php/coming_soon">Contact Us</a></li>
 			</ul>
 		</section>
 		<section class="learn">
 			<h3>Learn</h3>
 			<ul>
-				<li><a href="">HTML</a></li>
-				<li><a href="">CSS</a></li>
-				<li><a href="">JavaScript</a></li>
-				<li><a href="">PHP</a></li>
-				<li><a href="">Android</a></li>
-				<li><a href="">C++</a></li>
+				<li><a href="<?=base_url();?>index.php/library/index/category/1">HTML</a></li>
+				<li><a href="<?=base_url();?>index.php/library/index/category/8">CSS</a></li>
+				<li><a href="<?=base_url();?>index.php/library/index/category/6">JavaScript</a></li>
+				<li><a href="<?=base_url();?>index.php/library/index/category/2">PHP</a></li>
+				<li><a href="<?=base_url();?>index.php/library/index/category/5">Android</a></li>
+				<li><a href="<?=base_url();?>index.php/library/index/category/9">C++</a></li>
 			</ul>
 		</section>
 		<section class="social-media">
 			<h3>Connect</h3>
 			<ul class="social-icons">
-				<li><a href="">Facebook</a></li>
-				<li><a href="">Twitter</a></li>
-				<li><a href="">YouTube</a></li>
+				<li><a href="<?=base_url();?>index.php/coming_soon">Facebook</a></li>
+				<li><a href="<?=base_url();?>index.php/coming_soon">Twitter</a></li>
+				<li><a href="<?=base_url();?>index.php/coming_soon">YouTube</a></li>
 			</ul>
 		</section>
 		<section class="subscribe">

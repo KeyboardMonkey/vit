@@ -11,9 +11,8 @@ class PageDoesNotExist extends CI_Controller
 
         $this->output->set_status_header('404');
         $this->load->view('templates/header-clean'); 
-        $this->load->view('pages/fourOfour');
+        $this->load->view('pages/four-O-four');
         $this->load->view('templates/footer');
         
     }
 }
-?>

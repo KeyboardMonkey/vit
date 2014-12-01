@@ -33,7 +33,7 @@ class Home extends MY_Controller
 		
 
 		$this->load->view('templates/header');
-		$this->load->view('templates/breadcrumbs');
+//		$this->load->view('templates/breadcrumbs');
 	 	$this->load->view('templates/side-navs');
 		$this->load->view('pages/home');
 		$this->load->view('templates/footer');

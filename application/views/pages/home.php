@@ -198,17 +198,17 @@
 		<section class="popular-courses">
 			<h3>Popular Courses</h3>
 			<ul class="course-widget">
-				<li><a href="">Programming Fundamentals</a></li>
-				<li><a href="">Introduction to Android</a></li>
-				<li><a href="">Windows Phone Development</a></li>
+				<li><a href="<?=base_url();?>index.php/library">Programming Fundamentals</a></li>
+				<li><a href="<?=base_url();?>index.php/library">Introduction to Android</a></li>
+				<li><a href="<?=base_url();?>index.php/library">Windows Phone Development</a></li>
 			</ul>
 		</section>
 		<section class="new-courses">
 			<h3>New Courses</h3>
 			<ul class="course-widget">
-				<li><a href="">Cloud Computing</a></li>
-				<li><a href="">Windows Store Authorization</a></li>
-				<li><a href="">Introduction to ASP.NET MVC</a></li>
+				<li><a href="<?=base_url();?>index.php/library">Cloud Computing</a></li>
+				<li><a href="<?=base_url();?>index.php/library">Windows Store Authorization</a></li>
+				<li><a href="<?=base_url();?>index.php/library">Introduction to ASP.NET MVC</a></li>
 			</ul>
 		</section>
 		<section class="clear"></section>

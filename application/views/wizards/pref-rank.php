@@ -1,3 +1,6 @@
+    <section class="breadcrumb">
+        <h2><a href="<?=base_url();?>index.php/home">HOME</a> / <a href="<?=base_url();?>index.php/preference/set_preference">SET PREFERENCE</a> / RANK PREFERENCE</h2>
+    </section>
 <?php
 $userInterests = $this -> user_interest_categories -> getWithCondition(
     array(
@@ -15,14 +18,15 @@ if(count($userInterests) < 5)
 ?>
     <?=validation_errors();?>
     <style>
-        #sortable { list-style-type: none; margin: 0; padding: 0; width: 60%; }
-        #sortable li { border: 1px solid red; margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
-        .highlights { background-color: yellow; }
+        #sortable { margin:0 2.5%; padding:0; list-style-type:none; width:80%; }
+        #sortable li { margin:2px 0; padding:10px 0; padding-left:20px; color:#FFFFFF; background:#2ABB9B; font-size:16px; }
+        .highlights { background-color:#ECF0F1; }
     </style>
 <script type="text/javascript" src="<?=base_url('assets/js/jquery-ui.min.js');?>"></script>
 <section class="container">
 	<section class="content-pref-wizard">
-		<h2>Rank Your Interests<br /><small>Want even more finely-tuned recommendations? Rank your interests below.</small></h2>
+        <h2>Rank Your Interests<br /><small>Want even more finely-tuned recommendations? Rank your interests below by dragging up and down.</small></h2>
+		<h4 style="margin:0px 0px 10px 25px;">Top-most category has the highest priority.</h4>
 		<form method="post">
             <ul id="sortable">
                 <?php
@@ -40,14 +44,14 @@ if(count($userInterests) < 5)
                 <?php
                     }
                 ?>
-
             </ul>
-<input type="submit" value="submit" />
+            
+            <section class="inline-buttons">
+                <a class="default" href="<?=base_url();?>index.php/preference/index">Go Back</a>
+                <button class="default" type="submit" style="border:none;">Create My Recommendations</button>
+            </section>
 		</form>
-		<section class="inline-buttons">
-			<a href="<?=base_url();?>index.php/preference/index">Go Back</a>
-			<a href="<?=base_url();?>index.php/recommendations">Create My Recommendations</a>
-		</section>
+			<!-- <a href="<?=base_url();?>index.php/recommendations">Create My Recommendations</a> -->
 	</section>
 	</section>
     <script>

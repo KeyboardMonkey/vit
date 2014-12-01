@@ -1,3 +1,6 @@
+   <section class="breadcrumb">
+        <h2><a href="<?=base_url();?>index.php/home">HOME</a> / TRACKS</h2>
+    </section>
 <section class="container">
 	<section class="content-lg">
 	<!-- 	<ul class="suggest-me-track">

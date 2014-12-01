@@ -27,7 +27,7 @@ class Courses extends MY_Controller
         
         
         $this -> load -> view('templates/header');
-        $this -> load -> view('templates/breadcrumbs'); 
+ //       $this -> load -> view('templates/breadcrumbs'); 
         $this -> load -> view('pages/course-intro', array('course' => $course));
     //    $this -> load -> view('widgets/similar-courses-widget');
         $this -> load -> view('templates/footer');
@@ -43,7 +43,7 @@ class Courses extends MY_Controller
         }
         
         $this -> load -> view('templates/header');
-        $this -> load -> view('templates/breadcrumbs'); 
+//        $this -> load -> view('templates/breadcrumbs'); 
         $this -> load -> view('pages/course-intro', array('course' => $course));
         $this -> load -> view('templates/footer');
     }
@@ -172,7 +172,7 @@ class Courses extends MY_Controller
 
         $message = "";
         $this->load->view('templates/header');
-        $this->load->view('templates/breadcrumbs');
+//        $this->load->view('templates/breadcrumbs');
         // $this->load->view('pages/course_add', array('message' => $message));
         $this->load->view('pages/course-add', array('message' => $message));
         $this->load->view('templates/footer');
@@ -208,7 +208,7 @@ class Courses extends MY_Controller
         $lectures = $this -> lecture -> getWithCondition(array('course_id' => $course_id));
 
         $this->load->view('templates/header');
-        $this->load->view('templates/breadcrumbs');
+//        $this->load->view('templates/breadcrumbs');
         $this->load->view('pages/course-playback', array('course_id' => $course_id, 'course' => $course, 'lect_files' => $lect_files, 'lectures' => $lectures, 'current_lecture' => $start_lecture));
         $this->load->view('templates/footer');
     }

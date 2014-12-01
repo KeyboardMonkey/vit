@@ -6,7 +6,7 @@ class Tech_feeds extends MY_Controller
 	{
 
 		$this->load->view('templates/header');
-		$this->load->view('templates/breadcrumbs');
+//		$this->load->view('templates/breadcrumbs');
 	 	
 		$this->load->view('pages/tech-feeds');
 		$this->load->view('templates/footer');
@@ -36,8 +36,8 @@ class Tech_feeds extends MY_Controller
 	{
 
 		$this->load->view('templates/header');
-		$this->load->view('templates/breadcrumbs');
-	 	;
+//		$this->load->view('templates/breadcrumbs');
+	 	
 		$this->load->view('pages/tech-feeds');
 		$this->load->view('templates/footer');
 

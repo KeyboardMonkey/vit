@@ -33,7 +33,7 @@ class Notifications extends MY_Controller
 	{
 
 		$this->load->view('templates/header');
-		$this->load->view('templates/breadcrumbs');
+//		$this->load->view('templates/breadcrumbs');
 	 	$this->load->view('templates/side-navs');	
 		$this->load->view('pages/notifications');
 		$this->load->view('templates/footer');

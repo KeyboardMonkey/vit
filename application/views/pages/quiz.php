@@ -4,7 +4,9 @@
 	//print_r($questions);
 	
 ?>
-
+<section class="breadcrumb">
+        <h2><a href="<?=base_url();?>index.php/home">HOME</a> / COURSE / QUIZ</h2>
+    </section>
 <section class="container">
 
 <!-- 	<section class="widgets">		

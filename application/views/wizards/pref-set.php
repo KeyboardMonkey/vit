@@ -1,3 +1,6 @@
+ <section class="breadcrumb">
+        <h2><a href="<?=base_url();?>index.php/home">HOME</a> / SET PREFERENCE</h2>
+    </section>
 <section class="container">
         <?=
         validation_errors();?>
@@ -47,7 +50,7 @@
 			<a href="<?=base_url();?>index.php/home">Not Right Now</a>
 			<!-- <a href="<?=base_url();?>index.php/preference/rank_preference">Next Step</a> -->
 			<a id="submit_pref">Next Step</a>
-			<input type="button" value="Recommendations" onclick="newDoc()">
+			<!-- <input type="button" value="Recommendations" onclick="newDoc()"> -->
                 <script>
                     $(document).ready(function(){
                        $("#submit_pref").click(function(){
@@ -56,9 +59,9 @@
                     });
                 </script>
 				<script>
-					function newDoc() {
+					/*function newDoc() {
 					    window.location.assign("<?=base_url();?>index.php/recommendations");
-					}
+					}*/
 				</script>
 <!-- redirect script -->
           <!--               <?php

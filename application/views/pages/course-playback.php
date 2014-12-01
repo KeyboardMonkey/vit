@@ -26,6 +26,14 @@
 	//print_r($lecture);
 	$videoUrl = $lecture->vid_path;
 ?>
+
+ 
+   <section class="breadcrumb">
+        <h2><a href="<?=base_url();?>index.php/home">HOME</a> / <a href="<?=base_url();?>index.php/library">LIBRARY</a> / COURSE PLAYBACK</h2>
+    </section>
+
+
+
 <section class="container">
 	<section class="widgets">
 		<section class="widget-video-transition">

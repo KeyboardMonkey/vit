@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b0faaeb2-8c84-4a2f-b3d6-2a9f1115c242" name="Default" comment="">
-<<<<<<< HEAD
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/cssxfire.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pages/course-intro.php" afterPath="$PROJECT_DIR$/application/views/pages/course-intro.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/courses.php" afterPath="$PROJECT_DIR$/application/controllers/courses.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/templates/header.php" afterPath="$PROJECT_DIR$/application/views/templates/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/pages/home.php" afterPath="$PROJECT_DIR$/application/views/pages/home.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vit.sublime-workspace" afterPath="$PROJECT_DIR$/vit.sublime-workspace" />
-=======
->>>>>>> origin/master
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="b0faaeb2-8c84-4a2f-b3d6-2a9f1115c242" name="Default" comment="" />
     <ignored path="vit.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -39,43 +27,7 @@
       <file leaf-file-name="courses.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/controllers/courses.php">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state line="82" column="66" selection-start="2776" selection-end="2776" vertical-scroll-proportion="-13.769231" vertical-offset="1036" max-vertical-offset="4896">
-=======
-            <state vertical-scroll-proportion="0.0" vertical-offset="1011" max-vertical-offset="1598">
-              <caret line="224" column="50" selection-start-line="224" selection-start-column="50" selection-end-line="224" selection-end-column="50" />
-              <folding>
-                <element signature="e#823#1262#0#PHP" expanded="false" />
-                <element signature="e#1267#1588#0#PHP" expanded="false" />
-                <element signature="e#1594#2098#0#PHP" expanded="false" />
-                <element signature="e#2103#4833#0#PHP" expanded="false" />
-                <element signature="e#4838#5199#0#PHP" expanded="false" />
-                <element signature="e#6552#6724#0#PHP" expanded="false" />
-                <element signature="e#6729#7625#0#PHP" expanded="false" />
-                <element signature="e#7630#9271#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="quiz.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/controllers/quiz.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="2295">
-              <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-              <folding>
-                <element signature="e#114#2923#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sys_config.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/models/sys_config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41062802" vertical-offset="0" max-vertical-offset="621">
-              <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
->>>>>>> origin/master
               <folding />
             </state>
           </provider>
@@ -84,12 +36,7 @@
       <file leaf-file-name="course-intro.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/pages/course-intro.php">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state line="294" column="0" selection-start="10282" selection-end="10282" vertical-scroll-proportion="-36.78846" vertical-offset="3085" max-vertical-offset="5117">
-=======
-            <state vertical-scroll-proportion="0.0" vertical-offset="1462" max-vertical-offset="2074">
-              <caret line="111" column="40" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
->>>>>>> origin/master
               <folding />
             </state>
           </provider>
@@ -98,12 +45,7 @@
       <file leaf-file-name="home.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/views/pages/home.php">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state line="156" column="131" selection-start="6272" selection-end="6272" vertical-scroll-proportion="0.49253732" vertical-offset="2388" max-vertical-offset="4607">
-=======
-            <state vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="1938">
-              <caret line="370" column="80" selection-start-line="370" selection-start-column="80" selection-end-line="370" selection-end-column="80" />
->>>>>>> origin/master
+            <state line="156" column="131" selection-start="6272" selection-end="6272" vertical-scroll-proportion="0.5096525" vertical-offset="2388" max-vertical-offset="4607">
               <folding>
                 <element signature="n#style#0;n#h5#0;n#section#0;n#section#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#h4#0;n#h5#0;n#section#0;n#section#0;n#!!top" expanded="true" />
@@ -121,22 +63,7 @@
       <file leaf-file-name="jRating.jquery.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/assets/js/jRating.jquery.js">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
             <state line="11" column="0" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3961">
-=======
-            <state vertical-scroll-proportion="0.0" vertical-offset="729" max-vertical-offset="1649">
-              <caret line="58" column="53" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/config/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5678" max-vertical-offset="6290">
-              <caret line="356" column="2" selection-start-line="356" selection-start-column="2" selection-end-line="356" selection-end-column="2" />
->>>>>>> origin/master
               <folding />
             </state>
           </provider>
@@ -191,10 +118,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="22" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="y" value="30" />
+    <option name="width" value="1366" />
+    <option name="height" value="738" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -231,7 +157,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-<<<<<<< HEAD
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="vit" />
@@ -328,15 +253,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-=======
->>>>>>> origin/master
         </subPane>
       </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../dashboard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
   </component>
   <component name="RecentsManager">
@@ -373,13 +296,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
-    <frame x="-8" y="22" width="1382" height="754" extended-state="0" />
-    <editor active="true" />
-=======
-    <frame x="-8" y="-8" width="1319" height="784" extended-state="6" />
+    <frame x="0" y="30" width="1366" height="738" extended-state="1" />
     <editor active="false" />
->>>>>>> origin/master
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -387,26 +305,16 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15332326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15519878" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23100537" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
->>>>>>> origin/master
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-=======
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3293944" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
->>>>>>> origin/master
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -449,223 +357,22 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/application/controllers/courses.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4573">
           <folding />
-=======
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5678" max-vertical-offset="6290">
-          <caret line="356" column="2" selection-start-line="356" selection-start-column="2" selection-end-line="356" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/courses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1011" max-vertical-offset="1598">
-          <caret line="224" column="50" selection-start-line="224" selection-start-column="50" selection-end-line="224" selection-end-column="50" />
-          <folding>
-            <element signature="e#823#1262#0#PHP" expanded="false" />
-            <element signature="e#1267#1588#0#PHP" expanded="false" />
-            <element signature="e#1594#2098#0#PHP" expanded="false" />
-            <element signature="e#2103#4833#0#PHP" expanded="false" />
-            <element signature="e#4838#5199#0#PHP" expanded="false" />
-            <element signature="e#6552#6724#0#PHP" expanded="false" />
-            <element signature="e#6729#7625#0#PHP" expanded="false" />
-            <element signature="e#7630#9271#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/quiz.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="2295">
-          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-          <folding>
-            <element signature="e#114#2923#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/sys_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1462" max-vertical-offset="2074">
-          <caret line="111" column="40" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/course.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="1938">
-          <caret line="370" column="80" selection-start-line="370" selection-start-column="80" selection-end-line="370" selection-end-column="80" />
-          <folding>
-            <element signature="n#getCategoryTitle#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getCategory#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getCategoryCourseCount#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#courseRatedByMe#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#isRatedByUser#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getRatingByUser#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#numberOfRatings#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getOverAllRating#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#isUserEnrolled#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getRecommendations#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#_sort_array#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#enrollmentCount#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getNextLecture#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getLectures#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getFinishedLecture#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getLectureProgress#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getCourseProgressPercent#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#reviewedByUser#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#isCourseFinishedByUser#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#quizTaken#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getCorrectAnswers#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getQuizEarnedPoints#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getEarnedPoints#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getTracks#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getTopStudents#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="e#21827#23231#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pages/quiz-result.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="729" max-vertical-offset="1649">
-          <caret line="58" column="53" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5678" max-vertical-offset="6290">
-          <caret line="356" column="2" selection-start-line="356" selection-start-column="2" selection-end-line="356" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/courses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1011" max-vertical-offset="1598">
-          <caret line="224" column="50" selection-start-line="224" selection-start-column="50" selection-end-line="224" selection-end-column="50" />
-          <folding>
-            <element signature="e#823#1262#0#PHP" expanded="false" />
-            <element signature="e#1267#1588#0#PHP" expanded="false" />
-            <element signature="e#1594#2098#0#PHP" expanded="false" />
-            <element signature="e#2103#4833#0#PHP" expanded="false" />
-            <element signature="e#4838#5199#0#PHP" expanded="false" />
-            <element signature="e#6552#6724#0#PHP" expanded="false" />
-            <element signature="e#6729#7625#0#PHP" expanded="false" />
-            <element signature="e#7630#9271#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/quiz.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="2295">
-          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-          <folding>
-            <element signature="e#114#2923#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/sys_config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1462" max-vertical-offset="2074">
-          <caret line="111" column="40" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/course.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="1938">
-          <caret line="370" column="80" selection-start-line="370" selection-start-column="80" selection-end-line="370" selection-end-column="80" />
-          <folding>
-            <element signature="n#getCategoryTitle#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getCategory#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getCategoryCourseCount#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#courseRatedByMe#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#isRatedByUser#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getRatingByUser#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#numberOfRatings#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getOverAllRating#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#isUserEnrolled#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getRecommendations#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#_sort_array#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#enrollmentCount#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getNextLecture#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getLectures#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getFinishedLecture#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getLectureProgress#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getCourseProgressPercent#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#reviewedByUser#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#isCourseFinishedByUser#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#quizTaken#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getCorrectAnswers#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getQuizEarnedPoints#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getEarnedPoints#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getTracks#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getTopStudents#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="e#21827#23231#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pages/quiz-result.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="729" max-vertical-offset="1649">
-          <caret line="58" column="53" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/track.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1904">
-          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
->>>>>>> origin/master
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/quiz.php">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="4114">
           <folding />
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="30" max-vertical-offset="1921">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="22" />
->>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/sys_config.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
           <folding />
         </state>
@@ -675,10 +382,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2074">
           <folding />
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3281">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> origin/master
         </state>
       </provider>
     </entry>
@@ -771,155 +474,73 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/widgets/top-three-students.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-=======
-        <state vertical-scroll-proportion="2.3598971" vertical-offset="0" max-vertical-offset="1088">
-          <caret line="54" column="6" selection-start-line="54" selection-start-column="6" selection-end-line="54" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/pages/course-intro.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56388414" vertical-offset="3086" max-vertical-offset="4420">
-          <caret line="201" column="2" selection-start-line="201" selection-start-column="2" selection-end-line="201" selection-end-column="2" />
-        </state>
->>>>>>> origin/master
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/core/my_model.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
-=======
-        <state vertical-scroll-proportion="0.3808" vertical-offset="51" max-vertical-offset="2414">
-          <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
->>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages/track-in-progress.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
-=======
-        <state vertical-scroll-proportion="-15.653846" vertical-offset="511" max-vertical-offset="3281">
-          <caret line="54" column="17" selection-start-line="54" selection-start-column="17" selection-end-line="54" selection-end-column="17" />
->>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages/track-explore.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-=======
-        <state vertical-scroll-proportion="-8.653846" vertical-offset="30" max-vertical-offset="1921">
-          <caret line="15" column="22" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="22" />
-        </state>
->>>>>>> origin/master
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/wizards/pref-set.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-=======
-        <state vertical-scroll-proportion="0.7222222" vertical-offset="102" max-vertical-offset="1802">
-          <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-        </state>
->>>>>>> origin/master
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/user_interest_level.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-=======
-        <state vertical-scroll-proportion="0.14072847" vertical-offset="0" max-vertical-offset="604">
-          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
-        </state>
->>>>>>> origin/master
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/recommendations.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="651">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
->>>>>>> origin/master
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/pages/recommendations.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-=======
-        <state vertical-scroll-proportion="-1.1764706" vertical-offset="1708" max-vertical-offset="2397">
-          <caret line="104" column="30" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="30" />
-        </state>
->>>>>>> origin/master
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/wizards/pref-rank.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-=======
-        <state vertical-scroll-proportion="-3.9230769" vertical-offset="153" max-vertical-offset="1598">
-          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
-        </state>
->>>>>>> origin/master
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/preference.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-=======
-        <state vertical-scroll-proportion="-4.576923" vertical-offset="204" max-vertical-offset="1666">
-          <caret line="19" column="168" selection-start-line="19" selection-start-column="168" selection-end-line="19" selection-end-column="168" />
-        </state>
->>>>>>> origin/master
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/login.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-=======
-        <state vertical-scroll-proportion="-11.769231" vertical-offset="102" max-vertical-offset="1292">
-          <caret line="24" column="92" selection-start-line="24" selection-start-column="92" selection-end-line="24" selection-end-column="92" />
-        </state>
->>>>>>> origin/master
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/user.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1717">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/track.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
-=======
-        <state vertical-scroll-proportion="0.6111111" vertical-offset="510" max-vertical-offset="1904">
-          <caret line="52" column="51" selection-start-line="52" selection-start-column="51" selection-end-line="52" selection-end-column="51" />
-        </state>
->>>>>>> origin/master
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/tracks.php">
@@ -935,41 +556,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/quiz.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="1011" max-vertical-offset="1598">
-          <caret line="224" column="50" selection-start-line="224" selection-start-column="50" selection-end-line="224" selection-end-column="50" />
-          <folding>
-            <element signature="e#823#1262#0#PHP" expanded="false" />
-            <element signature="e#1267#1588#0#PHP" expanded="false" />
-            <element signature="e#1594#2098#0#PHP" expanded="false" />
-            <element signature="e#2103#4833#0#PHP" expanded="false" />
-            <element signature="e#4838#5199#0#PHP" expanded="false" />
-            <element signature="e#6552#6724#0#PHP" expanded="false" />
-            <element signature="e#6729#7625#0#PHP" expanded="false" />
-            <element signature="e#7630#9271#0#PHP" expanded="false" />
-          </folding>
->>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/config.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
-=======
-        <state vertical-scroll-proportion="0.042288557" vertical-offset="0" max-vertical-offset="402">
-          <caret line="1" column="16" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="16" />
->>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
@@ -985,72 +585,20 @@
     <entry file="file://$PROJECT_DIR$/application/views/pages/quiz-result.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="323" max-vertical-offset="2295">
-          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
-          <folding>
-            <element signature="e#114#2923#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/config/autoload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1462" max-vertical-offset="2074">
-          <caret line="111" column="40" selection-start-line="111" selection-start-column="40" selection-end-line="111" selection-end-column="40" />
->>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/models/sys_config.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="1056" max-vertical-offset="1938">
-          <caret line="370" column="80" selection-start-line="370" selection-start-column="80" selection-end-line="370" selection-end-column="80" />
-          <folding>
-            <element signature="n#getCategoryTitle#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getCategory#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getCategoryCourseCount#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#courseRatedByMe#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#isRatedByUser#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getRatingByUser#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#numberOfRatings#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getOverAllRating#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#isUserEnrolled#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getRecommendations#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#_sort_array#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#enrollmentCount#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getNextLecture#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getLectures#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getFinishedLecture#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getLectureProgress#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getCourseProgressPercent#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#reviewedByUser#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#isCourseFinishedByUser#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#quizTaken#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getCorrectAnswers#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getQuizEarnedPoints#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getEarnedPoints#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getTracks#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="n#getTopStudents#0;n#course#0;n#!!top" expanded="false" />
-            <element signature="e#21827#23231#0#PHP" expanded="false" />
-          </folding>
->>>>>>> origin/master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/views/templates/header.php">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="17" column="110" selection-start="1003" selection-end="1021" vertical-scroll-proportion="0.5142349" vertical-offset="0" max-vertical-offset="1020">
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="729" max-vertical-offset="1649">
-          <caret line="58" column="53" selection-start-line="58" selection-start-column="34" selection-end-line="58" selection-end-column="53" />
->>>>>>> origin/master
           <folding />
         </state>
       </provider>
@@ -1078,20 +626,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/js/jRating.jquery.js">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state line="11" column="0" selection-start="553" selection-end="553" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3961">
-=======
-        <state vertical-scroll-proportion="0.41062802" vertical-offset="0" max-vertical-offset="621">
-          <caret line="15" column="10" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
->>>>>>> origin/master
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/application/views/pages/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="156" column="131" selection-start="6272" selection-end="6272" vertical-scroll-proportion="0.49253732" vertical-offset="2388" max-vertical-offset="4607">
+        <state line="156" column="131" selection-start="6272" selection-end="6272" vertical-scroll-proportion="0.5096525" vertical-offset="2388" max-vertical-offset="4607">
           <folding>
             <element signature="n#style#0;n#h5#0;n#section#0;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h4#0;n#h5#0;n#section#0;n#section#0;n#!!top" expanded="true" />
@@ -1102,13 +644,6 @@
             <element signature="n#style#0;n#img#0;n#section#4;n#section#0;n#section#0;n#section#3;n#section#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#section#0;n#section#0;n#section#3;n#section#0;n#!!top" expanded="true" />
           </folding>
-=======
-    <entry file="file://$PROJECT_DIR$/application/config/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5678" max-vertical-offset="6290">
-          <caret line="356" column="2" selection-start-line="356" selection-start-column="2" selection-end-line="356" selection-end-column="2" />
-          <folding />
->>>>>>> origin/master
         </state>
       </provider>
     </entry>

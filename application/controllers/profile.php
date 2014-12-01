@@ -16,7 +16,7 @@ class Profile extends MY_Controller
 	{
 
 		$this->load->view('templates/header');
-		$this->load->view('templates/breadcrumbs');
+//		$this->load->view('templates/breadcrumbs');
 	 	$this->load->view('templates/side-navs');
 		$this->load->view('pages/edit-profile');
 		$this->load->view('templates/footer');
@@ -43,7 +43,7 @@ class Profile extends MY_Controller
                 }
                 else{
                     $this->load->view('templates/header');
-                    $this->load->view('templates/breadcrumbs');
+//                    $this->load->view('templates/breadcrumbs');
                     $this->load->view('templates/side-navs');
                     $this->load->view('pages/profile', array('user_id' => $user_id));
                     $this->load->view('templates/footer');
