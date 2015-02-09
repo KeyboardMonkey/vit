@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"error",
+				"error_reporting"
+			],
+			[
 				"te",
 				"text-align"
 			],
@@ -252,10 +256,98 @@
 	"buffers":
 	[
 		{
+			"file": "index.php",
+			"settings":
+			{
+				"buffer_size": 6356,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/controllers/quiz.php",
+			"settings":
+			{
+				"buffer_size": 8528,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "application/views/pages/quiz.php",
 			"settings":
 			{
 				"buffer_size": 2283,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/config/config.php",
+			"settings":
+			{
+				"buffer_size": 13023,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/controllers/courses.php",
+			"settings":
+			{
+				"buffer_size": 10344,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/pages/course-playback.php",
+			"settings":
+			{
+				"buffer_size": 11834,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/A/xampp/htdocs/ssss/simpletest/test/url_test.php",
+			"settings":
+			{
+				"buffer_size": 22238,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/A/xampp/htdocs/ssss/simpletest/test/tag_test.php",
+			"settings":
+			{
+				"buffer_size": 21311,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/A/xampp/htdocs/ssss/simpletest/tag.php",
+			"settings":
+			{
+				"buffer_size": 41799,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/views/pages/leaderboard.php",
+			"settings":
+			{
+				"buffer_size": 1144,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/models/course.php",
+			"settings":
+			{
+				"buffer_size": 23316,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/A/xampp/htdocs/taut/action.php",
+			"settings":
+			{
+				"buffer_size": 1618,
 				"line_ending": "Windows"
 			}
 		}
@@ -287,6 +379,12 @@
 	},
 	"file_history":
 	[
+		"/A/xampp/htdocs/taut/index.php",
+		"/A/xampp/htdocs/vit/assets/styles/main.css",
+		"/A/xampp/htdocs/vit/assets/styles/pro-bars.min.css",
+		"/A/xampp/htdocs/vit/assets/styles/jRating.jquery.css",
+		"/B/- ELIXIR LABS/elixir.pk/index.html",
+		"/B/- ELIXIR LABS/amglobaltechs.com/index.html",
 		"/A/xampp/htdocs/vit/application/controllers/PageDoesNotExist.php",
 		"/A/xampp/htdocs/vit/application/views/templates/breadcrumbs.php",
 		"/A/xampp/htdocs/vit/application/views/wizards/pref-rank.php",
@@ -326,7 +424,6 @@
 		"/A/xampp/htdocs/vit/application/controllers/coming_soon.php",
 		"/A/xampp/htdocs/vit/application/models/course_review.php",
 		"/A/xampp/htdocs/vit/application/views/templates/footer.php",
-		"/A/xampp/htdocs/vit/assets/styles/main.css",
 		"/A/xampp/htdocs/vit/application/views/templates/side-navs.php",
 		"/A/xampp/htdocs/ssss/php/jRating.php",
 		"/A/xampp/htdocs/vit/assets/js/jRating.jquery.js",
@@ -361,7 +458,6 @@
 		"/C/Users/The Unusual Suspect/Desktop/vito/category-leaders-latest.php",
 		"/A/xampp/htdocs/vit/application/controllers/login.php",
 		"/A/xampp/htdocs/vit/application/views/templates/header-clean.php",
-		"/A/xampp/htdocs/vit/assets/styles/pro-bars.min.css",
 		"/A/xampp/htdocs/vit/application/controllers/users.php",
 		"/A/xampp/htdocs/vit/application/views/pages/viewcourse.php",
 		"/A/xampp/htdocs/vit/assets/styles/main-arm ki new wali.css",
@@ -410,11 +506,7 @@
 		"/V/GitHubLog.txt",
 		"/A/xampp/htdocs/vit/soptair/models/user_question_answer.php",
 		"/F/__UPDATED FILES/quiz.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/profile.php",
-		"/A/xampp/htdocs/vit/soptair/controllers/register.php",
-		"/C/Users/The Unusual Suspect/Downloads/lectures.sql",
-		"/A/xampp/htdocs/vit/soptair/libraries/MY_Form_validation.php",
-		"/V/-- UPDATED FILES/vitdb.sql"
+		"/A/xampp/htdocs/vit/soptair/controllers/profile.php"
 	],
 	"find":
 	{
@@ -450,6 +542,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"[",
+			"uid",
+			"elixir",
+			"AM Global Technologies",
 			"take",
 			"templates/breadcrumbs",
 			"rating",
@@ -573,11 +669,7 @@
 			"; ",
 			">\n",
 			"emerald",
-			"remove",
-			"pro-bar-container",
-			".pro-bar-container",
-			"2ABB9B",
-			".pro-bar-container.color-nephritis"
+			"remove"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -600,16 +692,76 @@
 	"groups":
 	[
 		{
-			"sheets":
-			[
-			]
-		},
-		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "index.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6356,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								570,
+								570
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 138.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/controllers/quiz.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8528,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4252,
+								4252
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2919.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 2,
 					"file": "application/views/pages/quiz.php",
 					"semi_transient": false,
 					"settings":
@@ -621,8 +773,272 @@
 						"selection":
 						[
 							[
-								193,
-								193
+								194,
+								194
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 122.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "application/config/config.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 13023,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12898,
+								12898
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 4785.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/controllers/courses.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10344,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5903,
+								5907
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 706.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/views/pages/course-playback.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 11834,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1605,
+								1605
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 64.0,
+						"translation.y": 432.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/A/xampp/htdocs/ssss/simpletest/test/url_test.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22238,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/A/xampp/htdocs/ssss/simpletest/test/tag_test.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 21311,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "/A/xampp/htdocs/ssss/simpletest/tag.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 41799,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "application/views/pages/leaderboard.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "application/models/course.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 23316,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3796,
+								3796
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 49.0,
+						"translation.y": 1506.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "/A/xampp/htdocs/taut/action.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1618,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -634,7 +1050,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 5,
 					"type": "text"
 				}
 			]
@@ -668,7 +1084,7 @@
 		"cols":
 		[
 			0.0,
-			0.936467598475,
+			0.279549881055,
 			1.0
 		],
 		"rows":
@@ -723,7 +1139,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 237.0,
+	"side_bar_width": 139.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

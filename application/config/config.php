@@ -357,7 +357,7 @@ $config['rewrite_short_tags'] = TRUE;
 */
 $config['proxy_ips'] = '';
 
-$config['max_quiz_questions'] = 10;
+$config['max_quiz_questions'] = 5;
 $config['quiz_points'] = 70;
 $config['review_points'] = 30;
 /* End of file config.php */
